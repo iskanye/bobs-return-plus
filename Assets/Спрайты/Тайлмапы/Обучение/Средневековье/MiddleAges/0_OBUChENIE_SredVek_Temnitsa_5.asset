@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 0_OBUChENIE_SredVek_Temnitsa_5
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 789494120, guid: 56f4571789e5e0006a24966a976334ec, type: 3}
+  m_Sprite: {fileID: -896864367, guid: fc43be4b0cf33165a903c58d5e41e056, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

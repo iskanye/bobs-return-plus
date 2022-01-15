@@ -333,10 +333,10 @@
 -r:"Library/Bee/artifacts/2400b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aEDbg.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aEDbg.dag/com.unity.cinemachine.editor.ref.dll"
+"Assets/Скрипты/Анимации/AnimationMovementController.cs"
 "Assets/Скрипты/Основные механики/AINoiseDistractor.cs"
 "Assets/Скрипты/Передвижение/AI.cs"
 "Assets/Скрипты/Передвижение/MovementBob.cs"
-"Assets/Скрипты/Скрипты редактора/AIEditor.cs"
 "Assets/Скрипты/Тригеры/Interact.cs"
 -langversion:9.0
 
