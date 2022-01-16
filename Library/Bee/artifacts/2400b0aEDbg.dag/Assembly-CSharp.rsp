@@ -334,6 +334,8 @@
 -r:"Library/Bee/artifacts/2400b0aEDbg.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/2400b0aEDbg.dag/com.unity.cinemachine.editor.ref.dll"
 "Assets/Скрипты/Анимации/AnimationMovementController.cs"
+"Assets/Скрипты/Диалоги/DialogueActivator.cs"
+"Assets/Скрипты/Диалоги/DialogueSystem.cs"
 "Assets/Скрипты/Основные механики/AINoiseDistractor.cs"
 "Assets/Скрипты/Передвижение/AI.cs"
 "Assets/Скрипты/Передвижение/MovementBob.cs"

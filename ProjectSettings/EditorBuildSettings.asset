@@ -6,15 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Game Menu.unity
-    guid: 5887e598797e6498091a2c9eb953cf78
-  - enabled: 1
-    path: Assets/Scenes/Player House.unity
-    guid: 12a46db2d23444be4b8cf4f45de45dd5
-  - enabled: 1
-    path: Assets/Scenes/Overworld.unity
-    guid: a61212dede0814df6b7daa4a81657997
-  - enabled: 1
-    path: Assets/Scenes/Dungeon.unity
-    guid: 9288d37b2dc124e788adfefed518c2ba
+    path: "Assets/\u0421\u0446\u0435\u043D\u044B/AI Testing.unity"
+    guid: 07296356ff650655ca49f94a6bfbe40f
   m_configObjects: {}
