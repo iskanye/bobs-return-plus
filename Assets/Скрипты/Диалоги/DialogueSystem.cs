@@ -16,6 +16,7 @@ public class DialogueSystem : MonoBehaviour
 
     Dialogue[] dialogues;
     Dialogue current;
+    MovementBob player;
     int index;
     bool isDialogue;
     bool isPrinting;
@@ -25,31 +26,32 @@ public class DialogueSystem : MonoBehaviour
     {
         if (isDialogue)
         {
-            if (index >= dialogues.Length) StopDialogue();
+            if (index >= dialogues.Length)
+            {
+                StopDialogue();
+                return;
+            }
 
             current = dialogues[index];
+
+            if (isReady) StartCoroutine(Print(current.text, current.character));
+
             firstVariant.gameObject.SetActive(current.isNonlinear && !isPrinting);
             firstVariantText.text = current.firstVariant;
-            secondVariant.gameObject.SetActive(current.isNonlinear && !isPrinting);            
+            secondVariant.gameObject.SetActive(current.isNonlinear && !isPrinting);
             secondVariantText.text = current.secondVariant;
 
-            if (isReady && !isPrinting) StartCoroutine(Print(current.text, current.character));
-
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && !isReady && !current.isNonlinear)
             {
-                if (isPrinting)
-                {
-                    isPrinting = false;
-                    StopAllCoroutines();
-                    text.text = current.text;
-                }
-                else if (!isReady && current.isNonlinear)
-                {
-                    isReady = true;
-                    index++;
-                }
+                isReady = true;
+                index++;
+                text.text = "";
             }
+
+            dialogueBox.transform.localScale = Vector3.Lerp(dialogueBox.transform.localScale, Vector3.one, .2f);
         }
+        
+        else dialogueBox.transform.localScale = Vector3.Lerp(dialogueBox.transform.localScale, Vector3.zero, .2f);
     }
 
     IEnumerator Print(string text, string character)
@@ -68,34 +70,33 @@ public class DialogueSystem : MonoBehaviour
         isPrinting = false;
     }
 
-    IEnumerator SetDialogue()
+    IEnumerator SetDialogue(bool set)
     {
         yield return new WaitForEndOfFrame();
-        isDialogue = true;
+        isDialogue = set;
+        if (!set) dialogues = null;
     }
 
     void StopDialogue()
     {
-        foreach (var i in FindObjectsOfType<Interact>()) i.enabled = true;
-        FindObjectOfType<MovementBob>().enabled = true;
-
-        dialogueBox.SetActive(false);
-        isDialogue = false;
-        dialogues = null;
+        text.text = "";
+        firstVariant.gameObject.SetActive(false);
+        secondVariant.gameObject.SetActive(false);
+        player.enabled = true;
+        StartCoroutine(SetDialogue(false));
     }
 
     public void StartDialogue(Dialogue[] dialogues)
     {
+        if (isDialogue) return;
+
         this.dialogues = dialogues;
         index = 0;
         isReady = true;
-        dialogueBox.SetActive(true);
-        text.text = "";
-        FindObjectOfType<MovementBob>().enabled = false;
-
-        foreach (var i in FindObjectsOfType<Interact>()) i.enabled = false;
-
-        StartCoroutine(SetDialogue());
+        player = FindObjectOfType<MovementBob>();
+        player.enabled = false;
+        player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        StartCoroutine(SetDialogue(true));
     }
 
     public void ChooseVariant(int variant)
@@ -103,7 +104,7 @@ public class DialogueSystem : MonoBehaviour
         switch (variant)
         {
             case 1:
-                if (current.isFirstVariantStops) 
+                if (current.isFirstVariantStops)
                 {
                     StopDialogue();
                     current.firstVariantAction.Invoke();
@@ -111,13 +112,14 @@ public class DialogueSystem : MonoBehaviour
 
                 else
                 {
+                    text.text = "";
                     isReady = true;
                     dialogues = current.firstVariantContinuation;
                     index = 0;
                 }
                 break;
             case 2:
-                if (current.isFirstVariantStops) 
+                if (current.isSecondVariantStops)
                 {
                     StopDialogue();
                     current.secondVariantAction.Invoke();
@@ -125,6 +127,7 @@ public class DialogueSystem : MonoBehaviour
 
                 else
                 {
+                    text.text = "";
                     isReady = true;
                     dialogues = current.secondVariantContinuation;
                     index = 0;
@@ -151,4 +154,12 @@ public class Dialogue
     public bool isSecondVariantStops;
     public UnityEvent secondVariantAction;
     public Dialogue[] secondVariantContinuation;
+
+    public Dialogue(string character, string text, UnityEvent action)
+    {
+        this.character = character;
+        this.text = text;
+        this.action = action;
+        isNonlinear = false;
+    }
 }

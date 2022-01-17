@@ -6,7 +6,7 @@ public class MovementBob : MonoBehaviour
     public float speed; //Скорость передвижения(за кадр)
     [Range(0f, 1f)]public float accel; //Ускорение
     [Range(0f, 1f)]public float stopAccel; //Ускорение замедления
-
+    
     Rigidbody2D rig; //Физика обьекта
     Vector2 dir; //Направление
     AnimationMovementController anim; //Контроллер анимаций

@@ -5,7 +5,6 @@ using Pathfinding;
 public class AI : MonoBehaviour
 {
     public LayerMask obstacles, player; //Слой, видимый для ИИ
-    //public float speed; //Скорость
     public float seeRange; //Дальность зрения
     public float spotSpeed; //Скорость движения(При погоне)
     public Vector2 direction = Vector2.right;
@@ -18,7 +17,6 @@ public class AI : MonoBehaviour
 
     AnimationMovementController anim; //Контроллер анимаций
     AILerp ai; //Скрипт поиска пути
-    RaycastHit2D[] hit = new RaycastHit2D[31]; //Лучи(зрение ИИ)
     bool patr; //Патрулирует ли ИИ?
     int currWay = 0; //Текущий путь из массива позиций
     float swTime; //Время ожидания(для патруля)
@@ -79,7 +77,7 @@ public class AI : MonoBehaviour
             ai.speed = patrolSpeed; //Меняем скорость на обычную
             var search = false; //Надо ли нам искать путь?
 
-            //Если ИИ достиг конца пути, не ищет путь и его время ожидания не равно бесконечности, 
+            //Если ИИ достиг конца пути, не ищет путь и его время ожидания равно бесконечности, 
             //то мы назначаем ему время после которого ему надо будет идти к другой точке патруля
             if (ai.reachedEndOfPath && !ai.pathPending && float.IsPositiveInfinity(swTime)) swTime = Time.time + Random.Range(.5f, 6);
 
