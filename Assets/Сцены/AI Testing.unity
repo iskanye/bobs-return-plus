@@ -290,6 +290,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b03eac781278d52aa4afb457a70da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 64
   action:
     m_PersistentCalls:
       m_Calls:
@@ -682,6 +685,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b03eac781278d52aa4afb457a70da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 64
   action:
     m_PersistentCalls:
       m_Calls:
@@ -959,7 +965,7 @@ GameObject:
   - component: {fileID: 780290296}
   m_Layer: 6
   m_Name: Walk Down 1
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
