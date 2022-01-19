@@ -374,6 +374,7 @@ GameObject:
   - component: {fileID: 354846492}
   - component: {fileID: 354846491}
   - component: {fileID: 354846493}
+  - component: {fileID: 354846494}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -410,7 +411,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1818182, y: 1}
+    m_SensorSize: {x: 2.172078, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -447,6 +448,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a8a05de0ac134f4f9d01bef6b9da077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &354846494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354846490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfb4d774f7d3a147eb14a6648122ef5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 354846491}
 --- !u!1 &513137611
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,6 +610,7 @@ GameObject:
   - component: {fileID: 605709032}
   - component: {fileID: 605709031}
   - component: {fileID: 605709030}
+  - component: {fileID: 605709034}
   - component: {fileID: 605709033}
   m_Layer: 0
   m_Name: pipis
@@ -794,7 +809,19 @@ MonoBehaviour:
       text: "\u0418\u0434\u0438 \u043D\u0430\u0445\u0443\u0439"
       action:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 605709034}
+            m_TargetAssemblyTypeName: Shaker, Assembly-CSharp
+            m_MethodName: Shake
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       isNonlinear: 0
       firstVariant: 
       isFirstVariantStops: 0
@@ -808,6 +835,23 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
       secondVariantContinuation: []
+--- !u!114 &605709034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605709027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b627d87786c830b41853a1d527f0487f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 354846494}
+  amplitude: 15
+  frequency: 7
+  sharpness: 0.079
+  shakeTime: 0.25
 --- !u!1 &621898908
 GameObject:
   m_ObjectHideFlags: 0
@@ -3218,7 +3262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_NoiseProfile: {fileID: 11400000, guid: e9ce97b7a206dc64d90931ea044e0c72, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
   m_AmplitudeGain: 0
   m_FrequencyGain: 0
