@@ -57,7 +57,7 @@ public class DialogueSystem : MonoBehaviour
     IEnumerator Print(string text, string character)
     {
         this.character.text = character;
-        current.action.Invoke();
+        if (current.action != null) current.action.Invoke();
         isReady = false;
         isPrinting = true;
 

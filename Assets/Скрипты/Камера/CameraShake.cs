@@ -35,7 +35,7 @@ public class CameraShake : MonoBehaviour
         }
     }
 
-    public void StartShake(float amplitude, float frequency, float sharpness, float shakeTime)
+    public void StartShake(float amplitude = 10, float frequency = 10, float sharpness = .1f, float shakeTime = .4f)
     {
         isShake = true;
         this.amplitude = amplitude;

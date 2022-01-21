@@ -1,31 +1,44 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class LiveCounter : MonoBehaviour
 {
     public Image[] lives;
+    public new CameraShake camera;
     public int livesRemaining;
-    
-    public void LoseLife()
-    {
-        livesRemaining--;
 
-        lives[livesRemaining].gameObject.SetActive(false);
-
-        if(livesRemaining==0)
-        {
-            Debug.Log("проебал");
-        }    
-    }
+    bool isInvincible = false;
+    float invincibleTime = float.PositiveInfinity;
 
     private void Update()
     {
-        // сделано для теста
-        if (Input.GetKeyDown(KeyCode.K))
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+        if (Input.GetKeyDown(KeyCode.K)) LoseLife();
+
+        if (float.IsPositiveInfinity(invincibleTime) && isInvincible) invincibleTime = Time.time + 2;
+
+        if (Time.time >= invincibleTime) 
         {
-            LoseLife();
+            invincibleTime = float.PositiveInfinity;
+            isInvincible = false;
         }
+    }
+    
+    public void LoseLife()
+    {
+        if (isInvincible)
+        {
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
+            return;
+        } 
+
+        livesRemaining--;
+
+        camera.StartShake();
+
+        lives[livesRemaining].gameObject.SetActive(false); 
+        isInvincible = true;  
+
+        if (livesRemaining <= 0) Application.Quit();
     }
 }

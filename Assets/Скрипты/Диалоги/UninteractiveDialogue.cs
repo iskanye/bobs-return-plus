@@ -8,7 +8,6 @@ public class UninteractiveDialogue : ScriptableObject
     {
         public string character;
         public string text;
-        public UnityEngine.Events.UnityEvent action;
     }
     public Dialog[] dialogues;
 }

@@ -108,7 +108,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 288
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -129,7 +129,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 288
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -150,7 +150,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 288
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -171,7 +171,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 288
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -192,7 +192,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 288
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -213,7 +213,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 288
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -234,7 +234,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 288
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -255,7 +255,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 224
-        y: 288
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -276,7 +276,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 288
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -296,8 +296,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
+        x: 288
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -317,8 +317,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_10
       rect:
         serializedVersion: 2
-        x: 32
-        y: 256
+        x: 0
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -338,8 +338,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_11
       rect:
         serializedVersion: 2
-        x: 64
-        y: 256
+        x: 32
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -359,8 +359,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_12
       rect:
         serializedVersion: 2
-        x: 96
-        y: 256
+        x: 64
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -380,8 +380,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_13
       rect:
         serializedVersion: 2
-        x: 128
-        y: 256
+        x: 96
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -401,8 +401,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_14
       rect:
         serializedVersion: 2
-        x: 160
-        y: 256
+        x: 128
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -422,8 +422,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_15
       rect:
         serializedVersion: 2
-        x: 192
-        y: 256
+        x: 160
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -443,8 +443,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_16
       rect:
         serializedVersion: 2
-        x: 224
-        y: 256
+        x: 192
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -464,8 +464,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_17
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
+        x: 224
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -485,8 +485,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_18
       rect:
         serializedVersion: 2
-        x: 0
-        y: 224
+        x: 256
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -506,8 +506,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_19
       rect:
         serializedVersion: 2
-        x: 32
-        y: 224
+        x: 288
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -527,8 +527,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_20
       rect:
         serializedVersion: 2
-        x: 64
-        y: 224
+        x: 0
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -548,8 +548,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_21
       rect:
         serializedVersion: 2
-        x: 96
-        y: 224
+        x: 32
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -569,8 +569,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_22
       rect:
         serializedVersion: 2
-        x: 128
-        y: 224
+        x: 64
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -590,8 +590,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_23
       rect:
         serializedVersion: 2
-        x: 160
-        y: 224
+        x: 96
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -611,8 +611,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_24
       rect:
         serializedVersion: 2
-        x: 192
-        y: 224
+        x: 128
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -632,8 +632,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_25
       rect:
         serializedVersion: 2
-        x: 224
-        y: 224
+        x: 160
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -653,8 +653,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_26
       rect:
         serializedVersion: 2
-        x: 256
-        y: 224
+        x: 192
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -674,8 +674,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_27
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
+        x: 224
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -695,8 +695,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_28
       rect:
         serializedVersion: 2
-        x: 32
-        y: 192
+        x: 256
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -716,8 +716,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_29
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
+        x: 288
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -737,8 +737,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_30
       rect:
         serializedVersion: 2
-        x: 224
-        y: 192
+        x: 0
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -758,8 +758,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_31
       rect:
         serializedVersion: 2
-        x: 256
-        y: 192
+        x: 32
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -779,8 +779,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_32
       rect:
         serializedVersion: 2
-        x: 192
-        y: 160
+        x: 64
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -800,8 +800,8 @@ TextureImporter:
       name: 0_OBUChENIE_SredVek_Temnitsa_33
       rect:
         serializedVersion: 2
-        x: 256
-        y: 160
+        x: 96
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -813,6 +813,1392 @@ TextureImporter:
       bones: []
       spriteID: f9c92e126597670e48608f7d79545d41
       internalID: -130883498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_34
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eabcdefa41e9badb9a84a800356ecbb
+      internalID: 4358100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_35
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3beed0aeddf875b8bb46a9991a59815
+      internalID: -1608080199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_36
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0cc95605175db471bb2fefd78bfda4c
+      internalID: 1847134110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_37
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe7c5c0ad587c2909481d43e003b0f9
+      internalID: 1248514227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc2d40747e9a0ed1a6754667e1b800a
+      internalID: -76573252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_39
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a33b39b5c3e84333bd63fe730c619b9
+      internalID: -1343414255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_40
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaaa75bfec8257f86a25e0a605adfea7
+      internalID: 1794234946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_41
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d2bac3e514eba1d8dbb32004ad2060
+      internalID: 849702910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_42
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ed6a36387dafb84a0c6f45020c6344
+      internalID: 729896511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_43
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a085311acb0e2c4b851b3eaca7fefc5
+      internalID: 1024823673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c4371ecab7f3ddd8abedbad8b76300
+      internalID: -582189721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_45
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4cbe5b709a4a9d5cbb9cc30bd26590b
+      internalID: 768509243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_46
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95417ae37d716e1bcaf6496df1c4c0dc
+      internalID: 1354065489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_47
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c8f0bc22266da4b9d8a4f399259809
+      internalID: -920001117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_48
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea70572d5bce6ede91a125b9b036ef6
+      internalID: -266517431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_49
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8f5cbc6e6f953628288cbdaf205f58
+      internalID: 441081126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_50
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c58e3116e5cc15dc4a990125ec3afdf7
+      internalID: -975330600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_51
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165f0718d2ae002c0b69b041ce688469
+      internalID: -1898733348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_52
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2b590940371055287d1fd167d4c5fc
+      internalID: 1878992213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_53
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5e2162f54af6aca4976a7f30baa0621
+      internalID: 1466332711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_54
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c756889eaded76275835fce96cf5de98
+      internalID: 1124503065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20864e32aa3f93f63b6de8b8b6bbe786
+      internalID: -1682590068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_56
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a6ad86c006ed8caac081531cc4028a
+      internalID: -1932408247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_57
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14941131f2594f82783be7dddaaa2977
+      internalID: 1319311348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_58
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5eb05ee75311826b867b4a4d2a7e68a
+      internalID: 1649972254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_59
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b87a3c1b326d9aea3ec38b69958536
+      internalID: 168242932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_60
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788e95c961b9a848ab934fbdbbf51ca7
+      internalID: -1836674932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_61
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd9f8928b1ed09fa8e2e438f958203f
+      internalID: 880679857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_62
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674c536a921f3a03981b962c62af0a52
+      internalID: 793111900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_63
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c9ebd27ba0bb2009611dd86ccb28fa
+      internalID: 934827753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_64
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abfe1067f7db53cafbb5559af96ab831
+      internalID: -1872055551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_65
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67ee8a6001715b66b558d86ce9b9262
+      internalID: -642331779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7b18b3cf818bbd89793617146aeea1
+      internalID: -1238112540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_67
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb4c6ec26264287399ec63a5077b5853
+      internalID: 1519125941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_68
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a464c5f21f68aca07b1c666ecf4d04ef
+      internalID: -1685851940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_69
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863b3e33be6404d6d8f5dfdba3b92e54
+      internalID: -1447194376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_70
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1814bb6e9c7ca401bc4cf35f7636920
+      internalID: 1978947837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_71
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c2b929c7ff660ea281282f16d9cebca
+      internalID: 1711742563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_72
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 331d588230a7165bc997b1be0dde1b1b
+      internalID: 1292022376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_73
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ebbb7ba0b74b909b037593e2586b70
+      internalID: 1342486149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_74
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14939d698ed557c2ace707491e8b24f
+      internalID: -683829888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_75
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7e9e50060d12c6ab74f3412e85cccb
+      internalID: 1533127370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_76
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f6156f43301949b80897a7eeccca4a
+      internalID: -642228877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_77
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ceaf9d28cde65ccb561a37adc18a1b
+      internalID: -1615237834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_78
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d2d3fb0dc740c09a672f471aafd458
+      internalID: 1028339545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_79
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4995d43d1dd508cf69f342b11665651f
+      internalID: 1691155834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_80
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6203e684f228ef6b9a5ca1c859f6cbfc
+      internalID: -1628590079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_81
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4499a66fc5297c4b0aa3eaee7e02242c
+      internalID: -10513297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_82
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2512040647a0d98edb05f777d2309e4a
+      internalID: 615588498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_83
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ce2c5c5309c05c19ecf78485c5364a
+      internalID: 65633367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_84
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc91167c372d37dc84748168756bbfd
+      internalID: 1006681727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_85
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c87b5253b4d8b1c9c7fe95c324b7d5
+      internalID: -1231872019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_86
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1d634c7fef395b58d78b79c67a5501
+      internalID: -1902614615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_87
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 827fc926ac9d2d84085d6dc11bf7501a
+      internalID: 729341731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_88
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e09f5a429d8676af088d7b0509dd5cad
+      internalID: 831483735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_89
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4223a1d209b34012921cdef409710a0
+      internalID: -1404762985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_90
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1539872c5b9aeffca9e7ca1d2b4f460d
+      internalID: 1885709272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_91
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f71086d09fb90ce5a651ee5f68f7d9a
+      internalID: -1455061726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_92
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6156e3f7e50aa6ed8879c6a8a221e6c9
+      internalID: -800973566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_93
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462c4f01478f71b998ce925748f5a399
+      internalID: -1040261039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_94
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5294b6f24e0cb9b0abe2ae13cb1976a7
+      internalID: 448075395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_95
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bdd03f0650a97add9cd08ab0005c2cf
+      internalID: -1698413845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4fe87575aa84126e86dcced7c13ef04
+      internalID: 2014652520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_97
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14be42f55949c434a79f0c8b6ffecd3
+      internalID: -1885960955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_98
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa77aab54f0a54cd961c143212836e7
+      internalID: 2001814439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_OBUChENIE_SredVek_Temnitsa_99
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92da09ff9b5b4abeea8fedf359e9fcd5
+      internalID: 613277183
       vertices: []
       indices: 
       edges: []
@@ -830,38 +2216,104 @@ TextureImporter:
     nameFileIdTable:
       0_OBUChENIE_SredVek_Temnitsa_0: 1173097517
       0_OBUChENIE_SredVek_Temnitsa_15: 2105020251
-      0_OBUChENIE_SredVek_Temnitsa_30: 345446032
+      0_OBUChENIE_SredVek_Temnitsa_39: -1343414255
+      0_OBUChENIE_SredVek_Temnitsa_46: 1354065489
+      0_OBUChENIE_SredVek_Temnitsa_75: 1533127370
       0_OBUChENIE_SredVek_Temnitsa_33: -130883498
       0_OBUChENIE_SredVek_Temnitsa_9: -42262468
-      0_OBUChENIE_SredVek_Temnitsa_22: 424843285
-      0_OBUChENIE_SredVek_Temnitsa_23: 1084700826
-      0_OBUChENIE_SredVek_Temnitsa_20: -1540735585
-      0_OBUChENIE_SredVek_Temnitsa_25: -2138235199
       0_OBUChENIE_SredVek_Temnitsa_29: -1825707929
-      0_OBUChENIE_SredVek_Temnitsa_14: 581536710
-      0_OBUChENIE_SredVek_Temnitsa_24: -223809189
-      0_OBUChENIE_SredVek_Temnitsa_3: -1606015455
-      0_OBUChENIE_SredVek_Temnitsa_13: -481535102
+      0_OBUChENIE_SredVek_Temnitsa_23: 1084700826
+      0_OBUChENIE_SredVek_Temnitsa_74: -683829888
+      0_OBUChENIE_SredVek_Temnitsa_79: 1691155834
+      0_OBUChENIE_SredVek_Temnitsa_92: -800973566
+      0_OBUChENIE_SredVek_Temnitsa_83: 65633367
+      0_OBUChENIE_SredVek_Temnitsa_80: -1628590079
+      0_OBUChENIE_SredVek_Temnitsa_90: 1885709272
+      0_OBUChENIE_SredVek_Temnitsa_72: 1292022376
       0_OBUChENIE_SredVek_Temnitsa_11: -245075209
       0_OBUChENIE_SredVek_Temnitsa_19: 586625842
       0_OBUChENIE_SredVek_Temnitsa_27: 720107697
-      0_OBUChENIE_SredVek_Temnitsa_1: 1166548183
       0_OBUChENIE_SredVek_Temnitsa_32: 906329490
-      0_OBUChENIE_SredVek_Temnitsa_7: -817019246
+      0_OBUChENIE_SredVek_Temnitsa_77: -1615237834
+      0_OBUChENIE_SredVek_Temnitsa_94: 448075395
       0_OBUChENIE_SredVek_Temnitsa_8: 382928065
-      0_OBUChENIE_SredVek_Temnitsa_16: 502198254
-      0_OBUChENIE_SredVek_Temnitsa_21: 1311031633
-      0_OBUChENIE_SredVek_Temnitsa_12: 70936875
-      0_OBUChENIE_SredVek_Temnitsa_31: -1385014376
-      0_OBUChENIE_SredVek_Temnitsa_10: -1216777817
-      0_OBUChENIE_SredVek_Temnitsa_4: 1454084826
+      0_OBUChENIE_SredVek_Temnitsa_35: -1608080199
+      0_OBUChENIE_SredVek_Temnitsa_59: 168242932
+      0_OBUChENIE_SredVek_Temnitsa_78: 1028339545
+      0_OBUChENIE_SredVek_Temnitsa_96: 2014652520
+      0_OBUChENIE_SredVek_Temnitsa_41: 849702910
+      0_OBUChENIE_SredVek_Temnitsa_97: -1885960955
       0_OBUChENIE_SredVek_Temnitsa_6: -1462951185
       0_OBUChENIE_SredVek_Temnitsa_5: -896864367
       0_OBUChENIE_SredVek_Temnitsa_28: 170599223
-      0_OBUChENIE_SredVek_Temnitsa_17: -150890545
-      0_OBUChENIE_SredVek_Temnitsa_2: 1299195717
-      0_OBUChENIE_SredVek_Temnitsa_18: -1383627533
+      0_OBUChENIE_SredVek_Temnitsa_60: -1836674932
+      0_OBUChENIE_SredVek_Temnitsa_84: 1006681727
+      0_OBUChENIE_SredVek_Temnitsa_42: 729896511
       0_OBUChENIE_SredVek_Temnitsa_26: 1069998879
+      0_OBUChENIE_SredVek_Temnitsa_30: 345446032
+      0_OBUChENIE_SredVek_Temnitsa_40: 1794234946
+      0_OBUChENIE_SredVek_Temnitsa_47: -920001117
+      0_OBUChENIE_SredVek_Temnitsa_85: -1231872019
+      0_OBUChENIE_SredVek_Temnitsa_55: -1682590068
+      0_OBUChENIE_SredVek_Temnitsa_61: 880679857
+      0_OBUChENIE_SredVek_Temnitsa_3: -1606015455
+      0_OBUChENIE_SredVek_Temnitsa_88: 831483735
+      0_OBUChENIE_SredVek_Temnitsa_82: 615588498
+      0_OBUChENIE_SredVek_Temnitsa_1: 1166548183
+      0_OBUChENIE_SredVek_Temnitsa_43: 1024823673
+      0_OBUChENIE_SredVek_Temnitsa_7: -817019246
+      0_OBUChENIE_SredVek_Temnitsa_16: 502198254
+      0_OBUChENIE_SredVek_Temnitsa_71: 1711742563
+      0_OBUChENIE_SredVek_Temnitsa_12: 70936875
+      0_OBUChENIE_SredVek_Temnitsa_57: 1319311348
+      0_OBUChENIE_SredVek_Temnitsa_54: 1124503065
+      0_OBUChENIE_SredVek_Temnitsa_63: 934827753
+      0_OBUChENIE_SredVek_Temnitsa_4: 1454084826
+      0_OBUChENIE_SredVek_Temnitsa_50: -975330600
+      0_OBUChENIE_SredVek_Temnitsa_48: -266517431
+      0_OBUChENIE_SredVek_Temnitsa_51: -1898733348
+      0_OBUChENIE_SredVek_Temnitsa_2: 1299195717
+      0_OBUChENIE_SredVek_Temnitsa_44: -582189721
+      0_OBUChENIE_SredVek_Temnitsa_87: 729341731
+      0_OBUChENIE_SredVek_Temnitsa_52: 1878992213
+      0_OBUChENIE_SredVek_Temnitsa_64: -1872055551
+      0_OBUChENIE_SredVek_Temnitsa_36: 1847134110
+      0_OBUChENIE_SredVek_Temnitsa_89: -1404762985
+      0_OBUChENIE_SredVek_Temnitsa_76: -642228877
+      0_OBUChENIE_SredVek_Temnitsa_49: 441081126
+      0_OBUChENIE_SredVek_Temnitsa_73: 1342486149
+      0_OBUChENIE_SredVek_Temnitsa_37: 1248514227
+      0_OBUChENIE_SredVek_Temnitsa_34: 4358100
+      0_OBUChENIE_SredVek_Temnitsa_99: 613277183
+      0_OBUChENIE_SredVek_Temnitsa_69: -1447194376
+      0_OBUChENIE_SredVek_Temnitsa_66: -1238112540
+      0_OBUChENIE_SredVek_Temnitsa_81: -10513297
+      0_OBUChENIE_SredVek_Temnitsa_21: 1311031633
+      0_OBUChENIE_SredVek_Temnitsa_65: -642331779
+      0_OBUChENIE_SredVek_Temnitsa_91: -1455061726
+      0_OBUChENIE_SredVek_Temnitsa_18: -1383627533
+      0_OBUChENIE_SredVek_Temnitsa_67: 1519125941
+      0_OBUChENIE_SredVek_Temnitsa_38: -76573252
+      0_OBUChENIE_SredVek_Temnitsa_93: -1040261039
+      0_OBUChENIE_SredVek_Temnitsa_95: -1698413845
+      0_OBUChENIE_SredVek_Temnitsa_53: 1466332711
+      0_OBUChENIE_SredVek_Temnitsa_22: 424843285
+      0_OBUChENIE_SredVek_Temnitsa_20: -1540735585
+      0_OBUChENIE_SredVek_Temnitsa_25: -2138235199
+      0_OBUChENIE_SredVek_Temnitsa_14: 581536710
+      0_OBUChENIE_SredVek_Temnitsa_24: -223809189
+      0_OBUChENIE_SredVek_Temnitsa_13: -481535102
+      0_OBUChENIE_SredVek_Temnitsa_62: 793111900
+      0_OBUChENIE_SredVek_Temnitsa_70: 1978947837
+      0_OBUChENIE_SredVek_Temnitsa_56: -1932408247
+      0_OBUChENIE_SredVek_Temnitsa_98: 2001814439
+      0_OBUChENIE_SredVek_Temnitsa_68: -1685851940
+      0_OBUChENIE_SredVek_Temnitsa_31: -1385014376
+      0_OBUChENIE_SredVek_Temnitsa_45: 768509243
+      0_OBUChENIE_SredVek_Temnitsa_58: 1649972254
+      0_OBUChENIE_SredVek_Temnitsa_10: -1216777817
+      0_OBUChENIE_SredVek_Temnitsa_17: -150890545
+      0_OBUChENIE_SredVek_Temnitsa_86: -1902614615
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
