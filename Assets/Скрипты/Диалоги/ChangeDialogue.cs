@@ -34,4 +34,9 @@ public class ChangeDialogue : MonoBehaviour
 
         interactiveActivator.dialogues = interactiveDialogue;
     }
+
+    public void Change(bool prop) 
+    {
+        if (prop) Change();
+    }
 }

@@ -10,10 +10,16 @@ public class Cannon : MonoBehaviour
     public LiveCounter lives;
     public bool isReloadable;
     public float reloadDelay;
+    public bool haveShoted { set; get; }
 
     float swTime;
-    bool haveShoted;
+    PropertyHolder prop;
 
+    void Awake() 
+    { 
+        prop = GetComponent<PropertyHolder>();
+    }
+    
     void Update()
     {
         if (Physics2D.Raycast(transform.position, direction, distance, player))
@@ -24,6 +30,7 @@ public class Cannon : MonoBehaviour
                 bull.GetComponent<Rigidbody2D>().AddForce(direction * force, ForceMode2D.Impulse);
                 bull.GetComponent<Damageable>().player = lives; 
                 haveShoted = true;
+                if (prop != null) prop.property = true;
             }
 
             else if (isReloadable)
