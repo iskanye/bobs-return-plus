@@ -3,21 +3,22 @@ using UnityEngine;
 //Контроллер анимаций для движущихся обьектов
 public class AnimationMovementController : MonoBehaviour
 {
-    internal bool isWalk; //Двигает ли обьект?
-    internal Vector2 direction; //Направления движения
+    Animator animator; //Контроллер анимаций от Unity
+    IWalkable movingObject;
 
-    Animator anim; //Контроллер анимаций от Unity
-
-    void Awake() => anim = GetComponent<Animator>(); //Ищем этот контроллер
+    void Awake()
+    {
+        animator = GetComponent<Animator>(); //Ищем этот контроллер
+        movingObject = GetComponent<IWalkable>();
+    }
 
     void Update()
     {
-        anim.SetBool("Is Walk", isWalk); //Говорим контроллеру, когда мы двигаемся
-
-        if (isWalk) //Если двигаемся отправляем ему данные о нашем направлении
-        {
-            anim.SetFloat("Direction X", direction.x);        
-            anim.SetFloat("Direction Y", direction.y);
-        }
+        bool isWalking = movingObject.IsWalking;
+        animator.SetBool("Is Walk", isWalking); //Говорим контроллеру, когда мы двигаемся
+        animator.SetFloat("Direction X", movingObject.Direction.x);
+        animator.SetFloat("Direction Y", movingObject.Direction.y);
     }
 }
+
+

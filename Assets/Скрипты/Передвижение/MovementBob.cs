@@ -1,7 +1,7 @@
 using UnityEngine;
 
 //Тестовый скрипт передвижения
-public class MovementBob : MonoBehaviour
+public class MovementBob : MonoBehaviour, IWalkable
 {
     public float speed; //Скорость передвижения(за кадр)
     [Range(0f, 1f)]public float accel; //Ускорение
@@ -10,6 +10,10 @@ public class MovementBob : MonoBehaviour
     Rigidbody2D rig; //Физика обьекта
     Vector2 dir; //Направление
     AnimationMovementController anim; //Контроллер анимаций
+
+    public bool IsWalking => dir != Vector2.zero; 
+
+    public Vector2 Direction => dir;
 
     void Awake()
     { 
@@ -25,8 +29,6 @@ public class MovementBob : MonoBehaviour
             Input.GetKey(KeyCode.D) ? 1 : Input.GetKey(KeyCode.A) ? -1 : 0,
             Input.GetKey(KeyCode.W) ? 1 : Input.GetKey(KeyCode.S) ? -1 : 0);
         //ЗАМЕТКА: тут я использую тернарную операцию для сокращения и упрощения кода: условие ? выражение если верно : выражение иначе
-        anim.direction = dir; 
-        anim.isWalk = dir != Vector2.zero; 
         //Отправляем данные в контроллер анимаций
     }
 

@@ -11,7 +11,7 @@ public class AINoiseDistractor : MonoBehaviour
     {
         var AIs = Physics2D.OverlapCircleAll(transform.position, range, AIMask); //Ищем в радиусе ИИ
         //Если такие есть то мы их уведомляем о начилии шума
-        foreach (var i in AIs) i.GetComponent<AI>().NoiseDistraction(transform.position); 
+        foreach (var i in AIs) i.GetComponent<AIManager>().NoiseDistraction(transform); 
     }
 
     //Визуализируем шум
