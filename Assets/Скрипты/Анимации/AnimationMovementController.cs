@@ -16,8 +16,12 @@ public class AnimationMovementController : MonoBehaviour
     {
         bool isWalking = movingObject.IsWalking;
         animator.SetBool("Is Walk", isWalking); //Говорим контроллеру, когда мы двигаемся
-        animator.SetFloat("Direction X", movingObject.Direction.x);
-        animator.SetFloat("Direction Y", movingObject.Direction.y);
+
+        if (isWalking)
+        {
+            animator.SetFloat("Direction X", movingObject.Direction.x);
+            animator.SetFloat("Direction Y", movingObject.Direction.y);
+        }
     }
 }
 

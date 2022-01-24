@@ -798,7 +798,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.3978496, y: 1}
+    m_SensorSize: {x: 2.2748344, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1363,7 +1363,7 @@ Transform:
   m_Children:
   - {fileID: 1511976635}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &605709030
 MonoBehaviour:
@@ -3061,9 +3061,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49a5f56a86ba53259144eca89903e43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 340
-  accel: 0.05
-  stopAccel: 0.25
+  speed: 210
+  accel: 0.3
+  stopAccel: 0.3
 --- !u!50 &780290292
 Rigidbody2D:
   serializedVersion: 4
@@ -3291,7 +3291,7 @@ Transform:
   - {fileID: 186837984}
   - {fileID: 986910029}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &848625353
 GameObject:
@@ -3520,7 +3520,7 @@ Transform:
   - {fileID: 730835277}
   - {fileID: 1101931641}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &959306839
 GameObject:
@@ -3743,7 +3743,25 @@ MonoBehaviour:
   uninteractiveActivator: {fileID: 986910033}
   uninteractiveDialogue: {fileID: 11400000, guid: c5b8ede8350bff5a9b33a1f645da0666,
     type: 2}
-  uninteractiveEvents: []
+  uninteractiveEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+  - m_PersistentCalls:
+      m_Calls: []
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 986910035}
+        m_TargetAssemblyTypeName: PropertyHolder, Assembly-CSharp
+        m_MethodName: set_property
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   interactiveDialogue: []
 --- !u!114 &986910033
 MonoBehaviour:
@@ -3790,6 +3808,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 986910035}
+        m_TargetAssemblyTypeName: PropertyHolder, Assembly-CSharp
+        m_MethodName: set_property
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &986910034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3829,17 +3859,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 986910028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a6d0dc5c2abb8d6b99578435767079f, type: 3}
+  m_Script: {fileID: 11500000, guid: 38a87426f22708f4ebe42aefbb90ed8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  variableName: 0
+  name: Moss
   action:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 986910032}
         m_TargetAssemblyTypeName: ChangeDialogue, Assembly-CSharp
         m_MethodName: Change
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6725,7 +6755,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1142647630, guid: 9f2d7eec1bf1b54519370699a0a1d5e1, type: 3}
+  m_Sprite: {fileID: -2076407240, guid: 9f2d7eec1bf1b54519370699a0a1d5e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6733,7 +6763,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
 --- !u!4 &1578550899
@@ -6763,12 +6793,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6649e68642940fb4491f7882a93c7914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacles:
-    serializedVersion: 2
-    m_Bits: 8
-  player:
-    serializedVersion: 2
-    m_Bits: 64
   seeRange: 10
   spotSpeed: 4
   direction: {x: 0, y: 1}
@@ -6780,8 +6804,8 @@ MonoBehaviour:
   - {x: 7.5, y: 0.5}
   - {x: -4.5, y: 0.5}
   - {x: -4.5, y: -4.5}
-  isSee: 0
-  target: {x: 0, y: 0}
+  currWay: 0
+  currentTarget: {fileID: 0}
 --- !u!114 &1578550901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7153,7 +7177,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1852414576
 GameObject:
@@ -8712,7 +8736,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2147213153
 MonoBehaviour:

@@ -41,7 +41,7 @@ public class DialogueSystem : MonoBehaviour
             secondVariant.gameObject.SetActive(current.isNonlinear && !isPrinting);
             secondVariantText.text = current.secondVariant;
 
-            if (Input.GetKeyDown(KeyCode.Space) && !isReady && !current.isNonlinear)
+            if (Input.GetKeyDown(KeyCode.Space) && !isReady && !current.isNonlinear && !isPrinting)
             {
                 isReady = true;
                 index++;

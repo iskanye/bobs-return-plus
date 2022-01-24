@@ -73,24 +73,29 @@ namespace AI
             sm.AI.destination = sm.path[sm.currWay]; //Назначаем ИИ путь
             sm.AI.SearchPath(); //Если надо ищем этот самый путь
 
+            float waitTime = float.PositiveInfinity;
+
             //Если ИИ достиг конца пути, не ищет путь и его время ожидания не равно бесконечности, 
             //то мы назначаем ему время после которого ему надо будет идти к другой точке патруля
             while (true)
             {
-
                 if (sm.CanSeePlayer())
                     sm.ChangeState(sm.chaseState);
 
                 yield return base.Update();
 
-                if (sm.AI.reachedEndOfPath && !sm.AI.pathPending)
-                {
-                    yield return new WaitForSeconds(Random.Range(.5f, 6f));
+                if (sm.AI.reachedEndOfPath && !sm.AI.pathPending && float.IsPositiveInfinity(waitTime))
+                    waitTime = Time.time + Random.Range(.5f, 6);
+                
+                if (Time.time >= waitTime)
+                { 
+                    waitTime = float.PositiveInfinity;                   
                     sm.currWay++; //Обновляем путь
                     sm.currWay %= sm.path.Length; //Вычисляем остаток от деления текущего пути на длины массива путей, чтобы текущий путь не превышал кол-во путей
                     sm.AI.destination = sm.path[sm.currWay]; //Назначаем ИИ путь
                     sm.AI.SearchPath(); //Если надо ищем этот самый путь
                 }
+
                 if (sm.AI.velocity != Vector3.zero)
                     sm.direction = sm.AI.velocity.normalized;
 
