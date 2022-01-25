@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace AI
@@ -39,6 +38,8 @@ namespace AI
         public override IEnumerator Update()
         {
             sm.AI.maxSpeed = sm.spotSpeed; //Меняем ему скорость
+            sm.AI.destination = sm.currentTarget.position; //Меняем ему цель на объект
+            sm.AI.SearchPath(); //Ищем путь до объекта
 
             while (true)
             {
@@ -50,7 +51,9 @@ namespace AI
                 else if (sm.AI.reachedEndOfPath)
                 {
                     sm.ChangeState(sm.searchState);
-                }
+                }                
+                if (sm.AI.velocity != Vector3.zero)
+                    sm.direction = sm.AI.velocity.normalized;
                 yield return base.Update();
             }
         }
@@ -60,20 +63,12 @@ namespace AI
     {
         public PatrolState(AIManager stateManager) : base(stateManager) { }
 
-        public override IEnumerator Start()
-        {
-            yield return new WaitForSeconds(Random.Range(2, 4));
-            yield return base.Start();
-        }
-
-
         public override IEnumerator Update()
         {
             sm.AI.maxSpeed = sm.patrolSpeed; //Меняем скорость на обычную
-            sm.AI.destination = sm.path[sm.currWay]; //Назначаем ИИ путь
-            sm.AI.SearchPath(); //Если надо ищем этот самый путь
 
-            float waitTime = float.PositiveInfinity;
+            float waitTime = Random.Range(2, 4);
+            float time = 0;
 
             //Если ИИ достиг конца пути, не ищет путь и его время ожидания не равно бесконечности, 
             //то мы назначаем ему время после которого ему надо будет идти к другой точке патруля
@@ -83,11 +78,13 @@ namespace AI
                     sm.ChangeState(sm.chaseState);
 
                 yield return base.Update();
+                
+                time += Time.deltaTime;                
 
                 if (sm.AI.reachedEndOfPath && !sm.AI.pathPending && float.IsPositiveInfinity(waitTime))
-                    waitTime = Time.time + Random.Range(.5f, 6);
+                    waitTime = time + Random.Range(.5f, 6);
                 
-                if (Time.time >= waitTime)
+                if (time >= waitTime)
                 { 
                     waitTime = float.PositiveInfinity;                   
                     sm.currWay++; //Обновляем путь

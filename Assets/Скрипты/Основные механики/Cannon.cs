@@ -7,7 +7,6 @@ public class Cannon : MonoBehaviour
     public Vector2 direction;
     public LayerMask player;
     public float force;
-    public LiveCounter lives;
     public bool isReloadable;
     public float reloadDelay;
     public bool haveShoted { set; get; }
@@ -28,7 +27,6 @@ public class Cannon : MonoBehaviour
             {
                 var bull = Instantiate(bullet, transform.position, Quaternion.identity);
                 bull.GetComponent<Rigidbody2D>().AddForce(direction * force, ForceMode2D.Impulse);
-                bull.GetComponent<Damageable>().player = lives; 
                 haveShoted = true;
                 if (prop != null) prop.property = true;
             }
@@ -41,7 +39,6 @@ public class Cannon : MonoBehaviour
                 {
                     var bull = Instantiate(bullet, transform);
                     bull.GetComponent<Rigidbody2D>().AddForce(direction * force, ForceMode2D.Impulse); 
-                    bull.GetComponent<Damageable>().player = lives; 
                     swTime = float.PositiveInfinity;                  
                 }
             }

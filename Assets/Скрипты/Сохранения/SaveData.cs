@@ -1,56 +1,56 @@
 using UnityEngine;
-using System.Xml;
-using System.Xml.Serialization;
+using System;
 using System.Collections.Generic;
 
-[XmlRoot("Data")]
+[Serializable]
 public class SaveData
 {
-    [XmlAttribute("Level")]
     public int level;
-    [XmlAttribute("Lives")]
     public int lives = 3;
-    [XmlArray("Positions"), XmlArrayItem("Position")]
     public List<Position> positionData;
-
-    [XmlArray("Properties"), XmlArrayItem("Property")]
     public List<CustomProperty> customProperties;
+    public List<IdItem> achievements;
+    public List<IdItem> inventory;
 
     public SaveData() { }
 }
 
-[XmlType("PositionData")]
+[Serializable]
 public class Position 
 {
-    [XmlAttribute("Object")]
-    public string objectName;
+    public int id;
 
-    [XmlElement("Position")]
     public Vector3 position;
 
     public Position() { }
 
-    public Position(string name, Vector3 position)
+    public Position(int id, Vector3 position)
     {
-        objectName = name;
+        this.id = id;
         this.position = position;
     }
 }
 
-[XmlType("PropertyData")]
+[Serializable]
 public class CustomProperty
 {
-    [XmlAttribute("Object")]
-    public string objectName;
+    public int id;
 
-    [XmlAttribute("Property")]
     public bool property;
 
     public CustomProperty() { }
 
-    public CustomProperty(string name, bool property)
+    public CustomProperty(int id, bool property)
     {
-        objectName = name;
+        this.id = id;
         this.property = property;
     }
+}
+
+[Serializable]
+public class IdItem
+{
+    public int id;
+
+    public IdItem(int id) => this.id = id;
 }

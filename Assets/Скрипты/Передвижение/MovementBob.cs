@@ -9,18 +9,13 @@ public class MovementBob : MonoBehaviour, IWalkable
     
     Rigidbody2D rig; //Физика обьекта
     Vector2 dir; //Направление
-    AnimationMovementController anim; //Контроллер анимаций
 
     public bool IsWalking => dir != Vector2.zero; 
 
-    public Vector2 Direction => dir;
+    public Vector2 Direction { get; private set; }
 
-    void Awake()
-    { 
-        //Находим компонент физики и анимаций
-        rig = GetComponent<Rigidbody2D>(); 
-        anim = GetComponent<AnimationMovementController>();
-    }
+    //Находим компонент физики
+    void Awake() => rig = GetComponent<Rigidbody2D>(); 
 
     void Update()
     {
@@ -30,6 +25,7 @@ public class MovementBob : MonoBehaviour, IWalkable
             Input.GetKey(KeyCode.W) ? 1 : Input.GetKey(KeyCode.S) ? -1 : 0);
         //ЗАМЕТКА: тут я использую тернарную операцию для сокращения и упрощения кода: условие ? выражение если верно : выражение иначе
         //Отправляем данные в контроллер анимаций
+        if (IsWalking) Direction = dir;
     }
 
     void FixedUpdate()

@@ -1,55 +1,51 @@
 using UnityEngine;
 using System;
 using System.IO;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
 using System.Collections.Generic;
 
 public class SaveLoad
 {
     public async static void Save(SaveData data)
     {
-        Type[] customTypes = { typeof(Position), typeof(CustomProperty) };
-        var root = new XmlSerializer(typeof(SaveData), customTypes);
-
-        using (var file = new FileStream(Application.dataPath + "/Saves/save.xml", FileMode.Create)) await Task.Run(() => root.Serialize(file, data));
+        using (var file = new StreamWriter(Application.dataPath + "/Saves/save.json", false)) await file.WriteLineAsync(JsonUtility.ToJson(data));
     }
 
     public static SaveData Load()
     {
-        Type[] customTypes = { typeof(Position), typeof(CustomProperty) };
-        var root = new XmlSerializer(typeof(SaveData), customTypes);
         SaveData result;
         result = new SaveData();
 
         try
         {
-            using (var file = new FileStream(Application.dataPath + "/Saves/save.xml", FileMode.OpenOrCreate)) result = (SaveData)root.Deserialize(file);
+            using (var file = new StreamReader(Application.dataPath + "/Saves/save.json")) result = JsonUtility.FromJson<SaveData>(file.ReadToEnd());
         }
 
         catch
         {
             result.customProperties = new List<CustomProperty>();
             result.positionData = new List<Position>();
+            result.achievements = new List<IdItem>();
+            result.inventory = new List<IdItem>();
             result.level = 0;
         }
 
         return result;
     }
 
-    public async static void SaveAchievement(AchievementJson[] achievements)
+    public async static void SaveJson(IdItem[] data, string fileName)
     {
-        using (var file = new StreamWriter(Application.dataPath + "/Saves/achievements.json", false)) await file.WriteLineAsync(JsonHelper.ToJson(achievements));
+        using (var file = new StreamWriter(Application.dataPath + "/Saves/" + fileName + ".json", false)) await file.WriteLineAsync(JsonHelper.ToJson(data));
     }
 
-    public static AchievementJson[] GetAchievements()
+    public static IdItem[] LoadJson(string fileName)
     {
-        AchievementJson[] result;
+        IdItem[] result;
 
         try
         {
-            using (var file = new StreamReader(Application.dataPath + "/Saves/achievements.json")) result = JsonHelper.FromJson<AchievementJson>(file.ReadToEnd());
+            using (var file = new StreamReader(Application.dataPath + "/Saves/" + fileName + ".json")) result = JsonHelper.FromJson<IdItem>(file.ReadToEnd());
         }
+
         catch
         {
             result = null;

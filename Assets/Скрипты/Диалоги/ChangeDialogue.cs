@@ -12,7 +12,7 @@ public class ChangeDialogue : MonoBehaviour
     
     void Awake() 
     {
-        if (uninteractiveEvents.Length == 0) uninteractiveEvents = new UnityEvent[uninteractiveDialogue.dialogues.Length];
+        if (uninteractiveEvents.Length <= 0) uninteractiveEvents = new UnityEvent[uninteractiveDialogue.dialogues.Length];
     }
 
     public void Change()
@@ -22,12 +22,14 @@ public class ChangeDialogue : MonoBehaviour
             if (uninteractiveActivator != null) 
             {
                 uninteractiveActivator.dialogues = uninteractiveDialogue;
+                uninteractiveActivator.events = uninteractiveEvents;
                 return;
             }
-            
             List<Dialogue> dial = new List<Dialogue>();
             var cache = uninteractiveDialogue.dialogues;
+
             for (int i = 0; i < cache.Length; i++) dial.Add(new Dialogue(cache[i].character, cache[i].text, uninteractiveEvents[i]));
+
             interactiveActivator.dialogues = dial.ToArray();
             return;
         }

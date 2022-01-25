@@ -46,6 +46,7 @@ public class AIManager : MonoBehaviour, IWalkable
         patrolState = new PatrolState(this);
         chaseState = new ChaseState(this);
         searchState = new SearchState(this);
+
         if (isPatrol)
             ChangeState(searchState);
     }
@@ -59,6 +60,7 @@ public class AIManager : MonoBehaviour, IWalkable
 
         //Проверяем угол между игроком и ИИ
         Vector3 dirToPlayer = (check.transform.position - transform.position).normalized;
+
         if (Mathf.Acos(Vector2.Dot(direction, dirToPlayer)) * Mathf.Rad2Deg < viewAngle * .5f)
         {
             //Если угол укладывается в поле зрения, то мы проверяем на наличие препятствий между ИИ и игроком
@@ -108,6 +110,7 @@ public class AIManager : MonoBehaviour, IWalkable
         {
             Gizmos.color = Color.green;
             Vector2 lastPoint = path[0];
+
             foreach (var currentPoint in path)
             {
                 Gizmos.DrawLine(lastPoint, currentPoint);
@@ -115,6 +118,7 @@ public class AIManager : MonoBehaviour, IWalkable
                 lastPoint = currentPoint;
                 Gizmos.color = Color.yellow;
             }
+            
             Gizmos.DrawLine(lastPoint, path[0]);
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(lastPoint, .2f);

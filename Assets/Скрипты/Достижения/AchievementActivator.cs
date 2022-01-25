@@ -1,9 +1,6 @@
-using UnityEngine;
-
-public class AchievementActivator : MonoBehaviour
+public class AchievementActivator : UnityEngine.MonoBehaviour
 {
     public Achievement achievement;
-    public AchievementSystem system;
 
-    public void Activate() => system.ShowAchievement(achievement);
+    public void Activate() => AchievementSystem.Active.ShowAchievement(achievement);
 }

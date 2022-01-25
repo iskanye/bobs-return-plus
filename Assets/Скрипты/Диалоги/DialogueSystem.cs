@@ -14,6 +14,8 @@ public class DialogueSystem : MonoBehaviour
     public Button secondVariant;
     public TMP_Text secondVariantText;
 
+    public static DialogueSystem Active { get; private set; }
+
     Dialogue[] dialogues;
     Dialogue current;
     MovementBob player;
@@ -21,6 +23,12 @@ public class DialogueSystem : MonoBehaviour
     bool isDialogue;
     bool isPrinting;
     bool isReady = true;
+
+    void Awake()
+    { 
+        Active = this;        
+        player = FindObjectOfType<MovementBob>();
+    }
 
     void Update()
     {
@@ -93,7 +101,6 @@ public class DialogueSystem : MonoBehaviour
         this.dialogues = dialogues;
         index = 0;
         isReady = true;
-        player = FindObjectOfType<MovementBob>();
         player.enabled = false;
         player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         StartCoroutine(SetDialogue(true));

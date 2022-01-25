@@ -1,8 +1,4 @@
-using UnityEngine;
-
-public class Damageable : MonoBehaviour
+public class Damageable : UnityEngine.MonoBehaviour
 {
-    public LiveCounter player;
-
-    public void Damage() => player.LoseLife();
+    public void Damage() => LiveCounter.LoseLife();
 }

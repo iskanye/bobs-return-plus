@@ -9,31 +9,30 @@ public class AchievementSystem : MonoBehaviour
     public TMP_Text description;
     public UnityEngine.UI.Image icon;
 
+    public static AchievementSystem Active { get; private set; }
+
     Animator animator;
-    List<AchievementJson> achievements;
+    SceneData data;
 
-    void Awake()
+    void Start()
     {
+        data = SceneData.Active;
+        Active = this;
         animator = GetComponent<Animator>();
-        var ach = SaveLoad.GetAchievements();
-
-        if (ach != null) achievements = ach.ToList();
-
-        else achievements = new List<AchievementJson>();
     }
 
     public void ShowAchievement(Achievement achievement)
     {
         var ach = achievement;
+        var id = new IdItem(ach.id);
 
-        if (!achievements.Exists(a => a.id == ach.id))
+        if (!data.data.achievements.Contains(id))
         {
             title.text = ach.title;
             description.text = ach.description;
             icon.sprite = ach.icon;
             StartCoroutine(PlayAnimation());
-            achievements.Add(new AchievementJson(ach.id));
-            SaveLoad.SaveAchievement(achievements.ToArray());
+            data.data.achievements.Add(id);
         }
     }
 

@@ -7,8 +7,12 @@ public class LiveCounter : MonoBehaviour
     public new CameraShake camera;
     public int livesRemaining;
 
+    public static LiveCounter Self { get; private set; }
+
     bool isInvincible = false;
     float invincibleTime = float.PositiveInfinity;
+
+    void Awake() => LiveCounter.Self = this;
 
     private void Update()
     {
@@ -24,21 +28,23 @@ public class LiveCounter : MonoBehaviour
         }
     }
     
-    public void LoseLife()
+    public static void LoseLife()
     {
-        if (isInvincible)
+        var self = Self;
+
+        if (self.isInvincible)
         {
             Debug.Log("�������");
             return;
         } 
 
-        livesRemaining--;
+        self.livesRemaining--;
 
-        camera.StartShake();
+        self.camera.StartShake();
 
-        lives[livesRemaining].gameObject.SetActive(false); 
-        isInvincible = true;  
+        self.lives[self.livesRemaining].gameObject.SetActive(false); 
+        self.isInvincible = true;  
 
-        if (livesRemaining <= 0) Application.Quit();
+        if (self.livesRemaining <= 0) Application.Quit();
     }
 }
