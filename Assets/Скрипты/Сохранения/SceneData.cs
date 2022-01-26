@@ -1,11 +1,11 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using static UnityEngine.SceneManagement.SceneManager;
 
 public class SceneData : MonoBehaviour
 {
     public TMPro.TMP_Text savingText;
-
     
     public SaveData data { get; private set; }
 
@@ -22,6 +22,8 @@ public class SceneData : MonoBehaviour
         properties = FindObjectsOfType<PropertyHolder>();
         lives = FindObjectOfType<LiveCounter>();      
         data = SaveLoad.Load();
+
+        if (data.level != GetActiveScene().buildIndex) return;
 
         foreach (var pos in data.positionData) positions.First(i => i.id == pos.id).gameObject.transform.position = pos.position;
 
@@ -41,7 +43,7 @@ public class SceneData : MonoBehaviour
     {
         data.customProperties = new List<CustomProperty>();
         data.positionData = new List<Position>();
-        data.level = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
+        data.level = GetActiveScene().buildIndex;
         data.lives = lives.livesRemaining;
 
         foreach (var i in positions) data.positionData.Add(new Position(i.id, i.gameObject.transform.position));

@@ -1,7 +1,6 @@
 public class PositionHolder : UnityEngine.MonoBehaviour
 {
-    public int id
-    {
-        get => gameObject.GetHashCode();
-    }
+    public string id;
+    
+    void Reset() => id = System.Guid.NewGuid().ToString();
 }

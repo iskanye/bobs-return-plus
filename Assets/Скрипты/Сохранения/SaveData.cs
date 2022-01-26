@@ -18,13 +18,13 @@ public class SaveData
 [Serializable]
 public class Position 
 {
-    public int id;
+    public string id;
 
     public Vector3 position;
 
     public Position() { }
 
-    public Position(int id, Vector3 position)
+    public Position(string id, Vector3 position)
     {
         this.id = id;
         this.position = position;
@@ -34,13 +34,13 @@ public class Position
 [Serializable]
 public class CustomProperty
 {
-    public int id;
+    public string id;
 
     public bool property;
 
     public CustomProperty() { }
 
-    public CustomProperty(int id, bool property)
+    public CustomProperty(string id, bool property)
     {
         this.id = id;
         this.property = property;

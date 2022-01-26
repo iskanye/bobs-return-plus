@@ -5,6 +5,7 @@ public class LiveCounter : MonoBehaviour
 {
     public Image[] lives;
     public new CameraShake camera;
+    public int maxLives = 3;
     public int livesRemaining;
 
     public static LiveCounter Self { get; private set; }
@@ -14,12 +15,14 @@ public class LiveCounter : MonoBehaviour
 
     void Awake() => LiveCounter.Self = this;
 
-    private void Update()
+    void Update()
     {
         // ������� ��� �����
-        if (Input.GetKeyDown(KeyCode.K)) LoseLife();
+        if (Input.GetKeyDown(KeyCode.K)) 
+            LoseLife();
 
-        if (float.IsPositiveInfinity(invincibleTime) && isInvincible) invincibleTime = Time.time + 2;
+        if (float.IsPositiveInfinity(invincibleTime) && isInvincible) 
+            invincibleTime = Time.time + 2;
 
         if (Time.time >= invincibleTime) 
         {
@@ -33,10 +36,7 @@ public class LiveCounter : MonoBehaviour
         var self = Self;
 
         if (self.isInvincible)
-        {
-            Debug.Log("�������");
             return;
-        } 
 
         self.livesRemaining--;
 
@@ -45,6 +45,19 @@ public class LiveCounter : MonoBehaviour
         self.lives[self.livesRemaining].gameObject.SetActive(false); 
         self.isInvincible = true;  
 
-        if (self.livesRemaining <= 0) Application.Quit();
+        if (self.livesRemaining == 0) Application.Quit();
+    }
+
+    public static bool Heal()
+    {
+        var self = Self;
+
+        if (self.livesRemaining == self.maxLives) 
+            return false;
+
+        self.lives[self.livesRemaining].gameObject.SetActive(true); 
+        self.livesRemaining++;
+
+        return true;
     }
 }

@@ -6,7 +6,7 @@ public class InventorySystem : MonoBehaviour
 {
     public int maxItems;
     public UnityEngine.UI.Image[] icons;
-    public TMPro.TMP_Text[] labels; 
+    public TMPro.TMP_Text[] labels;
     public Item[] allItems;
 
     public static InventorySystem Active { get; private set; }
@@ -22,7 +22,7 @@ public class InventorySystem : MonoBehaviour
         items = new List<Item>();
 
         if (inventory != null) foreach (var i in inventory)
-            items.Add(allItems.First(p => p.id == i.id));
+                items.Add(allItems.First(p => p.id == i.id));
     }
 
     void Update()
@@ -31,11 +31,11 @@ public class InventorySystem : MonoBehaviour
         {
             if (i < items.Count)
             {
-                icons[i].sprite = items[i].icon;                
+                icons[i].sprite = items[i].icon;
                 icons[i].color = Color.white;
                 labels[i].text = items[i].name;
             }
-            else 
+            else
             {
                 icons[i].color = new Color(0, 0, 0, 0);
                 labels[i].text = "";
@@ -44,10 +44,24 @@ public class InventorySystem : MonoBehaviour
     }
 
     public void AddItem(Item item)
-    {     
+    {
         if (items.Count >= maxItems)
             return;
         items.Add(item);
         data.data.inventory.Add(new IdItem(item.id));
+    }
+
+    public void Use(int item)
+    {
+        if (items.Count < item)
+            return;
+
+        try
+        {
+            if (items[item].Action())
+                items.RemoveAt(item);
+        }
+
+       catch { return; }
     }
 }
