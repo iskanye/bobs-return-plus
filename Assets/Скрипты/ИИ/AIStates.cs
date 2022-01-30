@@ -48,12 +48,13 @@ namespace AI
                     sm.AI.destination = sm.currentTarget.position; //Меняем ему цель на объект
                     sm.AI.SearchPath(); //Ищем путь до объекта
                 }
+
                 else if (sm.AI.reachedEndOfPath)
-                {
                     sm.ChangeState(sm.searchState);
-                }                
+
                 if (sm.AI.velocity != Vector3.zero)
                     sm.direction = sm.AI.velocity.normalized;
+
                 yield return base.Update();
             }
         }
@@ -110,18 +111,22 @@ namespace AI
             float time = 0;
             Vector2 startDirection = sm.direction;
             int sign = Random.Range(0, 2) * 2 - 1; /*рандом -1 или 1*/
+            
             while (time < 2f)
             {
                 var rotation = Mathf.Lerp(0f, 360f, time / 2f);
                 sm.direction = Quaternion.Euler(0, 0, sign * rotation) * startDirection;
                 time += Time.deltaTime;
+
                 if (sm.CanSeePlayer())
                 {
                     sm.ChangeState(sm.chaseState);
                     yield break;
                 }
+
                 yield return base.Update();
             }
+
             if (sm.isPatrol)
                 sm.ChangeState(sm.patrolState);
 

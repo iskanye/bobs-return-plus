@@ -1,11 +1,9 @@
 using UnityEngine;
-using UnityEngine.Events;
 
-public class Trigger : MonoBehaviour
+public class Trigger : ActionBase
 {
     public LayerMask playerMask; 
     public bool isOnStay;
-    public UnityEvent action; 
 
     void OnTriggerEnter2D(Collider2D c) 
     {

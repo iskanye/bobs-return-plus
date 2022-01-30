@@ -5,10 +5,11 @@ using System.Collections.Generic;
 [Serializable]
 public class SaveData
 {
-    public int level;
+    public int level = 0;
     public int lives = 3;
-    public List<Position> positionData;
+    public List<Position> positions;
     public List<CustomProperty> customProperties;
+    public List<CustomProperty> globalProperties;
     public List<IdItem> achievements;
     public List<IdItem> inventory;
 

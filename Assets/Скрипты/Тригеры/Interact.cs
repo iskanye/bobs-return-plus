@@ -1,10 +1,9 @@
 using UnityEngine;
 
 //Скрипт для обьектов, с которыми можно взаимодейвствовать
-public class Interact : MonoBehaviour
+public class Interact : ActionBase
 {
     public LayerMask playerMask; //Слой игрока
-    public UnityEngine.Events.UnityEvent action; //Действиее при взаимодействии
 
     void OnTriggerStay2D(Collider2D c) 
     {

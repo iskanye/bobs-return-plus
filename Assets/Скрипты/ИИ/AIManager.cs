@@ -47,8 +47,7 @@ public class AIManager : MonoBehaviour, IWalkable
         chaseState = new ChaseState(this);
         searchState = new SearchState(this);
 
-        if (isPatrol)
-            ChangeState(searchState);
+        ChangeState(searchState);
     }
 
     public bool CanSeePlayer()

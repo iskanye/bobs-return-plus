@@ -22,12 +22,21 @@ public class SaveLoad
         catch
         {
             result.customProperties = new List<CustomProperty>();
-            result.positionData = new List<Position>();
+            result.globalProperties = new List<CustomProperty>();
+            result.positions = new List<Position>();
             result.achievements = new List<IdItem>();
             result.inventory = new List<IdItem>();
-            result.level = 0;
         }
 
         return result;
+    }
+
+    public static void DeleteSaves()
+    {
+        try
+        {
+            File.Delete(Application.persistentDataPath + "/save.json");
+        }
+        catch {}
     }
 }
