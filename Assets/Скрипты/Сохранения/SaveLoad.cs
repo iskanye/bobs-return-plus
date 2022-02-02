@@ -1,8 +1,8 @@
-using UnityEngine;
-using System.IO;
 using System.Collections.Generic;
+using System.IO;
+using UnityEngine;
 
-public class SaveLoad
+public static class SaveLoad
 {
     public async static void Save(SaveData data)
     {
@@ -19,14 +19,7 @@ public class SaveLoad
             using (var file = new StreamReader(Application.persistentDataPath + "/save.json")) result = JsonUtility.FromJson<SaveData>(file.ReadToEnd());
         }
 
-        catch
-        {
-            result.customProperties = new List<CustomProperty>();
-            result.globalProperties = new List<CustomProperty>();
-            result.positions = new List<Position>();
-            result.achievements = new List<IdItem>();
-            result.inventory = new List<IdItem>();
-        }
+        catch { }
 
         return result;
     }
@@ -37,6 +30,6 @@ public class SaveLoad
         {
             File.Delete(Application.persistentDataPath + "/save.json");
         }
-        catch {}
+        catch { }
     }
 }

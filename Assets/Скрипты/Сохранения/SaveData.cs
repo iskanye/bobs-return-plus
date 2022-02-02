@@ -5,7 +5,7 @@ using System.Collections.Generic;
 [Serializable]
 public class SaveData
 {
-    public int level = 0;
+    public int level;
     public int lives = 3;
     public List<Position> positions;
     public List<CustomProperty> customProperties;
@@ -13,7 +13,14 @@ public class SaveData
     public List<IdItem> achievements;
     public List<IdItem> inventory;
 
-    public SaveData() { }
+    public SaveData() 
+    {
+        customProperties = new List<CustomProperty>();
+        globalProperties = new List<CustomProperty>();
+        positions = new List<Position>();
+        achievements = new List<IdItem>();
+        inventory = new List<IdItem>();
+    }
 }
 
 [Serializable]

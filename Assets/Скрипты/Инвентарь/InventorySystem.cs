@@ -62,6 +62,6 @@ public class InventorySystem : MonoBehaviour
                 items.RemoveAt(item);
         }
 
-       catch { return; }
+        catch { }
     }
 }

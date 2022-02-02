@@ -6,8 +6,7 @@ public class CameraShake : MonoBehaviour
     public new CinemachineVirtualCamera camera;
 
     CinemachineBasicMultiChannelPerlin noise;
-    bool isShake;
-    float shakeDelay;
+    float shakeDelay = float.NegativeInfinity;
     float shakeTime;
     float amplitude;
     float frequency;
@@ -17,27 +16,13 @@ public class CameraShake : MonoBehaviour
 
     void Update()
     {
-        if (isShake)
-        {
-            if (float.IsPositiveInfinity(shakeDelay)) shakeDelay = Time.time + shakeTime;
-
-            noise.m_FrequencyGain = Mathf.Lerp(noise.m_FrequencyGain, frequency, sharpness);
-            noise.m_AmplitudeGain = Mathf.Lerp(noise.m_AmplitudeGain, frequency, sharpness);
-            
-            if (Time.time >= shakeDelay) isShake = false;
-        }
-
-        else
-        {
-            shakeDelay = float.PositiveInfinity;
-            noise.m_FrequencyGain = Mathf.Lerp(noise.m_FrequencyGain, 0, sharpness);
-            noise.m_AmplitudeGain = Mathf.Lerp(noise.m_AmplitudeGain, 0, sharpness);
-        }
+        noise.m_FrequencyGain = Mathf.Lerp(noise.m_FrequencyGain, Time.time >= shakeDelay ? 0 : frequency, sharpness);
+        noise.m_AmplitudeGain = Mathf.Lerp(noise.m_AmplitudeGain, Time.time >= shakeDelay ? 0 : amplitude, sharpness);
     }
 
     public void StartShake(float amplitude = 10, float frequency = 10, float sharpness = .1f, float shakeTime = .4f)
     {
-        isShake = true;
+        shakeDelay = Time.time + shakeTime;
         this.amplitude = amplitude;
         this.frequency = frequency;
         this.sharpness = sharpness;

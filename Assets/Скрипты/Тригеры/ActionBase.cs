@@ -1,4 +1,6 @@
-public abstract class ActionBase : UnityEngine.MonoBehaviour 
+using UnityEngine;
+
+public abstract class ActionBase : MonoBehaviour 
 {
-    public UnityEngine.Events.UnityEvent action;
+    public UnityEngine.Events.UnityEvent<GameObject> action;
 }

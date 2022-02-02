@@ -8,6 +8,6 @@ public class Interact : ActionBase
     void OnTriggerStay2D(Collider2D c) 
     {
         //Если игрок находится в зоне триггера и он нажал спейс, то мы выполняем действие выше
-        if (1 << c.gameObject.layer == playerMask.value && Input.GetKeyDown(KeyCode.Space)) action.Invoke(); 
+        if (((1 << c.gameObject.layer) | playerMask) == playerMask && Input.GetKeyDown(KeyCode.Space)) action.Invoke(c.gameObject); 
     }
 }

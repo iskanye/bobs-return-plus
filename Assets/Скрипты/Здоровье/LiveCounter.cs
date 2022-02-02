@@ -10,10 +10,10 @@ public class LiveCounter : MonoBehaviour
 
     public static LiveCounter Self { get; private set; }
 
-    bool isInvincible = false;
+    bool isInvincible;
     float invincibleTime = float.PositiveInfinity;
 
-    void Awake() => LiveCounter.Self = this;
+    void Awake() => Self = this;
 
     void Update()
     {

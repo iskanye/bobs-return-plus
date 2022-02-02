@@ -40,7 +40,7 @@ public class AIManager : MonoBehaviour, IWalkable
     void Awake()
     {
         //Получаем скрипт поиска пути и контроллер анимаций
-        ai = GetComponent<AILerp>();
+        ai = GetComponent<IAstarAI>();
         anim = GetComponent<AnimationMovementController>();
 
         patrolState = new PatrolState(this);
@@ -124,5 +124,3 @@ public class AIManager : MonoBehaviour, IWalkable
         }
     }
 }
-
-

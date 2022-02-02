@@ -125,6 +125,7 @@ public class DialogueSystem : MonoBehaviour
                     index = 0;
                 }
                 break;
+
             case 2:
                 if (current.isSecondVariantStops)
                 {

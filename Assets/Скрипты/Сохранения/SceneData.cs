@@ -28,6 +28,7 @@ public class SceneData : MonoBehaviour
 
         if (data.level != GetActiveScene().buildIndex) 
         {
+            data = new SaveData();
             return;
         }
 
@@ -54,7 +55,7 @@ public class SceneData : MonoBehaviour
 
         foreach (var pr in globalProperties)
         {
-            pr.data = this;
+            pr.Data = this;
 
             foreach (var prop in data.globalProperties)
                 if (pr.id == prop.id)
@@ -100,6 +101,7 @@ public class SceneData : MonoBehaviour
         yield return new WaitForSecondsRealtime(3);
         savingText.text = "";
     }
+
     void ResetData() 
     {
         data.customProperties = new List<CustomProperty>();

@@ -19,6 +19,19 @@ public class AnimationMovementController : MonoBehaviour
         animator.SetFloat("Direction X", movingObject.Direction.x);
         animator.SetFloat("Direction Y", movingObject.Direction.y);
     }
+
+    public void Play(string animation) => animator.Play(animation);
+
+    public System.Collections.IEnumerator WaitForAnimationToStop(string animation)
+    {
+        var state = animator.GetCurrentAnimatorStateInfo(0);
+
+        while (!state.IsName(animation))
+        {
+            yield return null;
+            state = animator.GetCurrentAnimatorStateInfo(0);
+        }
+
+        yield return new WaitForSeconds(state.length);
+    }
 }
-
-
