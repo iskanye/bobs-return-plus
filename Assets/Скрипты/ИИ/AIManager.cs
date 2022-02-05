@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 using Pathfinding;
 using AI;
 using System;
@@ -9,7 +8,6 @@ public class AIManager : MonoBehaviour, IWalkable
 {
     private LayerMask obstacles = 1 << 3; //Слой с препятствиями
     private LayerMask player = 1 << 6; //Слой с игроком
-    //public float speed; //Скорость
     public float seeRange; //Дальность зрения
     public float spotSpeed; //Скорость движения(При погоне)
     public Vector2 direction = Vector2.right;
@@ -18,10 +16,8 @@ public class AIManager : MonoBehaviour, IWalkable
     public float patrolSpeed; //Скорость движения(При патрулировании)
     public Vector2[] path; //Массив пути(для патрульного ИИ)
 
-    private AnimationMovementController anim; //Контроллер анимаций
-    private IAstarAI ai; //Скрипт поиска пути
-    public AnimationMovementController Anim => anim;
-    public IAstarAI AI => ai;
+    public AnimationMovementController Anim { get; private set; }
+    public IAstarAI AI { get; private set; }
 
     public bool IsWalking => AI.velocity != Vector3.zero;
 
@@ -34,14 +30,14 @@ public class AIManager : MonoBehaviour, IWalkable
     [HideInInspector] public PatrolState patrolState;
     [HideInInspector] public ChaseState chaseState;
     [HideInInspector] public SearchState searchState;
-    [SerializeField] private AIState currentState;
+    [SerializeField] private State<AIManager> currentState;
 
 
     void Awake()
     {
         //Получаем скрипт поиска пути и контроллер анимаций
-        ai = GetComponent<IAstarAI>();
-        anim = GetComponent<AnimationMovementController>();
+        AI = GetComponent<IAstarAI>();
+        Anim = GetComponent<AnimationMovementController>();
 
         patrolState = new PatrolState(this);
         chaseState = new ChaseState(this);
@@ -88,7 +84,7 @@ public class AIManager : MonoBehaviour, IWalkable
         ChaseTarget(noise);
     }
 
-    public void ChangeState(AIState state)
+    public void ChangeState(State<AIManager> state)
     {
         if (currentState != null)
             StartCoroutine(chaseState.Stop());

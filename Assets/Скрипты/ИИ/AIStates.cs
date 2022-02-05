@@ -3,70 +3,42 @@ using UnityEngine;
 
 namespace AI
 {
-    public abstract class AIState
-    {
-        protected AIManager sm;
-        public Coroutine UpdateCoroutine;
-        public AIState(AIManager stateManager)
-        {
-            sm = stateManager;
-        }
-
-        public virtual IEnumerator Start()
-        {
-            sm.StartCoroutine(Update());
-            yield break;
-        }
-        
-        //Считать как за один проход по циклу. Если нужен сам цикл - использовать while(true)
-        public virtual IEnumerator Update() 
-        {
-            yield break;
-        }
-
-        public virtual IEnumerator Stop()
-        {
-            sm.StopAllCoroutines();
-            yield break;
-        }
-    }
-
-    public class ChaseState : AIState
+    public class ChaseState : State<AIManager>
     {
         public ChaseState(AIManager stateManager) : base(stateManager) { }
 
         public override IEnumerator Update()
         {
-            sm.AI.maxSpeed = sm.spotSpeed; //Меняем ему скорость
-            sm.AI.destination = sm.currentTarget.position; //Меняем ему цель на объект
-            sm.AI.SearchPath(); //Ищем путь до объекта
+            mn.AI.maxSpeed = mn.spotSpeed; //Меняем ему скорость
+            mn.AI.destination = mn.currentTarget.position; //Меняем ему цель на объект
+            mn.AI.SearchPath(); //Ищем путь до объекта
 
             while (true)
             {
-                if (sm.CanSeePlayer())
+                if (mn.CanSeePlayer())
                 {
-                    sm.AI.destination = sm.currentTarget.position; //Меняем ему цель на объект
-                    sm.AI.SearchPath(); //Ищем путь до объекта
+                    mn.AI.destination = mn.currentTarget.position; //Меняем ему цель на объект
+                    mn.AI.SearchPath(); //Ищем путь до объекта
                 }
 
-                else if (sm.AI.reachedEndOfPath)
-                    sm.ChangeState(sm.searchState);
+                else if (mn.AI.reachedEndOfPath)
+                    mn.ChangeState(mn.searchState);
 
-                if (sm.AI.velocity != Vector3.zero)
-                    sm.direction = sm.AI.velocity.normalized;
+                if (mn.AI.velocity != Vector3.zero)
+                    mn.direction = mn.AI.velocity.normalized;
 
                 yield return base.Update();
             }
         }
     }
 
-    public class PatrolState : AIState
+    public class PatrolState : State<AIManager>
     {
         public PatrolState(AIManager stateManager) : base(stateManager) { }
 
         public override IEnumerator Update()
         {
-            sm.AI.maxSpeed = sm.patrolSpeed; //Меняем скорость на обычную
+            mn.AI.maxSpeed = mn.patrolSpeed; //Меняем скорость на обычную
 
             float waitTime = Random.Range(2, 4);
             float time = 0;
@@ -75,60 +47,63 @@ namespace AI
             //то мы назначаем ему время после которого ему надо будет идти к другой точке патруля
             while (true)
             {
-                if (sm.CanSeePlayer())
-                    sm.ChangeState(sm.chaseState);
+                if (mn.CanSeePlayer())
+                {
+                    mn.ChangeState(mn.chaseState);
+                    yield break;
+                }
 
                 yield return base.Update();
                 
                 time += Time.deltaTime;                
 
-                if (sm.AI.reachedEndOfPath && !sm.AI.pathPending && float.IsPositiveInfinity(waitTime))
+                if (mn.AI.reachedEndOfPath && !mn.AI.pathPending && float.IsPositiveInfinity(waitTime))
                     waitTime = time + Random.Range(.5f, 6);
                 
                 if (time >= waitTime)
                 { 
                     waitTime = float.PositiveInfinity;                   
-                    sm.currWay++; //Обновляем путь
-                    sm.currWay %= sm.path.Length; //Вычисляем остаток от деления текущего пути на длины массива путей, чтобы текущий путь не превышал кол-во путей
-                    sm.AI.destination = sm.path[sm.currWay]; //Назначаем ИИ путь
-                    sm.AI.SearchPath(); //Если надо ищем этот самый путь
+                    mn.currWay++; //Обновляем путь
+                    mn.currWay %= mn.path.Length; //Вычисляем остаток от деления текущего пути на длины массива путей, чтобы текущий путь не превышал кол-во путей
+                    mn.AI.destination = mn.path[mn.currWay]; //Назначаем ИИ путь
+                    mn.AI.SearchPath(); //Если надо ищем этот самый путь
                 }
 
-                if (sm.AI.velocity != Vector3.zero)
-                    sm.direction = sm.AI.velocity.normalized;
+                if (mn.AI.velocity != Vector3.zero)
+                    mn.direction = mn.AI.velocity.normalized;
 
                 yield return base.Update();
             }
         }
     }
 
-    public class SearchState : AIState
+    public class SearchState : State<AIManager>
     {
         public SearchState(AIManager stateManager) : base(stateManager) { }
 
         public override IEnumerator Start()
         {
             float time = 0;
-            Vector2 startDirection = sm.direction;
+            Vector2 startDirection = mn.direction;
             int sign = Random.Range(0, 2) * 2 - 1; /*рандом -1 или 1*/
             
             while (time < 2f)
             {
                 var rotation = Mathf.Lerp(0f, 360f, time / 2f);
-                sm.direction = Quaternion.Euler(0, 0, sign * rotation) * startDirection;
+                mn.direction = Quaternion.Euler(0, 0, sign * rotation) * startDirection;
                 time += Time.deltaTime;
 
-                if (sm.CanSeePlayer())
+                if (mn.CanSeePlayer())
                 {
-                    sm.ChangeState(sm.chaseState);
+                    mn.ChangeState(mn.chaseState);
                     yield break;
                 }
 
                 yield return base.Update();
             }
 
-            if (sm.isPatrol)
-                sm.ChangeState(sm.patrolState);
+            if (mn.isPatrol)
+                mn.ChangeState(mn.patrolState);
 
             yield return base.Update();
         }

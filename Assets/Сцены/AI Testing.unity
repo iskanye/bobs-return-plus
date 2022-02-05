@@ -816,7 +816,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1050081, y: 1}
+    m_SensorSize: {x: 1.46042, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7747,6 +7747,181 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852414576}
   m_CullTransparentMesh: 1
+--- !u!1 &1892688156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1892688160}
+  - component: {fileID: 1892688159}
+  - component: {fileID: 1892688158}
+  - component: {fileID: 1892688157}
+  m_Layer: 0
+  m_Name: "\u0434\u0438\u0430\u043B\u043E\u0433"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1892688157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892688156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b03eac781278d52aa4afb457a70da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1892688158}
+        m_TargetAssemblyTypeName: DialogueActivator, Assembly-CSharp
+        m_MethodName: Dialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &1892688158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892688156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cdd3421eba6d11b287b7ecac324932b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - character: "\u0430\u0431\u043B\u044F"
+    text: "\u0430\u0431\u043E\u0431\u0430"
+    action:
+      m_PersistentCalls:
+        m_Calls: []
+    isNonlinear: 1
+    firstVariant: "\u0430"
+    isFirstVariantStops: 0
+    firstVariantAction:
+      m_PersistentCalls:
+        m_Calls: []
+    firstVariantContinuation:
+    - character: "\u044F \u043B\u044E\u0431\u043B\u044E"
+      text: "\u0431\u0435\u0431\u0440\u0443"
+      action:
+        m_PersistentCalls:
+          m_Calls: []
+      isNonlinear: 0
+      firstVariant: 
+      isFirstVariantStops: 0
+      firstVariantAction:
+        m_PersistentCalls:
+          m_Calls: []
+      firstVariantContinuation: []
+      secondVariant: 
+      isSecondVariantStops: 0
+      secondVariantAction:
+        m_PersistentCalls:
+          m_Calls: []
+      secondVariantContinuation: []
+    secondVariant: "\u0431"
+    isSecondVariantStops: 0
+    secondVariantAction:
+      m_PersistentCalls:
+        m_Calls: []
+    secondVariantContinuation:
+    - character: "\u0431\u0435\u0431\u0440\u0430"
+      text: "\u0431\u043B\u044F"
+      action:
+        m_PersistentCalls:
+          m_Calls: []
+      isNonlinear: 0
+      firstVariant: 
+      isFirstVariantStops: 0
+      firstVariantAction:
+        m_PersistentCalls:
+          m_Calls: []
+      firstVariantContinuation: []
+      secondVariant: 
+      isSecondVariantStops: 0
+      secondVariantAction:
+        m_PersistentCalls:
+          m_Calls: []
+      secondVariantContinuation: []
+    - character: "\u0431\u0443\u0431\u0443"
+      text: "\u0431\u0435\u0431\u0435"
+      action:
+        m_PersistentCalls:
+          m_Calls: []
+      isNonlinear: 0
+      firstVariant: 
+      isFirstVariantStops: 0
+      firstVariantAction:
+        m_PersistentCalls:
+          m_Calls: []
+      firstVariantContinuation: []
+      secondVariant: 
+      isSecondVariantStops: 0
+      secondVariantAction:
+        m_PersistentCalls:
+          m_Calls: []
+      secondVariantContinuation: []
+--- !u!61 &1892688159
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892688156}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.4823816, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5929526, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1892688160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892688156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1984909082
 MonoBehaviour:
   m_ObjectHideFlags: 0

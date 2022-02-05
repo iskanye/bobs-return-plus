@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
 using System.Collections;
+using Dialogues;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -16,94 +17,115 @@ public class DialogueSystem : MonoBehaviour
 
     public static DialogueSystem Active { get; private set; }
 
-    Dialogue[] dialogues;
-    Dialogue current;
-    MovementBob player;
-    int index;
+    [HideInInspector] public Dialogue[] dialogues;
+    [HideInInspector] public Dialogue current;
+    [HideInInspector] public MovementBob player;
+
+    [HideInInspector] public IdleState idleState;
+    [HideInInspector] public PrintingState printingState;
+    [HideInInspector] public WaitingState waitingState;
+
+    [HideInInspector] public int index;
+
+    State<DialogueSystem> state;
+
     bool isDialogue;
     bool isPrinting;
     bool isReady = true;
 
     void Awake()
-    { 
-        Active = this;        
+    {
+        Active = this;
         player = FindObjectOfType<MovementBob>();
+
+        idleState = new IdleState(this);
+        printingState = new PrintingState(this);
+        waitingState = new WaitingState(this);
+
+        ChangeState(idleState);
     }
 
-    void Update()
-    {
-        if (isDialogue)
-        {
-            if (index >= dialogues.Length)
-            {
-                StopDialogue();
-                return;
-            }
+    //void Update()
+    //{
+    //    if (isDialogue)
+    //    {
+    //        if (index >= dialogues.Length)
+    //        {
+    //            StopDialogue();
+    //            return;
+    //        }
 
-            current = dialogues[index];
+    //        current = dialogues[index];
 
-            if (isReady) StartCoroutine(Print(current.text, current.character));
+    //        if (isReady) StartCoroutine(Print(current.text, current.character));
 
-            firstVariant.gameObject.SetActive(current.isNonlinear && !isPrinting);
-            firstVariantText.text = current.firstVariant;
-            secondVariant.gameObject.SetActive(current.isNonlinear && !isPrinting);
-            secondVariantText.text = current.secondVariant;
+    //        firstVariant.gameObject.SetActive(current.isNonlinear && !isPrinting);
+    //        firstVariantText.text = current.firstVariant;
+    //        secondVariant.gameObject.SetActive(current.isNonlinear && !isPrinting);
+    //        secondVariantText.text = current.secondVariant;
 
-            if (Input.GetKeyDown(KeyCode.Space) && !isReady && !current.isNonlinear && !isPrinting)
-            {
-                isReady = true;
-                index++;
-                text.text = "";
-            }
+    //        if (Input.GetKeyDown(KeyCode.Space) && !isReady && !current.isNonlinear && !isPrinting)
+    //        {
+    //            isReady = true;
+    //            index++;
+    //            text.text = "";
+    //        }
 
-            dialogueBox.transform.localScale = Vector3.Lerp(dialogueBox.transform.localScale, Vector3.one, .2f);
-        }
+    //        dialogueBox.transform.localScale = Vector3.Lerp(dialogueBox.transform.localScale, Vector3.one, .2f);
+    //    }
         
-        else dialogueBox.transform.localScale = Vector3.Lerp(dialogueBox.transform.localScale, Vector3.zero, .2f);
-    }
+    //    else dialogueBox.transform.localScale = Vector3.Lerp(dialogueBox.transform.localScale, Vector3.zero, .2f);
+    //}
 
-    IEnumerator Print(string text, string character)
+    //IEnumerator Print(string text, string character)
+    //{
+    //    this.character.text = character;
+    //    if (current.action != null) current.action.Invoke();
+    //    isReady = false;
+    //    isPrinting = true;
+
+    //    foreach (var j in text)
+    //    {
+    //        this.text.text += j;
+    //        yield return new WaitForFixedUpdate();
+    //    }
+
+    //    isPrinting = false;
+    //}
+
+    //IEnumerator SetDialogue(bool set)
+    //{
+    //    yield return new WaitForEndOfFrame();
+    //    isDialogue = set;
+    //    if (!set) dialogues = null;
+    //}
+
+    //void StopDialogue()
+    //{
+    //    text.text = "";
+    //    firstVariant.gameObject.SetActive(false);
+    //    secondVariant.gameObject.SetActive(false);
+    //    player.enabled = true;
+    //    StartCoroutine(SetDialogue(false));
+    //}
+
+    public void ChangeState(State<DialogueSystem> st)
     {
-        this.character.text = character;
-        if (current.action != null) current.action.Invoke();
-        isReady = false;
-        isPrinting = true;
+        if (state != null)
+            StartCoroutine(state.Stop());
 
-        foreach (var j in text)
-        {
-            this.text.text += j;
-            yield return new WaitForFixedUpdate();
-        }
-
-        isPrinting = false;
-    }
-
-    IEnumerator SetDialogue(bool set)
-    {
-        yield return new WaitForEndOfFrame();
-        isDialogue = set;
-        if (!set) dialogues = null;
-    }
-
-    void StopDialogue()
-    {
-        text.text = "";
-        firstVariant.gameObject.SetActive(false);
-        secondVariant.gameObject.SetActive(false);
-        player.enabled = true;
-        StartCoroutine(SetDialogue(false));
+        state = st;
+        StartCoroutine(state.Start());
     }
 
     public void StartDialogue(Dialogue[] dialogues)
     {
-        if (isDialogue) return;
+        if (state is PrintingState || state is WaitingState) return;
 
         this.dialogues = dialogues;
         index = 0;
-        isReady = true;
-        player.enabled = false;
-        player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        StartCoroutine(SetDialogue(true));
+
+        ChangeState(printingState);
     }
 
     public void ChooseVariant(int variant)
@@ -113,32 +135,30 @@ public class DialogueSystem : MonoBehaviour
             case 1:
                 if (current.isFirstVariantStops)
                 {
-                    StopDialogue();
+                    ChangeState(idleState);
                     current.firstVariantAction.Invoke();
                 }
 
                 else
                 {
-                    text.text = "";
-                    isReady = true;
                     dialogues = current.firstVariantContinuation;
                     index = 0;
+                    ChangeState(printingState);
                 }
                 break;
 
             case 2:
                 if (current.isSecondVariantStops)
                 {
-                    StopDialogue();
+                    ChangeState(idleState);
                     current.secondVariantAction.Invoke();
                 }
 
                 else
                 {
-                    text.text = "";
-                    isReady = true;
                     dialogues = current.secondVariantContinuation;
                     index = 0;
+                    ChangeState(printingState);
                 }
                 break;
         }
