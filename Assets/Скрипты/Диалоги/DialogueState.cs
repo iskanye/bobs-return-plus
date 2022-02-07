@@ -46,6 +46,8 @@ namespace Dialogues
             }
 
             mn.ChangeState(mn.waitingState);
+
+            yield return base.Update();
         }
 
         public override IEnumerator Update()
@@ -73,18 +75,6 @@ namespace Dialogues
             while (true) 
             {
                 mn.dialogueBox.transform.localScale = Vector3.Lerp(mn.dialogueBox.transform.localScale, Vector3.one, .2f);
-
-                if (!mn.current.isNonlinear && Input.GetKeyDown(KeyCode.Space))
-                {
-                    mn.index++;
-                    if (mn.index >= mn.dialogues.Length)
-                    {
-                        mn.ChangeState(mn.idleState);
-                        yield break;
-                    }
-                    mn.ChangeState(mn.printingState);
-                }
-
                 yield return base.Update(); 
             }
         }

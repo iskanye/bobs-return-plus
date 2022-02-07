@@ -2,12 +2,28 @@ using UnityEngine;
 
 //Скрипт для обьектов, с которыми можно взаимодейвствовать
 public class Interact : ActionBase
-{
+{   
     public LayerMask playerMask; //Слой игрока
 
-    void OnTriggerStay2D(Collider2D c) 
+    bool trigger;
+    GameObject player;
+
+    void Start() =>
+        InputManager.Active.AddListenerToActionStarted("Submit", e => 
+        {
+            if (trigger)
+                action.Invoke(player); 
+        });
+
+    void OnTriggerStay2D(Collider2D c)
     {
-        //Если игрок находится в зоне триггера и он нажал спейс, то мы выполняем действие выше
-        if (((1 << c.gameObject.layer) | playerMask) == playerMask && Input.GetKeyDown(KeyCode.Space)) action.Invoke(c.gameObject); 
+        if (((1 << c.gameObject.layer) | playerMask) == playerMask) 
+        {
+            trigger = true;
+            player = c.gameObject; 
+        }
     }
+
+    void OnTriggerExit2D(Collider2D c) => 
+        trigger = false;
 }
