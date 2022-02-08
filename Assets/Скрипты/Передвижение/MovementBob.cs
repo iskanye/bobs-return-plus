@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Linq;
 
 //Тестовый скрипт передвижения
 public class MovementBob : MonoBehaviour, IWalkable

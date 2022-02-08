@@ -4,7 +4,6 @@ using UnityEngine.UI;
 public class LiveCounter : MonoBehaviour
 {
     public Image[] lives;
-    public new CameraShake camera;
     public int maxLives = 3;
     public int livesRemaining;
 
@@ -17,10 +16,6 @@ public class LiveCounter : MonoBehaviour
 
     void Update()
     {
-        // ������� ��� �����
-        if (Input.GetKeyDown(KeyCode.K)) 
-            LoseLife();
-
         if (float.IsPositiveInfinity(invincibleTime) && isInvincible) 
             invincibleTime = Time.time + 2;
 
@@ -40,7 +35,7 @@ public class LiveCounter : MonoBehaviour
 
         self.livesRemaining--;
 
-        self.camera.StartShake();
+        CameraShake.StartShake();
 
         self.lives[self.livesRemaining].gameObject.SetActive(false); 
         self.isInvincible = true;  

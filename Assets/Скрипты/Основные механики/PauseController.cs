@@ -10,11 +10,14 @@ public class PauseController : MonoBehaviour
     {
         pauseBox.SetActive(isPaused);
         Time.timeScale = isPaused ? 0 : 1;
-
-        if (Input.GetKeyDown(KeyCode.Escape)) isPaused = !isPaused; 
     }
 
-    public void Continue() => isPaused = false;
+    public void Input() => 
+        isPaused = !isPaused;
 
-    public void Quit() => Application.Quit();
+    public void Continue() => 
+        isPaused = false;
+
+    public void Quit() =>
+        Application.Quit();
 }
