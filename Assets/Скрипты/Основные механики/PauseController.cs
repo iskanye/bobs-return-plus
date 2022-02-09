@@ -6,6 +6,9 @@ public class PauseController : MonoBehaviour
 
     bool isPaused;
 
+    void Start() =>
+        InputManager.Active.AddListenerToActionStarted("Pause", e => Input());
+
     void Update()
     {
         pauseBox.SetActive(isPaused);
