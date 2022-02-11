@@ -7,9 +7,12 @@ public class SaveData
 {
     public int level;
     public int lives = 3;
+
     public List<Position> positions;
+
     public List<CustomProperty> customProperties;
     public List<CustomProperty> globalProperties;
+
     public List<IdItem> achievements;
     public List<IdItem> inventory;
 
@@ -27,7 +30,6 @@ public class SaveData
 public class Position 
 {
     public string id;
-
     public Vector3 position;
 
     public Position() { }
@@ -43,7 +45,6 @@ public class Position
 public class CustomProperty
 {
     public string id;
-
     public bool property;
 
     public CustomProperty() { }

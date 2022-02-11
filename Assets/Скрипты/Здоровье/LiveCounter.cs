@@ -35,7 +35,7 @@ public class LiveCounter : MonoBehaviour
 
         self.livesRemaining--;
 
-        CameraShake.StartShake();
+        CameraController.StartShake();
 
         self.lives[self.livesRemaining].gameObject.SetActive(false); 
         self.isInvincible = true;  

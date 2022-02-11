@@ -41,7 +41,7 @@ public class DialogueSystem : MonoBehaviour
     }
 
     void Start() =>
-        InputManager.Active.AddListenerToActionCanceled("Submit", e => Input());
+        InputManager.AddListenerToActionCanceled("Submit", e => Input());
 
     public void ChangeState(State<DialogueSystem> st)
     {
@@ -52,14 +52,16 @@ public class DialogueSystem : MonoBehaviour
         StartCoroutine(state.Start());
     }
 
-    public void StartDialogue(Dialogue[] dialogues)
+    public static void StartDialogue(Dialogue[] dialogues)
     {
-        if (state is PrintingState || state is WaitingState) return;
+        var active = Active;
 
-        this.dialogues = dialogues;
-        index = 0;
+        if (active.state is PrintingState || active.state is WaitingState) return;
 
-        ChangeState(printingState);
+        active.dialogues = dialogues;
+        active.index = 0;
+
+        active.ChangeState(active.printingState);
     }
 
     public void ChooseVariant(int variant)

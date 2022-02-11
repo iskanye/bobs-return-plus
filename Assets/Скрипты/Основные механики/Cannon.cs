@@ -9,31 +9,32 @@ public class Cannon : MonoBehaviour
     public float force;
     public bool isReloadable;
     public float reloadDelay;
-    public bool haveShoted { set; get; }
+    public bool HaveShoted { set; get; }
 
     float swTime;
     PropertyHolder prop;
 
-    void Awake() 
-    { 
+    void Awake() =>
         prop = GetComponent<PropertyHolder>();
-    }
     
     void Update()
     {
         if (Physics2D.Raycast(transform.position, direction, distance, player))
         {
-            if (!isReloadable && !haveShoted)
+            if (!isReloadable && !HaveShoted)
             {
                 var bull = Instantiate(bullet, transform.position, Quaternion.identity);
                 bull.GetComponent<Rigidbody2D>().AddForce(direction * force, ForceMode2D.Impulse);
-                haveShoted = true;
-                if (prop != null) prop.property = true;
+                HaveShoted = true;
+
+                if (prop != null) 
+                    prop.property = true;
             }
 
             else if (isReloadable)
             {
-                if (float.IsPositiveInfinity(swTime)) swTime = Time.time + reloadDelay;
+                if (float.IsPositiveInfinity(swTime)) 
+                    swTime = Time.time + reloadDelay;
 
                 if (Time.time >= swTime)
                 {
@@ -44,6 +45,7 @@ public class Cannon : MonoBehaviour
             }
         }
 
-        else swTime = float.PositiveInfinity;
+        else    
+            swTime = float.PositiveInfinity;
     }
 }

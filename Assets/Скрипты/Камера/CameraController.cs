@@ -1,12 +1,11 @@
 using UnityEngine;
 using Cinemachine;
 
-public class CameraShake : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
-    public new CinemachineVirtualCamera camera;
+    public static CameraController Active { get; private set; }
 
-    public static CameraShake Active { get; private set; }
-
+    new CinemachineVirtualCamera camera;
     CinemachineBasicMultiChannelPerlin noise;
     float shakeDelay = float.NegativeInfinity;
     float shakeTime;
@@ -15,7 +14,8 @@ public class CameraShake : MonoBehaviour
     float sharpness = 1;
 
     void Awake() 
-    { 
+    {
+        camera = GetComponent<CinemachineVirtualCamera>();
         noise = camera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         Active = this;
     }
@@ -36,4 +36,7 @@ public class CameraShake : MonoBehaviour
         active.sharpness = sharpness;
         active.shakeTime = shakeTime;
     }
+
+    public static void ChangeTarget(Transform target) =>
+        Active.camera.m_Follow = target;
 }

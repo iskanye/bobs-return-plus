@@ -9,7 +9,7 @@ public class Interact : ActionBase
     GameObject player;
 
     void Start() =>
-        InputManager.Active.AddListenerToActionStarted("Submit", e => 
+        InputManager.AddListenerToActionStarted("Submit", e => 
         {
             if (trigger)
                 action.Invoke(player); 

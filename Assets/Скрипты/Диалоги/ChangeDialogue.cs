@@ -25,6 +25,7 @@ public class ChangeDialogue : MonoBehaviour
                 uninteractiveActivator.events = uninteractiveEvents;
                 return;
             }
+
             List<Dialogue> dial = new List<Dialogue>();
             var cache = uninteractiveDialogue.dialogues;
 
