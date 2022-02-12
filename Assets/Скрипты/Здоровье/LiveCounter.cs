@@ -7,12 +7,20 @@ public class LiveCounter : MonoBehaviour
     public int maxLives = 3;
     public int livesRemaining;
 
-    public static LiveCounter Self { get; private set; }
+    public static LiveCounter Active { get; private set; }
 
     bool isInvincible;
     float invincibleTime = float.PositiveInfinity;
 
-    void Awake() => Self = this;
+    void Awake() => Active = this;
+
+    void Start() 
+    {
+        var data = SceneData.Data;
+        livesRemaining = data.lives;
+
+        for (int i = 0; i < lives.Length; i++) lives[i].gameObject.SetActive(i <= data.lives - 1);
+    }
 
     void Update()
     {
@@ -28,7 +36,7 @@ public class LiveCounter : MonoBehaviour
     
     public static void LoseLife()
     {
-        var self = Self;
+        var self = Active;
 
         if (self.isInvincible)
             return;
@@ -45,9 +53,9 @@ public class LiveCounter : MonoBehaviour
 
     public static bool Heal()
     {
-        var self = Self;
+        var self = Active;
 
-        if (self.livesRemaining == self.maxLives) 
+        if (self.livesRemaining >= self.maxLives) 
             return false;
 
         self.lives[self.livesRemaining].gameObject.SetActive(true); 

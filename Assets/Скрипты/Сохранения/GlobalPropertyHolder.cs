@@ -5,13 +5,11 @@ public class GlobalPropertyHolder : MonoBehaviour
     public string id;
     public UnityEngine.Events.UnityEvent<bool> action;
 
-    public SceneData Data { set; private get; }
-
     void Reset() => id = System.Guid.NewGuid().ToString();
 
     public void SetProperty(bool property)
     {
-        var cache = Data.data.globalProperties;       
+        var cache = SceneData.Data.globalProperties;       
         var prop = cache.Find(p => p.id == id);
 
         if (prop != null)
@@ -20,6 +18,6 @@ public class GlobalPropertyHolder : MonoBehaviour
         else
             cache.Add(new CustomProperty(id, property));
 
-        Data.data.globalProperties = cache;
+        SceneData.Data.globalProperties = cache;
     }
 }

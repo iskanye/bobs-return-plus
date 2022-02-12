@@ -2175,7 +2175,7 @@ MonoBehaviour:
   - {fileID: 458847492}
   - {fileID: 1220751743}
   - {fileID: 883128370}
-  maxLives: 0
+  maxLives: 3
   livesRemaining: 3
 --- !u!114 &780290299
 MonoBehaviour:
@@ -2262,8 +2262,6 @@ MonoBehaviour:
   - {fileID: 1027031786}
   - {fileID: 1812114254}
   - {fileID: 1168074648}
-  allItems:
-  - {fileID: 11400000, guid: d125b1bffcf2f19efb8d9cdaaa651a68, type: 2}
 --- !u!114 &832949172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7653,6 +7651,7 @@ GameObject:
   - component: {fileID: 1892688159}
   - component: {fileID: 1892688158}
   - component: {fileID: 1892688157}
+  - component: {fileID: 1892688161}
   m_Layer: 0
   m_Name: "\u0434\u0438\u0430\u043B\u043E\u0433"
   m_TagString: Untagged
@@ -7761,7 +7760,19 @@ MonoBehaviour:
       text: "\u0431\u0435\u0431\u0435"
       action:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1892688161}
+            m_TargetAssemblyTypeName: GetItem, Assembly-CSharp
+            m_MethodName: AddItem
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       isNonlinear: 0
       firstVariant: 
       isFirstVariantStops: 0
@@ -7816,6 +7827,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1892688161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892688156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d35911e1927ec8670882ecebb8a801a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: f843def1f41424ee7affbfa6f380bc19, type: 2}
 --- !u!114 &1984909082
 MonoBehaviour:
   m_ObjectHideFlags: 0

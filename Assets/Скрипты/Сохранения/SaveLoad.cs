@@ -1,12 +1,11 @@
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
 public static class SaveLoad
 {
-    public async static void Save(SaveData data)
+    public static void Save(SaveData data)
     {
-        using (var file = new StreamWriter(Application.persistentDataPath + "/save.json", false)) await file.WriteLineAsync(JsonUtility.ToJson(data));
+        using (var file = new StreamWriter(Application.persistentDataPath + "/save.json", false)) file.WriteLine(JsonUtility.ToJson(data));
     }
 
     public static SaveData Load()

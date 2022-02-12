@@ -12,11 +12,9 @@ public class AchievementSystem : MonoBehaviour
     public static AchievementSystem Active { get; private set; }
 
     Animator animator;
-    SceneData data;
 
     void Start()
     {
-        data = SceneData.Active;
         Active = this;
         animator = GetComponent<Animator>();
     }
@@ -26,13 +24,13 @@ public class AchievementSystem : MonoBehaviour
         var ach = achievement;
         var id = new IdItem(ach.id);
 
-        if (!data.data.achievements.Contains(id))
+        if (!SceneData.Data.achievements.Contains(id))
         {
             title.text = ach.title;
             description.text = ach.description;
             icon.sprite = ach.icon;
             StartCoroutine(PlayAnimation());
-            data.data.achievements.Add(id);
+            SceneData.Data.achievements.Add(id);
         }
     }
 

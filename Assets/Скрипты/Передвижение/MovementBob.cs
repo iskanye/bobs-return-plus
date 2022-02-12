@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 //Тестовый скрипт передвижения
-public class MovementBob : MonoBehaviour, IWalkable
+public class MovementBob : MonoBehaviour, IWalkable, IInputListener
 {
     public float speed; //Скорость передвижения(за кадр)
 
@@ -19,7 +19,7 @@ public class MovementBob : MonoBehaviour, IWalkable
     void Start()
     {
         InputManager.AddListenerToActionPerformed("Move", Input);
-        InputManager.AddListenerToActionCanceled("Move", e => InputStop());
+        InputManager.AddListenerToActionCanceled("Move", InputStop);
     }
 
     void Update()
@@ -27,15 +27,19 @@ public class MovementBob : MonoBehaviour, IWalkable
         if (IsWalking) Direction = dir;
     }
 
-    void FixedUpdate()
-    {
+    void FixedUpdate() =>
         rig.velocity = dir.normalized * Time.deltaTime * speed; 
-        //Переводим кадры в секунды и линейно интерполируем скорость
-    }
+    //Переводим кадры в секунды и прикладываем к обьекту скорость
 
     public void Input(InputAction.CallbackContext c) => 
         dir = c.ReadValue<Vector2>();
 
-    public void InputStop() =>
+    public void InputStop(InputAction.CallbackContext c) =>
         dir = Vector2.zero;
+
+    public void DeleteListeners()
+    {
+        InputManager.AddListenerToActionPerformed("Move", Input);
+        InputManager.AddListenerToActionCanceled("Move", InputStop);
+    }
 }

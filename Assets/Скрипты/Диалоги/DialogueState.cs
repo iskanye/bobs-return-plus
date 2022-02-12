@@ -13,7 +13,7 @@ namespace Dialogues
 
             while (true)
             {
-                mn.dialogueBox.transform.localScale = Vector3.Lerp(mn.dialogueBox.transform.localScale, Vector3.zero, .2f);
+                mn.dialogueBox.transform.localScale = Vector3.Lerp(mn.dialogueBox.transform.localScale, Vector3.zero, 10 * Time.deltaTime);
                 yield return base.Update();
             }
         }
@@ -54,7 +54,7 @@ namespace Dialogues
         {
             while (true)
             {
-                mn.dialogueBox.transform.localScale = Vector3.Lerp(mn.dialogueBox.transform.localScale, Vector3.one, .2f);
+                mn.dialogueBox.transform.localScale = Vector3.Lerp(mn.dialogueBox.transform.localScale, Vector3.one, 10 * Time.deltaTime);
                 yield return base.Update();
             }
         }
@@ -74,7 +74,7 @@ namespace Dialogues
 
             while (true) 
             {
-                mn.dialogueBox.transform.localScale = Vector3.Lerp(mn.dialogueBox.transform.localScale, Vector3.one, .2f);
+                mn.dialogueBox.transform.localScale = Vector3.Lerp(mn.dialogueBox.transform.localScale, Vector3.one, 10 * Time.deltaTime);
                 yield return base.Update(); 
             }
         }

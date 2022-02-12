@@ -1,7 +1,7 @@
 using UnityEngine;
 
 //Скрипт для обьектов, с которыми можно взаимодейвствовать
-public class Interact : ActionBase
+public class Interact : ActionBase, IInputListener
 {   
     public LayerMask playerMask; //Слой игрока
 
@@ -9,11 +9,7 @@ public class Interact : ActionBase
     GameObject player;
 
     void Start() =>
-        InputManager.AddListenerToActionStarted("Submit", e => 
-        {
-            if (trigger)
-                action.Invoke(player); 
-        });
+        InputManager.AddListenerToActionStarted("Submit", Input);
 
     void OnTriggerStay2D(Collider2D c)
     {
@@ -26,4 +22,13 @@ public class Interact : ActionBase
 
     void OnTriggerExit2D(Collider2D c) => 
         trigger = false;
+
+    public void DeleteListeners() =>
+        InputManager.RemoveListenerAtActionStarted("Submit", Input);
+
+    void Input(UnityEngine.InputSystem.InputAction.CallbackContext e) 
+    {
+        if (trigger)
+            action.Invoke(player);
+    }
 }

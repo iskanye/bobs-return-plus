@@ -4,7 +4,7 @@ using UnityEngine.Events;
 using TMPro;
 using Dialogues;
 
-public class DialogueSystem : MonoBehaviour
+public class DialogueSystem : MonoBehaviour, IInputListener
 {
     public GameObject dialogueBox;
     public TMP_Text character;
@@ -41,7 +41,7 @@ public class DialogueSystem : MonoBehaviour
     }
 
     void Start() =>
-        InputManager.AddListenerToActionCanceled("Submit", e => Input());
+        InputManager.AddListenerToActionCanceled("Submit", Input);
 
     public void ChangeState(State<DialogueSystem> st)
     {
@@ -100,7 +100,7 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
-    public void Input() 
+    public void Input(UnityEngine.InputSystem.InputAction.CallbackContext c) 
     {
         if (current.isNonlinear) return;
 
@@ -115,7 +115,11 @@ public class DialogueSystem : MonoBehaviour
             ChangeState(printingState);
         }
     }
+
+    public void DeleteListeners() =>
+        InputManager.RemoveListenerAtActionCanceled("Submit", Input);
 }
+
 [System.Serializable]
 public class Dialogue
 {

@@ -1,16 +1,19 @@
 using UnityEngine;
 
-public class MoveToAndBack : MonoBehaviour
+public class SimpleMovement : MonoBehaviour, IWalkable
 {
     public Vector2 endPoint;
     [Range(0, 10)] public float speed = .5f;
     public float startDelay;
     public bool repeat;
 
+    public bool IsWalking { get; set; }
+    public Vector2 Direction { get; set; }
+
     [HideInInspector] public Vector2 startPoint;
 
     MoveState moveState;
-    State<MoveToAndBack> state;
+    State<SimpleMovement> state;
 
     void Awake()
     {
@@ -28,7 +31,7 @@ public class MoveToAndBack : MonoBehaviour
         Gizmos.DrawWireSphere(endPoint, .25f);
     }
 
-    public void ChangeState(State<MoveToAndBack> state) 
+    public void ChangeState(State<SimpleMovement> state) 
     {
         if (this.state != null)
             StartCoroutine(this.state.Stop());
@@ -41,16 +44,20 @@ public class MoveToAndBack : MonoBehaviour
         ChangeState(moveState);
 }
 
-public class MoveState : State<MoveToAndBack> 
+public class MoveState : State<SimpleMovement> 
 { 
-    public MoveState(MoveToAndBack mn) : base(mn) { }
+    public MoveState(SimpleMovement mn) : base(mn) { }
 
     float t;
 
     public override System.Collections.IEnumerator Update() 
-    { 
+    {
+        mn.IsWalking = true;
+
         while (true) 
         {
+            mn.Direction = (mn.endPoint - mn.startPoint).normalized;
+
             mn.gameObject.transform.position = Vector2.Lerp(mn.startPoint, mn.endPoint, t);
             t += mn.speed * Time.deltaTime;
 
@@ -62,7 +69,10 @@ public class MoveState : State<MoveToAndBack>
                     (mn.startPoint, mn.endPoint) = (mn.endPoint, mn.startPoint);
                 }
                 else
+                {
                     mn.ChangeState(null);
+                    mn.IsWalking = false;
+                }
             }
 
             yield return base.Update();

@@ -8,7 +8,7 @@ public class SceneData : MonoBehaviour
 {
     public TMPro.TMP_Text savingText;
 
-    public SaveData data { get; private set; }
+    public static SaveData Data { get; private set; }
 
     public static SceneData Active { get; private set; }
 
@@ -24,15 +24,15 @@ public class SceneData : MonoBehaviour
         properties = FindObjectsOfType<PropertyHolder>();
         globalProperties = FindObjectsOfType<GlobalPropertyHolder>();
         lives = FindObjectOfType<LiveCounter>();
-        data = SaveLoad.Load();
+        Data = SaveLoad.Load();
 
-        if (data.level != GetActiveScene().buildIndex) 
+        if (Data.level != GetActiveScene().buildIndex) 
         {
-            data = new SaveData();
+            Data = new SaveData();
             return;
         }
 
-        foreach (var pos in data.positions)
+        foreach (var pos in Data.positions)
         {
             var pr = positions.First(i => i.id == pos.id);
 
@@ -42,7 +42,7 @@ public class SceneData : MonoBehaviour
             pr.gameObject.transform.position = pos.position;
         }
 
-        foreach (var prop in data.customProperties)
+        foreach (var prop in Data.customProperties)
         {
             var pr = properties.First(i => i.id == prop.id);
 
@@ -54,49 +54,49 @@ public class SceneData : MonoBehaviour
         }
 
         foreach (var pr in globalProperties)
-        {
-            pr.Data = this;
-
-            foreach (var prop in data.globalProperties)
+            foreach (var prop in Data.globalProperties)
                 if (pr.id == prop.id)
                     pr.action.Invoke(prop.property);
-        }
-
-        lives.livesRemaining = data.lives;
-
-        for (int i = 0; i < lives.lives.Length; i++) lives.lives[i].gameObject.SetActive(i <= data.lives - 1);
     }
 
     public void Save()
     {
-        data.customProperties = new List<CustomProperty>();
-        data.level = GetActiveScene().buildIndex;
-        data.lives = lives.livesRemaining;
+        Data.customProperties = new List<CustomProperty>();
+        Data.level = GetActiveScene().buildIndex;
+        Data.lives = lives.livesRemaining;
 
-        foreach (var i in positions) data.positions.Add(new Position(i.id, i.gameObject.transform.position));
+        foreach (var i in positions) Data.positions.Add(new Position(i.id, i.gameObject.transform.position));
 
-        foreach (var i in properties) data.customProperties.Add(new CustomProperty(i.id, i.property));
+        foreach (var i in properties) Data.customProperties.Add(new CustomProperty(i.id, i.property));
 
-        SaveLoad.Save(data);
-        StartCoroutine(Saved());
+        StopAllCoroutines();
+        StartCoroutine(Saving());
     }
 
     public void DeleteSaves()
     {
-        SaveLoad.DeleteSaves();
-        ResetData();
-        StartCoroutine(Deleted());
+        StopAllCoroutines();
+        StartCoroutine(Deleting());
     }
 
-    IEnumerator Saved()
+    IEnumerator Saving()
     {
+        savingText.text = "сохраняется";
+
+        SaveLoad.Save(Data);
+
         savingText.text = "сохранено";
         yield return new WaitForSecondsRealtime(3);
         savingText.text = "";
     }
 
-    IEnumerator Deleted()
+    IEnumerator Deleting()
     {
+        savingText.text = "удаляется";
+
+        SaveLoad.DeleteSaves();
+        ResetData();
+
         savingText.text = "удалено";
         yield return new WaitForSecondsRealtime(3);
         savingText.text = "";
@@ -104,10 +104,10 @@ public class SceneData : MonoBehaviour
 
     void ResetData() 
     {
-        data.customProperties = new List<CustomProperty>();
-        data.globalProperties = new List<CustomProperty>();
-        data.positions = new List<Position>();
-        data.achievements = new List<IdItem>();
-        data.inventory = new List<IdItem>();
+        Data.customProperties = new List<CustomProperty>();
+        Data.globalProperties = new List<CustomProperty>();
+        Data.positions = new List<Position>();
+        Data.achievements = new List<IdItem>();
+        Data.inventory = new List<IdItem>();
     }
 }

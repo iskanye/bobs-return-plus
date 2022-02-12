@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class PauseController : MonoBehaviour
+public class PauseController : MonoBehaviour, IInputListener
 {
     public GameObject pauseBox;
 
     bool isPaused;
 
     void Start() =>
-        InputManager.AddListenerToActionStarted("Pause", e => Input());
+        InputManager.AddListenerToActionStarted("Pause", Input);
 
     void Update()
     {
@@ -15,7 +15,7 @@ public class PauseController : MonoBehaviour
         Time.timeScale = isPaused ? 0 : 1;
     }
 
-    public void Input() => 
+    public void Input(UnityEngine.InputSystem.InputAction.CallbackContext c) => 
         isPaused = !isPaused;
 
     public void Continue() => 
@@ -23,4 +23,7 @@ public class PauseController : MonoBehaviour
 
     public void Quit() =>
         Application.Quit();
+
+    public void DeleteListeners() =>
+        InputManager.RemoveListenerAtActionStarted("Pause", Input);
 }
