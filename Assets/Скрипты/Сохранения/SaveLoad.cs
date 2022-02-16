@@ -25,10 +25,7 @@ public static class SaveLoad
 
     public static void DeleteSaves()
     {
-        try
-        {
+        if (File.Exists(Application.persistentDataPath + "/save.json"))
             File.Delete(Application.persistentDataPath + "/save.json");
-        }
-        catch { }
     }
 }

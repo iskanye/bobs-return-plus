@@ -4,7 +4,7 @@ using UnityEngine.Events;
 using TMPro;
 using Dialogues;
 
-public class DialogueSystem : MonoBehaviour, IInputListener
+public class DialogueSystem : MonoBehaviour
 {
     public GameObject dialogueBox;
     public TMP_Text character;
@@ -30,7 +30,12 @@ public class DialogueSystem : MonoBehaviour, IInputListener
 
     void Awake()
     {
-        Active = this;
+        if (Active == null)
+            Active = this;
+
+        else
+            return;
+
         player = FindObjectOfType<MovementBob>();
 
         idleState = new IdleState(this);
@@ -38,13 +43,12 @@ public class DialogueSystem : MonoBehaviour, IInputListener
         waitingState = new WaitingState(this);
 
         ChangeState(idleState);
+
+        InputManager.AddListenerToActionCanceled("Submit", Input);
     }
 
-    void Start() =>
-        InputManager.AddListenerToActionCanceled("Submit", Input);
-
     public void ChangeState(State<DialogueSystem> st)
-    {
+    {  
         if (state != null)
             StartCoroutine(state.Stop());
 
@@ -72,7 +76,9 @@ public class DialogueSystem : MonoBehaviour, IInputListener
                 if (current.isFirstVariantStops)
                 {
                     ChangeState(idleState);
-                    current.firstVariantAction.Invoke();
+
+                    if (current.firstVariantAction != null)
+                        current.firstVariantAction.Invoke();
                 }
 
                 else
@@ -87,7 +93,9 @@ public class DialogueSystem : MonoBehaviour, IInputListener
                 if (current.isSecondVariantStops)
                 {
                     ChangeState(idleState);
-                    current.secondVariantAction.Invoke();
+
+                    if (current.secondVariantAction != null)
+                        current.secondVariantAction.Invoke();
                 }
 
                 else
@@ -115,9 +123,6 @@ public class DialogueSystem : MonoBehaviour, IInputListener
             ChangeState(printingState);
         }
     }
-
-    public void DeleteListeners() =>
-        InputManager.RemoveListenerAtActionCanceled("Submit", Input);
 }
 
 [System.Serializable]

@@ -19,18 +19,30 @@ public class SceneData : MonoBehaviour
 
     void Awake()
     {
-        Active = this;
+        if (Active == null)
+        {
+            Active = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         positions = FindObjectsOfType<PositionHolder>();
         properties = FindObjectsOfType<PropertyHolder>();
         globalProperties = FindObjectsOfType<GlobalPropertyHolder>();
         lives = FindObjectOfType<LiveCounter>();
-        Data = SaveLoad.Load();
 
-        if (Data.level != GetActiveScene().buildIndex) 
-        {
-            Data = new SaveData();
+        Data = SaveLoad.Load();
+    }
+
+    void Start()
+    {
+        if (Data.level != GetActiveScene().buildIndex)
             return;
-        }
 
         foreach (var pos in Data.positions)
         {
@@ -59,24 +71,28 @@ public class SceneData : MonoBehaviour
                     pr.action.Invoke(prop.property);
     }
 
-    public void Save()
+    public static void Save()
     {
+        var active = Active;
+
         Data.customProperties = new List<CustomProperty>();
         Data.level = GetActiveScene().buildIndex;
-        Data.lives = lives.livesRemaining;
+        Data.lives = active.lives.livesRemaining;
 
-        foreach (var i in positions) Data.positions.Add(new Position(i.id, i.gameObject.transform.position));
+        foreach (var i in active.positions) Data.positions.Add(new Position(i.id, i.gameObject.transform.position));
 
-        foreach (var i in properties) Data.customProperties.Add(new CustomProperty(i.id, i.property));
+        foreach (var i in active.properties) Data.customProperties.Add(new CustomProperty(i.id, i.property));
 
-        StopAllCoroutines();
-        StartCoroutine(Saving());
+        active.StopAllCoroutines();
+        active.StartCoroutine(active.Saving());
     }
 
-    public void DeleteSaves()
+    public static void DeleteSaves()
     {
-        StopAllCoroutines();
-        StartCoroutine(Deleting());
+        var active = Active;
+
+        active.StopAllCoroutines();
+        active.StartCoroutine(active.Deleting());
     }
 
     IEnumerator Saving()

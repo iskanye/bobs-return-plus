@@ -9,7 +9,8 @@ namespace Dialogues
 
         public override IEnumerator Update()
         {
-            mn.player.enabled = true;
+            if (mn.player != null)
+                mn.player.enabled = true;
 
             while (true)
             {
@@ -27,14 +28,16 @@ namespace Dialogues
         {
             yield return base.Start();
 
-            mn.player.enabled = false;
-            mn.player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            if (mn.player != null)
+            {
+                mn.player.enabled = false;
+                mn.player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            }
 
             mn.current = mn.dialogues[mn.index];
-
             mn.character.text = mn.current.character;
 
-            if (mn.current.action != null) 
+            if (mn.current.action != null)
                 mn.current.action.Invoke();
 
             mn.text.text = "";

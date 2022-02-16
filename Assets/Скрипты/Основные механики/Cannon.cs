@@ -27,25 +27,19 @@ public class Cannon : MonoBehaviour
                 bull.GetComponent<Rigidbody2D>().AddForce(direction * force, ForceMode2D.Impulse);
                 HaveShoted = true;
 
-                if (prop != null) 
+                if (prop != null)
                     prop.property = true;
             }
 
-            else if (isReloadable)
+            else if (isReloadable && float.IsPositiveInfinity(swTime))
             {
-                if (float.IsPositiveInfinity(swTime)) 
-                    swTime = Time.time + reloadDelay;
-
-                if (Time.time >= swTime)
-                {
-                    var bull = Instantiate(bullet, transform);
-                    bull.GetComponent<Rigidbody2D>().AddForce(direction * force, ForceMode2D.Impulse); 
-                    swTime = float.PositiveInfinity;                  
-                }
+                var bull = Instantiate(bullet, transform);
+                bull.GetComponent<Rigidbody2D>().AddForce(direction * force, ForceMode2D.Impulse);
+                swTime = Time.time + reloadDelay;
             }
         }
 
-        else    
+        if (Time.time >= swTime)
             swTime = float.PositiveInfinity;
     }
 }

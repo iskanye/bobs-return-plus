@@ -33,11 +33,13 @@ public class SimpleMovement : MonoBehaviour, IWalkable
 
     public void ChangeState(State<SimpleMovement> state) 
     {
-        if (this.state != null)
+        if (state != null)
             StartCoroutine(this.state.Stop());
 
         this.state = state;
-        if (this.state != null) StartCoroutine(this.state.Start());
+
+        if (state != null)
+            StartCoroutine(this.state.Start());
     }
 
     public void StartMove() =>

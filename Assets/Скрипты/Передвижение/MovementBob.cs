@@ -13,11 +13,9 @@ public class MovementBob : MonoBehaviour, IWalkable, IInputListener
     Vector2 dir; //Направление
 
     //Находим компонент физики
-    void Awake() =>
-        rig = GetComponent<Rigidbody2D>();
-
-    void Start()
+    void Awake()
     {
+        rig = GetComponent<Rigidbody2D>();
         InputManager.AddListenerToActionPerformed("Move", Input);
         InputManager.AddListenerToActionCanceled("Move", InputStop);
     }

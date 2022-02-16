@@ -8,7 +8,7 @@ public class Interact : ActionBase, IInputListener
     bool trigger;
     GameObject player;
 
-    void Start() =>
+    void Awake() =>
         InputManager.AddListenerToActionStarted("Submit", Input);
 
     void OnTriggerStay2D(Collider2D c)
@@ -23,12 +23,12 @@ public class Interact : ActionBase, IInputListener
     void OnTriggerExit2D(Collider2D c) => 
         trigger = false;
 
-    public void DeleteListeners() =>
-        InputManager.RemoveListenerAtActionStarted("Submit", Input);
-
     void Input(UnityEngine.InputSystem.InputAction.CallbackContext e) 
     {
         if (trigger)
             action.Invoke(player);
     }
+
+    public void DeleteListeners() =>
+        InputManager.RemoveListenerAtActionStarted("Submit", Input);
 }
