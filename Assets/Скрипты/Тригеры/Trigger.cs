@@ -7,11 +7,11 @@ public class Trigger : ActionBase
 
     void OnTriggerEnter2D(Collider2D c) 
     {
-        if (((1 << c.gameObject.layer) | playerMask) == playerMask && !isOnStay) action.Invoke(c.gameObject); 
+        if (action != null && ((1 << c.gameObject.layer) | playerMask) == playerMask && !isOnStay) action.Invoke(c.gameObject); 
     }
 
     void OnTriggerStay2D(Collider2D c) 
     {
-        if (((1 << c.gameObject.layer) | playerMask) == playerMask && isOnStay) action.Invoke(c.gameObject); 
+        if (action != null && ((1 << c.gameObject.layer) | playerMask) == playerMask && isOnStay) action.Invoke(c.gameObject); 
     }
 }

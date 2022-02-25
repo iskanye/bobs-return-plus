@@ -16,9 +16,17 @@ public class MovementBob : MonoBehaviour, IWalkable, IInputListener
     void Awake()
     {
         rig = GetComponent<Rigidbody2D>();
+        OnEnable();
+    }
+
+    void OnEnable() 
+    {
         InputManager.AddListenerToActionPerformed("Move", Input);
         InputManager.AddListenerToActionCanceled("Move", InputStop);
     }
+
+    void OnDisable() =>
+        DeleteListeners();
 
     void Update()
     {
@@ -37,7 +45,7 @@ public class MovementBob : MonoBehaviour, IWalkable, IInputListener
 
     public void DeleteListeners()
     {
-        InputManager.AddListenerToActionPerformed("Move", Input);
-        InputManager.AddListenerToActionCanceled("Move", InputStop);
+        InputManager.RemoveListenerFromActionPerformed("Move", Input);
+        InputManager.RemoveListenerFromActionCanceled("Move", InputStop);
     }
 }

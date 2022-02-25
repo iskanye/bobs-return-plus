@@ -14,7 +14,7 @@ namespace Dialogues
 
             while (true)
             {
-                mn.dialogueBox.transform.localScale = Vector3.Lerp(mn.dialogueBox.transform.localScale, Vector3.zero, 10 * Time.deltaTime);
+                mn.dialogueBox.transform.localScale = Vector3.Lerp(mn.dialogueBox.transform.localScale, new Vector3(1, 0, 1), 10 * Time.deltaTime);
                 yield return base.Update();
             }
         }
@@ -40,7 +40,8 @@ namespace Dialogues
             if (mn.current.action != null)
                 mn.current.action.Invoke();
 
-            mn.text.text = "";
+            if (mn.current.clearPreviousText) 
+                mn.text.text = "";
 
             foreach (var j in mn.current.text)
             {

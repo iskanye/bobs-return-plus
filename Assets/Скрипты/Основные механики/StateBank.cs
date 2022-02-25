@@ -1,24 +1,39 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class StateBank : MonoBehaviour
 {
     public int stateCount;
-    public UnityEngine.Events.UnityEvent action;
+    public UnityEvent action;
+    public string rightOrder;
+    public UnityEvent wrongOrderAction;
 
-    int states; 
+    string[] _rightOrder;
+    int states;
+    int index;
 
-    public void ChangeState(int state) 
+    void Awake() =>
+        _rightOrder = rightOrder.Split(new char[] { ' ' });
+
+    public void ChangeState(int state)
     {
-        if (state > stateCount || ((1 << stateCount) & states) == 1)
-            return;
-
         var byteState = 1 << state;
 
-        if ((states & byteState) == 0)
-            states |= byteState;
+        if (state > stateCount || ((1 << stateCount) & states) == 1 || (states & byteState) != 0)
+            return;
 
-        else
-            states &= ~byteState;
+        if (rightOrder != null && _rightOrder[index] != state.ToString())
+        {
+            if (wrongOrderAction != null)
+                wrongOrderAction.Invoke();
+
+            index = 0;
+            states = 0;
+            return;
+        }
+
+        states |= byteState;
+        index++;
 
         if (states == (int)Mathf.Pow(2, stateCount - 1) - 1)
         {

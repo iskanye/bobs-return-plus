@@ -4,10 +4,11 @@ using UnityEngine;
 public class UninteractiveDialogue : ScriptableObject 
 {
     [System.Serializable]
-    public struct Dialog
+    public class Dialog
     {
         public string character;
         public string text;
+        public bool clearPreviousText = true;
     }
     public Dialog[] dialogues;
 }

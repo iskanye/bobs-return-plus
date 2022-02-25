@@ -13,11 +13,7 @@ public class AchievementSystem : MonoBehaviour
 
     void Awake()
     {
-        if (Active == null)
-            Active = this;
-
-        else
-            return;
+        Active = this;
 
         animator = GetComponent<Animator>();
     }

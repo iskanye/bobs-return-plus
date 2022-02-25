@@ -7,6 +7,8 @@ public class CameraController : MonoBehaviour
 
     new CinemachineVirtualCamera camera;
     CinemachineBasicMultiChannelPerlin noise;
+    CinemachineConfiner2D bounds;
+
     float shakeDelay = float.NegativeInfinity;
     float shakeTime;
     float amplitude;
@@ -17,6 +19,8 @@ public class CameraController : MonoBehaviour
     {
         camera = GetComponent<CinemachineVirtualCamera>();
         noise = camera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        bounds = GetComponent<CinemachineConfiner2D>();
+
         Active = this;
     }
 
@@ -39,4 +43,7 @@ public class CameraController : MonoBehaviour
 
     public static void ChangeTarget(Transform target) =>
         Active.camera.m_Follow = target;
+
+    public static void ChangeCameraBounds(PolygonCollider2D bounds) =>
+        Active.bounds.m_BoundingShape2D = bounds;
 }

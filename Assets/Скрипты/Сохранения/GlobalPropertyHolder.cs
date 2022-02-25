@@ -1,6 +1,4 @@
-using UnityEngine;
-
-public class GlobalPropertyHolder : MonoBehaviour
+public class GlobalPropertyHolder : UnityEngine.MonoBehaviour
 {
     public string id;
     public UnityEngine.Events.UnityEvent<bool> action;
@@ -9,7 +7,7 @@ public class GlobalPropertyHolder : MonoBehaviour
 
     public void SetProperty(bool property)
     {
-        var cache = SceneData.Data.globalProperties;       
+        ref var cache = ref SceneData.Data.globalProperties;       
         var prop = cache.Find(p => p.id == id);
 
         if (prop != null)
@@ -17,7 +15,5 @@ public class GlobalPropertyHolder : MonoBehaviour
 
         else
             cache.Add(new CustomProperty(id, property));
-
-        SceneData.Data.globalProperties = cache;
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PauseController : MonoBehaviour, IInputListener
+public class PauseController : MonoBehaviour
 {
     public GameObject pauseBox;
 
@@ -23,7 +23,4 @@ public class PauseController : MonoBehaviour, IInputListener
 
     public void Quit() =>
         Application.Quit();
-
-    public void DeleteListeners() =>
-        InputManager.RemoveListenerAtActionStarted("Pause", Input);
 }

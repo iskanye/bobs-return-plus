@@ -4,7 +4,7 @@ using UnityEngine.Events;
 using TMPro;
 using Dialogues;
 
-public class DialogueSystem : MonoBehaviour
+public class DialogueSystem : SequenceObject
 {
     public GameObject dialogueBox;
     public TMP_Text character;
@@ -30,11 +30,7 @@ public class DialogueSystem : MonoBehaviour
 
     void Awake()
     {
-        if (Active == null)
-            Active = this;
-
-        else
-            return;
+        Active = this;
 
         player = FindObjectOfType<MovementBob>();
 
@@ -115,13 +111,20 @@ public class DialogueSystem : MonoBehaviour
         if (state is WaitingState) 
         {
             index++;
+
             if (index >= dialogues.Length)
             {
                 ChangeState(idleState);
                 return;
             }
+
             ChangeState(printingState);
         }
+    }
+
+    public override System.Collections.IEnumerator Sequence()
+    {
+        yield return new WaitUntil(() => state is IdleState);
     }
 }
 
@@ -133,6 +136,7 @@ public class Dialogue
     public UnityEvent action;
 
     public bool isNonlinear;
+    public bool clearPreviousText = true;
 
     public string firstVariant;
     public bool isFirstVariantStops;
@@ -144,11 +148,12 @@ public class Dialogue
     public UnityEvent secondVariantAction;
     public Dialogue[] secondVariantContinuation;
 
-    public Dialogue(string character, string text, UnityEvent action)
+    public Dialogue(string character, string text, UnityEvent action, bool clearPreviousText)
     {
         this.character = character;
         this.text = text;
         this.action = action;
+        this.clearPreviousText = clearPreviousText;
         isNonlinear = false;
     }
 }

@@ -13,7 +13,7 @@ public class Interact : ActionBase, IInputListener
 
     void OnTriggerStay2D(Collider2D c)
     {
-        if (((1 << c.gameObject.layer) | playerMask) == playerMask) 
+        if (action != null && ((1 << c.gameObject.layer) | playerMask) == playerMask) 
         {
             trigger = true;
             player = c.gameObject; 
@@ -30,5 +30,5 @@ public class Interact : ActionBase, IInputListener
     }
 
     public void DeleteListeners() =>
-        InputManager.RemoveListenerAtActionStarted("Submit", Input);
+        InputManager.RemoveListenerFromActionStarted("Submit", Input);
 }

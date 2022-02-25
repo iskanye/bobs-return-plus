@@ -10,8 +10,6 @@ public class InputManager : MonoBehaviour
 
     void Awake()
     {
-        input = GetComponent<PlayerInput>();
-
         if (Active == null)
         {
             Active = this;
@@ -19,7 +17,12 @@ public class InputManager : MonoBehaviour
         }
 
         else
+        {
             Destroy(gameObject);
+            return;
+        }
+
+        input = GetComponent<PlayerInput>();
     }
 
     public static void AddListenerToActionStarted(string actionName, Action<InputAction.CallbackContext> listener) =>
@@ -31,12 +34,12 @@ public class InputManager : MonoBehaviour
     public static void AddListenerToActionCanceled(string actionName, Action<InputAction.CallbackContext> listener) =>
         Active.input.currentActionMap[actionName].canceled += listener;
 
-    public static void RemoveListenerAtActionStarted(string actionName, Action<InputAction.CallbackContext> listener) =>
+    public static void RemoveListenerFromActionStarted(string actionName, Action<InputAction.CallbackContext> listener) =>
         Active.input.currentActionMap[actionName].started -= listener;
 
-    public static void RemoveListenerAtActionPerformed(string actionName, Action<InputAction.CallbackContext> listener) =>
+    public static void RemoveListenerFromActionPerformed(string actionName, Action<InputAction.CallbackContext> listener) =>
         Active.input.currentActionMap[actionName].performed -= listener;
 
-    public static void RemoveListenerAtActionCanceled(string actionName, Action<InputAction.CallbackContext> listener) =>
+    public static void RemoveListenerFromActionCanceled(string actionName, Action<InputAction.CallbackContext> listener) =>
         Active.input.currentActionMap[actionName].canceled -= listener;
 }

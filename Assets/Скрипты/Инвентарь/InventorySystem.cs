@@ -11,11 +11,10 @@ public class InventorySystem : MonoBehaviour
 
     Item[] items;
 
-    void Awake() =>
+    void Awake()
+    {
         Active = this;
 
-    void Start()
-    { 
         var inventory = SceneData.Data.inventory;
         items = new Item[maxItems];
 
