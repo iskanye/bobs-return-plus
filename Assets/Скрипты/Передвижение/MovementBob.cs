@@ -26,7 +26,7 @@ public class MovementBob : MonoBehaviour, IWalkable, IInputListener
     }
 
     void OnDisable() =>
-        DeleteListeners();
+       DeleteListeners();
 
     void Update()
     {

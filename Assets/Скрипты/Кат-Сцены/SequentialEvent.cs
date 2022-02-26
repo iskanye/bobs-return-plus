@@ -8,8 +8,11 @@
     void Awake() =>
         sequenceState = new SequenceState(this);
 
-    public void StartSequence() =>
-        ChangeState(sequenceState);
+    public void StartSequence()
+    {
+        if (currentState == null) 
+            ChangeState(sequenceState);
+    }
 
     public void ChangeState(State<SequentialEvent> state) 
     {

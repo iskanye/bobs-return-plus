@@ -1,7 +1,7 @@
 using UnityEngine;
 
-interface IWalkable 
+public interface IWalkable 
 {
-    bool IsWalking {get;}
-    Vector2 Direction {get;}
+    bool IsWalking { get; }
+    Vector2 Direction { get; }
 }

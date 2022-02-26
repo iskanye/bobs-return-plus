@@ -6,4 +6,10 @@ public class Destroy : MonoBehaviour
 
     public void Do() =>
         Destroy(objectToDestroy);
+
+    public void Do(bool property)
+    {
+        if (property)
+            Do();
+    }
 }

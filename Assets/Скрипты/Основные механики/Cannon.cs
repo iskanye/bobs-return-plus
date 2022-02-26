@@ -9,6 +9,7 @@ public class Cannon : MonoBehaviour
     public float force;
     public bool isReloadable;
     public float reloadDelay;
+
     public bool HaveShoted { set; get; }
 
     float swTime;

@@ -1,7 +1,8 @@
+using System.Collections;
 using UnityEngine;
 
 //Контроллер анимаций для движущихся обьектов
-public class AnimationMovementController : MonoBehaviour
+public class AnimationMovementController : SequenceObject
 {
     Animator animator; //Контроллер анимаций от Unity
     IWalkable movingObject;
@@ -22,7 +23,7 @@ public class AnimationMovementController : MonoBehaviour
     public void Play(string animation) => 
         animator.Play(animation);
 
-    public System.Collections.IEnumerator WaitForAnimationToStop(string animation)
+    public IEnumerator WaitForAnimationToStop(string animation)
     {
         var state = animator.GetCurrentAnimatorStateInfo(0);
 
@@ -33,5 +34,10 @@ public class AnimationMovementController : MonoBehaviour
         }
 
         yield return new WaitForSeconds(state.length);
+    }
+
+    public override IEnumerator Sequence()
+    {
+        yield return WaitForAnimationToStop(animator.GetCurrentAnimatorStateInfo(0).ToString());
     }
 }

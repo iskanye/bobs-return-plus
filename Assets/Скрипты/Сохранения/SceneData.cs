@@ -111,19 +111,10 @@ public class SceneData : MonoBehaviour
         savingText.text = "удаляется";
 
         SaveLoad.DeleteSaves();
-        ResetData();
+        Data = new SaveData();
 
         savingText.text = "удалено";
         yield return new WaitForSecondsRealtime(3);
         savingText.text = "";
-    }
-
-    void ResetData() 
-    {
-        Data.customProperties = new List<CustomProperty>();
-        Data.globalProperties = new List<CustomProperty>();
-        Data.positions = new List<Position>();
-        Data.achievements = new List<IdItem>();
-        Data.inventory = new List<IdItem>();
     }
 }

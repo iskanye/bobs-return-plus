@@ -26,8 +26,6 @@ namespace Dialogues
 
         public override IEnumerator Start()
         {
-            yield return base.Start();
-
             if (mn.player != null)
             {
                 mn.player.enabled = false;
@@ -37,11 +35,16 @@ namespace Dialogues
             mn.current = mn.dialogues[mn.index];
             mn.character.text = mn.current.character;
 
+            mn.firstVariant.gameObject.SetActive(false);
+            mn.secondVariant.gameObject.SetActive(false);
+
             if (mn.current.action != null)
                 mn.current.action.Invoke();
 
             if (mn.current.clearPreviousText) 
                 mn.text.text = "";
+
+            yield return base.Start();
 
             foreach (var j in mn.current.text)
             {

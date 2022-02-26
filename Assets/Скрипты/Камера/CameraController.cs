@@ -41,9 +41,9 @@ public class CameraController : MonoBehaviour
         active.shakeTime = shakeTime;
     }
 
-    public static void ChangeTarget(Transform target) =>
-        Active.camera.m_Follow = target;
+    public void ChangeTarget(Transform target) =>
+        camera.m_Follow = target;
 
-    public static void ChangeCameraBounds(PolygonCollider2D bounds) =>
-        Active.bounds.m_BoundingShape2D = bounds;
+    public void ChangeCameraBounds(PolygonCollider2D bounds) =>
+        this.bounds.m_BoundingShape2D = bounds;
 }
