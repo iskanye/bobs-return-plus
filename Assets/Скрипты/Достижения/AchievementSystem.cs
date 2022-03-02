@@ -7,30 +7,23 @@ public class AchievementSystem : MonoBehaviour
     public TMP_Text description;
     public UnityEngine.UI.Image icon;
 
-    public static AchievementSystem Active { get; private set; }
-
     Animator animator;
 
-    void Awake()
-    {
-        Active = this;
-
+    void Awake() =>
         animator = GetComponent<Animator>();
-    }
 
-    public static void ShowAchievement(Achievement achievement)
+    public void ShowAchievement(Achievement achievement)
     {
-        var active = Active;
         var ach = achievement;
         var id = new IdItem(ach.id);
 
         if (!SceneData.Data.achievements.Contains(id))
         {
-            active.title.text = ach.title;
-            active.description.text = ach.description;
-            active.icon.sprite = ach.icon;
+            title.text = ach.title;
+            description.text = ach.description;
+            icon.sprite = ach.icon;
 
-            active.StartCoroutine(active.PlayAnimation());
+            StartCoroutine(PlayAnimation());
             SceneData.Data.achievements.Add(id);
         }
     }

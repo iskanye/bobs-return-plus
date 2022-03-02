@@ -7,14 +7,10 @@ public class InventorySystem : MonoBehaviour
     public UnityEngine.UI.Image[] icons;
     public TMPro.TMP_Text[] labels;
 
-    public static InventorySystem Active { get; private set; }
-
     Item[] items;
 
     void Awake()
     {
-        Active = this;
-
         var inventory = SceneData.Data.inventory;
         items = new Item[maxItems];
 
@@ -44,14 +40,12 @@ public class InventorySystem : MonoBehaviour
         }
     }
 
-    public static void AddItem(Item item)
+    public void AddItem(Item item)
     {
-        var active = Active;
-
-        for (int i = 0; i < active.maxItems; i++)
-            if (active.items[i] == null)
+        for (int i = 0; i < maxItems; i++)
+            if (items[i] == null)
             {
-                active.items[i] = item;
+                items[i] = item;
                 SceneData.Data.inventory.Add(new IdItem(item.id));
                 break;
             }

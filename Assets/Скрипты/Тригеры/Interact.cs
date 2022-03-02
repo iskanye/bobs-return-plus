@@ -1,7 +1,7 @@
 using UnityEngine;
 
 //Скрипт для обьектов, с которыми можно взаимодейвствовать
-public class Interact : ActionBase, IInputListener
+public class Interact : ActionBase
 {   
     public LayerMask playerMask; //Слой игрока
 
@@ -28,7 +28,4 @@ public class Interact : ActionBase, IInputListener
         if (trigger)
             action.Invoke(player);
     }
-
-    public void DeleteListeners() =>
-        InputManager.RemoveListenerFromActionStarted("Submit", Input);
 }

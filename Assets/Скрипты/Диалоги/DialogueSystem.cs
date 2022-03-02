@@ -1,18 +1,18 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
+using System;
+using System.Collections.Generic;
 using TMPro;
 using Dialogues;
 
 public class DialogueSystem : SequenceObject
 {
-    public GameObject dialogueBox;
+    public Transform dialogueBox;
+    public Transform variantBox;
+    public GameObject variantPrefab;
     public TMP_Text character;
     public TMP_Text text;
-    public Button firstVariant;
-    public TMP_Text firstVariantText;
-    public Button secondVariant;
-    public TMP_Text secondVariantText;
 
     public static DialogueSystem Active { get; private set; }
 
@@ -25,6 +25,8 @@ public class DialogueSystem : SequenceObject
     [HideInInspector] public WaitingState waitingState;
 
     [HideInInspector] public int index;
+    [HideInInspector] public int currentVariant;
+    [HideInInspector] public List<GameObject> variantObjects;
 
     State<DialogueSystem> state;
 
@@ -33,6 +35,7 @@ public class DialogueSystem : SequenceObject
         Active = this;
 
         player = FindObjectOfType<MovementBob>();
+        variantObjects = new List<GameObject>();
 
         idleState = new IdleState(this);
         printingState = new PrintingState(this);
@@ -41,6 +44,7 @@ public class DialogueSystem : SequenceObject
         ChangeState(idleState);
 
         InputManager.AddListenerToActionCanceled("Submit", Input);
+        InputManager.AddListenerToActionStarted("Move", VariantInput);
     }
 
     public void ChangeState(State<DialogueSystem> st)
@@ -64,52 +68,25 @@ public class DialogueSystem : SequenceObject
         active.ChangeState(active.printingState);
     }
 
-    public void ChooseVariant(int variant)
+    void Input(InputAction.CallbackContext c) 
     {
-        switch (variant)
-        {
-            case 1:
-                if (current.isFirstVariantStops)
-                {
-                    ChangeState(idleState);
-
-                    if (current.firstVariantAction != null)
-                        current.firstVariantAction.Invoke();
-                }
-
-                else
-                {
-                    dialogues = current.firstVariantContinuation;
-                    index = 0;
-                    ChangeState(printingState);
-                }
-                break;
-
-            case 2:
-                if (current.isSecondVariantStops)
-                {
-                    ChangeState(idleState);
-
-                    if (current.secondVariantAction != null)
-                        current.secondVariantAction.Invoke();
-                }
-
-                else
-                {
-                    dialogues = current.secondVariantContinuation;
-                    index = 0;
-                    ChangeState(printingState);
-                }
-                break;
-        }
-    }
-
-    public void Input(UnityEngine.InputSystem.InputAction.CallbackContext c) 
-    {
-        if (current.isNonlinear) return;
-
         if (state is WaitingState) 
         {
+            if (current.isNonlinear)
+            {
+                foreach (var i in variantObjects)
+                    Destroy(i);
+
+                currentVariant = 0;
+                variantObjects = new List<GameObject>();
+                ChangeState(idleState);
+
+                if (current.variants[currentVariant].action != null)
+                    current.variants[currentVariant].action.Invoke();
+
+                return;
+            }
+
             index++;
 
             if (index >= dialogues.Length)
@@ -122,13 +99,30 @@ public class DialogueSystem : SequenceObject
         }
     }
 
+    void VariantInput(InputAction.CallbackContext c) 
+    {
+        if (!(state is WaitingState) || !current.isNonlinear)
+            return;
+
+        var val = c.ReadValue<Vector2>();
+        var variant = currentVariant + (val.y >= 0 ? -1 : 1);
+
+        if (variant >= 0 && variant < current.variants.Length)
+        {
+            currentVariant = variant;
+
+            for (int i = 0; i < current.variants.Length; i++) 
+                variantObjects[i].GetComponent<TMP_Text>().faceColor = i == currentVariant ? Color.white : Color.grey;
+        }
+    }
+
     public override System.Collections.IEnumerator Sequence()
     {
         yield return new WaitUntil(() => state is IdleState);
     }
 }
 
-[System.Serializable]
+[Serializable]
 public class Dialogue
 {
     public string character;
@@ -138,15 +132,14 @@ public class Dialogue
     public bool isNonlinear;
     public bool clearPreviousText = true;
 
-    public string firstVariant;
-    public bool isFirstVariantStops;
-    public UnityEvent firstVariantAction;
-    public Dialogue[] firstVariantContinuation;
+    public DialogueVariant[] variants;
 
-    public string secondVariant;
-    public bool isSecondVariantStops;
-    public UnityEvent secondVariantAction;
-    public Dialogue[] secondVariantContinuation;
+    [Serializable]
+    public class DialogueVariant
+    {
+        public string variant;
+        public UnityEvent action;
+    }
 
     public Dialogue(string character, string text, UnityEvent action, bool clearPreviousText)
     {

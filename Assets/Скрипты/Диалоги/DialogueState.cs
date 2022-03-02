@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using TMPro;
 
 namespace Dialogues
 {
@@ -14,7 +15,9 @@ namespace Dialogues
 
             while (true)
             {
-                mn.dialogueBox.transform.localScale = Vector3.Lerp(mn.dialogueBox.transform.localScale, new Vector3(1, 0, 1), 10 * Time.deltaTime);
+                mn.dialogueBox.localScale = Vector3.Lerp(mn.dialogueBox.localScale, new Vector3(1, 0, 1), 10 * Time.deltaTime);
+                mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, new Vector3(1, 0, 1), 10 * Time.deltaTime);
+
                 yield return base.Update();
             }
         }
@@ -34,9 +37,6 @@ namespace Dialogues
 
             mn.current = mn.dialogues[mn.index];
             mn.character.text = mn.current.character;
-
-            mn.firstVariant.gameObject.SetActive(false);
-            mn.secondVariant.gameObject.SetActive(false);
 
             if (mn.current.action != null)
                 mn.current.action.Invoke();
@@ -61,7 +61,9 @@ namespace Dialogues
         {
             while (true)
             {
-                mn.dialogueBox.transform.localScale = Vector3.Lerp(mn.dialogueBox.transform.localScale, Vector3.one, 10 * Time.deltaTime);
+                mn.dialogueBox.localScale = Vector3.Lerp(mn.dialogueBox.localScale, Vector3.one, 10 * Time.deltaTime);
+                mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, new Vector3(1, 0, 1), 10 * Time.deltaTime);
+
                 yield return base.Update();
             }
         }
@@ -71,17 +73,30 @@ namespace Dialogues
     {
         public WaitingState(DialogueSystem sys) : base(sys) { }
 
+        public override IEnumerator Start()
+        {
+            if (mn.current.isNonlinear)
+                for (int i = 0; i < mn.current.variants.Length; i++)
+                {
+                    var variant = Object.Instantiate(mn.variantPrefab, mn.variantBox);
+                    variant.GetComponent<TMP_Text>().text = mn.current.variants[i].variant;
+                    variant.GetComponent<TMP_Text>().faceColor = i == 0 ? Color.white : Color.grey;
+
+                    mn.variantObjects.Add(variant);
+                }
+
+            yield return base.Start();
+        }
+
         public override IEnumerator Update()
         {
-            mn.firstVariant.gameObject.SetActive(mn.current.isNonlinear);
-            mn.firstVariantText.text = mn.current.firstVariant;
-
-            mn.secondVariant.gameObject.SetActive(mn.current.isNonlinear);
-            mn.secondVariantText.text = mn.current.secondVariant;
-
             while (true) 
             {
-                mn.dialogueBox.transform.localScale = Vector3.Lerp(mn.dialogueBox.transform.localScale, Vector3.one, 10 * Time.deltaTime);
+                mn.dialogueBox.localScale = Vector3.Lerp(mn.dialogueBox.localScale, Vector3.one, 10 * Time.deltaTime);
+
+                if (mn.current.isNonlinear) 
+                    mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, Vector3.one, 10 * Time.deltaTime);
+
                 yield return base.Update(); 
             }
         }
