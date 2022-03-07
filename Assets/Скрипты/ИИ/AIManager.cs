@@ -14,6 +14,7 @@ public class AIManager : MonoBehaviour, IWalkable
     [Range(0, 360)] public float viewAngle;
     [Header("Patrol AI")] public bool isPatrol; //Является ли данный ИИ патрульным     
     public float patrolSpeed; //Скорость движения(При патрулировании)
+    public float patrolDelay;
     public Vector2[] path; //Массив пути(для патрульного ИИ)
 
     public AnimationMovementController Anim { get; private set; }
@@ -23,7 +24,7 @@ public class AIManager : MonoBehaviour, IWalkable
 
     public Vector2 Direction => direction;
 
-    [HideInInspector] public int currWay = 0; //Текущий путь из массива позиций
+    [HideInInspector] public int currWay; //Текущий путь из массива позиций
     [HideInInspector] public Transform currentTarget; //Трансформ цели
 
     //States

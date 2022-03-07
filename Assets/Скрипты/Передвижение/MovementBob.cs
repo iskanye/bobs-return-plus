@@ -16,17 +16,20 @@ public class MovementBob : MonoBehaviour, IWalkable
     void Awake()
     {
         rig = GetComponent<Rigidbody2D>();
-        OnEnable();
+        Direction = Vector2.down;
     }
 
     void OnEnable() 
     {
-        InputManager.AddListenerToActionPerformed("Move", Input);
-        InputManager.AddListenerToActionCanceled("Move", InputStop);
+        InputManager.Input.Player.Move.performed += Input;
+        InputManager.Input.Player.Move.canceled += InputStop;
     }
 
-    void OnDisable() =>
-       DeleteListeners();
+    void OnDisable()
+    {
+        DeleteListeners();
+        dir = Vector2.zero;
+    }
 
     void Update()
     {
@@ -45,7 +48,7 @@ public class MovementBob : MonoBehaviour, IWalkable
 
     void DeleteListeners()
     {
-        InputManager.RemoveListenerFromActionPerformed("Move", Input);
-        InputManager.RemoveListenerFromActionCanceled("Move", InputStop);
+        InputManager.Input.Player.Move.performed -= Input;
+        InputManager.Input.Player.Move.canceled -= InputStop;
     }
 }

@@ -30,7 +30,7 @@ public class CameraController : MonoBehaviour
         noise.m_AmplitudeGain = Mathf.Lerp(noise.m_AmplitudeGain, Time.time >= shakeDelay ? 0 : amplitude, sharpness);
     }
 
-    public static void StartShake(float amplitude = 10, float frequency = 10, float sharpness = .1f, float shakeTime = .4f)
+    public static void StartShake(float amplitude = 10, float frequency = 10, float sharpness = .3f, float shakeTime = .4f)
     {
         var active = Active;
 

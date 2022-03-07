@@ -1,4 +1,4 @@
-public class Damageable : UnityEngine.MonoBehaviour
+﻿public class Damageable : UnityEngine.MonoBehaviour
 {
-    public void Damage() => LiveCounter.LoseLife();
+    public void Damage() => LiveCounter.Active.LoseLife();
 }

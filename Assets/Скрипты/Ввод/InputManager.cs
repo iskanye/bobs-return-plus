@@ -1,12 +1,9 @@
 ﻿using UnityEngine;
-using UnityEngine.InputSystem;
-using System;
 
 public class InputManager : MonoBehaviour
 {
-    public static InputManager Active { get; private set; }
-
-    [HideInInspector] public PlayerInput input;
+    public static InputMap Input { get; private set; }
+    static InputManager Active;
 
     void Awake()
     {
@@ -22,24 +19,7 @@ public class InputManager : MonoBehaviour
             return;
         }
 
-        input = GetComponent<PlayerInput>();
+        Input = new InputMap();
+        Input.Player.Enable();
     }
-
-    public static void AddListenerToActionStarted(string actionName, Action<InputAction.CallbackContext> listener) =>
-        Active.input.currentActionMap[actionName].started += listener;
-
-    public static void AddListenerToActionPerformed(string actionName, Action<InputAction.CallbackContext> listener) =>
-        Active.input.currentActionMap[actionName].performed += listener;
-
-    public static void AddListenerToActionCanceled(string actionName, Action<InputAction.CallbackContext> listener) =>
-        Active.input.currentActionMap[actionName].canceled += listener;
-
-    public static void RemoveListenerFromActionStarted(string actionName, Action<InputAction.CallbackContext> listener) =>
-        Active.input.currentActionMap[actionName].started -= listener;
-
-    public static void RemoveListenerFromActionPerformed(string actionName, Action<InputAction.CallbackContext> listener) =>
-        Active.input.currentActionMap[actionName].performed -= listener;
-
-    public static void RemoveListenerFromActionCanceled(string actionName, Action<InputAction.CallbackContext> listener) =>
-        Active.input.currentActionMap[actionName].canceled -= listener;
 }

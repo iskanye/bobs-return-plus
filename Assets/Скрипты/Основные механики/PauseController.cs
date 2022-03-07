@@ -7,7 +7,7 @@ public class PauseController : MonoBehaviour
     bool isPaused;
 
     void Awake() =>
-        InputManager.AddListenerToActionStarted("Pause", Input);
+        InputManager.Input.Player.Pause.started += Input;
 
     void Update()
     {

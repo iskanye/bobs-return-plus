@@ -40,7 +40,7 @@ namespace AI
         {
             mn.AI.maxSpeed = mn.patrolSpeed; //Меняем скорость на обычную
 
-            float waitTime = Random.Range(2, 4);
+            float waitTime = Random.Range(0, 4);
             float time = 0;
 
             //Если ИИ достиг конца пути, не ищет путь и его время ожидания не равно бесконечности, 
@@ -58,7 +58,7 @@ namespace AI
                 time += Time.deltaTime;                
 
                 if (mn.AI.reachedEndOfPath && !mn.AI.pathPending && float.IsPositiveInfinity(waitTime))
-                    waitTime = time + Random.Range(.5f, 6);
+                    waitTime = time + Random.Range(.5f, mn.patrolDelay);
                 
                 if (time >= waitTime)
                 { 

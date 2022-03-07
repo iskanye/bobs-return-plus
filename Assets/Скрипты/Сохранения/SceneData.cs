@@ -34,13 +34,14 @@ public class SceneData : MonoBehaviour
         positions = FindObjectsOfType<PositionHolder>();
         properties = FindObjectsOfType<PropertyHolder>();
         globalProperties = FindObjectsOfType<GlobalPropertyHolder>();
-        lives = FindObjectOfType<LiveCounter>();
 
         Data = SaveLoad.Load();
     }
 
     void Start()
     {
+        lives = LiveCounter.Active;
+
         if (Data.level != GetActiveScene().buildIndex)
             return;
 

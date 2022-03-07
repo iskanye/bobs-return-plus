@@ -1,5 +1,8 @@
 ﻿public class ActionAtStart : ActionBase
 {
-    void Start() =>
-        action.Invoke(FindObjectOfType<MovementBob>().gameObject);
+    void Start()
+    {
+        if (action != null)
+            action.Invoke(FindObjectOfType<MovementBob>().gameObject);
+    }
 }

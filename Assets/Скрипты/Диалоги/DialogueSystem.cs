@@ -9,7 +9,7 @@ using Dialogues;
 public class DialogueSystem : SequenceObject
 {
     public Transform dialogueBox;
-    public Transform variantBox;
+    public RectTransform variantBox;
     public GameObject variantPrefab;
     public TMP_Text character;
     public TMP_Text text;
@@ -43,8 +43,8 @@ public class DialogueSystem : SequenceObject
 
         ChangeState(idleState);
 
-        InputManager.AddListenerToActionCanceled("Submit", Input);
-        InputManager.AddListenerToActionStarted("Move", VariantInput);
+        InputManager.Input.Player.Submit.canceled += Input;
+        InputManager.Input.Player.Move.started += VariantInput;
     }
 
     public void ChangeState(State<DialogueSystem> st)
@@ -77,13 +77,13 @@ public class DialogueSystem : SequenceObject
                 foreach (var i in variantObjects)
                     Destroy(i);
 
-                currentVariant = 0;
                 variantObjects = new List<GameObject>();
                 ChangeState(idleState);
 
                 if (current.variants[currentVariant].action != null)
                     current.variants[currentVariant].action.Invoke();
 
+                currentVariant = 0;
                 return;
             }
 
@@ -105,7 +105,7 @@ public class DialogueSystem : SequenceObject
             return;
 
         var val = c.ReadValue<Vector2>();
-        var variant = currentVariant + (val.y >= 0 ? -1 : 1);
+        var variant = currentVariant + (val.y > 0 ? -1 : 1);
 
         if (variant >= 0 && variant < current.variants.Length)
         {

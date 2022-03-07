@@ -9,7 +9,7 @@ public class Interact : ActionBase
     GameObject player;
 
     void Awake() =>
-        InputManager.AddListenerToActionStarted("Submit", Input);
+        InputManager.Input.Player.Submit.started += Input;
 
     void OnTriggerStay2D(Collider2D c)
     {

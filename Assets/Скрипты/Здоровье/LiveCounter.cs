@@ -34,32 +34,28 @@ public class LiveCounter : MonoBehaviour
         }
     }
     
-    public static void LoseLife()
+    public void LoseLife()
     {
-        var self = Active;
-
-        if (self.isInvincible)
+        if (isInvincible)
             return;
 
-        self.livesRemaining--;
+        livesRemaining--;
 
         CameraController.StartShake();
 
-        self.lives[self.livesRemaining].gameObject.SetActive(false); 
-        self.isInvincible = true;  
+        lives[livesRemaining].gameObject.SetActive(false); 
+        isInvincible = true;  
 
-        if (self.livesRemaining == 0) Application.Quit();
+        if (livesRemaining == 0) Application.Quit();
     }
 
-    public static bool Heal()
+    public bool Heal()
     {
-        var self = Active;
-
-        if (self.livesRemaining >= self.maxLives) 
+        if (livesRemaining >= maxLives) 
             return false;
 
-        self.lives[self.livesRemaining].gameObject.SetActive(true); 
-        self.livesRemaining++;
+        lives[livesRemaining].gameObject.SetActive(true); 
+        livesRemaining++;
 
         return true;
     }
