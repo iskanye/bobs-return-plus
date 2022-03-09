@@ -6,8 +6,8 @@ using System;
 //Скрипт ИИ
 public class AIManager : MonoBehaviour, IWalkable
 {
-    private LayerMask obstacles = 1 << 3; //Слой с препятствиями
-    private LayerMask player = 1 << 6; //Слой с игроком
+    public LayerMask obstacles = 1 << 3; //Слой с препятствиями
+    public LayerMask player = 1 << 6; //Слой с игроком
     public float seeRange; //Дальность зрения
     public float spotSpeed; //Скорость движения(При погоне)
     public Vector2 direction = Vector2.right;
@@ -17,7 +17,6 @@ public class AIManager : MonoBehaviour, IWalkable
     public float patrolDelay;
     public Vector2[] path; //Массив пути(для патрульного ИИ)
 
-    public AnimationMovementController Anim { get; private set; }
     public IAstarAI AI { get; private set; }
 
     public bool IsWalking => AI.velocity != Vector3.zero;
@@ -31,20 +30,32 @@ public class AIManager : MonoBehaviour, IWalkable
     [HideInInspector] public PatrolState patrolState;
     [HideInInspector] public ChaseState chaseState;
     [HideInInspector] public SearchState searchState;
+    [HideInInspector] public IdleState idleState;
     [SerializeField] private State<AIManager> currentState;
-
 
     void Awake()
     {
         //Получаем скрипт поиска пути и контроллер анимаций
         AI = GetComponent<IAstarAI>();
-        Anim = GetComponent<AnimationMovementController>();
 
         patrolState = new PatrolState(this);
         chaseState = new ChaseState(this);
         searchState = new SearchState(this);
+        idleState = new IdleState(this);
 
         ChangeState(searchState);
+    }
+
+    void OnEnable()
+    {
+        ChangeState(searchState);
+        AI.canMove = true;
+    }
+
+    void OnDisable()
+    {
+        StopAllCoroutines();
+        AI.canMove = false;
     }
 
     public bool CanSeePlayer()

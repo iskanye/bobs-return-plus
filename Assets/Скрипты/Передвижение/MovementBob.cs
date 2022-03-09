@@ -33,18 +33,24 @@ public class MovementBob : MonoBehaviour, IWalkable
 
     void Update()
     {
-        if (IsWalking) Direction = dir;
+        if (IsWalking) 
+            Direction = dir;
     }
 
-    void FixedUpdate() =>
-        rig.velocity = dir.normalized * Time.deltaTime * speed; 
-    //Переводим кадры в секунды и прикладываем к обьекту скорость
+    void FixedUpdate()
+    {
+        if (IsWalking)
+            rig.velocity = dir.normalized * Time.deltaTime * speed;
+    } //Переводим кадры в секунды и прикладываем к обьекту скорость
 
     public void Input(InputAction.CallbackContext c) => 
         dir = c.ReadValue<Vector2>();
 
-    public void InputStop(InputAction.CallbackContext c) =>
+    public void InputStop(InputAction.CallbackContext c)
+    {
         dir = Vector2.zero;
+        rig.velocity = Vector2.zero;    
+    }
 
     void DeleteListeners()
     {

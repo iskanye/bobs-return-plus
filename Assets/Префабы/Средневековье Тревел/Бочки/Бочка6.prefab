@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 525406149142511146}
   - component: {fileID: 2493241723695154188}
   - component: {fileID: 3881582825330088587}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\u0411\u043E\u0447\u043A\u04306"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,11 +25,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6603878511810055104}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5497002715490101719}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -101,3 +102,152 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.37}
   serializedVersion: 2
   m_Radius: 0.47
+--- !u!1 &7515837653747234485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5497002715490101719}
+  - component: {fileID: 239050223597466483}
+  - component: {fileID: 4619564371935721166}
+  - component: {fileID: 9191420041221674396}
+  - component: {fileID: 7721595662419825698}
+  m_Layer: 3
+  m_Name: "\u0422\u0440\u0438\u0433\u0433\u0435\u0440"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5497002715490101719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7515837653747234485}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 525406149142511146}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &239050223597466483
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7515837653747234485}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.37}
+  serializedVersion: 2
+  m_Radius: 0.6
+--- !u!114 &4619564371935721166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7515837653747234485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b03eac781278d52aa4afb457a70da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9191420041221674396}
+        m_TargetAssemblyTypeName: DialogueActivator, Assembly-CSharp
+        m_MethodName: Dialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &9191420041221674396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7515837653747234485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cdd3421eba6d11b287b7ecac324932b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - character: 
+    text: "\u042D\u0442\u0430 \u0431\u043E\u0447\u043A\u0430 \u0437\u0430\u0431\u0438\u0442\u0430
+      \u0441\u0435\u043D\u043E\u043C."
+    action:
+      m_PersistentCalls:
+        m_Calls: []
+    isNonlinear: 1
+    clearPreviousText: 1
+    variants:
+    - variant: "\u0413\u0440\u043E\u043C\u043A\u043E \u043F\u043E\u0432\u043E\u0440\u043E\u0448\u0438\u0442\u044C
+        \u0441\u0435\u043D\u043E."
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 7721595662419825698}
+            m_TargetAssemblyTypeName: AINoiseDistractor, Assembly-CSharp
+            m_MethodName: Distract
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - variant: "\u0423\u0439\u0442\u0438"
+      action:
+        m_PersistentCalls:
+          m_Calls: []
+  - character: 
+    text: 
+    action:
+      m_PersistentCalls:
+        m_Calls: []
+    isNonlinear: 0
+    clearPreviousText: 0
+    variants: []
+--- !u!114 &7721595662419825698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7515837653747234485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f322c0ac4a7314587dfadb0d83ff0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 10
+  offset: {x: 0, y: 0, z: 0}
+  AIMask:
+    serializedVersion: 2
+    m_Bits: 128

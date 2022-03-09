@@ -33,20 +33,26 @@ public class LiveCounter : MonoBehaviour
             isInvincible = false;
         }
     }
-    
-    public void LoseLife()
+
+    public void LoseLifes(int lifes)
     {
-        if (isInvincible)
+        if (isInvincible || livesRemaining == 0)
             return;
 
-        livesRemaining--;
+        for (int i = 0; i < lifes; i++)
+        {
+            livesRemaining--;
+            lives[livesRemaining].gameObject.SetActive(false);
+
+            if (livesRemaining == 0)
+            {
+                Application.Quit();
+                return;
+            }
+        }
 
         CameraController.StartShake();
-
-        lives[livesRemaining].gameObject.SetActive(false); 
-        isInvincible = true;  
-
-        if (livesRemaining == 0) Application.Quit();
+        isInvincible = true;
     }
 
     public bool Heal()

@@ -16,6 +16,7 @@ public class SceneData : MonoBehaviour
     PropertyHolder[] properties;
     GlobalPropertyHolder[] globalProperties;
     LiveCounter lives;
+    InventorySystem inventory;
 
     void Awake()
     {
@@ -31,15 +32,15 @@ public class SceneData : MonoBehaviour
             return;
         }
 
-        positions = FindObjectsOfType<PositionHolder>();
-        properties = FindObjectsOfType<PropertyHolder>();
-        globalProperties = FindObjectsOfType<GlobalPropertyHolder>();
-
         Data = SaveLoad.Load();
     }
 
     void Start()
     {
+        positions = FindObjectsOfType<PositionHolder>();
+        properties = FindObjectsOfType<PropertyHolder>();
+        globalProperties = FindObjectsOfType<GlobalPropertyHolder>();
+        inventory = FindObjectOfType<InventorySystem>();
         lives = LiveCounter.Active;
 
         if (Data.level != GetActiveScene().buildIndex)
@@ -77,12 +78,19 @@ public class SceneData : MonoBehaviour
         var active = Active;
 
         Data.customProperties = new List<CustomProperty>();
+        Data.inventory = new List<IdItem>();
         Data.level = GetActiveScene().buildIndex;
         Data.lives = active.lives.livesRemaining;
 
-        foreach (var i in active.positions) Data.positions.Add(new Position(i.id, i.gameObject.transform.position));
+        foreach (var i in active.positions) 
+            Data.positions.Add(new Position(i.id, i.gameObject.transform.position));
 
-        foreach (var i in active.properties) Data.customProperties.Add(new CustomProperty(i.id, i.property));
+        foreach (var i in active.properties) 
+            Data.customProperties.Add(new CustomProperty(i.id, i.property));
+
+        foreach (var i in active.inventory.items)
+            if (i != null) 
+                Data.inventory.Add(new IdItem(i.id));
 
         active.StopAllCoroutines();
         active.StartCoroutine(active.Saving());

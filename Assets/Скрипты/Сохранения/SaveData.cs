@@ -57,9 +57,20 @@ public class CustomProperty
 }
 
 [Serializable]
-public class IdItem
+public class IdItem : IEquatable<IdItem>
 {
     public int id;
 
     public IdItem(int id) => this.id = id;
+
+    public bool Equals(IdItem i)
+    {
+        if (i == null)
+            return false;
+
+        if (id == i.id)
+            return true;
+
+        return false;
+    }
 }

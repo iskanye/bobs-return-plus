@@ -10,7 +10,6 @@ public class CameraController : MonoBehaviour
     CinemachineConfiner2D bounds;
 
     float shakeDelay = float.NegativeInfinity;
-    float shakeTime;
     float amplitude;
     float frequency;
     float sharpness = 1;
@@ -30,7 +29,7 @@ public class CameraController : MonoBehaviour
         noise.m_AmplitudeGain = Mathf.Lerp(noise.m_AmplitudeGain, Time.time >= shakeDelay ? 0 : amplitude, sharpness);
     }
 
-    public static void StartShake(float amplitude = 10, float frequency = 10, float sharpness = .3f, float shakeTime = .4f)
+    public static void StartShake(float amplitude = 18, float frequency = 20, float sharpness = .5f, float shakeTime = .3f)
     {
         var active = Active;
 
@@ -38,7 +37,6 @@ public class CameraController : MonoBehaviour
         active.amplitude = amplitude;
         active.frequency = frequency;
         active.sharpness = sharpness;
-        active.shakeTime = shakeTime;
     }
 
     public void ChangeTarget(Transform target) =>

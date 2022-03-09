@@ -3,6 +3,25 @@ using UnityEngine;
 
 namespace AI
 {
+    public class IdleState : State<AIManager> 
+    {
+        public IdleState(AIManager stateManager) : base(stateManager) { }
+
+        public override IEnumerator Update()
+        {
+            while (true)
+            {
+                if (mn.CanSeePlayer())
+                {
+                    mn.ChangeState(mn.chaseState);
+                    yield break;
+                }
+
+                yield return base.Update();
+            }
+        }
+    }
+
     public class ChaseState : State<AIManager>
     {
         public ChaseState(AIManager stateManager) : base(stateManager) { }
@@ -40,7 +59,7 @@ namespace AI
         {
             mn.AI.maxSpeed = mn.patrolSpeed; //Меняем скорость на обычную
 
-            float waitTime = Random.Range(0, 4);
+            float waitTime = Random.Range(.5f, mn.patrolDelay);
             float time = 0;
 
             //Если ИИ достиг конца пути, не ищет путь и его время ожидания не равно бесконечности, 
@@ -104,6 +123,9 @@ namespace AI
 
             if (mn.isPatrol)
                 mn.ChangeState(mn.patrolState);
+
+            else
+                mn.ChangeState(mn.idleState);
 
             yield return base.Update();
         }

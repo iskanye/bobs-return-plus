@@ -6,8 +6,8 @@ public class AddForce : MonoBehaviour
     public Rigidbody2D body;
 
     public void Add() =>
-        body.velocity += force;
+        body.AddForce(force, ForceMode2D.Impulse);
 
     public void Add(GameObject p) =>
-        p.GetComponent<Rigidbody2D>().velocity += force;
+        p.GetComponent<Rigidbody2D>().AddForce(force, ForceMode2D.Impulse);
 }

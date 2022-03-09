@@ -19,7 +19,7 @@ namespace Dialogues
             while (true)
             {
                 mn.dialogueBox.localScale = Vector3.Lerp(mn.dialogueBox.localScale, new Vector3(1, 0, 1), 8 * Time.deltaTime);
-                mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, new Vector3(1, 0, 1), 8 * Time.deltaTime);
+                mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, new Vector3(1, 0, 1), 6 * Time.deltaTime);
 
                 yield return base.Update();
             }
@@ -50,7 +50,7 @@ namespace Dialogues
             while (true)
             {
                 mn.dialogueBox.localScale = Vector3.Lerp(mn.dialogueBox.localScale, Vector3.one, 8 * Time.deltaTime);
-                mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, new Vector3(1, 0, 1), 8 * Time.deltaTime);
+                mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, new Vector3(1, 0, 1), 6 * Time.deltaTime);
 
                 if (mn.dialogueBox.localScale == Vector3.one)
                     break;
@@ -84,7 +84,7 @@ namespace Dialogues
 
                 while (true)
                 {
-                    mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, Vector3.one, 8 * Time.deltaTime);
+                    mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, Vector3.one, 6 * Time.deltaTime);
 
                     if (mn.variantBox.localScale == Vector3.one)
                         break;

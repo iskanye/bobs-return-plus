@@ -7,7 +7,7 @@ public class InventorySystem : MonoBehaviour
     public UnityEngine.UI.Image[] icons;
     public TMPro.TMP_Text[] labels;
 
-    Item[] items;
+    [HideInInspector] public Item[] items;
 
     void Awake()
     {
@@ -46,7 +46,6 @@ public class InventorySystem : MonoBehaviour
             if (items[i] == null)
             {
                 items[i] = item;
-                SceneData.Data.inventory.Add(new IdItem(item.id));
                 break;
             }
     }

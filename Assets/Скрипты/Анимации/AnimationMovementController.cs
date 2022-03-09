@@ -20,24 +20,8 @@ public class AnimationMovementController : SequenceObject
         animator.SetFloat("Direction Y", movingObject.Direction.y);
     }
 
-    public void Play(string animation) => 
-        animator.Play(animation);
-
-    public IEnumerator WaitForAnimationToStop(string animation)
-    {
-        var state = animator.GetCurrentAnimatorStateInfo(0);
-
-        while (!state.IsName(animation))
-        {
-            state = animator.GetCurrentAnimatorStateInfo(0);
-            yield return null;
-        }
-
-        yield return new WaitForSeconds(state.length);
-    }
-
     public override IEnumerator Sequence()
     {
-        yield return WaitForAnimationToStop(animator.GetCurrentAnimatorStateInfo(0).ToString());
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length); 
     }
 }
