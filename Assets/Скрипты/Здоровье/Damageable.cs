@@ -1,8 +1,9 @@
-﻿public class Damageable : UnityEngine.MonoBehaviour
-{
-    public void Damage() => 
-        LiveCounter.Active.LoseLifes(1);
+﻿using UnityEngine;
 
-    public void Damage(int damage) => 
-        LiveCounter.Active.LoseLifes(damage);
+public class Damageable : MonoBehaviour
+{
+    public int damage = 1;
+
+    public void Damage(GameObject g) =>
+        g.GetComponent<ILives>().Lives -= damage;
 }

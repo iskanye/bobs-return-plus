@@ -15,7 +15,7 @@ public class SceneData : MonoBehaviour
     PositionHolder[] positions;
     PropertyHolder[] properties;
     GlobalPropertyHolder[] globalProperties;
-    LiveCounter lives;
+    PlayerLiveCounter lives;
     InventorySystem inventory;
 
     void Awake()
@@ -41,7 +41,7 @@ public class SceneData : MonoBehaviour
         properties = FindObjectsOfType<PropertyHolder>();
         globalProperties = FindObjectsOfType<GlobalPropertyHolder>();
         inventory = FindObjectOfType<InventorySystem>();
-        lives = LiveCounter.Active;
+        lives = PlayerLiveCounter.Active;
 
         if (Data.level != GetActiveScene().buildIndex)
             return;
@@ -80,7 +80,7 @@ public class SceneData : MonoBehaviour
         Data.customProperties = new List<CustomProperty>();
         Data.inventory = new List<IdItem>();
         Data.level = GetActiveScene().buildIndex;
-        Data.lives = active.lives.livesRemaining;
+        Data.lives = active.lives.LivesRemaining;
 
         foreach (var i in active.positions) 
             Data.positions.Add(new Position(i.id, i.gameObject.transform.position));

@@ -3066,7 +3066,7 @@ MonoBehaviour:
       - m_Target: {fileID: 322945716}
         m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
         m_MethodName: Damage
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3091,6 +3091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!58 &322945717
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4158,7 +4159,7 @@ MonoBehaviour:
       - m_Target: {fileID: 459864360}
         m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
         m_MethodName: Damage
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4183,6 +4184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!58 &459864361
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4252,7 +4254,7 @@ MonoBehaviour:
       - m_Target: {fileID: 474765395}
         m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
         m_MethodName: Damage
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4277,6 +4279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!61 &474765396
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4287,10 +4290,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.05}
+  m_Offset: {x: 0, y: -0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4301,7 +4304,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.1}
+  m_Size: {x: 1, y: 0.2}
   m_EdgeRadius: 0
 --- !u!1 &490928707
 GameObject:
@@ -4355,7 +4358,7 @@ MonoBehaviour:
       - m_Target: {fileID: 490928710}
         m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
         m_MethodName: Damage
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4366,7 +4369,7 @@ MonoBehaviour:
         m_CallState: 2
   playerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   isOnStay: 0
 --- !u!114 &490928710
 MonoBehaviour:
@@ -4380,6 +4383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!61 &490928712
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4664,7 +4668,7 @@ MonoBehaviour:
       - m_Target: {fileID: 513663793}
         m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
         m_MethodName: Damage
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4689,6 +4693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!61 &513663794
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4699,10 +4704,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.05}
+  m_Offset: {x: 0, y: -0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4713,7 +4718,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 0.1}
+  m_Size: {x: 3, y: 0.2}
   m_EdgeRadius: 0
 --- !u!4 &532861883 stripped
 Transform:
@@ -7780,6 +7785,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 780290291}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     sequenceObject: {fileID: 218927318}
   - action:
       m_PersistentCalls:
@@ -7837,6 +7854,7 @@ GameObject:
   - component: {fileID: 780290295}
   - component: {fileID: 780290297}
   - component: {fileID: 780290291}
+  - component: {fileID: 780290300}
   - component: {fileID: 780290296}
   - component: {fileID: 780290299}
   m_Layer: 6
@@ -8018,6 +8036,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2f555c6b-17a1-4c92-989d-7ff15cdab6ef
+--- !u!114 &780290300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780290290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1877d85c2d6fa5c89b687955578c30f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &783552512 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5901387748719636143, guid: 56698879f098039e88827d48594b6842,
@@ -8657,7 +8687,7 @@ MonoBehaviour:
       - m_Target: {fileID: 876358661}
         m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
         m_MethodName: Damage
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8682,6 +8712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!61 &876358662
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8692,10 +8723,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.05}
+  m_Offset: {x: 0, y: -0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8706,7 +8737,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.1}
+  m_Size: {x: 1, y: 0.2}
   m_EdgeRadius: 0
 --- !u!1 &880768569
 GameObject:
@@ -9586,7 +9617,7 @@ MonoBehaviour:
       - m_Target: {fileID: 976357179}
         m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
         m_MethodName: Damage
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9611,6 +9642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!61 &976357180
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9621,10 +9653,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.05}
+  m_Offset: {x: 0, y: -0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -9635,7 +9667,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.1}
+  m_Size: {x: 1, y: 0.2}
   m_EdgeRadius: 0
 --- !u!1001 &985881677
 PrefabInstance:
@@ -11756,7 +11788,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1168076621}
         m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
         m_MethodName: Damage
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11779,7 +11811,7 @@ MonoBehaviour:
         m_CallState: 2
   playerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   isOnStay: 0
 --- !u!114 &1168076621
 MonoBehaviour:
@@ -11793,6 +11825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!61 &1168076623
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11926,7 +11959,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1173428547}
         m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
         m_MethodName: Damage
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11949,7 +11982,7 @@ MonoBehaviour:
         m_CallState: 2
   playerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   isOnStay: 0
 --- !u!114 &1173428547
 MonoBehaviour:
@@ -11963,6 +11996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &1181938345
 GameObject:
   m_ObjectHideFlags: 0
@@ -12416,7 +12450,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1246522384}
         m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
         m_MethodName: Damage
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12441,6 +12475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!61 &1246522385
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12451,10 +12486,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.05}
+  m_Offset: {x: 0, y: -0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -12465,7 +12500,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 0.1}
+  m_Size: {x: 2, y: 0.2}
   m_EdgeRadius: 0
 --- !u!1001 &1276557092
 PrefabInstance:
@@ -12867,7 +12902,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1351248727}
         m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
         m_MethodName: Damage
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12892,6 +12927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!61 &1351248728
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12902,10 +12938,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.05}
+  m_Offset: {x: 0, y: -0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -12916,7 +12952,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.1}
+  m_Size: {x: 1, y: 0.2}
   m_EdgeRadius: 0
 --- !u!1 &1356717991
 GameObject:
@@ -13431,7 +13467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAoIextlZQeYQIAABgFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMziWDGZxCby0Q0gOBCc3k4otsrbEGWfJIMl8Z/ntXsoxdekK8tx/vrVb+IlyaCjKr9EpztlYMyI8BcWfybdCRr3CmeyV3/AptzCdntnBB1Me8U8sV4pFLM6oEq3n2U+6FCx4hWEueK10u2R7myliDcE6FAaS0si5bIvQ1IGf8Gc5cygVP4+/udMXTbDS44TEDaUF3oZNxiByO4xDZBNYyE7SsgDnVvfjZUxwy4tgHSnQUYkaey5QQ3ARBxF4qb3hXFaDBOWacoj8vInpy7Qvg+8I6tf3sTZ4bsMG+ppcF1ziopiz5pZrpldQcGnFHKmrXaOpFNSXX/7HDyNO5VuVr2zUauQ624NnhnV4yamxvuH140RPuJ3Si4kBTAZ8FyDe10qqWDEmra5daGxgvur93Y/MCskOHN1IfwLrqRt7eZXuTzsPNez/PBS9TP/hJA+yE8uP2CwAar+Y3CvbrYUIJRJ2KDwN/6L6/R4F44dpYpIJL6eSlqtYulCz9zJyb2s6VluDhILoCSYW9bLGMfbzAB67X9oF5oe7FhOaBax/CQ4qHu/jR6IHaqtP9skyhTmswxaa2gst+Mce84aDmSspmwXqW2rRdrXOaQUfsa87+XS3ConSWstk0ZjSaxDAbPqcRy9gzneYQp2OaEr97XKJPKraN0DAevDXZFZe4Z+2HZLDStPK7zjQ9rfi1VD19XOZql2kAuWkq3F2Bxib4LNmScRzQDqzl0t83+UqIUNkBWHIvlHiny7PVNOmqJKTiR2UdkpC5/3IkxMH3Xd5qOHI4ueZtsRu5/QVQSwMEFAAACAgAACgh7EDoS/htAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tFKKYZJlUoqlhWlKoqGJaaqlrlmSYUpyilmiRVqqaZJRYpJSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAACgh7G2VlB5hAgAAGAUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAACgh7EDoS/htAAAAeAAAAAkAJAAAAAAAAAAAAAAArgIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABmAwAAAAA=
+    dataString: UEsDBBQAAAgIAAAoIeyKKhlBXQIAABMFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzqUDDE5Dby0Q0gOBCc3k4otsrbEGWfLoI3xk+O9dyTJ26Amx7+3qvd2VPwmXpobcKr3SnK0VA/JzQPyZfBt04DOc6F7JHb9Ay3nnzJaeRAPnlVquMD72aUZVYDXPf8m98OQRBp3khdLVku1hrow1GC6oMICQVtZnSwx9DsgJf4Yzn3LG0+SHP13wNBsNrnjMQVrQHXU6iczhJInMhuhkLmhVA/Oqe/zZ9yRmJEkgSnQUOaOA5UoIbqIgYs91MPxKz94u4xTNBQXeawl8X1ovtJ+4KQoDNjrX9LzgGnvUVCS/VdO4ippDo+uDCufveAx6mpLr/9DhOMCFVtVze+t45G+wJc8PqC+nxvb62g8vvsp28kjFgWYC3kuQL2qllZMMQaudT3UGJovu783YvIT80MUbqXdBV3fdbsfYDtF7uAbvp7ngVRZ6Pm0CO6FCp8PsQeNU/qDgsBkmlsCoV/Fm4C/d91coAk9cG4tQdCm9vEw57alkGXrm3Tg7V1pCCEfRNUgq7HmLZez9AO+w3rV3yBP1jyVeHrH2DdylhHDHH43uoK063oZlSnVcgyk3zgou+8U88oKNmispmwXrWWrTdk4XNIcO2DvOvq4WYeNslrHZY8LoeJrAbPiQjVnOHuhjAUk2oRkJu8cl+qRi2wiN7cGpya64xD1rvyGDlaZ12HWm6XHFL5Xq6eOyULtcA8hNU+HmCjRegi+SLRnHBu3AWi7DvMlnSoTKD8DSW6E0OF2erKZpVyUlNf9Q1kdSMg8fjZT48G2Xtxo+OBz95W2xK7n+A1BLAwQUAAAICAAAKCHsQOhL+G0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0UophkmVSiqWFaUqioYlpqqWuWZJhSnKKWaJFWqppklFiklIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAKCHsiioZQV0CAAATBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAKCHsQOhL+G0AAAB4AAAACQAkAAAAAAAAAAAAAACqAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAGIDAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -14758,7 +14794,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1597847339}
         m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
         m_MethodName: Damage
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -14781,7 +14817,7 @@ MonoBehaviour:
         m_CallState: 2
   playerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   isOnStay: 0
 --- !u!114 &1597847339
 MonoBehaviour:
@@ -14795,6 +14831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!61 &1597847341
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14959,7 +14996,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1617671948}
         m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
         m_MethodName: Damage
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -14970,7 +15007,7 @@ MonoBehaviour:
         m_CallState: 2
   playerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   isOnStay: 0
 --- !u!114 &1617671948
 MonoBehaviour:
@@ -14984,6 +15021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &1618792181
 GameObject:
   m_ObjectHideFlags: 0
@@ -15875,7 +15913,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1820613555}
         m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
         m_MethodName: Damage
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -15900,6 +15938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!61 &1820613556
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15910,10 +15949,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.05}
+  m_Offset: {x: 0, y: -0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -15924,7 +15963,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 0.1}
+  m_Size: {x: 2, y: 0.2}
   m_EdgeRadius: 0
 --- !u!1 &1823010810
 GameObject:
@@ -18023,7 +18062,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2109098415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b51021eb77e4c44599e15707b702e45, type: 3}
+  m_Script: {fileID: 11500000, guid: 919b7c32a0014f229af55694085a3df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lives:
@@ -18031,7 +18070,7 @@ MonoBehaviour:
   - {fileID: 1220751743}
   - {fileID: 883128370}
   maxLives: 3
-  livesRemaining: 3
+  invincibleTime: 2
 --- !u!1001 &2119592457
 PrefabInstance:
   m_ObjectHideFlags: 0
