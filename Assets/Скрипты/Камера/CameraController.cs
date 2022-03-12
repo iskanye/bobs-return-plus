@@ -42,6 +42,9 @@ public class CameraController : MonoBehaviour
     public void ChangeTarget(Transform target) =>
         camera.m_Follow = target;
 
+    public void ChangeTarget(GameObject target) =>
+        camera.m_Follow = target.transform;
+
     public void ChangeCameraBounds(PolygonCollider2D bounds) =>
         this.bounds.m_BoundingShape2D = bounds;
 }

@@ -67,35 +67,4 @@ public class PlayerLiveCounter : MonoBehaviour
             isInvincible = false;
         }
     }
-
-    //public void LoseLifes(int lifes)
-    //{
-    //    if (isInvincible || LivesRemaining == 0)
-    //        return;
-
-    //    for (int i = 0; i < lifes; i++)
-    //    {
-    //        LivesRemaining--;
-    //        lives[LivesRemaining].gameObject.SetActive(false);
-
-    //        if (LivesRemaining == 0)
-    //        {
-    //            Application.Quit();
-    //            return;
-    //        }
-    //    }
-
-    //    CameraController.StartShake();
-    //    isInvincible = true;
-    //}
-
-    //public bool Heal(int lifes)
-    //{
-    //    if (LivesRemaining >= maxLives) 
-    //        return false;
-
-    //    LivesRemaining += lifes;
-
-    //    return true;
-    //}
 }
