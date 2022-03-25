@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795573ee3d0781d7c97891cb2678f977, type: 3}
   m_Name: Moss
   m_EditorClassIdentifier: 
-  icon: {fileID: -102941555, guid: 81ac5fdf67ab5fb9eb48bbd7c4f54e82, type: 3}
+  icon: {fileID: -934719172, guid: 4effdec2a02843b7d8a1fb81acb8a06e, type: 3}
   title: "\u041C\u043E\u0445!"
   description: "\u0422\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u043B \u043C\u043E\u0445!"
   rarity: 0

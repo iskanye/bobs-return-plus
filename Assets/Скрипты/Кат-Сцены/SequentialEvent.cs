@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class SequentialEvent : SequenceObject
 {
@@ -18,10 +19,10 @@ public class SequentialEvent : SequenceObject
             ChangeState(sequenceState);
     }
 
-    public void StartSequence(GameObject o) 
+    public void StartSequence(GameObject o)
     {
-        StartSequence();
         obj = o;
+        StartSequence();
     }
 
     public void ChangeState(State<SequentialEvent> state) 
@@ -33,6 +34,19 @@ public class SequentialEvent : SequenceObject
 
         if (currentState != null)
             StartCoroutine(currentState.Start());
+    }
+
+    public override IEnumerator Sequence()
+    {
+        if (obj == null)    
+            yield return base.Sequence();
+
+        var seq = obj.GetComponent<SequenceObject>();
+
+        if (seq != null)
+            yield return seq.Sequence();
+
+        yield return base.Sequence();
     }
 }
 
@@ -47,7 +61,7 @@ public class SequenceState : State<SequentialEvent>
 { 
     public SequenceState(SequentialEvent mn) : base(mn) { }
 
-    public override System.Collections.IEnumerator Update() 
+    public override IEnumerator Update() 
     {
         int index = 0;
 

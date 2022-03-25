@@ -13,6 +13,7 @@ public class DialogueSystem : SequenceObject
     public GameObject variantPrefab;
     public TMP_Text character;
     public TMP_Text text;
+    public AudioSource textSFX;
 
     public static DialogueSystem Active { get; private set; }
 
@@ -28,7 +29,8 @@ public class DialogueSystem : SequenceObject
     [HideInInspector] public int currentVariant;
     [HideInInspector] public List<GameObject> variantObjects;
 
-    State<DialogueSystem> state;
+    [HideInInspector] public State<DialogueSystem> state;
+    [HideInInspector] public GameObject obj;
 
     void Awake()
     {
@@ -56,12 +58,14 @@ public class DialogueSystem : SequenceObject
         StartCoroutine(state.Start());
     }
 
-    public static void StartDialogue(Dialogue[] dialogues)
+    public static void StartDialogue(Dialogue[] dialogues, GameObject obj)
     {
         var active = Active;
 
-        if (active.state is PrintingState || active.state is WaitingState) return;
+        if (active.state is PrintingState || active.state is WaitingState) 
+            return;
 
+        active.obj = obj;
         active.dialogues = dialogues;
         active.index = 0;
 
@@ -72,7 +76,7 @@ public class DialogueSystem : SequenceObject
     {
         if (state is WaitingState) 
         {
-            if (current.isNonlinear)
+            if (current.variants != null)
             {
                 foreach (var i in variantObjects)
                     Destroy(i);
@@ -101,7 +105,7 @@ public class DialogueSystem : SequenceObject
 
     void VariantInput(InputAction.CallbackContext c) 
     {
-        if (!(state is WaitingState) || !current.isNonlinear)
+        if (!(state is WaitingState) || current.variants == null)
             return;
 
         var val = c.ReadValue<Vector2>();
@@ -127,10 +131,13 @@ public class Dialogue
 {
     public string character;
     public string text;
-    public UnityEvent action;
+    public UnityEvent<GameObject> action;
 
-    public bool isNonlinear;
+    public float startDelay;
+
     public bool clearPreviousText = true;
+    public bool showStraightaway;
+    public bool dontWait;
 
     public DialogueVariant[] variants;
 
@@ -141,12 +148,14 @@ public class Dialogue
         public UnityEvent action;
     }
 
-    public Dialogue(string character, string text, UnityEvent action, bool clearPreviousText)
+    public Dialogue(string character, string text, UnityEvent<GameObject> action, bool clearPreviousText, bool showStraightaway, bool dontWait, float startDelay)
     {
         this.character = character;
         this.text = text;
         this.action = action;
         this.clearPreviousText = clearPreviousText;
-        isNonlinear = false;
+        this.showStraightaway = showStraightaway;
+        this.dontWait = dontWait;
+        this.startDelay = startDelay;
     }
 }

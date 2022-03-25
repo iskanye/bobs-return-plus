@@ -6,6 +6,7 @@ public class SimpleMovement : MonoBehaviour, IWalkable
     [Range(0, 10)] public float speed = .5f;
     public float startDelay;
     public bool repeat;
+    public float repeatDelay;
 
     public bool IsWalking { get; set; }
     public Vector2 Direction { get; set; }
@@ -17,7 +18,7 @@ public class SimpleMovement : MonoBehaviour, IWalkable
 
     void Awake()
     {
-        startPoint = gameObject.transform.position;
+        startPoint = transform.localPosition;
         moveState = new MoveState(this);
 
         if (startDelay >= 0)
@@ -27,22 +28,25 @@ public class SimpleMovement : MonoBehaviour, IWalkable
     void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawLine(gameObject.transform.position, endPoint);
-        Gizmos.DrawWireSphere(endPoint, .25f);
+        Gizmos.DrawLine(transform.position, (Vector3)endPoint + transform.position);
+        Gizmos.DrawWireSphere((Vector3)endPoint + transform.position, .1f);
     }
 
     public void ChangeState(State<SimpleMovement> state) 
     {
-        if (state != null)
+        if (this.state != null)
             StartCoroutine(this.state.Stop());
 
         this.state = state;
 
-        if (state != null)
+        if (this.state != null)
             StartCoroutine(this.state.Start());
     }
 
     public void StartMove() =>
+        ChangeState(moveState);
+
+    public void StopMove() =>
         ChangeState(moveState);
 }
 
@@ -54,19 +58,19 @@ public class MoveState : State<SimpleMovement>
 
     public override System.Collections.IEnumerator Update() 
     {
+        mn.endPoint += (Vector2)mn.transform.localPosition;
         mn.IsWalking = true;
 
         while (true) 
         {
             mn.Direction = (mn.endPoint - mn.startPoint).normalized;
+            mn.transform.localPosition = Vector2.Lerp(mn.startPoint, mn.endPoint, t);
 
-            mn.gameObject.transform.position = Vector2.Lerp(mn.startPoint, mn.endPoint, t);
-            t += mn.speed * Time.deltaTime;
-
-            if (t >= 0) 
+            if (t >= 1) 
             {
                 if (mn.repeat)
                 {
+                    yield return new WaitForSeconds(mn.repeatDelay);
                     t = 0;
                     (mn.startPoint, mn.endPoint) = (mn.endPoint, mn.startPoint);
                 }
@@ -77,6 +81,7 @@ public class MoveState : State<SimpleMovement>
                 }
             }
 
+            t += mn.speed * Time.deltaTime;
             yield return base.Update();
         }
     }

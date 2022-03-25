@@ -78,9 +78,9 @@ public class SceneData : MonoBehaviour
         var active = Active;
 
         Data.customProperties = new List<CustomProperty>();
-        Data.inventory = new List<IdItem>();
+        Data.inventory = new List<GuidItem>();
         Data.level = GetActiveScene().buildIndex;
-        Data.lives = active.lives.LivesRemaining;
+        Data.lives = (int)active.lives.LivesRemaining;
 
         foreach (var i in active.positions) 
             Data.positions.Add(new Position(i.id, i.gameObject.transform.position));
@@ -90,7 +90,7 @@ public class SceneData : MonoBehaviour
 
         foreach (var i in active.inventory.items)
             if (i != null) 
-                Data.inventory.Add(new IdItem(i.id));
+                Data.inventory.Add(new GuidItem(i.id));
 
         active.StopAllCoroutines();
         active.StartCoroutine(active.Saving());

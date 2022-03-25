@@ -3,7 +3,7 @@
     public int Lives
     {
         get => 
-            PlayerLiveCounter.Active.LivesRemaining;
+            (int)PlayerLiveCounter.Active.LivesRemaining;
 
         set => 
             PlayerLiveCounter.Active.LivesRemaining = value;

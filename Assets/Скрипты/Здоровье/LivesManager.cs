@@ -2,6 +2,8 @@
 
 public class LivesManager : UnityEngine.MonoBehaviour, ILives
 {
+    public int maxLives;
+
     public int Lives
     {
         get => 
@@ -9,11 +11,17 @@ public class LivesManager : UnityEngine.MonoBehaviour, ILives
 
         set
         {
-            if (value - lives < 0 && value != 0 && onHit != null)
-                onHit.Invoke();
+            if (lives == 0)
+                return;
 
             if (value == 0 && onDeath != null)
+            {
                 onDeath.Invoke();
+                return;
+            }
+
+            if (value - lives < 0 && onHit != null)
+                onHit.Invoke();
 
             lives = value;
         }
@@ -23,4 +31,7 @@ public class LivesManager : UnityEngine.MonoBehaviour, ILives
     public UnityEvent onHit;
 
     int lives;
+
+    void Awake() =>
+        lives = maxLives;
 }

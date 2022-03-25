@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Moss
   m_EditorClassIdentifier: 
   id: 0
-  icon: {fileID: -102941555, guid: 81ac5fdf67ab5fb9eb48bbd7c4f54e82, type: 3}
+  icon: {fileID: -934719172, guid: 4effdec2a02843b7d8a1fb81acb8a06e, type: 3}
   name: "\u041C\u043E\u0445"
   local: 0
+  healing: 2

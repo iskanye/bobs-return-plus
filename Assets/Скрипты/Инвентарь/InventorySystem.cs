@@ -1,43 +1,53 @@
 using UnityEngine;
-using System.Linq;
+using UnityEngine.UI;
 
 public class InventorySystem : MonoBehaviour
 {
     public int maxItems;
-    public UnityEngine.UI.Image[] icons;
-    public TMPro.TMP_Text[] labels;
+    public Image[] icons;
+    public Image[] panels;
+    public Sprite regular;
+    public Sprite selected;
+    public TMPro.TMP_Text label;
 
     [HideInInspector] public Item[] items;
+
+    public int Index { get; set; }
 
     void Awake()
     {
         var inventory = SceneData.Data.inventory;
         items = new Item[maxItems];
 
-        var allItems = Item.AllItems.OrderBy(j => j.id).ToArray();
-
         if (inventory != null)
             for (int i = 0; i < (inventory.Count > maxItems ? maxItems : inventory.Count); i++)
-                items[i] = allItems[inventory[i].id];
+                items[i] = Item.GetItem(inventory[i].id);
     }
 
     void Update()
     {
-        for (int i = 0; i < icons.Length; i++)
+        for (int i = 0; i < maxItems; i++)
         {
             if (items[i] != null)
             {
                 icons[i].sprite = items[i].icon;
                 icons[i].color = Color.white;
-                labels[i].text = items[i].name;
             }
 
             else
-            {
                 icons[i].color = new Color(0, 0, 0, 0);
-                labels[i].text = "";
-            }
+
+            panels[i].sprite = i == Index ? selected : regular;
+
+            if (Input.GetKeyDown((KeyCode)(49 + i)))
+                if (i == Index)
+                    Use(i);
+
+                else
+                    Index = i;
         }
+
+        label.text = items[Index] != null ? items[Index].name : "";
     }
 
     public void AddItem(Item item)
@@ -52,7 +62,7 @@ public class InventorySystem : MonoBehaviour
 
     public void Use(int item)
     {
-        if (items[item] == null)
+        if (items[item] == null || !(DialogueSystem.Active.state is Dialogues.IdleState))
             return;
 
         if (items[item].Action())

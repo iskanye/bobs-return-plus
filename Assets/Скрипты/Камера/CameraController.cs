@@ -1,9 +1,12 @@
+using UnityEngine.U2D;
 using UnityEngine;
 using Cinemachine;
 
 public class CameraController : MonoBehaviour
 {
     public static CameraController Active { get; private set; }
+
+    public PixelPerfectCamera pixelCamera;
 
     new CinemachineVirtualCamera camera;
     CinemachineBasicMultiChannelPerlin noise;
@@ -29,7 +32,10 @@ public class CameraController : MonoBehaviour
         noise.m_AmplitudeGain = Mathf.Lerp(noise.m_AmplitudeGain, Time.time >= shakeDelay ? 0 : amplitude, sharpness);
     }
 
-    public static void StartShake(float amplitude = 18, float frequency = 20, float sharpness = .5f, float shakeTime = .3f)
+    void LateUpdate() =>
+        transform.position = pixelCamera.RoundToPixel(transform.position);
+
+    public static void StartShake(float amplitude = 15, float frequency = 5, float sharpness = .5f, float shakeTime = .3f)
     {
         var active = Active;
 

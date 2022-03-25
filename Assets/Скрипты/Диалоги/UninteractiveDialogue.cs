@@ -8,7 +8,12 @@ public class UninteractiveDialogue : ScriptableObject
     {
         public string character;
         public string text;
+
+        public float startDelay;
+
         public bool clearPreviousText = true;
+        public bool showStraightaway;
+        public bool dontWait;
     }
     public Dialog[] dialogues;
 }

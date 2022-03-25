@@ -42,31 +42,46 @@ namespace Dialogues
             mn.character.text = mn.current.character;
 
             if (mn.current.action != null)
-                mn.current.action.Invoke();
+                mn.current.action.Invoke(mn.obj);
 
             if (mn.current.clearPreviousText) 
                 mn.text.text = "";
 
-            while (true)
+            yield return base.Start();
+
+            while (mn.dialogueBox.localScale != Vector3.one)
             {
-                mn.dialogueBox.localScale = Vector3.Lerp(mn.dialogueBox.localScale, Vector3.one, 8 * Time.deltaTime);
-                mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, new Vector3(1, 0, 1), 6 * Time.deltaTime);
-
-                if (mn.dialogueBox.localScale == Vector3.one)
-                    break;
-
+                mn.dialogueBox.localScale = Vector3.Lerp(mn.dialogueBox.localScale, Vector3.one, 14 * Time.deltaTime);
                 yield return base.Update();
             }
 
-            foreach (var j in mn.current.text)
-            {
-                mn.text.text += j;
-                yield return new WaitForFixedUpdate();
-            }
+            yield return new WaitForSeconds(mn.current.startDelay);
+
+            if (mn.current.showStraightaway)
+                mn.text.text += mn.current.text;
+
+            else 
+                foreach (var j in mn.current.text)
+                {
+                    mn.textSFX.pitch = Random.Range(1.3f, 1.5f);
+                    mn.textSFX.Play();
+
+                    mn.text.text += j;
+                    yield return new WaitForFixedUpdate();
+                }
 
             mn.ChangeState(mn.waitingState);
 
             yield return base.Start();
+        }
+
+        public override IEnumerator Update()
+        {
+            while (true) 
+            {
+                mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, new Vector3(1, 0, 1), 8 * Time.deltaTime);
+                yield return base.Update();
+            }
         }
     }
 
@@ -76,18 +91,29 @@ namespace Dialogues
 
         public override IEnumerator Start()
         {
+            if (mn.current.dontWait) 
+            {
+                mn.index++;
+
+                if (mn.index >= mn.dialogues.Length)
+                {
+                    mn.ChangeState(mn.idleState);
+                    yield break;
+                }
+
+                mn.ChangeState(mn.printingState);
+            }
+
             yield return base.Start();
 
-            if (mn.current.isNonlinear)
+            if (mn.current.variants != null)
             {
-                mn.variantBox.sizeDelta = new Vector2(mn.variantBox.sizeDelta.x, 28 * mn.current.variants.Length);
+                mn.variantBox.sizeDelta = new Vector2(mn.variantBox.sizeDelta.x, 32 * mn.current.variants.Length);
 
-                while (true)
+                while (mn.variantBox.localScale != Vector3.one)
                 {
-                    mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, Vector3.one, 6 * Time.deltaTime);
-
-                    if (mn.variantBox.localScale == Vector3.one)
-                        break;
+                    mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, Vector3.one, 14 * Time.deltaTime);
+                    yield return base.Update();
                 }
 
                 for (int i = 0; i < mn.current.variants.Length; i++)
@@ -103,10 +129,10 @@ namespace Dialogues
 
         public override IEnumerator Update()
         {
-            while (true) 
+            while (mn.current.variants == null)
             {
-                mn.dialogueBox.localScale = Vector3.Lerp(mn.dialogueBox.localScale, Vector3.one, 8 * Time.deltaTime);
-                yield return base.Update(); 
+                mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, new Vector3(1, 0, 1), 6 * Time.deltaTime);
+                yield return base.Update();
             }
         }
     }

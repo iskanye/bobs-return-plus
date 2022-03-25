@@ -7,6 +7,9 @@
     void Awake() =>
         player = FindObjectOfType<MovementBob>();
 
+    void Update() =>
+        transform.position = player.transform.position;
+
     public override System.Collections.IEnumerator Sequence() 
     {
         yield return player.GetComponent<AnimationMovementController>().Sequence();

@@ -16,7 +16,7 @@ public class RandomActions : MonoBehaviour
 
     public void Action(GameObject o)
     {
-        Action();
         obj = o;
+        Action();
     }
 }

@@ -7,12 +7,12 @@ public class ChangeDialogue : MonoBehaviour
     public DialogueActivator interactiveActivator;
     public UninteractiveDialogueActivator uninteractiveActivator;
     public UninteractiveDialogue uninteractiveDialogue;
-    public UnityEvent[] uninteractiveEvents;
+    public UnityEvent<GameObject>[] uninteractiveEvents;
     public Dialogue[] interactiveDialogue;
     
     void Awake() 
     {
-        if (uninteractiveEvents.Length <= 0) uninteractiveEvents = new UnityEvent[uninteractiveDialogue.dialogues.Length];
+        if (uninteractiveEvents.Length <= 0) uninteractiveEvents = new UnityEvent<GameObject>[uninteractiveDialogue.dialogues.Length];
     }
 
     public void Change()
@@ -29,7 +29,9 @@ public class ChangeDialogue : MonoBehaviour
             List<Dialogue> dial = new List<Dialogue>();
             var cache = uninteractiveDialogue.dialogues;
 
-            for (int i = 0; i < cache.Length; i++) dial.Add(new Dialogue(cache[i].character, cache[i].text, uninteractiveEvents[i], cache[i].clearPreviousText));
+            for (int i = 0; i < cache.Length; i++) 
+                dial.Add(new Dialogue(cache[i].character, cache[i].text, uninteractiveEvents[i],
+                    cache[i].clearPreviousText, cache[i].showStraightaway, cache[i].dontWait, cache[i].startDelay));
 
             interactiveActivator.dialogues = dial.ToArray();
             return;
@@ -40,6 +42,7 @@ public class ChangeDialogue : MonoBehaviour
 
     public void Change(bool prop) 
     {
-        if (prop) Change();
+        if (prop) 
+            Change();
     }
 }

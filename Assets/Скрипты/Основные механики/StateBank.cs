@@ -35,7 +35,7 @@ public class StateBank : MonoBehaviour
         states |= byteState;
         index++;
 
-        if (states == (int)Mathf.Pow(2, stateCount - 1) - 1)
+        if (states == (int)Mathf.Pow(2, stateCount) - 1)
         {
             action.Invoke();
             states |= 1 << stateCount;

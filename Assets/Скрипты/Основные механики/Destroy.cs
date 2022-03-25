@@ -12,4 +12,7 @@ public class Destroy : MonoBehaviour
         if (property)
             Do();
     }
+
+    public void Do(GameObject obj) =>
+        Destroy(obj);
 }

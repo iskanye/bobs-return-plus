@@ -1,12 +1,14 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerLiveCounter : MonoBehaviour
 {
-    public UnityEngine.UI.Image[] lives;
-    public int maxLives = 3;
+    public Animator[] lives;
+    public int maxLives = 6;
+    public int livesInOneHeart = 2;
     public float invincibleTime = 2;
 
-    public int LivesRemaining 
+    public float LivesRemaining 
     {
         get => 
             livesRemaining;
@@ -16,26 +18,22 @@ public class PlayerLiveCounter : MonoBehaviour
             if (isInvincible || livesRemaining == 0)
                 return;
 
-            if (value - livesRemaining < 0) 
+            if (value <= 0)
+            {
+                Application.Quit();
+                return;
+            }
+
+            if (value > maxLives)
+                value = maxLives;
+
+            if (value < livesRemaining) 
             {
                 CameraController.StartShake();
                 isInvincible = true;
             }
 
-            if (value <= maxLives)
-                livesRemaining = value;
-
-            else
-                livesRemaining = maxLives;
-
-            for (int i = 0; i < lives.Length; i++)
-                lives[i].gameObject.SetActive(i <= value - 1);
-
-            if (livesRemaining == 0)
-            {
-                Application.Quit();
-                return;
-            }
+            StartCoroutine(ChangeLives(value));
         }
     }
 
@@ -43,17 +41,35 @@ public class PlayerLiveCounter : MonoBehaviour
 
     bool isInvincible;
     float invincibleDelay = float.PositiveInfinity;
-    int livesRemaining;
+    float livesRemaining;
 
     void Awake() => Active = this;
 
-    void Start() 
+    IEnumerator ChangeLives(float val)
     {
-        var data = SceneData.Data;
-        livesRemaining = data.lives;
+        while (livesRemaining != val)
+        {
+            if (val > livesRemaining)
+                livesRemaining++;
 
-        for (int i = 0; i < lives.Length; i++) 
-            lives[i].gameObject.SetActive(i <= data.lives - 1);
+            lives[Mathf.CeilToInt(livesRemaining / livesInOneHeart) - 1].SetTrigger(val < livesRemaining ? "Hurt" : "Heal");
+
+            if (val < livesRemaining)
+                livesRemaining--;
+
+            yield return new WaitForEndOfFrame();
+        }
+    }
+
+    IEnumerator Start()
+    {
+        livesRemaining = SceneData.Data.lives;
+
+        for (int i = 0; i < livesRemaining; i++)
+        {
+            lives[Mathf.CeilToInt(i / livesInOneHeart)].SetTrigger("Heal");
+            yield return new WaitForEndOfFrame();
+        }
     }
 
     void Update()

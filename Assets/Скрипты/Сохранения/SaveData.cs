@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class SaveData
 {
     public int level;
-    public int lives = 3;
+    public int lives = 6;
 
     public List<Position> positions;
 
@@ -14,7 +14,7 @@ public class SaveData
     public List<CustomProperty> globalProperties;
 
     public List<IdItem> achievements;
-    public List<IdItem> inventory;
+    public List<GuidItem> inventory;
 
     public SaveData() 
     {
@@ -22,7 +22,7 @@ public class SaveData
         globalProperties = new List<CustomProperty>();
         positions = new List<Position>();
         achievements = new List<IdItem>();
-        inventory = new List<IdItem>();
+        inventory = new List<GuidItem>();
     }
 }
 
@@ -64,6 +64,25 @@ public class IdItem : IEquatable<IdItem>
     public IdItem(int id) => this.id = id;
 
     public bool Equals(IdItem i)
+    {
+        if (i == null)
+            return false;
+
+        if (id == i.id)
+            return true;
+
+        return false;
+    }
+}
+
+[Serializable]
+public class GuidItem : IEquatable<GuidItem>
+{
+    public string id;
+
+    public GuidItem(string id) => this.id = id;
+
+    public bool Equals(GuidItem i)
     {
         if (i == null)
             return false;
