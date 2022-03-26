@@ -63,11 +63,13 @@ namespace Dialogues
             else 
                 foreach (var j in mn.current.text)
                 {
-                    mn.textSFX.pitch = Random.Range(1.3f, 1.5f);
+                    mn.textSFX.pitch = Random.Range(.95f, 1.05f);
                     mn.textSFX.Play();
 
                     mn.text.text += j;
                     yield return new WaitForFixedUpdate();
+
+                    mn.textSFX.Stop();
                 }
 
             mn.ChangeState(mn.waitingState);
@@ -79,7 +81,7 @@ namespace Dialogues
         {
             while (true) 
             {
-                mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, new Vector3(1, 0, 1), 8 * Time.deltaTime);
+                mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, new Vector3(1, 0, 1), 6 * Time.deltaTime);
                 yield return base.Update();
             }
         }

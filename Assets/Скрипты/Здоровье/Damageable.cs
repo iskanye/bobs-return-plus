@@ -2,6 +2,17 @@
 
 public class Damageable : MonoBehaviour
 {
-    public void Damage(GameObject g) =>
-        g.GetComponent<ILives>().Lives--;
+    public bool isDeadly;
+
+    public void Damage(GameObject g)
+    {
+        var obj = g.GetComponent<ILives>();
+
+        if (obj != null)
+            if (isDeadly)
+                obj.Lives = int.MinValue;
+
+            else
+                obj.Lives--;
+    }
 }

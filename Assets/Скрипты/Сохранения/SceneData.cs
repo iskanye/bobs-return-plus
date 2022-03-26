@@ -93,7 +93,9 @@ public class SceneData : MonoBehaviour
                 Data.inventory.Add(new GuidItem(i.id));
 
         active.StopAllCoroutines();
-        active.StartCoroutine(active.Saving());
+
+        if (active.savingText != null)
+            active.StartCoroutine(active.Saving());
     }
 
     public static void DeleteSaves()
@@ -101,7 +103,9 @@ public class SceneData : MonoBehaviour
         var active = Active;
 
         active.StopAllCoroutines();
-        active.StartCoroutine(active.Deleting());
+
+        if (active.savingText != null)
+            active.StartCoroutine(active.Deleting());
     }
 
     IEnumerator Saving()

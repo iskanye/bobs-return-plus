@@ -14,7 +14,7 @@ public class LivesManager : UnityEngine.MonoBehaviour, ILives
             if (lives == 0)
                 return;
 
-            if (value == 0 && onDeath != null)
+            if (value <= 0 && onDeath != null)
             {
                 onDeath.Invoke();
                 return;

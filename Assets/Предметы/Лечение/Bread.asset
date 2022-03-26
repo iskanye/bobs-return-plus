@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4c99a89d3d418542a6059be20833518, type: 3}
-  m_Name: Potion Regeneration
+  m_Name: Bread
   m_EditorClassIdentifier: 
-  id: 1
-  icon: {fileID: -1669756081, guid: 4effdec2a02843b7d8a1fb81acb8a06e, type: 3}
-  name: "\u041B\u0435\u0447\u0435\u0431\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435"
+  id: 856dc020-fc88-4b1e-931d-10b4fb9cac6a
+  icon: {fileID: -582059418, guid: 4effdec2a02843b7d8a1fb81acb8a06e, type: 3}
+  name: "\u0425\u043B\u0435\u0431"
   local: 0
-  healing: 4
+  healing: 3

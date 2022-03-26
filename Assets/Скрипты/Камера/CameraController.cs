@@ -30,12 +30,11 @@ public class CameraController : MonoBehaviour
     {
         noise.m_FrequencyGain = Mathf.Lerp(noise.m_FrequencyGain, Time.time >= shakeDelay ? 0 : frequency, sharpness);
         noise.m_AmplitudeGain = Mathf.Lerp(noise.m_AmplitudeGain, Time.time >= shakeDelay ? 0 : amplitude, sharpness);
+
+        transform.position = pixelCamera.RoundToPixel(transform.position);
     }
 
-    void LateUpdate() =>
-        transform.position = pixelCamera.RoundToPixel(transform.position);
-
-    public static void StartShake(float amplitude = 15, float frequency = 5, float sharpness = .5f, float shakeTime = .3f)
+    public static void StartShake(float amplitude = 7, float frequency = 3, float sharpness = .1f, float shakeTime = .6f)
     {
         var active = Active;
 

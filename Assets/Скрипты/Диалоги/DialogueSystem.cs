@@ -8,7 +8,7 @@ using Dialogues;
 
 public class DialogueSystem : SequenceObject
 {
-    public Transform dialogueBox;
+    public RectTransform dialogueBox;
     public RectTransform variantBox;
     public GameObject variantPrefab;
     public TMP_Text character;
@@ -70,6 +70,22 @@ public class DialogueSystem : SequenceObject
         active.index = 0;
 
         active.ChangeState(active.printingState);
+    }
+
+    public void GUIInput()
+    {
+        if (!(state is WaitingState) || current.variants != null)
+            return;
+
+        index++;
+
+        if (index >= dialogues.Length)
+        {
+            ChangeState(idleState);
+            return;
+        }
+
+        ChangeState(printingState);
     }
 
     void Input(InputAction.CallbackContext c) 
