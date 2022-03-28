@@ -8,4 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/\u0421\u0446\u0435\u043D\u044B/AI Testing.unity"
     guid: 07296356ff650655ca49f94a6bfbe40f
+  - enabled: 1
+    path: "Assets/1 \u0430\u043F\u0440\u0435\u043B\u044F \u043D\u0438\u043A\u043E\u043C\u0443
+      \u043D\u0435 \u0432\u0435\u0440\u044F/Menu.unity"
+    guid: f9ab2fc40333f043ca149e3c160fcdb6
+  - enabled: 1
+    path: "Assets/1 \u0430\u043F\u0440\u0435\u043B\u044F \u043D\u0438\u043A\u043E\u043C\u0443
+      \u043D\u0435 \u0432\u0435\u0440\u044F/Game.unity"
+    guid: c63608ca3acbf147381d071022519555
   m_configObjects: {}

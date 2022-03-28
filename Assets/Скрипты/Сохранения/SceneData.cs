@@ -77,10 +77,14 @@ public class SceneData : MonoBehaviour
     {
         var active = Active;
 
-        Data.customProperties = new List<CustomProperty>();
-        Data.inventory = new List<GuidItem>();
-        Data.level = GetActiveScene().buildIndex;
-        Data.lives = (int)active.lives.LivesRemaining;
+        var temp = Data.achievements;
+
+        Data = new SaveData
+        {
+            level = GetActiveScene().buildIndex,
+            lives = (int)active.lives.LivesRemaining,
+            achievements = temp
+        };
 
         foreach (var i in active.positions) 
             Data.positions.Add(new Position(i.id, i.gameObject.transform.position));

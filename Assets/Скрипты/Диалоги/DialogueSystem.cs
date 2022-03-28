@@ -11,6 +11,8 @@ public class DialogueSystem : SequenceObject
     public RectTransform dialogueBox;
     public RectTransform variantBox;
     public GameObject variantPrefab;
+    public UnityEngine.UI.Image novelSprite;
+    public Animator novelAnimator;
     public TMP_Text character;
     public TMP_Text text;
     public AudioSource textSFX;
@@ -146,6 +148,7 @@ public class DialogueSystem : SequenceObject
 public class Dialogue
 {
     public string character;
+    public Sprite characterSprite;
     public string text;
     public UnityEvent<GameObject> action;
 
@@ -164,9 +167,11 @@ public class Dialogue
         public UnityEvent action;
     }
 
-    public Dialogue(string character, string text, UnityEvent<GameObject> action, bool clearPreviousText, bool showStraightaway, bool dontWait, float startDelay)
+    public Dialogue(string character, Sprite characterSprite, string text, UnityEvent<GameObject> action, 
+        bool clearPreviousText, bool showStraightaway, bool dontWait, float startDelay)
     {
         this.character = character;
+        this.characterSprite = characterSprite;
         this.text = text;
         this.action = action;
         this.clearPreviousText = clearPreviousText;

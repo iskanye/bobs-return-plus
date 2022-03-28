@@ -16,6 +16,9 @@ namespace Dialogues
             if (mn.player != null)
                 mn.player.enabled = true;
 
+            mn.novelAnimator.ResetTrigger("Show");
+            mn.novelAnimator.SetTrigger("Fade");
+
             while (true)
             {
                 mn.dialogueBox.localScale = Vector3.Lerp(mn.dialogueBox.localScale, new Vector3(1, 0, 1), 8 * Time.deltaTime);
@@ -44,8 +47,14 @@ namespace Dialogues
             if (mn.current.action != null)
                 mn.current.action.Invoke(mn.obj);
 
-            if (mn.current.clearPreviousText) 
+            if (mn.current.clearPreviousText)
                 mn.text.text = "";
+
+            if (mn.current.characterSprite != null)
+                mn.novelSprite.sprite = mn.current.characterSprite;
+
+            mn.novelAnimator.ResetTrigger(mn.current.characterSprite != null ? "Fade" : "Show");
+            mn.novelAnimator.SetTrigger(mn.current.characterSprite != null ? "Show" : "Fade");
 
             yield return base.Start();
 
@@ -60,7 +69,7 @@ namespace Dialogues
             if (mn.current.showStraightaway)
                 mn.text.text += mn.current.text;
 
-            else 
+            else
                 foreach (var j in mn.current.text)
                 {
                     mn.textSFX.pitch = Random.Range(.95f, 1.05f);

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[ExecuteInEditMode]
 public class CornersScaler : MonoBehaviour
 {
     Canvas canvas;

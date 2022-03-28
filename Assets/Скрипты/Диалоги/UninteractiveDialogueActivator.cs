@@ -17,7 +17,7 @@ public class UninteractiveDialogueActivator : MonoBehaviour
         var convert = new Dialogue[dials.Length];
 
         for (int i = 0; i < dials.Length; i++) 
-            convert[i] = new Dialogue(dials[i].character, dials[i].text, events[i], dials[i].clearPreviousText, 
+            convert[i] = new Dialogue(dials[i].character, dials[i].characterSprite, dials[i].text, events[i], dials[i].clearPreviousText, 
                 dials[i].showStraightaway, dials[i].dontWait, dials[i].startDelay);
 
         DialogueSystem.StartDialogue(convert, obj);

@@ -7,6 +7,7 @@ public class UninteractiveDialogue : ScriptableObject
     public class Dialog
     {
         public string character;
+        public Sprite characterSprite;
         public string text;
 
         public float startDelay;

@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - character: 
+    characterSprite: {fileID: 0}
     text: "\u041C\u043E\u0445 \u043C\u043E\u0436\u0435\u0442 \u043F\u043E\u043C\u043E\u0447\u044C
       \u0437\u0430\u043B\u0435\u0447\u0438\u0442\u044C \u043B\u0435\u0433\u043A\u0438\u0435
       \u0440\u0430\u043D\u044B."
+    startDelay: 0
     clearPreviousText: 1
+    showStraightaway: 0
+    dontWait: 0

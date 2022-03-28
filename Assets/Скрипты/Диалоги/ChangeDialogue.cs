@@ -30,7 +30,7 @@ public class ChangeDialogue : MonoBehaviour
             var cache = uninteractiveDialogue.dialogues;
 
             for (int i = 0; i < cache.Length; i++) 
-                dial.Add(new Dialogue(cache[i].character, cache[i].text, uninteractiveEvents[i],
+                dial.Add(new Dialogue(cache[i].character, cache[i].characterSprite, cache[i].text, uninteractiveEvents[i],
                     cache[i].clearPreviousText, cache[i].showStraightaway, cache[i].dontWait, cache[i].startDelay));
 
             interactiveActivator.dialogues = dial.ToArray();

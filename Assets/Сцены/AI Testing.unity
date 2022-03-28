@@ -2161,6 +2161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - character: 
+    characterSprite: {fileID: 0}
     text: "\u042D\u0442\u043E \u0437\u043D\u0430\u0447\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0445
       \u0440\u0430\u0437\u043C\u0435\u0440\u043E\u0432 \u043A\u0443\u0447\u0430 \u0441\u0435\u043D\u0430."
     action:
@@ -6857,7 +6858,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.4600184, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -9553,6 +9554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - character: 
+    characterSprite: {fileID: 0}
     text: "\u0412\u0437\u044F\u0442\u044C \u0445\u043B\u0435\u0431 \u0441 \u043F\u0440\u0435\u0434\u0441\u043A\u0430\u0437\u0430\u043D\u0438\u0435\u043C?"
     action:
       m_PersistentCalls:
@@ -11200,10 +11202,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.22343326
-    y: 0.14839798
-    width: 0.5522253
-    height: 0.7015177
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -15393,6 +15395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - character: 
+    characterSprite: {fileID: 0}
     text: "\u041F\u043E\u043B\u043E\u0436\u0438\u0442\u044C "
     action:
       m_PersistentCalls:
@@ -15403,6 +15406,7 @@ MonoBehaviour:
     dontWait: 1
     variants: []
   - character: 
+    characterSprite: {fileID: 0}
     text: <color=#005500>
     action:
       m_PersistentCalls:
@@ -15413,6 +15417,7 @@ MonoBehaviour:
     dontWait: 1
     variants: []
   - character: 
+    characterSprite: {fileID: 0}
     text: "\u043C\u043E\u0445"
     action:
       m_PersistentCalls:
@@ -15423,6 +15428,7 @@ MonoBehaviour:
     dontWait: 1
     variants: []
   - character: 
+    characterSprite: {fileID: 0}
     text: </color>
     action:
       m_PersistentCalls:
@@ -15433,6 +15439,7 @@ MonoBehaviour:
     dontWait: 1
     variants: []
   - character: 
+    characterSprite: {fileID: 0}
     text: " \u0432 \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044C?"
     action:
       m_PersistentCalls:
@@ -33812,10 +33819,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5901387748086646547, guid: 56698879f098039e88827d48594b6842,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.6862745
+      objectReference: {fileID: 0}
     - target: {fileID: 5901387748086646548, guid: 56698879f098039e88827d48594b6842,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5901387748719636143, guid: 56698879f098039e88827d48594b6842,
         type: 3}
