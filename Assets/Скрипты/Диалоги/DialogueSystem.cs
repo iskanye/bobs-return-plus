@@ -12,7 +12,7 @@ public class DialogueSystem : SequenceObject
     public RectTransform variantBox;
     public GameObject variantPrefab;
     public UnityEngine.UI.Image novelSprite;
-    public Animator novelAnimator;
+    public RectTransform novelTransform;
     public TMP_Text character;
     public TMP_Text text;
     public AudioSource textSFX;
@@ -21,7 +21,7 @@ public class DialogueSystem : SequenceObject
 
     [HideInInspector] public Dialogue[] dialogues;
     [HideInInspector] public Dialogue current;
-    [HideInInspector] public MovementBob player;
+    [HideInInspector] public TopDownMovement player;
 
     [HideInInspector] public IdleState idleState;
     [HideInInspector] public PrintingState printingState;
@@ -33,12 +33,13 @@ public class DialogueSystem : SequenceObject
 
     [HideInInspector] public State<DialogueSystem> state;
     [HideInInspector] public GameObject obj;
+    [HideInInspector] public string prevText;
 
     void Awake()
     {
         Active = this;
 
-        player = FindObjectOfType<MovementBob>();
+        player = FindObjectOfType<TopDownMovement>();
         variantObjects = new List<GameObject>();
 
         idleState = new IdleState(this);
@@ -48,6 +49,7 @@ public class DialogueSystem : SequenceObject
         ChangeState(idleState);
 
         InputManager.Input.Player.Submit.canceled += Input;
+        InputManager.Input.Player.Submit.started += SkipInput;
         InputManager.Input.Player.Move.started += VariantInput;
     }
 
@@ -74,20 +76,33 @@ public class DialogueSystem : SequenceObject
         active.ChangeState(active.printingState);
     }
 
+    public void StopDialogue() =>
+        ChangeState(idleState);
+
     public void GUIInput()
     {
-        if (!(state is WaitingState) || current.variants != null)
+        if (current.variants != null)
             return;
 
-        index++;
-
-        if (index >= dialogues.Length)
+        if (state is WaitingState)
         {
-            ChangeState(idleState);
+            index++;
+
+            if (index >= dialogues.Length)
+            {
+                ChangeState(idleState);
+                return;
+            }
+
+            ChangeState(printingState);
             return;
         }
 
-        ChangeState(printingState);
+        if (state is PrintingState) 
+        {
+            ChangeState(waitingState);
+            text.text = prevText + current.text;
+        }
     }
 
     void Input(InputAction.CallbackContext c) 
@@ -118,6 +133,16 @@ public class DialogueSystem : SequenceObject
             }
 
             ChangeState(printingState);
+            return;
+        }
+    }
+
+    void SkipInput(InputAction.CallbackContext c)
+    {
+        if (state is PrintingState)
+        {
+            text.text = prevText + current.text;
+            ChangeState(waitingState);
         }
     }
 
@@ -149,7 +174,7 @@ public class Dialogue
 {
     public string character;
     public Sprite characterSprite;
-    public string text;
+    [TextArea] public string text;
     public UnityEvent<GameObject> action;
 
     public float startDelay;

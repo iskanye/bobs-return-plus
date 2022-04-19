@@ -10,6 +10,6 @@ public class PeriodAction : ActionBase
     void Do() 
     {
         if (action != null)
-            action.Invoke(FindObjectOfType<MovementBob>().gameObject); 
+            action.Invoke(FindObjectOfType<TopDownMovement>().gameObject); 
     }
 }

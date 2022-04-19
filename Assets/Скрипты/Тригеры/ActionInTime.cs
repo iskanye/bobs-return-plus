@@ -8,6 +8,6 @@ public class ActionInTime : ActionBase
     void Act()
     {
         if (action != null)
-            action.Invoke(FindObjectOfType<MovementBob>().gameObject);
+            action.Invoke(FindObjectOfType<TopDownMovement>().gameObject);
     }
 }

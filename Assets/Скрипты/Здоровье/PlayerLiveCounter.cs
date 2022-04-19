@@ -4,11 +4,23 @@ using System.Collections;
 public class PlayerLiveCounter : MonoBehaviour
 {
     public Animator[] lives;
-    public int maxLives = 6;
-    public int livesInOneHeart = 2;
+    public int[] livesInOneHeart;
     public float invincibleTime = 2;
 
-    public float LivesRemaining 
+    public int maxLives 
+    {
+        get
+        {
+            int res = 0;
+
+            for (int i = 0; i < livesInOneHeart.Length; i++)
+                res += livesInOneHeart[i];
+
+            return res;
+        } 
+    }
+
+    public int LivesRemaining 
     {
         get => 
             livesRemaining;
@@ -27,6 +39,9 @@ public class PlayerLiveCounter : MonoBehaviour
             if (value > maxLives)
                 value = maxLives;
 
+            if (value == livesRemaining)
+                return;
+
             if (value < livesRemaining) 
             {
                 CameraController.StartShake();
@@ -41,39 +56,70 @@ public class PlayerLiveCounter : MonoBehaviour
 
     bool isInvincible;
     float invincibleDelay = float.PositiveInfinity;
-    float livesRemaining;
+    int livesRemaining;
+    int heart;
+    int livesInHeart;
 
-    void Awake() => Active = this;
+    void Awake() =>
+        Active = this;
 
-    IEnumerator ChangeLives(float val)
+    public void Initialize()
     {
-        while (livesRemaining != val)
-        {
-            if (val > livesRemaining)
-                livesRemaining++;
+        for (int i = livesInOneHeart.Length; i < lives.Length; i++)
+            lives[i - 1].GetComponent<UnityEngine.UI.Image>().color = new Color(0, 0, 0, 0);
 
-            lives[Mathf.CeilToInt(livesRemaining / livesInOneHeart) - 1].SetTrigger(val < livesRemaining ? "Hurt" : "Heal");
-
-            if (val < livesRemaining)
-                livesRemaining--;
-
-            yield return new WaitForEndOfFrame();
-        }
+        StartCoroutine(ChangeLives(SceneData.Data.lives != null ? (int)SceneData.Data.lives : maxLives));
     }
 
-    IEnumerator Start()
+    IEnumerator ChangeLives(int val)
     {
-        livesRemaining = SceneData.Data.lives;
+        var cache = livesRemaining;
 
-        for (int i = 0; i < livesRemaining; i++)
+        do
         {
-            lives[Mathf.CeilToInt(i / livesInOneHeart)].SetTrigger("Heal");
-            yield return new WaitForEndOfFrame();
-        }
+            if (val >= livesRemaining)
+            {
+                if (livesInHeart > livesInOneHeart[heart])
+                {
+                    heart++;
+                    livesInHeart = 1;
+                }
+
+                livesInHeart++;
+                livesRemaining++;
+
+                lives[heart].SetTrigger("Heal");
+            }
+
+            else
+            {
+                lives[heart].SetTrigger("Hurt");
+                livesInHeart--;
+                livesRemaining--;
+
+                if (livesInHeart < 1)
+                {
+                    heart--;
+                    livesInHeart = livesInOneHeart[heart];
+                }
+            }
+
+            yield return new WaitForSeconds(.4f);
+        } while (val != livesRemaining);
+
+        if (val > cache)
+            lives[heart].SetTrigger("Heal");
+
+        for (int i = heart; i < livesInOneHeart.Length - 1; i++)
+            if (livesInOneHeart[i] == 3)
+                livesInOneHeart[i] = 2;
     }
 
     void Update()
     {
+        for (int i = 0; i < livesInOneHeart.Length; i++)
+            lives[i].SetInteger("Lives", livesInOneHeart[i]);
+
         if (float.IsPositiveInfinity(invincibleDelay) && isInvincible)
             invincibleDelay = Time.time + invincibleTime;
 

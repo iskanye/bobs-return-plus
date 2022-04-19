@@ -6858,7 +6858,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 1.69375, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -14014,6 +14014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1877d85c2d6fa5c89b687955578c30f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  livesInOneHeart: 030000000300000003000000
 --- !u!70 &780290301
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -32399,7 +32400,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 84, y: 28}
+  m_SizeDelta: {x: 96, y: 32}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2109098417
 MonoBehaviour:
@@ -32417,8 +32418,7 @@ MonoBehaviour:
   - {fileID: 458847494}
   - {fileID: 1302350532}
   - {fileID: 456195639}
-  maxLives: 6
-  livesInOneHeart: 2
+  livesInOneHeart: 020000000200000002000000
   invincibleTime: 1
 --- !u!114 &2109098418
 MonoBehaviour:

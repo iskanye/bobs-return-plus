@@ -2,10 +2,10 @@
 {
     public bool Enabled { set => player.enabled = value; }
 
-    MovementBob player;
+    TopDownMovement player;
 
     void Awake() =>
-        player = FindObjectOfType<MovementBob>();
+        player = FindObjectOfType<TopDownMovement>();
 
     void Update() =>
         transform.position = player.transform.position;

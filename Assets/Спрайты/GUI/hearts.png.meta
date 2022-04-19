@@ -107,10 +107,10 @@ TextureImporter:
       name: hearts_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 162
-        width: 28
-        height: 28
+        x: 0
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,10 +128,10 @@ TextureImporter:
       name: hearts_1
       rect:
         serializedVersion: 2
-        x: 34
-        y: 162
-        width: 28
-        height: 28
+        x: 32
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,10 +149,10 @@ TextureImporter:
       name: hearts_2
       rect:
         serializedVersion: 2
-        x: 66
-        y: 162
-        width: 28
-        height: 28
+        x: 64
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -233,10 +233,10 @@ TextureImporter:
       name: hearts_6
       rect:
         serializedVersion: 2
-        x: 2
-        y: 130
-        width: 28
-        height: 28
+        x: 0
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,10 +254,10 @@ TextureImporter:
       name: hearts_7
       rect:
         serializedVersion: 2
-        x: 34
-        y: 130
-        width: 28
-        height: 28
+        x: 32
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,10 +275,10 @@ TextureImporter:
       name: hearts_8
       rect:
         serializedVersion: 2
-        x: 66
-        y: 130
-        width: 28
-        height: 28
+        x: 64
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -359,10 +359,10 @@ TextureImporter:
       name: hearts_12
       rect:
         serializedVersion: 2
-        x: 2
-        y: 98
-        width: 28
-        height: 28
+        x: 0
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

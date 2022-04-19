@@ -16,13 +16,11 @@ namespace Dialogues
             if (mn.player != null)
                 mn.player.enabled = true;
 
-            mn.novelAnimator.ResetTrigger("Show");
-            mn.novelAnimator.SetTrigger("Fade");
-
             while (true)
             {
                 mn.dialogueBox.localScale = Vector3.Lerp(mn.dialogueBox.localScale, new Vector3(1, 0, 1), 8 * Time.deltaTime);
                 mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, new Vector3(1, 0, 1), 6 * Time.deltaTime);
+                mn.novelTransform.anchoredPosition = new Vector3(Mathf.Lerp(mn.novelTransform.anchoredPosition.x, mn.novelTransform.sizeDelta.x, 8 * Time.deltaTime), 0, 0);
 
                 yield return base.Update();
             }
@@ -50,17 +48,17 @@ namespace Dialogues
             if (mn.current.clearPreviousText)
                 mn.text.text = "";
 
+            mn.prevText = mn.text.text;
+
             if (mn.current.characterSprite != null)
                 mn.novelSprite.sprite = mn.current.characterSprite;
-
-            mn.novelAnimator.ResetTrigger(mn.current.characterSprite != null ? "Fade" : "Show");
-            mn.novelAnimator.SetTrigger(mn.current.characterSprite != null ? "Show" : "Fade");
 
             yield return base.Start();
 
             while (mn.dialogueBox.localScale != Vector3.one)
             {
                 mn.dialogueBox.localScale = Vector3.Lerp(mn.dialogueBox.localScale, Vector3.one, 14 * Time.deltaTime);
+
                 yield return base.Update();
             }
 
@@ -82,8 +80,6 @@ namespace Dialogues
                 }
 
             mn.ChangeState(mn.waitingState);
-
-            yield return base.Start();
         }
 
         public override IEnumerator Update()
@@ -91,6 +87,9 @@ namespace Dialogues
             while (true) 
             {
                 mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, new Vector3(1, 0, 1), 6 * Time.deltaTime);
+                mn.novelTransform.anchoredPosition = new Vector3(Mathf.Lerp(mn.novelTransform.anchoredPosition.x,
+                    mn.current.characterSprite == null ? mn.novelTransform.sizeDelta.x : 0, 8 * Time.deltaTime), 0, 0);
+
                 yield return base.Update();
             }
         }
@@ -140,9 +139,15 @@ namespace Dialogues
 
         public override IEnumerator Update()
         {
-            while (mn.current.variants == null)
+            while (true)
             {
-                mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, new Vector3(1, 0, 1), 6 * Time.deltaTime);
+                if (mn.current.variants == null)
+                    mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, new Vector3(1, 0, 1), 6 * Time.deltaTime);
+
+                mn.novelTransform.anchoredPosition = new Vector3(Mathf.Lerp(mn.novelTransform.anchoredPosition.x,
+                    mn.current.characterSprite == null ? mn.novelTransform.sizeDelta.x : 0, 8 * Time.deltaTime), 0, 0);
+                mn.dialogueBox.localScale = Vector3.Lerp(mn.dialogueBox.localScale, Vector3.one, 14 * Time.deltaTime);
+
                 yield return base.Update();
             }
         }

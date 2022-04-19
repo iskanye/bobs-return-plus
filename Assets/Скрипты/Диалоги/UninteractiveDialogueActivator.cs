@@ -13,6 +13,9 @@ public class UninteractiveDialogueActivator : MonoBehaviour
 
     public void Dialogue(GameObject obj) 
     {
+        if (dialogues == null)
+            return;
+
         var dials = dialogues.dialogues;
         var convert = new Dialogue[dials.Length];
 

@@ -3,9 +3,17 @@
     public int Lives
     {
         get => 
-            (int)PlayerLiveCounter.Active.LivesRemaining;
+            PlayerLiveCounter.Active.LivesRemaining;
 
         set => 
             PlayerLiveCounter.Active.LivesRemaining = value;
+    }
+
+    public int[] livesInOneHeart;
+
+    void Awake()
+    {
+        PlayerLiveCounter.Active.livesInOneHeart = livesInOneHeart;
+        PlayerLiveCounter.Active.Initialize();
     }
 }

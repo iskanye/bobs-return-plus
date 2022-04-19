@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2767952640011762502}
   - component: {fileID: 6160091786768540345}
   - component: {fileID: 3413887428759276968}
-  - component: {fileID: 3292338399500124190}
   m_Layer: 5
   m_Name: Novel
   m_TagString: Untagged
@@ -77,26 +76,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!95 &3292338399500124190
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2011172660896931043}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c92fe17b1588cd08183245019280dbe6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5901387747505473779
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,7 +514,7 @@ MonoBehaviour:
   variantPrefab: {fileID: 3577394298528926293, guid: 1d70e329498ba707bb1c958f95e4d06b,
     type: 3}
   novelSprite: {fileID: 3413887428759276968}
-  novelAnimator: {fileID: 3292338399500124190}
+  novelTransform: {fileID: 2767952640011762502}
   character: {fileID: 5901387747505473777}
   text: {fileID: 5901387747944285586}
   textSFX: {fileID: 7946911714796333345}

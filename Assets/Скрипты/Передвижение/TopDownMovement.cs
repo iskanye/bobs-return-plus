@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 //Тестовый скрипт передвижения
-public class MovementBob : MonoBehaviour, IWalkable
+public class TopDownMovement : MonoBehaviour, IWalkable
 {
     public float speed; //Скорость передвижения(за кадр)
 
