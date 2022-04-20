@@ -1,6 +1,6 @@
-﻿public class PlayerLives : UnityEngine.MonoBehaviour, ILives
+﻿public class PlayerLives : LivesBase
 {
-    public int Lives
+    public override int Lives
     {
         get => 
             PlayerLiveCounter.Active.LivesRemaining;

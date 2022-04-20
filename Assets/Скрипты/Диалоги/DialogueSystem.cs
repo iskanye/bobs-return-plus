@@ -49,7 +49,6 @@ public class DialogueSystem : SequenceObject
         ChangeState(idleState);
 
         InputManager.Input.Player.Submit.canceled += Input;
-        InputManager.Input.Player.Submit.started += SkipInput;
         InputManager.Input.Player.Move.started += VariantInput;
     }
 
@@ -135,11 +134,8 @@ public class DialogueSystem : SequenceObject
             ChangeState(printingState);
             return;
         }
-    }
 
-    void SkipInput(InputAction.CallbackContext c)
-    {
-        if (state is PrintingState)
+        if (!current.cantSkip && state is PrintingState)
         {
             text.text = prevText + current.text;
             ChangeState(waitingState);
@@ -182,6 +178,7 @@ public class Dialogue
     public bool clearPreviousText = true;
     public bool showStraightaway;
     public bool dontWait;
+    public bool cantSkip;
 
     public DialogueVariant[] variants;
 
@@ -193,7 +190,7 @@ public class Dialogue
     }
 
     public Dialogue(string character, Sprite characterSprite, string text, UnityEvent<GameObject> action, 
-        bool clearPreviousText, bool showStraightaway, bool dontWait, float startDelay)
+        bool clearPreviousText, bool showStraightaway, bool dontWait, float startDelay, bool cantSkip)
     {
         this.character = character;
         this.characterSprite = characterSprite;
@@ -203,5 +200,6 @@ public class Dialogue
         this.showStraightaway = showStraightaway;
         this.dontWait = dontWait;
         this.startDelay = startDelay;
+        this.cantSkip = cantSkip;
     }
 }

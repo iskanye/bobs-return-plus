@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a81290fa8bcd2af88b3323ebdf80c7, type: 3}
+  m_Name: Player Healing Effect
+  m_EditorClassIdentifier: 
+  mn: {fileID: 0}
+  duration: 7
+  sprite: {fileID: -1669756081, guid: 4effdec2a02843b7d8a1fb81acb8a06e, type: 3}

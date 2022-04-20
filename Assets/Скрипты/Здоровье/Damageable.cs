@@ -6,7 +6,7 @@ public class Damageable : MonoBehaviour
 
     public void Damage(GameObject g)
     {
-        var obj = g.GetComponent<ILives>();
+        var obj = g.GetComponent<LivesBase>();
 
         if (obj != null)
             if (isDeadly)

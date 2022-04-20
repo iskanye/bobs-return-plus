@@ -57,7 +57,7 @@ namespace AI
 
         public override IEnumerator Update()
         {
-            mn.AI.maxSpeed = mn.patrolSpeed; //Меняем скорость на обычную
+            mn.AI.maxSpeed = mn.speed; //Меняем скорость на обычную
 
             float waitTime = Random.Range(.5f, mn.patrolDelay);
             float time = 0;

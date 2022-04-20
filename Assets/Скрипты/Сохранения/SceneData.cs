@@ -75,13 +75,12 @@ public class SceneData : MonoBehaviour
     public static void Save()
     {
         var active = Active;
-
         var temp = Data.achievements;
 
         Data = new SaveData
         {
             level = GetActiveScene().buildIndex,
-            lives = (int)active.lives.LivesRemaining,
+            lives = active.lives.LivesRemaining,
             achievements = temp
         };
 

@@ -16,4 +16,5 @@ MonoBehaviour:
   icon: {fileID: -1669756081, guid: 4effdec2a02843b7d8a1fb81acb8a06e, type: 3}
   name: "\u041B\u0435\u0447\u0435\u0431\u043D\u043E\u0435 \u0437\u0435\u043B\u044C\u0435"
   local: 0
-  healing: 4
+  healing: 1
+  effect: {fileID: 11400000, guid: cb94d0fb78b633511b0face91253e3e0, type: 2}

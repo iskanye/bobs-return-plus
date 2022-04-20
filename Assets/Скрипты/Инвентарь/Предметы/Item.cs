@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public abstract class Item : ScriptableObject 
+public abstract class Item : ScriptableObject
 {
     public string id;
     public Sprite icon;
@@ -11,7 +11,7 @@ public abstract class Item : ScriptableObject
 
     public static List<Item> AllItems = new List<Item>();
 
-    public static Item GetItem(string id) => 
+    public static Item GetItem(string id) =>
         AllItems.First(i => i.id == id);
 
     public abstract bool Action();

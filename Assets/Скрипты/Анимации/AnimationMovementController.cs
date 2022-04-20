@@ -5,12 +5,12 @@ using UnityEngine;
 public class AnimationMovementController : SequenceObject
 {
     Animator animator; //Контроллер анимаций от Unity
-    IWalkable movingObject;
+    BaseMovement movingObject;
 
     void Awake()
     {
         animator = GetComponent<Animator>(); //Ищем этот контроллер
-        movingObject = GetComponent<IWalkable>();
+        movingObject = GetComponent<BaseMovement>();
     }
 
     void Update()

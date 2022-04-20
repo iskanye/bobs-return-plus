@@ -15,6 +15,7 @@ public class UninteractiveDialogue : ScriptableObject
         public bool clearPreviousText = true;
         public bool showStraightaway;
         public bool dontWait;
+        public bool cantSkip;
     }
     public Dialog[] dialogues;
 }

@@ -1,10 +1,10 @@
 ﻿using UnityEngine.Events;
 
-public class LivesManager : UnityEngine.MonoBehaviour, ILives
+public class LivesManager : LivesBase
 {
     public int maxLives;
 
-    public int Lives
+    public override int Lives
     {
         get => 
             lives;

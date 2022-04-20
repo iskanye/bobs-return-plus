@@ -43,10 +43,7 @@ public class PlayerLiveCounter : MonoBehaviour
                 return;
 
             if (value < livesRemaining) 
-            {
                 CameraController.StartShake();
-                isInvincible = true;
-            }
 
             StartCoroutine(ChangeLives(value));
         }
@@ -54,8 +51,8 @@ public class PlayerLiveCounter : MonoBehaviour
 
     public static PlayerLiveCounter Active { get; private set; }
 
-    bool isInvincible;
-    float invincibleDelay = float.PositiveInfinity;
+    [HideInInspector] public bool isInvincible;
+
     int livesRemaining;
     int heart;
     int livesInHeart;
@@ -68,65 +65,60 @@ public class PlayerLiveCounter : MonoBehaviour
         for (int i = livesInOneHeart.Length; i < lives.Length; i++)
             lives[i - 1].GetComponent<UnityEngine.UI.Image>().color = new Color(0, 0, 0, 0);
 
-        StartCoroutine(ChangeLives(SceneData.Data.lives != null ? (int)SceneData.Data.lives : maxLives));
+        StartCoroutine(ChangeLives(SceneData.Data.lives != -1 ? SceneData.Data.lives : maxLives));
     }
 
     IEnumerator ChangeLives(int val)
     {
+        isInvincible = true;
         var cache = livesRemaining;
 
-        do
+        while (val != livesRemaining)
         {
             if (val >= livesRemaining)
             {
+                livesInHeart++;
+
                 if (livesInHeart > livesInOneHeart[heart])
                 {
                     heart++;
                     livesInHeart = 1;
                 }
 
-                livesInHeart++;
                 livesRemaining++;
-
                 lives[heart].SetTrigger("Heal");
             }
 
             else
             {
-                lives[heart].SetTrigger("Hurt");
                 livesInHeart--;
-                livesRemaining--;
 
-                if (livesInHeart < 1)
+                if (livesInHeart < 0)
                 {
                     heart--;
-                    livesInHeart = livesInOneHeart[heart];
+                    livesInHeart = livesInOneHeart[heart] - 1;
                 }
+
+                livesRemaining--;
+                lives[heart].SetTrigger("Hurt");
             }
 
-            yield return new WaitForSeconds(.4f);
-        } while (val != livesRemaining);
+            yield return new WaitForSeconds(.3f);
+        } 
 
-        if (val > cache)
-            lives[heart].SetTrigger("Heal");
+        if (val < cache)
+            yield return new WaitForSeconds(invincibleTime);
 
-        for (int i = heart; i < livesInOneHeart.Length - 1; i++)
+        for (int i = heart + 1; i < livesInOneHeart.Length; i++)
             if (livesInOneHeart[i] == 3)
                 livesInOneHeart[i] = 2;
+
+        isInvincible = false;
     }
 
     void Update()
     {
         for (int i = 0; i < livesInOneHeart.Length; i++)
             lives[i].SetInteger("Lives", livesInOneHeart[i]);
-
-        if (float.IsPositiveInfinity(invincibleDelay) && isInvincible)
-            invincibleDelay = Time.time + invincibleTime;
-
-        if (Time.time >= invincibleDelay) 
-        {
-            invincibleDelay = float.PositiveInfinity;
-            isInvincible = false;
-        }
     }
 }

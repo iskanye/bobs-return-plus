@@ -1,15 +1,11 @@
 using UnityEngine;
 
-public class SimpleMovement : MonoBehaviour, IWalkable
+public class SimpleMovement : BaseMovement
 {
     public Vector2 endPoint;
-    [Range(0, 10)] public float speed = .5f;
     public float startDelay;
     public bool repeat;
     public float repeatDelay;
-
-    public bool IsWalking { get; set; }
-    public Vector2 Direction { get; set; }
 
     [HideInInspector] public Vector2 startPoint;
 

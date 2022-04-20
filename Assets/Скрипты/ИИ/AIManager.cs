@@ -4,7 +4,7 @@ using AI;
 using System;
 
 //Скрипт ИИ
-public class AIManager : MonoBehaviour, IWalkable
+public class AIManager : BaseMovement
 {
     public LayerMask obstacles = 1 << 3; //Слой с препятствиями
     public LayerMask player = 1 << 6; //Слой с игроком
@@ -12,16 +12,15 @@ public class AIManager : MonoBehaviour, IWalkable
     public float spotSpeed; //Скорость движения(При погоне)
     public Vector2 direction = Vector2.right;
     [Range(0, 360)] public float viewAngle;
+
     [Header("Patrol AI")] public bool isPatrol; //Является ли данный ИИ патрульным     
-    public float patrolSpeed; //Скорость движения(При патрулировании)
     public float patrolDelay;
     public Vector2[] path; //Массив пути(для патрульного ИИ)
 
     public IAstarAI AI { get; private set; }
 
-    public bool IsWalking => AI.velocity != Vector3.zero;
-
-    public Vector2 Direction => direction;
+    public override bool IsWalking => AI.velocity != Vector3.zero;
+    public override Vector2 Direction => direction;
 
     [HideInInspector] public int currWay; //Текущий путь из массива позиций
     [HideInInspector] public Transform currentTarget; //Трансформ цели

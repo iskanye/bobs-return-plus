@@ -1,5 +1,4 @@
-﻿
-public class PeriodAction : ActionBase
+﻿public class PeriodAction : ActionBase
 {
     public float startDelay;
     public float period;

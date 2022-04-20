@@ -2,12 +2,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 //Тестовый скрипт передвижения
-public class TopDownMovement : MonoBehaviour, IWalkable
+public class TopDownMovement : BaseMovement
 {
-    public float speed; //Скорость передвижения(за кадр)
-
-    public bool IsWalking => dir != Vector2.zero;
-    public Vector2 Direction { get; private set; }
+    public override bool IsWalking => dir != Vector2.zero;
 
     Rigidbody2D rig; //Физика обьекта
     Vector2 dir; //Направление
@@ -40,7 +37,7 @@ public class TopDownMovement : MonoBehaviour, IWalkable
     void FixedUpdate()
     {
         if (IsWalking)
-            rig.velocity = dir.normalized * Time.deltaTime * speed;
+            rig.velocity = dir.normalized * speed;
     } //Переводим кадры в секунды и прикладываем к обьекту скорость
 
     public void Input(InputAction.CallbackContext c) => 

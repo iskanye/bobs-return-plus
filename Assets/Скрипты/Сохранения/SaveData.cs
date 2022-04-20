@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class SaveData
 {
     public int level;
-    public int? lives;
+    public int lives = -1;
 
     public List<Position> positions;
 

@@ -2,10 +2,15 @@
 {
     public bool Enabled { set => player.enabled = value; }
 
+    public UnityEngine.UI.Image[] effectsImages;
+
     TopDownMovement player;
 
-    void Awake() =>
+    void Awake()
+    {
         player = FindObjectOfType<TopDownMovement>();
+        player.GetComponent<PlayerEffectsController>().images = effectsImages;
+    }
 
     void Update() =>
         transform.position = player.transform.position;

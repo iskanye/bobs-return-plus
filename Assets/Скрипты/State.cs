@@ -4,7 +4,8 @@ public abstract class State<T> where T : UnityEngine.MonoBehaviour
 {
     protected T mn;
 
-    protected State(T manager) => mn = manager;
+    protected State(T manager) => 
+        mn = manager;
 
     public virtual IEnumerator Start()
     {
