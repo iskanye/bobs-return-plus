@@ -2,11 +2,17 @@
 {
     public override int Lives
     {
-        get => 
+        get =>
             PlayerLiveCounter.Active.LivesRemaining;
 
-        set => 
-            PlayerLiveCounter.Active.LivesRemaining = value;
+        set
+        {
+            if (livesCalculation == null)
+                PlayerLiveCounter.Active.LivesRemaining = value;
+
+            else
+                PlayerLiveCounter.Active.LivesRemaining = livesCalculation.Invoke(value);
+        }
     }
 
     public int[] livesInOneHeart;

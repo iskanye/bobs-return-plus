@@ -14,6 +14,9 @@ public class LivesManager : LivesBase
             if (lives == 0)
                 return;
 
+            if (livesCalculation != null)
+                value = livesCalculation.Invoke(value);
+
             if (value <= 0 && onDeath != null)
             {
                 onDeath.Invoke();
