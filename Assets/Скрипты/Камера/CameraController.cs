@@ -17,7 +17,7 @@ public class CameraController : MonoBehaviour
     float frequency;
     float sharpness = 1;
 
-    void Awake() 
+    void Awake()
     {
         camera = GetComponent<CinemachineVirtualCamera>();
         noise = camera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
@@ -25,6 +25,13 @@ public class CameraController : MonoBehaviour
 
         Active = this;
     }
+
+#if UNITY_ANDROID
+
+    void Start() =>        
+        Screen.SetResolution(Screen.width, Screen.height, true);
+
+#endif
 
     void Update()
     {

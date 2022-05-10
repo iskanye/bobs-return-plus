@@ -1,14 +1,15 @@
 using System.Collections;
 using UnityEngine;
 
-public abstract class EffectBase : ScriptableObject
+public abstract class EffectBase : ScriptableObject, System.IEquatable<EffectBase>
 {
     [HideInInspector] public EffectsController mn;
     public float duration;
+    public IEnumerator start;
+
+    public static IEnumerator process;
 
     protected EffectData data;
-
-    IEnumerator process;
 
     public virtual IEnumerator Start()
     {
@@ -27,8 +28,20 @@ public abstract class EffectBase : ScriptableObject
 
     public virtual IEnumerator Stop()
     {
-        mn.StopCoroutine(process);
+        mn.StopCoroutine(process); 
+        mn.StopCoroutine(start);
         mn.effects.Remove(this);
         yield break;
+    }
+
+    public bool Equals(EffectBase e)
+    {
+        if (e == null)
+            return false;
+
+        if (process == e.Process())
+            return true;
+
+        return false;
     }
 }

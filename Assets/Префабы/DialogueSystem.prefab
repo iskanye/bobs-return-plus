@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 192, y: 0}
+  m_AnchoredPosition: {x: 191.99994, y: 0}
   m_SizeDelta: {x: 192, y: 384}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &6160091786768540345
@@ -511,7 +511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 5901387748086646548}
   variantBox: {fileID: 5348612745902933771}
-  variantPrefab: {fileID: 3577394298528926293, guid: 1d70e329498ba707bb1c958f95e4d06b,
+  variantPrefab: {fileID: -4060325389601966284, guid: 1d70e329498ba707bb1c958f95e4d06b,
     type: 3}
   novelSprite: {fileID: 3413887428759276968}
   novelTransform: {fileID: 2767952640011762502}
@@ -530,12 +530,14 @@ MonoBehaviour:
     clearPreviousText: 0
     showStraightaway: 0
     dontWait: 0
+    cantSkip: 0
     variants: []
   player: {fileID: 0}
   index: 0
   currentVariant: 0
   variantObjects: []
   obj: {fileID: 0}
+  prevText: 
 --- !u!1 &6241077804257388518
 GameObject:
   m_ObjectHideFlags: 0

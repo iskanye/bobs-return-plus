@@ -31,7 +31,7 @@ public class AchievementSystem : MonoBehaviour
     System.Collections.IEnumerator PlayAnimation()
     {
         animator.Play("Open");
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         animator.Play("Close");
     }
 }

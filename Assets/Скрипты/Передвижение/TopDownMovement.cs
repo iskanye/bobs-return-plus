@@ -6,8 +6,9 @@ public class TopDownMovement : BaseMovement
 {
     public override bool IsWalking => dir != Vector2.zero;
 
+    [HideInInspector] public Vector2 dir; //Направление
+
     Rigidbody2D rig; //Физика обьекта
-    Vector2 dir; //Направление
 
     //Находим компонент физики
     void Awake()

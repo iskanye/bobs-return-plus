@@ -3,7 +3,10 @@
 public class InputManager : MonoBehaviour
 {
     public static InputMap Input { get; private set; }
-    static InputManager Active;
+
+    public static InputManager Active;
+
+    public bool submit;
 
     void Awake()
     {
@@ -21,5 +24,8 @@ public class InputManager : MonoBehaviour
 
         Input = new InputMap();
         Input.Player.Enable();
+
+        Input.Player.Submit.started += (e) => submit = true;
+        Input.Player.Submit.canceled += (e) => submit = false;
     }
 }

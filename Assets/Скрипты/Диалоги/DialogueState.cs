@@ -131,8 +131,10 @@ namespace Dialogues
                     var variant = Object.Instantiate(mn.variantPrefab, mn.variantBox);
                     variant.GetComponent<TMP_Text>().text = mn.current.variants[i].variant;
                     variant.GetComponent<TMP_Text>().faceColor = i == 0 ? Color.white : Color.grey;
+                    variant.index = i;
+                    variant.system = mn;
 
-                    mn.variantObjects.Add(variant);
+                    mn.variantObjects.Add(variant.gameObject);
                 }
             }
         }

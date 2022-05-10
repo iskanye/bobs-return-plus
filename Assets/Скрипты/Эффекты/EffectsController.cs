@@ -13,7 +13,16 @@ public class EffectsController : MonoBehaviour
 
         effect.mn = this;
         effects.Add(effect);
-        StartCoroutine(effect.Start());
+
+        effect.start = effect.Start();
+        StartCoroutine(effect.start);
+    }
+
+    public void StopEffect(EffectBase effect) 
+    {
+        for (int i = 0; i < effects.Count; i++)
+            if (effects[i].Equals(effect)) 
+                StartCoroutine(effect.Stop());
     }
 }
 

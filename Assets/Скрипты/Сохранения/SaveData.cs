@@ -65,9 +65,6 @@ public class IdItem : IEquatable<IdItem>
 
     public bool Equals(IdItem i)
     {
-        if (i == null)
-            return false;
-
         if (id == i.id)
             return true;
 
@@ -84,9 +81,6 @@ public class GuidItem : IEquatable<GuidItem>
 
     public bool Equals(GuidItem i)
     {
-        if (i == null)
-            return false;
-
         if (id == i.id)
             return true;
 

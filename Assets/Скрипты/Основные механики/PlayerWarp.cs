@@ -4,7 +4,7 @@
 
     public UnityEngine.UI.Image[] effectsImages;
 
-    TopDownMovement player;
+    [UnityEngine.HideInInspector] public TopDownMovement player;
 
     void Awake()
     {

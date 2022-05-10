@@ -5,7 +5,6 @@ public class PauseController : MonoBehaviour
     public GameObject pauseBox;
     public UnityEngine.UI.Toggle fullscreenToggle;
 
-    Vector2Int resolution;
     bool isPaused;
 
     void Awake()
@@ -32,12 +31,10 @@ public class PauseController : MonoBehaviour
     public void FullScreen(bool p)
     {
         if (p)
-        {
-            resolution = new Vector2Int(Camera.current.pixelWidth, Camera.current.pixelHeight);
             Screen.SetResolution(Display.main.systemWidth, Display.main.systemWidth, true);
-        }
+
         else
-            Screen.SetResolution(resolution.x, resolution.y, false);
+            Screen.SetResolution(608, 416, false);
 
         Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
     }

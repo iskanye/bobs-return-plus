@@ -10,7 +10,7 @@ public class DialogueSystem : SequenceObject
 {
     public RectTransform dialogueBox;
     public RectTransform variantBox;
-    public GameObject variantPrefab;
+    public DialogueVariantObject variantPrefab;
     public UnityEngine.UI.Image novelSprite;
     public RectTransform novelTransform;
     public TMP_Text character;
@@ -48,7 +48,8 @@ public class DialogueSystem : SequenceObject
 
         ChangeState(idleState);
 
-        InputManager.Input.Player.Submit.canceled += Input;
+        InputManager.Input.Player.Submit.canceled += Submit;
+        InputManager.Input.Player.Skip.started += Skip;
         InputManager.Input.Player.Move.started += VariantInput;
     }
 
@@ -65,7 +66,7 @@ public class DialogueSystem : SequenceObject
     {
         var active = Active;
 
-        if (active.state is PrintingState || active.state is WaitingState) 
+        if (active.state is PrintingState || active.state is WaitingState)
             return;
 
         active.obj = obj;
@@ -80,61 +81,48 @@ public class DialogueSystem : SequenceObject
 
     public void GUIInput()
     {
-        if (current.variants != null)
-            return;
-
-        if (state is WaitingState)
+        if (!current.cantSkip && state is PrintingState)
         {
-            index++;
-
-            if (index >= dialogues.Length)
-            {
-                ChangeState(idleState);
-                return;
-            }
-
-            ChangeState(printingState);
-            return;
-        }
-
-        if (state is PrintingState) 
-        {
-            ChangeState(waitingState);
             text.text = prevText + current.text;
+            ChangeState(waitingState);
         }
+
+        else if (current.variants != null)
+            return;
+
+        else if (state is WaitingState)
+            ChangeDialogue();
     }
 
-    void Input(InputAction.CallbackContext c) 
+    void Submit(InputAction.CallbackContext c)
     {
         if (state is WaitingState) 
         {
             if (current.variants != null)
             {
-                foreach (var i in variantObjects)
-                    Destroy(i);
-
-                variantObjects = new List<GameObject>();
-                ChangeState(idleState);
-
-                if (current.variants[currentVariant].action != null)
-                    current.variants[currentVariant].action.Invoke();
-
-                currentVariant = 0;
+                ChooseVariant();
                 return;
             }
 
-            index++;
+            ChangeDialogue();
+        }
+    }
 
-            if (index >= dialogues.Length)
-            {
-                ChangeState(idleState);
-                return;
-            }
+    void ChangeDialogue()
+    {
+        index++;
 
-            ChangeState(printingState);
+        if (index >= dialogues.Length)
+        {
+            ChangeState(idleState);
             return;
         }
 
+        ChangeState(printingState);
+    }
+
+    void Skip(InputAction.CallbackContext c) 
+    {
         if (!current.cantSkip && state is PrintingState)
         {
             text.text = prevText + current.text;
@@ -147,16 +135,32 @@ public class DialogueSystem : SequenceObject
         if (!(state is WaitingState) || current.variants == null)
             return;
 
-        var val = c.ReadValue<Vector2>();
-        var variant = currentVariant + (val.y > 0 ? -1 : 1);
+        ChangeVariant(currentVariant + (c.ReadValue<Vector2>().y > 0 ? -1 : 1));
+    }
 
+    public void ChangeVariant(int variant)
+    {
         if (variant >= 0 && variant < current.variants.Length)
         {
             currentVariant = variant;
 
-            for (int i = 0; i < current.variants.Length; i++) 
+            for (int i = 0; i < current.variants.Length; i++)
                 variantObjects[i].GetComponent<TMP_Text>().faceColor = i == currentVariant ? Color.white : Color.grey;
         }
+    }
+
+    public void ChooseVariant() 
+    {
+        foreach (var i in variantObjects)
+            Destroy(i);
+
+        variantObjects = new List<GameObject>();
+        ChangeState(idleState);
+
+        if (current.variants[currentVariant].action != null)
+            current.variants[currentVariant].action.Invoke();
+
+        currentVariant = 0;
     }
 
     public override System.Collections.IEnumerator Sequence()

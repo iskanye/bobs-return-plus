@@ -20,6 +20,7 @@ public class LivesManager : LivesBase
             if (value <= 0 && onDeath != null)
             {
                 onDeath.Invoke();
+                lives = 0;
                 return;
             }
 
