@@ -20,10 +20,10 @@ public class PauseController : MonoBehaviour
     }
 
     public void Input(UnityEngine.InputSystem.InputAction.CallbackContext c) =>
-        isPaused = !isPaused;
+        Continue();
 
     public void Continue() =>
-        isPaused = false;
+        isPaused = !isPaused;
 
     public void Quit() =>
         Application.Quit();

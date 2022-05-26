@@ -20,8 +20,8 @@ public class UninteractiveDialogueActivator : MonoBehaviour
         var convert = new Dialogue[dials.Length];
 
         for (int i = 0; i < dials.Length; i++) 
-            convert[i] = new Dialogue(dials[i].character, dials[i].characterSprite, dials[i].text, events[i], dials[i].clearPreviousText, 
-                dials[i].showStraightaway, dials[i].dontWait, dials[i].startDelay, dials[i].cantSkip);
+            convert[i] = new Dialogue(dials[i].character, dials[i].dialogueCharacter, dials[i].text, events[i], dials[i].clearPreviousText, 
+                dials[i].showStraightaway, dials[i].dontWait, dials[i].startDelay, dials[i].cantSkip, dials[i].emotion);
 
         DialogueSystem.StartDialogue(convert, obj);
     }

@@ -1,6 +1,13 @@
 ﻿public class PlayerWarp : SequenceObject
 {
-    public bool Enabled { set => player.enabled = value; }
+    public bool Enabled 
+    { 
+        set => 
+            player.enabled = value;
+
+        get =>
+            player.enabled;
+    }
 
     public UnityEngine.UI.Image[] effectsImages;
 

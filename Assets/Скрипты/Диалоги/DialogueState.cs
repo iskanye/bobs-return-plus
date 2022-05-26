@@ -50,8 +50,12 @@ namespace Dialogues
 
             mn.prevText = mn.text.text;
 
-            if (mn.current.characterSprite != null)
-                mn.novelSprite.sprite = mn.current.characterSprite;
+            if (mn.current.dialogueCharacter != null)
+            {
+                var sprite = mn.current.dialogueCharacter.emotions[mn.current.emotion];
+                mn.novelSprite.sprite = sprite;
+                mn.novelSprite.rectTransform.sizeDelta = new Vector2(sprite.texture.width, mn.novelSprite.rectTransform.sizeDelta.y);
+            }
 
             yield return base.Start();
 
@@ -84,11 +88,11 @@ namespace Dialogues
 
         public override IEnumerator Update()
         {
-            while (true) 
+            while (true)
             {
                 mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, new Vector3(1, 0, 1), 6 * Time.deltaTime);
                 mn.novelTransform.anchoredPosition = new Vector3(Mathf.Lerp(mn.novelTransform.anchoredPosition.x,
-                    mn.current.characterSprite == null ? mn.novelTransform.sizeDelta.x : 0, 8 * Time.deltaTime), 0, 0);
+                    mn.current.dialogueCharacter == null ? mn.novelTransform.sizeDelta.x : -32, 8 * Time.deltaTime), 0, 0);
 
                 yield return base.Update();
             }
@@ -101,7 +105,7 @@ namespace Dialogues
 
         public override IEnumerator Start()
         {
-            if (mn.current.dontWait) 
+            if (mn.current.dontWait)
             {
                 mn.index++;
 
@@ -147,7 +151,7 @@ namespace Dialogues
                     mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, new Vector3(1, 0, 1), 6 * Time.deltaTime);
 
                 mn.novelTransform.anchoredPosition = new Vector3(Mathf.Lerp(mn.novelTransform.anchoredPosition.x,
-                    mn.current.characterSprite == null ? mn.novelTransform.sizeDelta.x : 0, 8 * Time.deltaTime), 0, 0);
+                    mn.current.dialogueCharacter == null ? mn.novelTransform.sizeDelta.x : 0, 8 * Time.deltaTime), 0, 0);
                 mn.dialogueBox.localScale = Vector3.Lerp(mn.dialogueBox.localScale, Vector3.one, 14 * Time.deltaTime);
 
                 yield return base.Update();

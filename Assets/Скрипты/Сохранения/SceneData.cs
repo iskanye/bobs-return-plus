@@ -42,7 +42,7 @@ public class SceneData : MonoBehaviour
         inventory = FindObjectOfType<InventorySystem>();
         lives = PlayerLiveCounter.Active;
 
-        if (Data.level != GetActiveScene().buildIndex)
+        if (Data.level != GetActiveScene().buildIndex || Data.version != SaveData.currentVersion)
             return;
 
         foreach (var pos in Data.positions)

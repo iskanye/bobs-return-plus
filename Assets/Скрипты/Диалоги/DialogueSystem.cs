@@ -173,7 +173,8 @@ public class DialogueSystem : SequenceObject
 public class Dialogue
 {
     public string character;
-    public Sprite characterSprite;
+    public DialogueCharacter dialogueCharacter;
+    public DialogueCharacter.Emotion emotion;
     [TextArea] public string text;
     public UnityEvent<GameObject> action;
 
@@ -193,11 +194,12 @@ public class Dialogue
         public UnityEvent action;
     }
 
-    public Dialogue(string character, Sprite characterSprite, string text, UnityEvent<GameObject> action, 
-        bool clearPreviousText, bool showStraightaway, bool dontWait, float startDelay, bool cantSkip)
+    public Dialogue(string character, DialogueCharacter dialogueCharacter, string text, UnityEvent<GameObject> action, 
+        bool clearPreviousText, bool showStraightaway, bool dontWait, float startDelay, bool cantSkip, DialogueCharacter.Emotion emotion)
     {
         this.character = character;
-        this.characterSprite = characterSprite;
+        this.dialogueCharacter = dialogueCharacter;
+        this.emotion = emotion;
         this.text = text;
         this.action = action;
         this.clearPreviousText = clearPreviousText;

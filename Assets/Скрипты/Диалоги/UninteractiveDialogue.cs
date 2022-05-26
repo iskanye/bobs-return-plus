@@ -7,7 +7,8 @@ public class UninteractiveDialogue : ScriptableObject
     public class Dialog
     {
         public string character;
-        public Sprite characterSprite;
+        public DialogueCharacter dialogueCharacter;
+        public DialogueCharacter.Emotion emotion;
         [TextArea] public string text;
 
         public float startDelay;

@@ -12,7 +12,7 @@ public class TouchJoystick : MonoBehaviour
     {
         var dir = Vector2.zero;
 
-        if (Input.touchCount > 0 && DialogueSystem.Active.state is Dialogues.IdleState)
+        if (Input.touchCount > 0 && player.Enabled)
         {
             var touch = Input.GetTouch(0);
 
