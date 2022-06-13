@@ -25,9 +25,8 @@ public class EffectsController : MonoBehaviour
                 StartCoroutine(effect.Stop());
     }
 }
-
-[System.Serializable] 
-public class EffectData 
+[System.Serializable]
+public struct EffectData
 {
     public BaseMovement movement;
     public LivesBase lives;

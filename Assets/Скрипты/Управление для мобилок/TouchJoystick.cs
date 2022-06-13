@@ -37,6 +37,6 @@ public class TouchJoystick : MonoBehaviour
             startPos = Vector2.zero;
         }
 
-        player.player.dir = dir / threshold;
+        player.player.data.movement.dir = dir / threshold;
     }
 }

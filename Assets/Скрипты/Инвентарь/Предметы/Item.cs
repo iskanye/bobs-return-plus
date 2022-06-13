@@ -7,7 +7,6 @@ public abstract class Item : ScriptableObject
     public string id;
     public Sprite icon;
     public new string name;
-    public bool local;
 
     public static List<Item> AllItems = new List<Item>();
 

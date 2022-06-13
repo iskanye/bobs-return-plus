@@ -11,11 +11,11 @@
 
     public UnityEngine.UI.Image[] effectsImages;
 
-    [UnityEngine.HideInInspector] public TopDownMovement player;
+    [UnityEngine.HideInInspector] public BobController player;
 
     void Awake()
     {
-        player = FindObjectOfType<TopDownMovement>();
+        player = FindObjectOfType<BobController>();
         player.GetComponent<PlayerEffectsController>().images = effectsImages;
     }
 

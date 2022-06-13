@@ -1,10 +1,9 @@
 using UnityEngine;
-using System.Collections;
 
 public class PlayerLiveCounter : MonoBehaviour
 {
     public Animator[] lives;
-    public int[] livesInOneHeart;
+    public Heart[] livesInOneHeart;
     public float invincibleTime = 2;
 
     public int maxLives 
@@ -14,7 +13,7 @@ public class PlayerLiveCounter : MonoBehaviour
             int res = 0;
 
             for (int i = 0; i < livesInOneHeart.Length; i++)
-                res += livesInOneHeart[i];
+                res += livesInOneHeart[i].lives;
 
             return res;
         } 
@@ -68,7 +67,7 @@ public class PlayerLiveCounter : MonoBehaviour
         StartCoroutine(ChangeLives(SceneData.Data.lives != -1 ? SceneData.Data.lives : maxLives));
     }
 
-    IEnumerator ChangeLives(int val)
+    System.Collections.IEnumerator ChangeLives(int val)
     {
         isInvincible = true;
         var cache = livesRemaining;
@@ -79,7 +78,7 @@ public class PlayerLiveCounter : MonoBehaviour
             {
                 livesInHeart++;
 
-                if (livesInHeart > livesInOneHeart[heart])
+                if (livesInHeart > livesInOneHeart[heart].lives)
                 {
                     heart++;
                     livesInHeart = 1;
@@ -95,8 +94,13 @@ public class PlayerLiveCounter : MonoBehaviour
 
                 if (livesInHeart < 0)
                 {
+                    livesInOneHeart[heart].type = LiveType.Regular;
+
+                    if (livesInOneHeart[heart].type == LiveType.Backpack || livesInOneHeart[heart].type == LiveType.Shield)
+                        livesInOneHeart[heart].lives = 2;
+
                     heart--;
-                    livesInHeart = livesInOneHeart[heart] - 1;
+                    livesInHeart = livesInOneHeart[heart].lives - 1;
                 }
 
                 livesRemaining--;
@@ -110,8 +114,8 @@ public class PlayerLiveCounter : MonoBehaviour
             yield return new WaitForSeconds(invincibleTime);
 
         for (int i = heart + 1; i < livesInOneHeart.Length; i++)
-            if (livesInOneHeart[i] == 3)
-                livesInOneHeart[i] = 2;
+            if (livesInOneHeart[i].lives == 3)
+                livesInOneHeart[i].lives = 2;
 
         isInvincible = false;
     }
@@ -119,6 +123,22 @@ public class PlayerLiveCounter : MonoBehaviour
     void Update()
     {
         for (int i = 0; i < livesInOneHeart.Length; i++)
-            lives[i].SetInteger("Lives", livesInOneHeart[i]);
+            lives[i].SetInteger("Lives", livesInOneHeart[i].lives);
     }
+}
+
+public enum LiveType 
+{
+    Regular,
+    Shield,
+    Backpack,
+    Poisonous,
+    Cold,
+    Radioactive
+}
+[System.Serializable]
+public struct Heart 
+{
+    public int lives;
+    public LiveType type; 
 }
