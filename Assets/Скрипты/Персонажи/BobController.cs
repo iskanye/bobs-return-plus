@@ -8,6 +8,7 @@ public class BobController : MonoBehaviour
     void Start() 
     {
         character.data = data;
-        character.Start();
+        character.controller = this;
+        StartCoroutine(character.Start());
     }
 }

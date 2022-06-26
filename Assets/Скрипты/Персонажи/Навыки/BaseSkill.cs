@@ -10,7 +10,7 @@ public class BaseSkill : ScriptableObject
         yield return null;
     }
 
-    public virtual IEnumerator Update() 
+    public virtual IEnumerator Process() 
     {
         yield return null;
     }

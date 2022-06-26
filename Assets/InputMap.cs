@@ -80,6 +80,15 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""d217dc66-ff01-4208-b1d5-bcaab5979a3d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -327,6 +336,17 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""39a45b52-adab-42fc-b982-ea4fd689ee02"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Submit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""8d2dc717-c1b8-4083-b050-77686f6cd9f9"",
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
@@ -355,6 +375,28 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Skip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6b81d48b-8d40-468a-bb30-78dcf1b4f111"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""71c3167a-e7d1-4a76-a6e1-85a9a633fdc7"",
+                    ""path"": ""<Keyboard>/ctrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -928,6 +970,7 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
         m_Player_Submit = m_Player.FindAction("Submit", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         m_Player_Skip = m_Player.FindAction("Skip", throwIfNotFound: true);
+        m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1004,6 +1047,7 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Submit;
     private readonly InputAction m_Player_Pause;
     private readonly InputAction m_Player_Skip;
+    private readonly InputAction m_Player_Attack;
     public struct PlayerActions
     {
         private @InputMap m_Wrapper;
@@ -1014,6 +1058,7 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
         public InputAction @Submit => m_Wrapper.m_Player_Submit;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputAction @Skip => m_Wrapper.m_Player_Skip;
+        public InputAction @Attack => m_Wrapper.m_Player_Attack;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1041,6 +1086,9 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                 @Skip.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkip;
                 @Skip.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkip;
                 @Skip.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkip;
+                @Attack.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
+                @Attack.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
+                @Attack.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1063,6 +1111,9 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                 @Skip.started += instance.OnSkip;
                 @Skip.performed += instance.OnSkip;
                 @Skip.canceled += instance.OnSkip;
+                @Attack.started += instance.OnAttack;
+                @Attack.performed += instance.OnAttack;
+                @Attack.canceled += instance.OnAttack;
             }
         }
     }
@@ -1217,6 +1268,7 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
         void OnSubmit(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnSkip(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

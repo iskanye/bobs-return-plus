@@ -15,7 +15,7 @@
         }
     }
 
-    public int[] livesInOneHeart;
+    public Heart[] livesInOneHeart;
 
     void Awake()
     {

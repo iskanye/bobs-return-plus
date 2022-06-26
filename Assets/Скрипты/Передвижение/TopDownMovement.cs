@@ -25,7 +25,8 @@ public class TopDownMovement : BaseMovement
 
     void OnDisable()
     {
-        DeleteListeners();
+        InputManager.Input.Player.Move.performed -= Input;
+        InputManager.Input.Player.Move.canceled -= InputStop;
         dir = Vector2.zero;
     }
 
@@ -48,11 +49,5 @@ public class TopDownMovement : BaseMovement
     {
         dir = Vector2.zero;
         rig.velocity = Vector2.zero;    
-    }
-
-    void DeleteListeners()
-    {
-        InputManager.Input.Player.Move.performed -= Input;
-        InputManager.Input.Player.Move.canceled -= InputStop;
     }
 }

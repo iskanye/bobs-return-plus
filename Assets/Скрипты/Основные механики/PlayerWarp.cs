@@ -11,12 +11,15 @@
 
     public UnityEngine.UI.Image[] effectsImages;
 
+    public InventorySystem inventory;
+
     [UnityEngine.HideInInspector] public BobController player;
 
     void Awake()
     {
         player = FindObjectOfType<BobController>();
         player.GetComponent<PlayerEffectsController>().images = effectsImages;
+        player.data.inventory = inventory;
     }
 
     void Update() =>

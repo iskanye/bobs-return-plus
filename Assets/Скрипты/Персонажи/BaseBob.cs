@@ -5,7 +5,7 @@ using System.Collections;
 public class BaseBob : ScriptableObject
 {
     [Range(0, 10)] public int speed;
-    public BobType type;
+    protected BobType type;
 
     [HideInInspector] public PlayerData data;
     [HideInInspector] public BobController controller;
@@ -13,11 +13,11 @@ public class BaseBob : ScriptableObject
     public virtual IEnumerator Start()
     {
         data.movement.speed = speed;
-        controller.StartCoroutine(Update());
+        controller.StartCoroutine(Process());
         yield return null;
     }
 
-    public virtual IEnumerator Update() 
+    public virtual IEnumerator Process() 
     {
         yield return null;
     }

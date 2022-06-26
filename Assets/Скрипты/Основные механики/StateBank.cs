@@ -9,7 +9,7 @@ public class StateBank : MonoBehaviour
     public UnityEvent wrongOrderAction;
 
     string[] _rightOrder;
-    int states;
+    ulong states;
     int index;
 
     void Awake() =>
@@ -17,9 +17,9 @@ public class StateBank : MonoBehaviour
 
     public void ChangeState(int state)
     {
-        var byteState = 1 << state;
+        ulong byteState = 1UL << state;
 
-        if (state > stateCount || ((1 << stateCount) & states) == 1 || (states & byteState) != 0)
+        if (state > stateCount || ((1UL << stateCount) & states) == 1 || (states & byteState) != 0)
             return;
 
         if (rightOrder != null && _rightOrder[index] != state.ToString())
@@ -35,10 +35,10 @@ public class StateBank : MonoBehaviour
         states |= byteState;
         index++;
 
-        if (states == (int)Mathf.Pow(2, stateCount) - 1)
+        if (states == (ulong)Mathf.Pow(2, stateCount) - 1)
         {
             action.Invoke();
-            states |= 1 << stateCount;
+            states |= 1UL << stateCount;
         }
     }
 }

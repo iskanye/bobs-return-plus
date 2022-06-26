@@ -4,14 +4,11 @@ using UnityEngine;
 //Контроллер анимаций для движущихся обьектов
 public class AnimationMovementController : SequenceObject
 {
+    public BaseMovement movingObject;
     Animator animator; //Контроллер анимаций от Unity
-    BaseMovement movingObject;
 
-    void Awake()
-    {
+    void Awake() =>
         animator = GetComponent<Animator>(); //Ищем этот контроллер
-        movingObject = GetComponent<BaseMovement>();
-    }
 
     void Update()
     {
