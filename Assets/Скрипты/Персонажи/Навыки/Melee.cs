@@ -41,7 +41,7 @@ public class Melee : BaseSkill
         var damageable = collider.GetComponent<Damageable>();
         damageable.damage = damage;
         damageable.discarding = discarding;
-        damageable.penetrating = penetrating;
+        damageable.penetrating = penetrating; 
         bob.data.damageable = damageable;
 
         bob.data.animator.Play("Attack");

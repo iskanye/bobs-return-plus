@@ -136,6 +136,7 @@ public enum LiveType
     Cold,
     Radioactive
 }
+
 [System.Serializable]
 public struct Heart 
 {

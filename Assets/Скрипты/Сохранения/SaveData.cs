@@ -5,7 +5,7 @@ using System.Collections.Generic;
 [Serializable]
 public class SaveData
 {
-    public const string currentVersion = "pre-alpha NEW MAP";
+    public const string currentVersion = "Battle Test";
     public string version = currentVersion;
 
     public int level;

@@ -94,12 +94,12 @@ namespace Pathfinding {
 		[UnityEngine.Serialization.FormerlySerializedAs("rotationIn2D")]
 		public OrientationMode orientation = OrientationMode.ZAxisForward;
 
-		/// <summary>
-		/// If true, the forward axis of the character will be along the Y axis instead of the Z axis.
-		///
-		/// Deprecated: Use <see cref="orientation"/> instead
-		/// </summary>
-		[System.Obsolete("Use orientation instead")]
+       /// <summary>
+       /// If true, the forward axis of the character will be along the Y axis instead of the Z axis.
+       ///
+       /// Deprecated: Use <see cref="orientation"/> instead
+       /// </summary>
+     [System.Obsolete("Use orientation instead")]
 		public bool rotationIn2D {
 			get { return orientation == OrientationMode.YAxisForward; }
 			set { orientation = value ? OrientationMode.YAxisForward : OrientationMode.ZAxisForward; }
