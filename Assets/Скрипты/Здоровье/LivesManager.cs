@@ -24,7 +24,7 @@ public class LivesManager : LivesBase
                 return;
             }
 
-            if (value - lives < 0 && onHit != null)
+            if (value < lives && onHit != null)
                 onHit.Invoke();
 
             lives = value;

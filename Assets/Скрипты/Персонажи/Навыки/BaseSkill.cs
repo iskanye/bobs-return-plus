@@ -14,4 +14,6 @@ public class BaseSkill : ScriptableObject
     {
         yield return null;
     }
+
+    public virtual void Stop() { }
 }

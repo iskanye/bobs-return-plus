@@ -38,8 +38,11 @@ public class SequentialEvent : SequenceObject
 
     public override IEnumerator Sequence()
     {
-        if (obj == null)    
+        if (obj == null)
+        {
             yield return base.Sequence();
+            yield break;
+        }
 
         var seq = obj.GetComponent<SequenceObject>();
 

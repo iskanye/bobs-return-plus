@@ -1,7 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using System.Linq;
-using static UnityEngine.SceneManagement.SceneManager;
 
 public class SceneData : MonoBehaviour
 {
@@ -13,7 +11,6 @@ public class SceneData : MonoBehaviour
 
     PositionHolder[] positions;
     PropertyHolder[] properties;
-    GlobalPropertyHolder[] globalProperties;
     PlayerLiveCounter lives;
     InventorySystem inventory;
 
@@ -32,44 +29,15 @@ public class SceneData : MonoBehaviour
         }
 
         Data = SaveLoad.Load();
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded += (i, j) => Start();
     }
 
     void Start()
     {
         positions = FindObjectsOfType<PositionHolder>();
         properties = FindObjectsOfType<PropertyHolder>();
-        globalProperties = FindObjectsOfType<GlobalPropertyHolder>();
+        lives = FindObjectOfType<PlayerLiveCounter>();
         inventory = FindObjectOfType<InventorySystem>();
-        lives = PlayerLiveCounter.Active;
-
-        if (Data.level != GetActiveScene().buildIndex || Data.version != SaveData.currentVersion)
-            return;
-
-        foreach (var pos in Data.positions)
-        {
-            var pr = positions.First(i => i.id == pos.id);
-
-            if (pr == null)
-                continue;
-
-            pr.gameObject.transform.position = pos.position;
-        }
-
-        foreach (var prop in Data.customProperties)
-        {
-            var pr = properties.First(i => i.id == prop.id);
-
-            if (pr == null)
-                continue;
-
-            pr.property = prop.property;
-            pr.action.Invoke(pr.property);
-        }
-
-        foreach (var pr in globalProperties)
-            foreach (var prop in Data.globalProperties)
-                if (pr.id == prop.id)
-                    pr.action.Invoke(prop.property);
     }
 
     public static void Save()
@@ -79,7 +47,7 @@ public class SceneData : MonoBehaviour
 
         Data = new SaveData
         {
-            level = GetActiveScene().buildIndex,
+            level = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex,
             lives = active.lives.LivesRemaining,
             achievements = temp
         };
@@ -112,8 +80,6 @@ public class SceneData : MonoBehaviour
 
     IEnumerator Saving()
     {
-        savingText.text = "сохраняется";
-
         SaveLoad.Save(Data);
 
         savingText.text = "сохранено";
@@ -123,8 +89,6 @@ public class SceneData : MonoBehaviour
 
     IEnumerator Deleting()
     {
-        savingText.text = "удаляется";
-
         SaveLoad.DeleteSaves();
         Data = new SaveData();
 

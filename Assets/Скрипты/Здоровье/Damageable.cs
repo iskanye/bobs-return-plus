@@ -12,19 +12,19 @@ public class Damageable : MonoBehaviour
 
     public void Damage(GameObject g)
     {
-        var obj = g.GetComponent<LivesBase>();
+        var lives = g.GetComponent<LivesBase>();
 
-        if (obj != null)
+        if (lives != null)
             if (isDeadly)
             {
-                obj.Lives = 0;
-                onDamage?.Invoke(0);
+                onDamage?.Invoke(lives.Lives);
+                lives.Lives = 0;
             }
 
             else
             {
-                onDamage?.Invoke(obj.Lives - damage);
-                obj.Lives -= damage;
+                onDamage?.Invoke(lives.Lives - damage);
+                lives.Lives -= damage;
             }
 
         var rigid = g.GetComponent<Rigidbody2D>();
@@ -36,5 +36,13 @@ public class Damageable : MonoBehaviour
 
         if (penetr != null && penetr.type <= penetrating)
             penetr.Penetrate();
+
+        var bob = g.GetComponent<BobController>();
+
+        if (bob != null)
+        {
+            bob.enabled = false;
+            bob.enabled = true;
+        }
     }
 }

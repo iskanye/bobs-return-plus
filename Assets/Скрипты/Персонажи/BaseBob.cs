@@ -21,6 +21,8 @@ public class BaseBob : ScriptableObject
     {
         yield return null;
     }
+
+    public virtual void Stop() { }
 }
 
 public enum BobType

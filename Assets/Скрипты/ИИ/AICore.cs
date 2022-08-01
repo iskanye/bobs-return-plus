@@ -1,45 +1,26 @@
 ﻿using UnityEngine;
 using Pathfinding;
 using System;
-using System.Collections.Generic;
 
 [RequireComponent(typeof(Seeker))]
-public class AICore : MonoBehaviour, IAstarAI
+public class AICore : MonoBehaviour
 {
     public float searchingTime;
     public float changePointDistance;
-
-    public float radius { get; set; }
-    public float height { get; set; }
-
-    public Vector3 position => transform.position;
-
-    public Quaternion rotation { get => transform.rotation; set => transform.rotation = value; }
-    public float maxSpeed { get; set; }
+    public float maxSpeed;
 
     public Vector3 velocity => rig.velocity;
+    public Vector3 position => transform.position;
 
-    public Vector3 desiredVelocity => throw new NotImplementedException();
-
-    public float remainingDistance => throw new NotImplementedException();
-
-    public bool reachedDestination => throw new NotImplementedException();
-
-    public bool reachedEndOfPath { get; set; }
-
-    public Vector3 destination { get; set; }
-    public bool canSearch { get; set; }
-    public bool canMove { get; set; }
+    [HideInInspector] public bool reachedEndOfPath;
+    [HideInInspector] public Vector3 destination;
+    [HideInInspector] public bool canSearch;
+    [HideInInspector] public bool canMove;
 
     public bool hasPath => currentPath != null;
-
     public bool pathPending => !seeker.IsDone();
 
-    public bool isStopped { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-    public Vector3 steeringTarget => throw new NotImplementedException();
-
-    public Action onSearchPath { get; set; }
+    public Action onSearchPath;
 
     Rigidbody2D rig;
     Path currentPath;
@@ -70,27 +51,17 @@ public class AICore : MonoBehaviour, IAstarAI
         if ((currentPath.vectorPath[index] - position).sqrMagnitude < changePointDistance * changePointDistance)
             index++;
 
-        reachedEndOfPath |= index >= currentPath.vectorPath.Count;
+        if (index >= currentPath.vectorPath.Count)
+        {
+            reachedEndOfPath = true;
+            rig.velocity = Vector2.zero;
+        }
     }
 
-    public void FinalizeMovement(Vector3 nextPosition, Quaternion nextRotation)
+    void OnDisable()
     {
-        throw new NotImplementedException();
-    }
-
-    public void GetRemainingPath(List<Vector3> buffer, out bool stale)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void Move(Vector3 deltaPosition)
-    {
-        throw new NotImplementedException();
-    }
-
-    public void MovementUpdate(float deltaTime, out Vector3 nextPosition, out Quaternion nextRotation)
-    {
-        throw new NotImplementedException();
+        rig.velocity = Vector2.zero;
+        currentPath = null;
     }
 
     public void SearchPath()
@@ -104,11 +75,6 @@ public class AICore : MonoBehaviour, IAstarAI
 
     public void SetPath(Path path) =>
         currentPath = path;
-
-    public void Teleport(Vector3 newPosition, bool clearPath = true)
-    {
-        throw new NotImplementedException();
-    }
 
     void OnPathComplete(Path p)
     {

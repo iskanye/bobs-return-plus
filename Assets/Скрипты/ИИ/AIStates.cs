@@ -106,9 +106,9 @@ namespace AI
             Vector2 startDirection = mn.direction;
             int sign = Random.Range(0, 2) * 2 - 1; /*рандом -1 или 1*/
             
-            while (time < 2f)
+            while (time < 1 / mn.searchSpeed)
             {
-                var rotation = Mathf.Lerp(0f, 360f, time / 2f);
+                var rotation = Mathf.Lerp(0f, 360f, time * mn.searchSpeed);
                 mn.direction = Quaternion.Euler(0, 0, sign * rotation) * startDirection;
                 time += Time.deltaTime;
 

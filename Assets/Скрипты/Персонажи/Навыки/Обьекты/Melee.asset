@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: Melee
   m_EditorClassIdentifier: 
   bob: {fileID: 11400000, guid: dc6e7bb48206f0b6b9081b634eae8ebd, type: 2}
-  damage: 10
-  reload: 0.35
-  duration: 0.3
-  range: 2
-  discarding: 5
+  dash: 1
+  damage: 15
+  swingDuration: 0.4
+  dashDuration: 0.7
+  hitDuration: 0.4
+  reloadDuration: 0.3
+  colliderSize: {x: 1.5, y: 2}
+  discarding: 8
   penetrating: 1
   meleePrefab: {fileID: 4448214415045013748, guid: beab6803bc128be84a8fe556fbf29ed2,
     type: 3}
+  attackTrigger: 0

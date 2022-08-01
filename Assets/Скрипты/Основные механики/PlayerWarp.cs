@@ -10,8 +10,8 @@
     }
 
     public UnityEngine.UI.Image[] effectsImages;
-
     public InventorySystem inventory;
+    public UnityEngine.Animator deathScreen;
 
     [UnityEngine.HideInInspector] public BobController player;
 
@@ -20,6 +20,7 @@
         player = FindObjectOfType<BobController>();
         player.GetComponent<PlayerEffectsController>().images = effectsImages;
         player.data.inventory = inventory;
+        player.data.lives.deathScreen = deathScreen;
     }
 
     void Update() =>

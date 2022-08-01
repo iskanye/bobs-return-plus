@@ -4,7 +4,6 @@ public class PlayerLiveCounter : MonoBehaviour
 {
     public Animator[] lives;
     public Heart[] livesInOneHeart;
-    public float invincibleTime = 2;
 
     public int maxLives 
     {
@@ -12,8 +11,8 @@ public class PlayerLiveCounter : MonoBehaviour
         {
             int res = 0;
 
-            for (int i = 0; i < livesInOneHeart.Length; i++)
-                res += livesInOneHeart[i].lives;
+            foreach (var i in livesInOneHeart)
+                res += i.lives;
 
             return res;
         } 
@@ -26,14 +25,8 @@ public class PlayerLiveCounter : MonoBehaviour
 
         set 
         {
-            if (isInvincible || livesRemaining == 0)
-                return;
-
             if (value <= 0)
-            {
-                Application.Quit();
-                return;
-            }
+                value = 0;
 
             if (value > maxLives)
                 value = maxLives;
@@ -41,10 +34,7 @@ public class PlayerLiveCounter : MonoBehaviour
             if (value == livesRemaining)
                 return;
 
-            if (value < livesRemaining) 
-                CameraController.StartShake();
-
-            StartCoroutine(ChangeLives(value));
+            ChangeLives(value);
         }
     }
 
@@ -64,18 +54,29 @@ public class PlayerLiveCounter : MonoBehaviour
         for (int i = livesInOneHeart.Length; i < lives.Length; i++)
             lives[i - 1].GetComponent<UnityEngine.UI.Image>().color = new Color(0, 0, 0, 0);
 
-        StartCoroutine(ChangeLives(SceneData.Data.lives != -1 ? SceneData.Data.lives : maxLives));
+        ChangeLives(SceneData.Data.lives != -1 && SceneData.Data.version == SaveData.currentVersion ? SceneData.Data.lives : maxLives);
     }
 
-    System.Collections.IEnumerator ChangeLives(int val)
+    void ChangeLives(int val)
     {
-        isInvincible = true;
-        var cache = livesRemaining;
-
         while (val != livesRemaining)
-        {
-            if (val >= livesRemaining)
+            if (val < livesRemaining)
             {
+                livesRemaining--;
+                livesInHeart--;
+
+                if (livesInHeart < 0)
+                {
+                    heart--;
+                    livesInHeart = livesInOneHeart[heart].lives - 1;
+                }
+
+                lives[heart].SetInteger("Lives", livesInHeart);
+            }
+
+            else
+            {
+                livesRemaining++;
                 livesInHeart++;
 
                 if (livesInHeart > livesInOneHeart[heart].lives)
@@ -84,47 +85,15 @@ public class PlayerLiveCounter : MonoBehaviour
                     livesInHeart = 1;
                 }
 
-                livesRemaining++;
-                lives[heart].SetTrigger("Heal");
+                lives[heart].SetInteger("Lives", livesInHeart);
             }
-
-            else
-            {
-                livesInHeart--;
-
-                if (livesInHeart < 0)
-                {
-                    livesInOneHeart[heart].type = LiveType.Regular;
-
-                    if (livesInOneHeart[heart].type == LiveType.Backpack || livesInOneHeart[heart].type == LiveType.Shield)
-                        livesInOneHeart[heart].lives = 2;
-
-                    heart--;
-                    livesInHeart = livesInOneHeart[heart].lives - 1;
-                }
-
-                livesRemaining--;
-                lives[heart].SetTrigger("Hurt");
-            }
-
-            yield return new WaitForSeconds(.3f);
-        } 
-
-        if (val < cache)
-            yield return new WaitForSeconds(invincibleTime);
 
         for (int i = heart + 1; i < livesInOneHeart.Length; i++)
-            if (livesInOneHeart[i].lives == 3)
-                livesInOneHeart[i].lives = 2;
-
-        isInvincible = false;
+            lives[heart].SetInteger("Lives", 0);
     }
 
-    void Update()
-    {
-        for (int i = 0; i < livesInOneHeart.Length; i++)
-            lives[i].SetInteger("Lives", livesInOneHeart[i].lives);
-    }
+    void Update() =>
+        lives[heart].SetInteger("Lives", livesInHeart);
 }
 
 public enum LiveType 

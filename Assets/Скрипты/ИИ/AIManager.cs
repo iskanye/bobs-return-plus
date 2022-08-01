@@ -1,5 +1,4 @@
 using UnityEngine;
-using Pathfinding;
 using AI;
 using System;
 
@@ -10,6 +9,7 @@ public class AIManager : BaseMovement
     public LayerMask player = 1 << 6; //Слой с игроком
     public float seeRange; //Дальность зрения
     public float spotSpeed; //Скорость движения(При погоне)
+    public float searchSpeed = .5f;
     public Vector2 direction = Vector2.right;
     [Range(0, 360)] public float viewAngle;
 
@@ -17,7 +17,7 @@ public class AIManager : BaseMovement
     public float patrolDelay;
     public Vector2[] path; //Массив пути(для патрульного ИИ)
 
-    public IAstarAI AI { get; private set; }
+    public AICore AI { get; private set; }
 
     public override bool IsWalking => AI.velocity != Vector3.zero;
     public override Vector2 Direction => direction;
@@ -35,7 +35,7 @@ public class AIManager : BaseMovement
     void Awake()
     {
         //Получаем скрипт поиска пути и контроллер анимаций
-        AI = GetComponent<IAstarAI>();
+        AI = GetComponent<AICore>();
 
         patrolState = new PatrolState(this);
         chaseState = new ChaseState(this);
@@ -82,18 +82,18 @@ public class AIManager : BaseMovement
         return false;
     }
 
-
     public void ChaseTarget(Transform target)
     {
         currentTarget = target;
         ChangeState(chaseState);
     }
 
+    public void ChaseTarget(GameObject target) =>
+        ChaseTarget(target.transform);
+
     //Система реагирования на скриптовые шумы
-    public void NoiseDistraction(Transform noise)
-    {
+    public void NoiseDistraction(Transform noise) =>
         ChaseTarget(noise);
-    }
 
     public void ChangeState(State<AIManager> state)
     {

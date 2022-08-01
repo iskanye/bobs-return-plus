@@ -27,7 +27,7 @@ public class TopDownMovement : BaseMovement
     {
         InputManager.Input.Player.Move.performed -= Input;
         InputManager.Input.Player.Move.canceled -= InputStop;
-        dir = Vector2.zero;
+        rig.velocity = dir = Vector2.zero;
     }
 
     void Update()
@@ -38,16 +38,12 @@ public class TopDownMovement : BaseMovement
 
     void FixedUpdate()
     {
-        if (IsWalking)
-            rig.velocity = dir.normalized * speed;
-    } //Переводим кадры в секунды и прикладываем к обьекту скорость
+        rig.velocity = dir.normalized * speed; //Переводим кадры в секунды и прикладываем к обьекту скорость
+    }
 
     public void Input(InputAction.CallbackContext c) => 
         dir = c.ReadValue<Vector2>();
 
-    public void InputStop(InputAction.CallbackContext c)
-    {
-        dir = Vector2.zero;
-        rig.velocity = Vector2.zero;    
-    }
+    public void InputStop(InputAction.CallbackContext c) =>
+        dir = Vector2.zero; 
 }

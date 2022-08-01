@@ -3,10 +3,11 @@
 [System.Serializable]
 public struct PlayerData
 {
+    public SpriteRenderer[] renderers;
     public TopDownMovement movement;
-    public LivesBase lives;
+    public PlayerLives lives;
     public Damageable damageable;
-    public Animator animator;
+    public Animator[] animators;
     public InventorySystem inventory;
     public GameObject gameObject;
 }

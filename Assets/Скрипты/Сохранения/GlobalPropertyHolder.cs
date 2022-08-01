@@ -16,4 +16,17 @@ public class GlobalPropertyHolder : UnityEngine.MonoBehaviour
         else
             cache.Add(new CustomProperty(id, property));
     }
+
+    void Start()
+    {
+        var data = SceneData.Data;
+
+        if (data.level != UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex || data.version != SaveData.currentVersion)
+            return;
+
+        var prop = data.globalProperties.Find(i => i.id == id);
+
+        if (prop != null)
+            action.Invoke(prop.property);
+    }
 }
