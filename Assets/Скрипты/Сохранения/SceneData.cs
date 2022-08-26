@@ -11,6 +11,7 @@ public class SceneData : MonoBehaviour
 
     PositionHolder[] positions;
     PropertyHolder[] properties;
+    IntegerHolder[] integers;
     PlayerLiveCounter lives;
     InventorySystem inventory;
 
@@ -36,6 +37,7 @@ public class SceneData : MonoBehaviour
     {
         positions = FindObjectsOfType<PositionHolder>();
         properties = FindObjectsOfType<PropertyHolder>();
+        integers = FindObjectsOfType<IntegerHolder>();
         lives = FindObjectOfType<PlayerLiveCounter>();
         inventory = FindObjectOfType<InventorySystem>();
     }
@@ -57,6 +59,9 @@ public class SceneData : MonoBehaviour
 
         foreach (var i in active.properties) 
             Data.customProperties.Add(new CustomProperty(i.id, i.property));
+
+        foreach (var i in active.integers)
+            Data.integers.Add(new Integer(i.id, i.Integer.integer));
 
         foreach (var i in active.inventory.items)
             if (i != null) 

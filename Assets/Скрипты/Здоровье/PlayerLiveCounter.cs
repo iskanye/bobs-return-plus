@@ -40,7 +40,7 @@ public class PlayerLiveCounter : MonoBehaviour
 
     public static PlayerLiveCounter Active { get; private set; }
 
-    [HideInInspector] public bool isInvincible;
+    public bool isInvincible;
 
     int livesRemaining;
     int heart;

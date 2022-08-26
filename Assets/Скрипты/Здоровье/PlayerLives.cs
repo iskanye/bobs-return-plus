@@ -11,7 +11,7 @@ public class PlayerLives : LivesBase
 
         set
         {
-            if (PlayerLiveCounter.Active.isInvincible || (bob.character is MeleeBob melee && melee.melee.attackTrigger))
+            if (melee && melee.melee.attackTrigger)
                 return;
 
             if (value <= 0)
@@ -22,6 +22,9 @@ public class PlayerLives : LivesBase
 
             else if (PlayerLiveCounter.Active.LivesRemaining > value)
             {
+                if (PlayerLiveCounter.Active.isInvincible)
+                    return;
+
                 StopAllCoroutines();
                 StartCoroutine(Invincible());
 
@@ -46,10 +49,12 @@ public class PlayerLives : LivesBase
     [HideInInspector] public Animator deathScreen;
 
     BobController bob;
+    MeleeBob melee;
 
     void Awake()
     {
         bob = GetComponent<BobController>();
+        melee = bob.character is MeleeBob meleeBob ? meleeBob : null;
         PlayerLiveCounter.Active.livesInOneHeart = livesInOneHeart;
         PlayerLiveCounter.Active.Initialize();
     }
@@ -57,24 +62,25 @@ public class PlayerLives : LivesBase
     IEnumerator Death()
     {
         FindObjectOfType<PauseController>().gameObject.SetActive(false);
+        GetComponent<Collider2D>().enabled = false;
 
         foreach (var i in bob.data.animators)
             i.SetTrigger("Death");
 
+        bob.gameObject.layer = LayerMask.GetMask(LayerMask.LayerToName(0));
         bob.data.movement.enabled = false;
-        bob.enabled = false;
-        bob.gameObject.layer = LayerMask.GetMask("Default");
 
         Time.timeScale = .25f;
         StartCoroutine(Invincible());
 
         yield return new WaitForSeconds(.4f);
+        bob.enabled = false;
         deathScreen.Play("Death");
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(.3f);
         Time.timeScale = 1;
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(3);
         LoadScene(GetActiveScene().buildIndex);
     }
 
@@ -101,6 +107,7 @@ public class PlayerLives : LivesBase
     IEnumerator Hit() 
     {
         bob.data.movement.enabled = false;
+        bob.data.rigidbody.velocity = hitDirection;
         yield return new WaitForSeconds(hitDuration);
         bob.data.movement.enabled = true;
     }

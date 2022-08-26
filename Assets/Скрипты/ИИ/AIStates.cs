@@ -17,6 +17,12 @@ namespace AI
                     yield break;
                 }
 
+                if (mn.isPatrol)
+                {
+                    mn.ChangeState(mn.patrolState);
+                    yield break;
+                }
+
                 yield return base.Update();
             }
         }
@@ -71,8 +77,6 @@ namespace AI
                     mn.ChangeState(mn.chaseState);
                     yield break;
                 }
-
-                yield return base.Update();
                 
                 time += Time.deltaTime;                
 

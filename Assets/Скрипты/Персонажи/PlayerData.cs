@@ -9,5 +9,6 @@ public struct PlayerData
     public Damageable damageable;
     public Animator[] animators;
     public InventorySystem inventory;
+    public Rigidbody2D rigidbody;
     public GameObject gameObject;
 }

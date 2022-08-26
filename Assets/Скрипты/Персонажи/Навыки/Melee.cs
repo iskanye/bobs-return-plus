@@ -22,8 +22,6 @@ public class Melee : BaseSkill
     public override IEnumerator Start()
     {
         InputManager.Input.Player.Attack.started += (c) => attackTrigger = true;
-        isReloading = false;
-
         yield return base.Start();
     }
 
@@ -35,14 +33,14 @@ public class Melee : BaseSkill
             yield break;
         }
 
+        isReloading = true;
+
         var direction = bob.data.movement.Direction;
-        var dir = new Vector2(direction.y != 0 ? 0 : direction.x, direction.y);
-        var rigid = bob.data.gameObject.GetComponent<Rigidbody2D>();
+        var dir = new Vector2(direction.y > 0.1f && direction.y < -0.1f ? 0 : direction.x, direction.y);
+        var rigid = bob.data.rigidbody;
 
         foreach (var i in bob.data.animators)
             i.SetTrigger("Attack");
-
-        isReloading = true;
 
         var isWalk = bob.data.movement.IsWalking;
         bob.data.movement.enabled = false;
@@ -61,8 +59,9 @@ public class Melee : BaseSkill
         var collider = Instantiate(meleePrefab, bob.controller.transform);
         var offset = colliderSize.x / 2;
 
-        collider.offset = new Vector2(dir.x != 0 ? (dir.x < 0 ? -offset : offset) : 0, dir.y != 0 ? (dir.y < 0 ? -offset : offset) : 0);
-        collider.size = new Vector2(dir.x != 0 ? colliderSize.x : colliderSize.y, dir.y != 0 ? colliderSize.x : colliderSize.y);
+        collider.offset = new Vector2(colliderSize.x * .5f, 0);
+        collider.size = colliderSize;
+        collider.transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.right, dir));
 
         var damageable = collider.GetComponent<Damageable>();
         damageable.damage = damage;
@@ -71,29 +70,32 @@ public class Melee : BaseSkill
         damageable.direction = dir;
         bob.data.damageable = damageable;
 
+        var inTime = collider.GetComponent<ActionInTime>();
+        inTime.time = hitDuration;
+        inTime.Action();
+
         yield return new WaitForSeconds(hitDuration);
 
-        Destroy(collider.gameObject);
         bob.data.movement.enabled = true;
 
         yield return new WaitForSeconds(reloadDuration);
 
-        isReloading = false;
+        isReloading = false; 
         attackTrigger = false;
     }
 
     public override void Stop()
     {
-        attackTrigger = false;
         isReloading = false;
+        attackTrigger = false;
     }
 }
 
 public enum DiscardingType
 {
-    Small = 5,
-    Normal = 8,
-    Big = 11
+    Small = 3,
+    Normal = 5,
+    Big = 10
 }
 
 public enum ObjectType

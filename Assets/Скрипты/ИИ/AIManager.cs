@@ -3,7 +3,7 @@ using AI;
 using System;
 
 //Скрипт ИИ
-public class AIManager : BaseMovement
+public class AIManager : BaseMovement, IInteger
 {
     public LayerMask obstacles = 1 << 3; //Слой с препятствиями
     public LayerMask player = 1 << 6; //Слой с игроком
@@ -19,8 +19,16 @@ public class AIManager : BaseMovement
 
     public AICore AI { get; private set; }
 
+    public int integer
+    {
+        get =>
+            currWay - 1;
+
+        set =>
+            currWay = value;
+    }
+
     public override bool IsWalking => AI.velocity != Vector3.zero;
-    public override Vector2 Direction => direction;
 
     [HideInInspector] public int currWay; //Текущий путь из массива позиций
     [HideInInspector] public Transform currentTarget; //Трансформ цели
@@ -30,7 +38,8 @@ public class AIManager : BaseMovement
     [HideInInspector] public ChaseState chaseState;
     [HideInInspector] public SearchState searchState;
     [HideInInspector] public IdleState idleState;
-    [SerializeField] private State<AIManager> currentState;
+
+    State<AIManager> currentState;
 
     void Awake()
     {
@@ -47,14 +56,22 @@ public class AIManager : BaseMovement
 
     void OnEnable()
     {
-        ChangeState(searchState);
         AI.canMove = true;
+        AI.enabled = true;
+        ChangeState(searchState);
+    }
+
+    void Update() 
+    {
+        if (direction != Vector2.zero)
+            Direction = direction;
     }
 
     void OnDisable()
     {
         StopAllCoroutines();
         AI.canMove = false;
+        AI.enabled = false;
     }
 
     public bool CanSeePlayer()
@@ -108,9 +125,10 @@ public class AIManager : BaseMovement
     void OnDrawGizmos()
     {
         //Границы зрения
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.white;
         Gizmos.DrawRay(transform.position, Quaternion.Euler(0f, 0f, viewAngle / 2) * direction * seeRange);
         Gizmos.DrawRay(transform.position, Quaternion.Euler(0f, 0f, -viewAngle / 2) * direction * seeRange);
+        Gizmos.DrawRay(transform.position, direction * seeRange);
 
         if (isPatrol)
         {

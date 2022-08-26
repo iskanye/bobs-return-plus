@@ -20,7 +20,7 @@ MonoBehaviour:
   hitDuration: 0.4
   reloadDuration: 0.3
   colliderSize: {x: 1.5, y: 2}
-  discarding: 8
+  discarding: 10
   penetrating: 1
   meleePrefab: {fileID: 4448214415045013748, guid: beab6803bc128be84a8fe556fbf29ed2,
     type: 3}

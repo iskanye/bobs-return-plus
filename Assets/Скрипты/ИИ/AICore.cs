@@ -66,7 +66,7 @@ public class AICore : MonoBehaviour
 
     public void SearchPath()
     {
-        if (!canSearch || pathPending)
+        if (!canSearch || !canMove || pathPending)
             return;
 
         seeker.StartPath(position, destination, OnPathComplete);

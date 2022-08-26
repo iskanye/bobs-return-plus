@@ -5,13 +5,14 @@ using System.Collections.Generic;
 [Serializable]
 public class SaveData
 {
-    public const string currentVersion = "Battle Test 5";
+    public const string currentVersion = "Battle Test 8";
     public string version = currentVersion;
 
     public int level;
     public int lives = -1;
 
     public List<Position> positions;
+    public List<Integer> integers;
 
     public List<CustomProperty> customProperties;
     public List<CustomProperty> globalProperties;
@@ -24,6 +25,7 @@ public class SaveData
         customProperties = new List<CustomProperty>();
         globalProperties = new List<CustomProperty>();
         positions = new List<Position>();
+        integers = new List<Integer>();
         achievements = new List<IdItem>();
         inventory = new List<GuidItem>();
     }
@@ -56,6 +58,21 @@ public class CustomProperty
     {
         this.id = id;
         this.property = property;
+    }
+}
+
+[Serializable]
+public class Integer
+{
+    public string id;
+    public int integer;
+
+    public Integer() { }
+
+    public Integer(string id, int integer)
+    {
+        this.id = id;
+        this.integer = integer;
     }
 }
 

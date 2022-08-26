@@ -51,6 +51,7 @@ public class DialogueSystem : SequenceObject
         InputManager.Input.Player.Submit.canceled += Submit;
         InputManager.Input.Player.Skip.started += Skip;
         InputManager.Input.Player.Move.started += VariantInput;
+        InputManager.Input.Player.Attack.performed += (i) => { Skip(i); Submit(i); };
     }
 
     public void ChangeState(State<DialogueSystem> st)

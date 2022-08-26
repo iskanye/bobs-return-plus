@@ -1,6 +1,6 @@
 ﻿using UnityEngine.Events;
 
-public class LivesManager : LivesBase
+public class LivesManager : LivesBase, IInteger
 {
     public int maxLives;
 
@@ -21,6 +21,7 @@ public class LivesManager : LivesBase
             {
                 onDeath.Invoke();
                 lives = 0;
+                enabled = false;
                 return;
             }
 
@@ -29,6 +30,14 @@ public class LivesManager : LivesBase
 
             lives = value;
         }
+    }
+
+    public int integer 
+    { 
+        get => 
+            Lives; 
+        set => 
+            Lives = value; 
     }
 
     public UnityEvent onDeath;

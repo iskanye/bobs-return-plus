@@ -3,27 +3,27 @@
  <image source="1_TimeTravel_Shipy.png" width="128" height="64"/>
  <tile id="0">
   <objectgroup draworder="index" id="2">
-   <object id="4" x="2" y="9.25" width="28" height="21.75"/>
+   <object id="5" x="2" y="2" width="28" height="29"/>
   </objectgroup>
  </tile>
  <tile id="1">
   <objectgroup draworder="index" id="2">
-   <object id="2" x="2" y="10.875" width="25" height="19.125"/>
+   <object id="4" x="2" y="4" width="25" height="26"/>
   </objectgroup>
  </tile>
  <tile id="2">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="19" y="22.375" width="11" height="8.625"/>
+   <object id="2" x="19" y="17" width="11" height="14"/>
   </objectgroup>
  </tile>
  <tile id="3">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="2" y="23.375" width="11" height="7.625"/>
+   <object id="2" x="2" y="18" width="11" height="13"/>
   </objectgroup>
  </tile>
  <tile id="4">
   <objectgroup draworder="index" id="2">
-   <object id="2" x="3" y="14" width="23" height="18"/>
+   <object id="3" x="3" y="7" width="23" height="25"/>
   </objectgroup>
  </tile>
  <tile id="5">
