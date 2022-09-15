@@ -48,10 +48,18 @@ public class DialogueSystem : SequenceObject
 
         ChangeState(idleState);
 
-        InputManager.Input.Player.Submit.canceled += Submit;
-        InputManager.Input.Player.Skip.started += Skip;
+        InputManager.Input.Player.Submit.performed += (i) => 
+        {
+            if (state is IdleState)
+                return;
+
+            if (state is WaitingState)
+                Submit(i);
+
+            else if (state is PrintingState)
+                Skip(i);
+        };
         InputManager.Input.Player.Move.started += VariantInput;
-        InputManager.Input.Player.Attack.performed += (i) => { Skip(i); Submit(i); };
     }
 
     public void ChangeState(State<DialogueSystem> st)

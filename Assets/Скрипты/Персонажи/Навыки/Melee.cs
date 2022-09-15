@@ -47,14 +47,14 @@ public class Melee : BaseSkill
 
         if (isWalk && dash)
         {
-            rigid.velocity += dir * 8;
+            rigid.velocity += dir * 6;
             yield return new WaitForSeconds(dashDuration);
         }
 
         else 
             yield return new WaitForSeconds(swingDuration);
 
-        rigid.velocity += dir * 6;
+        //rigid.velocity += dir * 4;
 
         var collider = Instantiate(meleePrefab, bob.controller.transform);
         var offset = colliderSize.x / 2;
@@ -71,7 +71,7 @@ public class Melee : BaseSkill
         bob.data.damageable = damageable;
 
         var inTime = collider.GetComponent<ActionInTime>();
-        inTime.time = hitDuration;
+        inTime.time = hitDuration - .1f;
         inTime.Action();
 
         yield return new WaitForSeconds(hitDuration);

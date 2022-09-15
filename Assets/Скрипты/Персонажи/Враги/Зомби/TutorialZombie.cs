@@ -13,6 +13,14 @@ public class TutorialZombie : MonoBehaviour
     public float reloadDuration;
     public float invincibleTime;
 
+    [Header("Without leg")]
+
+    public Rigidbody2D[] legLumps;
+    public int livesWithoutLeg;
+    public GameObject puddle;
+    public Vector3 headOffset; 
+    public Rigidbody2D[] headLumps;
+
     AIManager ai;
     SpriteRenderer rend;
     Animator anim;
@@ -21,6 +29,7 @@ public class TutorialZombie : MonoBehaviour
 
     bool isInvincible;
     bool isReloading;
+    bool withoutLeg;
 
     void Awake() 
     {
@@ -71,7 +80,7 @@ public class TutorialZombie : MonoBehaviour
 
     public void Attack()
     {
-        if (isReloading || isInvincible)
+        if (withoutLeg || isReloading || isInvincible)
             return;
 
         StartCoroutine(AttackCoroutine());
@@ -88,6 +97,10 @@ public class TutorialZombie : MonoBehaviour
 
         var coll = Instantiate(meleePrefab, transform);
 
+        var inTime = coll.GetComponent<ActionInTime>();
+        inTime.time = hitDuration;
+        inTime.Action();
+
         coll.offset = new Vector2(colliderSize.x * .5f, 0);
         coll.size = colliderSize;
         coll.transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.right, ai.Direction.normalized));
@@ -98,10 +111,6 @@ public class TutorialZombie : MonoBehaviour
         damageable.penetrating = ObjectType.Fragile;
         damageable.direction = ai.Direction;
 
-        var inTime = coll.GetComponent<ActionInTime>();
-        inTime.time = hitDuration;
-        inTime.Action();
-
         yield return new WaitForSeconds(reloadDuration + hitDuration);
 
         isReloading = false;
@@ -110,17 +119,44 @@ public class TutorialZombie : MonoBehaviour
 
     public void OnDeath()
     {
+        if (!withoutLeg && Random.value < .5f) 
+        {
+            StopAllCoroutines();
+
+            withoutLeg = true;
+            ai.enabled = true;
+            ai.isPatrol = false;
+            ((LivesManager)lives).Revive(livesWithoutLeg);
+            anim.SetBool("Without Leg", true); 
+
+            foreach (var i in legLumps) 
+                Instantiate(i, transform.position, Quaternion.identity).velocity = (Vector2)Random.onUnitSphere * 3;
+
+            ai.ChangeState(ai.searchState);
+            return;
+        }
+
+        if (withoutLeg) 
+        {
+            foreach (var i in headLumps)
+                Instantiate(i, transform.position + headOffset, Quaternion.identity).velocity = (Vector2)Random.onUnitSphere * 3;
+        }
+
         lives.StartCoroutine(_Hit());
 
         GetComponent<Collider2D>().enabled = false;
 
-        var head = Instantiate(zombieHead, transform.position, Quaternion.identity);
-        var rig = head.GetComponent<Rigidbody2D>();
-        rig.velocity = lives.hitDirection.normalized * 10;
+        var head = Instantiate(withoutLeg ? puddle : zombieHead, transform.position + (withoutLeg ? headOffset : Vector3.zero), Quaternion.identity);
+
+        if (!withoutLeg)
+        {
+            var rig = head.GetComponent<Rigidbody2D>();
+            rig.velocity = lives.hitDirection.normalized * 10;
+        }
 
         anim.SetTrigger("Death");
 
-        Destroy(ai.AI);
+        Destroy((MonoBehaviour)ai.AI);
         Destroy(ai);
         Destroy(this);
     }

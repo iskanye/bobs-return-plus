@@ -2,11 +2,11 @@
 
 public class InputManager : MonoBehaviour
 {
-    public static InputMap Input { get; private set; }
+    public static InputMap Input;
 
     public static InputManager Active;
 
-    public bool submit;
+    [HideInInspector] public bool submit;
 
     void Awake()
     {

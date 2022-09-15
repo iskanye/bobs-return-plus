@@ -15,7 +15,7 @@ public class ZombieHead : MonoBehaviour
         foreach (var i in lumps) 
         {
             var lump = Instantiate(i, transform.position, Quaternion.identity);
-            lump.velocity = Quaternion.Euler(0, 0, Random.Range(-180, 180)) * new Vector2(Random.Range(-3, 3), Random.Range(-3, 3));
+            lump.velocity = (Vector2)Random.onUnitSphere * 3;
         }
 
         Destroy(gameObject);

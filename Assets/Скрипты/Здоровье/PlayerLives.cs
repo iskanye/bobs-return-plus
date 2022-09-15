@@ -16,6 +16,7 @@ public class PlayerLives : LivesBase
 
             if (value <= 0)
             {
+                CameraController.Active.StartShake(.15f, 1.5f);
                 StopAllCoroutines();
                 StartCoroutine(Death());
             }
@@ -32,6 +33,7 @@ public class PlayerLives : LivesBase
                     i.SetTrigger("Hit");
 
                 StartCoroutine(Hit());
+                CameraController.Active.StartShake(.15f, 1f);
             }
 
             if (livesCalculation == null)
@@ -80,7 +82,7 @@ public class PlayerLives : LivesBase
         yield return new WaitForSeconds(.3f);
         Time.timeScale = 1;
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(7.7f);
         LoadScene(GetActiveScene().buildIndex);
     }
 

@@ -15,12 +15,12 @@ MonoBehaviour:
   bob: {fileID: 11400000, guid: dc6e7bb48206f0b6b9081b634eae8ebd, type: 2}
   dash: 1
   damage: 15
-  swingDuration: 0.4
-  dashDuration: 0.7
+  swingDuration: 0.375
+  dashDuration: 0.625
   hitDuration: 0.4
-  reloadDuration: 0.3
+  reloadDuration: 0.6
   colliderSize: {x: 1.5, y: 2}
-  discarding: 10
+  discarding: 5
   penetrating: 1
   meleePrefab: {fileID: 4448214415045013748, guid: beab6803bc128be84a8fe556fbf29ed2,
     type: 3}

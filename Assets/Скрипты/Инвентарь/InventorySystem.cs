@@ -16,12 +16,24 @@ public class InventorySystem : MonoBehaviour
 
     void Awake()
     {
+        Index = 0;
         var inventory = SceneData.Data.inventory;
         items = new Item[maxItems];
 
         if (inventory != null)
             for (int i = 0; i < (inventory.Count > maxItems ? maxItems : inventory.Count); i++)
                 items[i] = Item.GetItem(inventory[i].id);
+
+        InputManager.Input.Player.UseItem.started += i =>
+        {
+            if (items[Index] == null || !(DialogueSystem.Active.state is Dialogues.IdleState))
+                return;
+
+            if (items[Index].Action())
+                items[Index] = null;
+        };
+
+        InputManager.Input.Player.ItemChoose.started += i => Index = (Index + 1) % 4;
     }
 
     void Update()
@@ -38,13 +50,6 @@ public class InventorySystem : MonoBehaviour
                 icons[i].color = new Color(0, 0, 0, 0);
 
             panels[i].sprite = i == Index ? selected : regular;
-
-            if (Input.GetKeyDown((KeyCode)(49 + i)))
-                if (i == Index)
-                    Use(i);
-
-                else
-                    Index = i;
         }
 
         label.text = items[Index] != null ? items[Index].name : "";
@@ -58,14 +63,5 @@ public class InventorySystem : MonoBehaviour
                 items[i] = item;
                 break;
             }
-    }
-
-    public void Use(int item)
-    {
-        if (items[item] == null || !(DialogueSystem.Active.state is Dialogues.IdleState))
-            return;
-
-        if (items[item].Action())
-            items[item] = null;
     }
 }

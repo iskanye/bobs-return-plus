@@ -34,7 +34,6 @@ namespace AI
 
         public override IEnumerator Update()
         {
-            mn.AI.maxSpeed = mn.spotSpeed; //Меняем ему скорость
             mn.AI.destination = mn.currentTarget.position; //Меняем ему цель на объект
             mn.AI.SearchPath(); //Ищем путь до объекта
 
@@ -63,8 +62,6 @@ namespace AI
 
         public override IEnumerator Update()
         {
-            mn.AI.maxSpeed = mn.speed; //Меняем скорость на обычную
-
             float waitTime = Random.Range(.5f, mn.patrolDelay);
             float time = 0;
 

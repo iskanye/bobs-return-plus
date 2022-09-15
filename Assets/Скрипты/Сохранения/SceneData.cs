@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using System.Collections;
 
 public class SceneData : MonoBehaviour
 {
+    public InputActionAsset actions;
     public TMPro.TMP_Text savingText;
 
     public static SaveData Data { get; private set; }
@@ -14,6 +16,12 @@ public class SceneData : MonoBehaviour
     IntegerHolder[] integers;
     PlayerLiveCounter lives;
     InventorySystem inventory;
+
+    void OnDisable()
+    {
+        var rebinds = actions.SaveBindingOverridesAsJson();
+        PlayerPrefs.SetString("rebinds", rebinds);
+    }
 
     void Awake()
     {
@@ -31,10 +39,15 @@ public class SceneData : MonoBehaviour
 
         Data = SaveLoad.Load();
         UnityEngine.SceneManagement.SceneManager.sceneLoaded += (i, j) => Start();
+        UnityEngine.SceneManagement.SceneManager.sceneUnloaded += i => OnDisable();
     }
 
     void Start()
     {
+        var rebinds = PlayerPrefs.GetString("rebinds");
+        if (PlayerPrefs.HasKey("rebinds"))
+            actions.LoadBindingOverridesFromJson(rebinds);
+
         positions = FindObjectsOfType<PositionHolder>();
         properties = FindObjectsOfType<PropertyHolder>();
         integers = FindObjectsOfType<IntegerHolder>();
@@ -95,6 +108,7 @@ public class SceneData : MonoBehaviour
     IEnumerator Deleting()
     {
         SaveLoad.DeleteSaves();
+        PlayerPrefs.DeleteAll();
         Data = new SaveData();
 
         savingText.text = "удалено";

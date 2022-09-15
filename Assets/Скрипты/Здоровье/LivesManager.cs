@@ -19,8 +19,8 @@ public class LivesManager : LivesBase, IInteger
 
             if (value <= 0 && onDeath != null)
             {
-                onDeath.Invoke();
                 lives = 0;
+                onDeath.Invoke();
                 enabled = false;
                 return;
             }
@@ -47,4 +47,7 @@ public class LivesManager : LivesBase, IInteger
 
     void Awake() =>
         lives = maxLives;
+
+    public void Revive(int newLives) =>
+        lives = newLives;
 }

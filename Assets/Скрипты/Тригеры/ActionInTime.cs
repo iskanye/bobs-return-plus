@@ -1,13 +1,30 @@
+using UnityEngine;
+
 public class ActionInTime : ActionBase
 {
     public float time;
 
-    public void Action() => 
+    GameObject obj;
+
+    public void Action()
+    {
+        CancelInvoke();
         Invoke("Act", time);
+    }
+
+    public void Action(GameObject obj)
+    {
+        this.obj = obj;
+        Action();
+    }
 
     void Act()
     {
         if (action != null)
-            action.Invoke(gameObject);
+            if (obj == null)
+                action.Invoke(gameObject);
+
+            else
+                action.Invoke(obj);
     }
 }

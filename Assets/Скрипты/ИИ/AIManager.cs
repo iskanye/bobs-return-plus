@@ -1,6 +1,7 @@
 using UnityEngine;
 using AI;
 using System;
+using Pathfinding;
 
 //Скрипт ИИ
 public class AIManager : BaseMovement, IInteger
@@ -17,7 +18,7 @@ public class AIManager : BaseMovement, IInteger
     public float patrolDelay;
     public Vector2[] path; //Массив пути(для патрульного ИИ)
 
-    public AICore AI { get; private set; }
+    public IAstarAI AI { get; private set; }
 
     public int integer
     {
@@ -28,7 +29,9 @@ public class AIManager : BaseMovement, IInteger
             currWay = value;
     }
 
-    public override bool IsWalking => AI.velocity != Vector3.zero;
+    public bool canMove { get => AI.canMove; set => AI.canMove = value; }
+
+    public override bool IsWalking => AI.velocity != Vector3.zero && canMove;
 
     [HideInInspector] public int currWay; //Текущий путь из массива позиций
     [HideInInspector] public Transform currentTarget; //Трансформ цели
@@ -44,7 +47,7 @@ public class AIManager : BaseMovement, IInteger
     void Awake()
     {
         //Получаем скрипт поиска пути и контроллер анимаций
-        AI = GetComponent<AICore>();
+        AI = GetComponent<IAstarAI>();
 
         patrolState = new PatrolState(this);
         chaseState = new ChaseState(this);
@@ -56,8 +59,7 @@ public class AIManager : BaseMovement, IInteger
 
     void OnEnable()
     {
-        AI.canMove = true;
-        AI.enabled = true;
+        canMove = true;
         ChangeState(searchState);
     }
 
@@ -65,13 +67,14 @@ public class AIManager : BaseMovement, IInteger
     {
         if (direction != Vector2.zero)
             Direction = direction;
+
+        AI.maxSpeed = currentState is ChaseState ? spotSpeed : speed;
     }
 
     void OnDisable()
     {
         StopAllCoroutines();
-        AI.canMove = false;
-        AI.enabled = false;
+        canMove = false;
     }
 
     public bool CanSeePlayer()
