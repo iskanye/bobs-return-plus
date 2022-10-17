@@ -2,7 +2,7 @@
 
 public class Destroy : MonoBehaviour 
 {
-    public GameObject objectToDestroy;
+    public Object objectToDestroy;
 
     public void Do() =>
         Destroy(objectToDestroy);
@@ -13,6 +13,6 @@ public class Destroy : MonoBehaviour
             Do();
     }
 
-    public void Do(GameObject obj) =>
+    public void Do(Object obj) =>
         Destroy(obj);
 }

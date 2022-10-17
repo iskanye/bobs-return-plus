@@ -5,7 +5,7 @@ using System.Collections.Generic;
 [Serializable]
 public class SaveData
 {
-    public const string currentVersion = "Battle Test 11";
+    public const string currentVersion = "bt 10";
     public string version = currentVersion;
 
     public int level;

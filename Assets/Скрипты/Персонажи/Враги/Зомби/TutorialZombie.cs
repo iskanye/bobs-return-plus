@@ -17,7 +17,9 @@ public class TutorialZombie : MonoBehaviour
 
     public Rigidbody2D[] legLumps;
     public int livesWithoutLeg;
+    public GameObject deathPuddle;
     public GameObject puddle;
+    public float puddleSpawnDuration;
     public Vector3 headOffset; 
     public Rigidbody2D[] headLumps;
 
@@ -26,6 +28,7 @@ public class TutorialZombie : MonoBehaviour
     Animator anim;
     Rigidbody2D rigid;
     LivesBase lives;
+    BoxCollider2D poison;
 
     bool isInvincible;
     bool isReloading;
@@ -40,12 +43,22 @@ public class TutorialZombie : MonoBehaviour
         lives = GetComponent<LivesBase>();
     }
 
+    void Update()
+    {
+        if (withoutLeg)
+            poison.transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.right, ai.Direction.normalized));
+    }
+
     public void OnHit()
     {
         if (isInvincible)
             return;
 
         StopAllCoroutines();
+
+        if (withoutLeg)
+            StartCoroutine(PuddleSpawn());
+
         isReloading = false;
         StartCoroutine(Hit());
     }
@@ -64,13 +77,9 @@ public class TutorialZombie : MonoBehaviour
         isInvincible = true;
         rigid.velocity = lives.hitDirection;
 
-        var time = invincibleTime;
-
-        while (time >= 0)
+        for (var time = invincibleTime; time >= 0; time -= .15f)
         {
             rend.color = rend.color == Color.white ? new Color(1, .5f, .5f, 1) : Color.white;
-
-            time -= .15f;
             yield return new WaitForSeconds(.15f);
         }
 
@@ -117,20 +126,34 @@ public class TutorialZombie : MonoBehaviour
         ai.enabled = true;
     }
 
+    IEnumerator PuddleSpawn()
+    {
+        Instantiate(puddle, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(puddleSpawnDuration);
+        StartCoroutine(PuddleSpawn());
+    }
+
     public void OnDeath()
     {
+        lives.StartCoroutine(_Hit());
+
         if (!withoutLeg && Random.value < .5f) 
         {
             StopAllCoroutines();
+            StartCoroutine(PuddleSpawn());
 
             withoutLeg = true;
             ai.enabled = true;
             ai.isPatrol = false;
             ((LivesManager)lives).Revive(livesWithoutLeg);
-            anim.SetBool("Without Leg", true); 
+            anim.SetBool("Without Leg", true);
 
             foreach (var i in legLumps) 
                 Instantiate(i, transform.position, Quaternion.identity).velocity = (Vector2)Random.onUnitSphere * 3;
+
+            poison = Instantiate(meleePrefab, transform);
+            poison.size = colliderSize;
+            poison.transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.right, ai.Direction.normalized));
 
             ai.ChangeState(ai.searchState);
             return;
@@ -140,13 +163,13 @@ public class TutorialZombie : MonoBehaviour
         {
             foreach (var i in headLumps)
                 Instantiate(i, transform.position + headOffset, Quaternion.identity).velocity = (Vector2)Random.onUnitSphere * 3;
-        }
 
-        lives.StartCoroutine(_Hit());
+            Destroy(poison.gameObject);
+        }
 
         GetComponent<Collider2D>().enabled = false;
 
-        var head = Instantiate(withoutLeg ? puddle : zombieHead, transform.position + (withoutLeg ? headOffset : Vector3.zero), Quaternion.identity);
+        var head = Instantiate(withoutLeg ? deathPuddle : zombieHead, transform.position + (withoutLeg ? headOffset : Vector3.zero), Quaternion.identity);
 
         if (!withoutLeg)
         {

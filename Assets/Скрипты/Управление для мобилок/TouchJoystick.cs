@@ -4,7 +4,6 @@ public class TouchJoystick : MonoBehaviour
 {
     public float threshold;
     public RectTransform joystick;
-    public PlayerWarp player;
 
     Vector2 startPos;
 
@@ -12,7 +11,7 @@ public class TouchJoystick : MonoBehaviour
     {
         var dir = Vector2.zero;
 
-        if (Input.touchCount > 0 && player.Enabled)
+        if (Input.touchCount > 0)
         {
             var touch = Input.GetTouch(0);
 
@@ -37,6 +36,6 @@ public class TouchJoystick : MonoBehaviour
             startPos = Vector2.zero;
         }
 
-        player.player.data.movement.dir = dir / threshold;
+        InputManager.Active.direction = dir / threshold;
     }
 }

@@ -13,8 +13,8 @@ public class AnimationMovementController : SequenceObject
     void Update()
     {
         animator.SetBool("Is Walk", movingObject.IsWalking); //Говорим контроллеру, когда мы двигаемся
-        animator.SetFloat("Direction X", movingObject.Direction.x);
-        animator.SetFloat("Direction Y", movingObject.Direction.y);
+        animator.SetFloat("Direction X", movingObject.Direction.normalized.x);
+        animator.SetFloat("Direction Y", movingObject.Direction.normalized.y);
     }
 
     public override IEnumerator Sequence()

@@ -47,14 +47,12 @@ public class Melee : BaseSkill
 
         if (isWalk && dash)
         {
-            rigid.velocity += dir * 6;
+            rigid.velocity += dir * 2;
             yield return new WaitForSeconds(dashDuration);
         }
 
         else 
             yield return new WaitForSeconds(swingDuration);
-
-        //rigid.velocity += dir * 4;
 
         var collider = Instantiate(meleePrefab, bob.controller.transform);
         var offset = colliderSize.x / 2;

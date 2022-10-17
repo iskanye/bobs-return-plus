@@ -14,6 +14,8 @@ public class PlayerLives : LivesBase
             if (melee && melee.melee.attackTrigger)
                 return;
 
+            bob.data.movement.speed = prevSpeed;
+
             if (value <= 0)
             {
                 CameraController.Active.StartShake(.15f, 1.5f);
@@ -52,10 +54,13 @@ public class PlayerLives : LivesBase
 
     BobController bob;
     MeleeBob melee;
+    float prevSpeed;
 
     void Awake()
     {
         bob = GetComponent<BobController>();
+        prevSpeed = bob.data.movement.speed;
+
         melee = bob.character is MeleeBob meleeBob ? meleeBob : null;
         PlayerLiveCounter.Active.livesInOneHeart = livesInOneHeart;
         PlayerLiveCounter.Active.Initialize();
@@ -89,14 +94,12 @@ public class PlayerLives : LivesBase
     IEnumerator Invincible()
     {
         PlayerLiveCounter.Active.isInvincible = true;
-        var time = invincibleTime;
 
-        while (time >= 0)
+        for (var time = invincibleTime; time >= 0; time -= .15f)
         {
             foreach (var i in bob.data.renderers)
                 i.color = i.color == Color.white ? new Color(0, 0, 0, 0) : Color.white;
 
-            time -= .15f;
             yield return new WaitForSeconds(.15f);
         }
 
@@ -108,9 +111,10 @@ public class PlayerLives : LivesBase
 
     IEnumerator Hit() 
     {
-        bob.data.movement.enabled = false;
+        prevSpeed = bob.data.movement.speed;
+        bob.data.movement.speed *= .1f;
         bob.data.rigidbody.velocity = hitDirection;
         yield return new WaitForSeconds(hitDuration);
-        bob.data.movement.enabled = true;
+        bob.data.movement.speed = prevSpeed;
     }
 }

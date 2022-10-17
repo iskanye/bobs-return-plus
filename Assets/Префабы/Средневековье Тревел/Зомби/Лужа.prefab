@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3825486460545834193}
   - component: {fileID: 6766295023607301949}
   - component: {fileID: 162192368317098400}
+  - component: {fileID: 1592270023848165563}
   m_Layer: 0
   m_Name: "\u041B\u0443\u0436\u0430"
   m_TagString: Untagged
@@ -53,7 +54,7 @@ MonoBehaviour:
       - m_Target: {fileID: 162192368317098400}
         m_TargetAssemblyTypeName: Destroy, Assembly-CSharp
         m_MethodName: Do
-        m_Mode: 0
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -62,7 +63,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  time: 11.4
+      - m_Target: {fileID: 1592270023848165563}
+        m_TargetAssemblyTypeName: Destroy, Assembly-CSharp
+        m_MethodName: Do
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  time: 7.5
 --- !u!114 &6766295023607301949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,7 +116,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f5de1025c26fad98bdfedd3de193a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDestroy: {fileID: 0}
+  objectToDestroy: {fileID: 995041941049169118}
+--- !u!114 &1592270023848165563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3565138248528566938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f5de1025c26fad98bdfedd3de193a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToDestroy: {fileID: 3825486460545834193}
 --- !u!1 &3565138249473697437
 GameObject:
   m_ObjectHideFlags: 0
