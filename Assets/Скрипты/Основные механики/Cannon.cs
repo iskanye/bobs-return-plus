@@ -5,10 +5,12 @@ public class Cannon : MonoBehaviour
     public GameObject bullet;
     public float distance;
     public Vector2 direction;
+    public Vector2 bulletOffset;
     public Vector2 offset;
     public LayerMask player;
     public float force;
     public bool isReloadable;
+    public bool rotating;
     public float reloadDelay;
     public Animator[] animators;
 
@@ -32,7 +34,7 @@ public class Cannon : MonoBehaviour
         {
             if (!isReloadable && !HaveShoted)
             {
-                var bull = Instantiate(bullet, transform.position + (Vector3)offset, Quaternion.identity);
+                var bull = Instantiate(bullet, transform.position + (Vector3)bulletOffset, rotating ? Quaternion.Euler(direction) : Quaternion.identity);
                 bull.GetComponent<Rigidbody2D>().AddForce(direction * force, ForceMode2D.Impulse);
                 HaveShoted = true;
 
@@ -45,7 +47,7 @@ public class Cannon : MonoBehaviour
 
             else if (isReloadable && float.IsPositiveInfinity(swTime))
             {
-                var bull = Instantiate(bullet, transform.position + (Vector3)offset, Quaternion.identity);
+                var bull = Instantiate(bullet, transform.position + (Vector3)bulletOffset, rotating ? Quaternion.Euler(direction) : Quaternion.identity);
                 bull.GetComponent<Rigidbody2D>().AddForce(direction * force, ForceMode2D.Impulse);
                 swTime = Time.time + reloadDelay;
 
@@ -56,5 +58,13 @@ public class Cannon : MonoBehaviour
 
         if (Time.time >= swTime)
             swTime = float.PositiveInfinity;
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position + (Vector3)bulletOffset, .1f);
+        Gizmos.color = Color.green;
+        Gizmos.DrawRay(transform.position + (Vector3)offset, direction * distance);
     }
 }
