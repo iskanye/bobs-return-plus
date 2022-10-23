@@ -8,11 +8,14 @@ public class FadeInOut : SequenceObject
     [HideInInspector] public bool isIn;
     [HideInInspector] public float speed;
 
+    public static FadeInOut active;
+
     FadeState fadeState;
     State<FadeInOut> state;
 
     void Awake()
     {
+        active = this;
         img = GetComponent<Image>();
         fadeState = new FadeState(this);
     }

@@ -10,7 +10,6 @@ public class Cannon : MonoBehaviour
     public LayerMask player;
     public float force;
     public bool isReloadable;
-    public bool rotating;
     public float reloadDelay;
     public Animator[] animators;
 
@@ -34,7 +33,7 @@ public class Cannon : MonoBehaviour
         {
             if (!isReloadable && !HaveShoted)
             {
-                var bull = Instantiate(bullet, transform.position + (Vector3)bulletOffset, rotating ? Quaternion.Euler(direction) : Quaternion.identity);
+                var bull = Instantiate(bullet, transform.position + (Vector3)bulletOffset, Quaternion.identity);
                 bull.GetComponent<Rigidbody2D>().AddForce(direction * force, ForceMode2D.Impulse);
                 HaveShoted = true;
 
@@ -47,7 +46,7 @@ public class Cannon : MonoBehaviour
 
             else if (isReloadable && float.IsPositiveInfinity(swTime))
             {
-                var bull = Instantiate(bullet, transform.position + (Vector3)bulletOffset, rotating ? Quaternion.Euler(direction) : Quaternion.identity);
+                var bull = Instantiate(bullet, transform.position + (Vector3)bulletOffset, Quaternion.identity);
                 bull.GetComponent<Rigidbody2D>().AddForce(direction * force, ForceMode2D.Impulse);
                 swTime = Time.time + reloadDelay;
 

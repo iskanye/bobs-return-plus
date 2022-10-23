@@ -3,6 +3,7 @@
 [ExecuteInEditMode]
 public class CornersScaler : MonoBehaviour
 {
+    public Vector2Int screenSize;
     Canvas canvas;
 
     void Awake() =>
@@ -10,7 +11,7 @@ public class CornersScaler : MonoBehaviour
 
     void Update() 
     {
-        Vector2Int scaler = new Vector2Int(Mathf.CeilToInt(Screen.width / 608), Mathf.CeilToInt(Screen.height / 416));
+        Vector2Int scaler = new Vector2Int(Mathf.CeilToInt(Screen.width / screenSize.x), Mathf.CeilToInt(Screen.height / screenSize.y));
         canvas.scaleFactor = scaler.x == scaler.y ? scaler.x : scaler.x < scaler.y ? scaler.x : scaler.y;
     }
 }

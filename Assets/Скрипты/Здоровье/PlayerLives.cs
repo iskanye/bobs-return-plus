@@ -83,11 +83,15 @@ public class PlayerLives : LivesBase
         yield return new WaitForSeconds(.4f);
         bob.enabled = false;
         deathScreen.Play("Death");
+        FadeInOut.active.FadeIn(.45f);
 
         yield return new WaitForSeconds(.3f);
         Time.timeScale = 1;
 
-        yield return new WaitForSeconds(7.7f);
+        yield return new WaitForSeconds(5.7f);
+        FadeInOut.active.FadeOut(.45f);
+
+        yield return new WaitForSeconds(2);
         LoadScene(GetActiveScene().buildIndex);
     }
 
