@@ -183,6 +183,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isOnStay: 0
+  TriggerNotExpected: 0
+  ColliderNotExpected: 0
 --- !u!114 &2766309415123293339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,3 +249,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   isOnStay: 0
+  TriggerNotExpected: 1
+  ColliderNotExpected: 0
