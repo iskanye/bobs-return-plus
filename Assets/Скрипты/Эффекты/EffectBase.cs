@@ -5,9 +5,9 @@ public abstract class EffectBase : ScriptableObject, System.IEquatable<EffectBas
 {
     [HideInInspector] public EffectsController mn;
     public float duration;
-    public IEnumerator start;
 
-    public static IEnumerator process;
+    public IEnumerator start;
+    public IEnumerator process;
 
     protected EffectData data;
 

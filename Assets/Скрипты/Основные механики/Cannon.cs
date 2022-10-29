@@ -3,67 +3,67 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class Cannon : MonoBehaviour
 {
-    [SerializeField] private GameObject bullet;
-    [SerializeField] private float distance;
-    [SerializeField] private Vector2 direction;
-    [SerializeField] private Vector2 bulletOffset;
-    [SerializeField] private Vector2 offset;
-    [SerializeField] private LayerMask player;
-    [SerializeField] private float force;
-    [SerializeField] private bool isReloadable;
-    [SerializeField] private float reloadDelay;
-    [SerializeField] private Animator[] animators;
+    [SerializeField] GameObject bullet;
+    [SerializeField] DiscardingType bulletDiscarding;
+    [SerializeField] Vector2 detectionArea;
+    [SerializeField] Vector2Int direction;
+    [SerializeField] Vector2 bulletOffset;
+    [SerializeField] Vector2 offset;
+    [SerializeField] LayerMask player;
+    [SerializeField] float force;
+    [SerializeField] bool isReloadable;
+    [SerializeField] float reloadDelay;
+    [SerializeField] Animator animator;
 
-    private bool haveShot;
+    bool haveShot;
     
-    private float swTime;
-    private PropertyHolder prop;
+    float shootTime;
+    PropertyHolder prop;
     
-    private static readonly int Shoot = Animator.StringToHash("Shoot");
-    private static readonly int DirX = Animator.StringToHash("DirX");
-    private static readonly int DirY = Animator.StringToHash("DirY");
+    static readonly int shoot = Animator.StringToHash("Shoot");
+    static readonly int dirX = Animator.StringToHash("DirX");
+    static readonly int dirY = Animator.StringToHash("DirY");
     
-    private BoxCollider2D trigger;
+    BoxCollider2D trigger;
     
     void Awake()
     {
         prop = GetComponent<PropertyHolder>();
-        foreach (var i in animators)
-        {
-            i.SetFloat(DirX, direction.x);
-            i.SetFloat(DirY, direction.y);
-        }
+
+        animator.SetFloat(dirX, direction.x);
+        animator.SetFloat(dirY, direction.y);
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D c)
     {
-        if ((1<<col.gameObject.layer) != player.value)
+        if ((1 << c.gameObject.layer) != player)
             return;
-        
-        bool raycastHit2D = Physics2D.Raycast(transform.position + (Vector3)offset, direction, distance, player);
-        if (raycastHit2D)
-        {
-            if (!haveShot || (Time.time >= swTime && isReloadable))
-            {
-                var bull = Instantiate(bullet, transform.position + (Vector3)bulletOffset, Quaternion.identity);
-                bull.GetComponent<Rigidbody2D>().AddForce(direction * force, ForceMode2D.Impulse);
-                haveShot = true;
-                swTime = Time.time + reloadDelay;
-                
-                foreach (var i in animators)
-                    i.SetTrigger(Shoot);
 
-                if (prop != null)
-                    prop.property = true;
+        if (!haveShot || (Time.time >= shootTime && isReloadable))
+        {
+            var bull = Instantiate(bullet, transform.position + (Vector3)bulletOffset, bullet.transform.rotation);
+            bull.GetComponent<Rigidbody2D>().AddForce((Vector2)direction * force, ForceMode2D.Impulse);
+
+            foreach (var i in bull.GetComponents<Damageable>()) 
+            {
+                i.direction = direction;
+                i.discarding = bulletDiscarding;
             }
+
+            haveShot = true;
+            shootTime = Time.time + reloadDelay;
+            animator.SetTrigger(shoot);
+
+            if (prop != null)
+                prop.property = true;
         }
     }
 
-    private void OnValidate()
+    void OnValidate()
     {
         trigger = GetComponent<BoxCollider2D>();
-        trigger.offset = offset + Vector2.right*distance/2;
-        trigger.size = new Vector2(distance, 0.01f);
+        trigger.offset = offset + (Vector2)direction * detectionArea.x / 2;
+        trigger.size = direction.x != 0 ? new Vector2(detectionArea.x, detectionArea.y) : new Vector2(detectionArea.y, detectionArea.x);
         trigger.isTrigger = true;
     }
 

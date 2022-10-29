@@ -139,12 +139,9 @@ public class TutorialZombie : MonoBehaviour
 
         if (!withoutLeg && Random.value < .5f) 
         {
-            StopAllCoroutines();
             StartCoroutine(PuddleSpawn());
 
             withoutLeg = true;
-            ai.enabled = true;
-            ai.isPatrol = false;
             ((LivesManager)lives).Revive(livesWithoutLeg);
             anim.SetBool("Without Leg", true);
 
@@ -155,6 +152,8 @@ public class TutorialZombie : MonoBehaviour
             poison.size = colliderSize;
             poison.transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.right, ai.Direction.normalized));
 
+            ai.enabled = true;
+            ai.isPatrol = false;
             ai.ChangeState(ai.searchState);
             return;
         }

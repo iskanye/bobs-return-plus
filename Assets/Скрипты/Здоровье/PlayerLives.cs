@@ -89,7 +89,7 @@ public class PlayerLives : LivesBase
         Time.timeScale = 1;
 
         yield return new WaitForSeconds(5.7f);
-        FadeInOut.active.FadeOut(.45f);
+        FadeInOut.active.FadeOut(.6f);
 
         yield return new WaitForSeconds(2);
         LoadScene(GetActiveScene().buildIndex);

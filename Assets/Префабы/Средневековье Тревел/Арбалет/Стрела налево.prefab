@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 2607118781465187357}
   - component: {fileID: 8785336444095844013}
   - component: {fileID: 7243892724363717972}
+  - component: {fileID: -5538095686853811427}
+  - component: {fileID: -7697522168544319668}
   m_Layer: 0
   m_Name: "\u0421\u0442\u0440\u0435\u043B\u0430 \u043D\u0430\u043B\u0435\u0432\u043E"
   m_TagString: Untagged
@@ -183,6 +185,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isOnStay: 0
+  triggerNotExpected: 1
+  colliderNotExpected: 0
 --- !u!114 &2607118781465187357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,3 +251,70 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   isOnStay: 0
+  triggerNotExpected: 1
+  colliderNotExpected: 0
+--- !u!114 &-5538095686853811427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556203954447992246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95f36941413ad3943babb852ab66bbbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -7697522168544319668}
+        m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
+        m_MethodName: Damage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2607118781465187357}
+        m_TargetAssemblyTypeName: Destroy, Assembly-CSharp
+        m_MethodName: Do
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onExit:
+    m_PersistentCalls:
+      m_Calls: []
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  isOnStay: 0
+  triggerNotExpected: 1
+  colliderNotExpected: 0
+--- !u!114 &-7697522168544319668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556203954447992246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 15
+  isDeadly: 0
+  discarding: 0
+  direction: {x: 0, y: 0}
+  penetrating: 0

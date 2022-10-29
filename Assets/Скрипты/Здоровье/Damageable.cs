@@ -6,9 +6,9 @@ public class Damageable : MonoBehaviour
     public bool isDeadly;
     public System.Action<int> onDamage;
 
-    [HideInInspector] public DiscardingType discarding;
+    [HideInInspector] public DiscardingType discarding = DiscardingType.Small;
     [HideInInspector] public Vector2 direction;
-    [HideInInspector] public ObjectType penetrating;
+    [HideInInspector] public ObjectType penetrating = ObjectType.Fragile;
 
     public void Damage(GameObject g)
     {
@@ -35,13 +35,5 @@ public class Damageable : MonoBehaviour
 
         if (penetr && penetr.type <= penetrating)
             penetr.Penetrate();
-
-        var bob = g.GetComponent<BobController>();
-
-        if (bob)
-        {
-            bob.enabled = false;
-            bob.enabled = true;
-        }
     }
 }

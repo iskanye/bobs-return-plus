@@ -7,11 +7,8 @@ public class PeriodAction : ActionBase
 
     GameObject obj;
 
-    public void StartAction()
-    {
-        CancelInvoke();
+    public void StartAction() =>
         InvokeRepeating("Do", startDelay, period);
-    }
 
     public void StartAction(GameObject obj)
     {

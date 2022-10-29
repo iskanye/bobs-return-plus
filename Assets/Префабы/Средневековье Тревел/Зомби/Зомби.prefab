@@ -67,6 +67,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isOnStay: 1
+  triggerNotExpected: 0
+  colliderNotExpected: 0
 --- !u!61 &2182320066695370292
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -225,9 +227,9 @@ MonoBehaviour:
   drawGizmos: 1
   detailedGizmos: 0
   startEndModifier:
-    addPoints: 1
-    exactStartPoint: 3
-    exactEndPoint: 3
+    addPoints: 0
+    exactStartPoint: 1
+    exactEndPoint: 1
     useRaycasting: 0
     mask:
       serializedVersion: 2
@@ -287,9 +289,9 @@ MonoBehaviour:
     m_Bits: 64
   seeRange: 8
   spotSpeed: 2
-  searchSpeed: 1
+  searchSpeed: 2
   direction: {x: -1, y: 0}
-  viewAngle: 100
+  viewAngle: 120
   isPatrol: 0
   patrolDelay: 0
   path: []
@@ -425,7 +427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  discarding: 10
+  discarding: 5
   zombieHead: {fileID: 3853071993284499550, guid: f62ce053f26813779930e03930b92021,
     type: 3}
   colliderSize: {x: 1, y: 2}
@@ -561,3 +563,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isOnStay: 0
+  triggerNotExpected: 0
+  colliderNotExpected: 0

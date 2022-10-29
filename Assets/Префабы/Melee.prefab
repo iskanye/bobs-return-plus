@@ -106,10 +106,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onExit:
+    m_PersistentCalls:
+      m_Calls: []
   playerMask:
     serializedVersion: 2
     m_Bits: 136
   isOnStay: 0
+  triggerNotExpected: 0
+  colliderNotExpected: 0
 --- !u!114 &-5688368559764925745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +133,7 @@ MonoBehaviour:
       - m_Target: {fileID: 7501714121536143098}
         m_TargetAssemblyTypeName: Destroy, Assembly-CSharp
         m_MethodName: Do
-        m_Mode: 0
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -150,4 +155,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f5de1025c26fad98bdfedd3de193a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDestroy: {fileID: 0}
+  objectToDestroy: {fileID: 4448214415045013753}

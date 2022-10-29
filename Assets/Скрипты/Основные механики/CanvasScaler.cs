@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [ExecuteInEditMode]
-public class CornersScaler : MonoBehaviour
+public class CanvasScaler : MonoBehaviour
 {
     public Vector2Int screenSize;
     Canvas canvas;

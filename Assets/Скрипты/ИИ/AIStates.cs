@@ -122,6 +122,8 @@ namespace AI
                 yield return base.Update();
             }
 
+            mn.direction = startDirection;
+
             if (mn.isPatrol)
                 mn.ChangeState(mn.patrolState);
 

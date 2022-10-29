@@ -5,8 +5,8 @@ public class Trigger : ActionBase
     public UnityEngine.Events.UnityEvent<GameObject> onExit;
     [SerializeField] private LayerMask playerMask; 
     [SerializeField] private bool isOnStay;
-    [SerializeField] private bool TriggerNotExpected;
-    [SerializeField] private bool ColliderNotExpected;
+    [SerializeField] private bool triggerNotExpected;
+    [SerializeField] private bool colliderNotExpected;
     
     void OnTriggerEnter2D(Collider2D c) 
     {
@@ -26,13 +26,6 @@ public class Trigger : ActionBase
             onExit.Invoke(c.gameObject);
     }
 
-    bool IsTriggering(Collider2D c)
-    {
-        if (action != null && ((1 << c.gameObject.layer) & playerMask) != 0 && (c.isTrigger & !TriggerNotExpected || !c.isTrigger & !ColliderNotExpected))
-        {
-            return true;
-        }
-
-        return false;
-    }
+    bool IsTriggering(Collider2D c) => 
+        action != null && ((1 << c.gameObject.layer) & playerMask) != 0 && ((c.isTrigger && !triggerNotExpected) || (!c.isTrigger && !colliderNotExpected));
 }

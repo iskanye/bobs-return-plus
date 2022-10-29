@@ -1,10 +1,22 @@
 ﻿using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
 
 namespace Dialogues
 {
-    public class IdleState : State<DialogueSystem>
+    public class DialoguesState : State<DialogueSystem> 
+    {
+        public DialoguesState(DialogueSystem sys) : base(sys) { }
+
+        public virtual void Submit(InputAction.CallbackContext c) { }
+
+        public virtual void GUIInput() { }
+
+        public virtual void Move(InputAction.CallbackContext c) { }
+    }
+
+    public class IdleState : DialoguesState
     {
         public IdleState(DialogueSystem sys) : base(sys) { }
 
@@ -27,7 +39,7 @@ namespace Dialogues
         }
     }
 
-    public class PrintingState : State<DialogueSystem>
+    public class PrintingState : DialoguesState
     {
         public PrintingState(DialogueSystem sys) : base(sys) { }
 
@@ -97,9 +109,27 @@ namespace Dialogues
                 yield return base.Update();
             }
         }
+
+        public override void GUIInput()
+        {
+            if (!mn.current.cantSkip)
+            {
+                mn.text.text = mn.prevText + mn.current.text;
+                mn.ChangeState(mn.waitingState);
+            }
+        }
+
+        public override void Submit(InputAction.CallbackContext c) 
+        {
+            if (!mn.current.cantSkip)
+            {
+                mn.text.text = mn.prevText + mn.current.text;
+                mn.ChangeState(mn.waitingState);
+            }
+        }
     }
 
-    public class WaitingState : State<DialogueSystem>
+    public class WaitingState : DialoguesState
     {
         public WaitingState(DialogueSystem sys) : base(sys) { }
 
@@ -156,6 +186,27 @@ namespace Dialogues
 
                 yield return base.Update();
             }
+        }
+
+        public override void Submit(InputAction.CallbackContext c)
+        {
+            if (mn.current.variants != null)
+                mn.ChooseVariant();
+
+            else
+                mn.ChangeDialogue();
+        }
+
+        public override void GUIInput()
+        {
+            if (mn.current.variants == null)
+                mn.ChangeDialogue();
+        }
+
+        public override void Move(InputAction.CallbackContext c) 
+        {
+            if (mn.current.variants != null)
+                mn.ChangeVariant(mn.currentVariant + (c.ReadValue<Vector2>().y > 0 ? -1 : 1));
         }
     }
 }

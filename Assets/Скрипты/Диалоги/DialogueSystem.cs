@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.InputSystem;
 using System;
 using System.Collections.Generic;
 using TMPro;
@@ -31,7 +30,7 @@ public class DialogueSystem : SequenceObject
     [HideInInspector] public int currentVariant;
     [HideInInspector] public List<GameObject> variantObjects;
 
-    [HideInInspector] public State<DialogueSystem> state;
+    [HideInInspector] public DialoguesState state;
     [HideInInspector] public GameObject obj;
     [HideInInspector] public string prevText;
 
@@ -48,26 +47,23 @@ public class DialogueSystem : SequenceObject
 
         ChangeState(idleState);
 
-        InputManager.Input.Player.Submit.performed += (i) => 
-        {
-            if (state is IdleState)
-                return;
-
-            if (state is WaitingState)
-                Submit(i);
-
-            else if (state is PrintingState)
-                Skip(i);
-        };
-        InputManager.Input.Player.Move.started += VariantInput;
+        InputManager.Input.Player.Submit.performed += state.Submit;
+        InputManager.Input.Player.Move.started += state.Move;
     }
 
-    public void ChangeState(State<DialogueSystem> st)
-    {  
+    public void ChangeState(DialoguesState st)
+    {
         if (state != null)
+        {
             StartCoroutine(state.Stop());
+            InputManager.Input.Player.Submit.performed -= state.Submit;
+            InputManager.Input.Player.Move.started -= state.Move;
+        }
 
         state = st;
+        InputManager.Input.Player.Submit.performed += state.Submit;
+        InputManager.Input.Player.Move.started += state.Move;
+
         StartCoroutine(state.Start());
     }
 
@@ -88,36 +84,10 @@ public class DialogueSystem : SequenceObject
     public void StopDialogue() =>
         ChangeState(idleState);
 
-    public void GUIInput()
-    {
-        if (!current.cantSkip && state is PrintingState)
-        {
-            text.text = prevText + current.text;
-            ChangeState(waitingState);
-        }
+    public void GUIInput() =>
+        state.GUIInput();
 
-        else if (current.variants != null)
-            return;
-
-        else if (state is WaitingState)
-            ChangeDialogue();
-    }
-
-    void Submit(InputAction.CallbackContext c)
-    {
-        if (state is WaitingState) 
-        {
-            if (current.variants != null)
-            {
-                ChooseVariant();
-                return;
-            }
-
-            ChangeDialogue();
-        }
-    }
-
-    void ChangeDialogue()
+    public void ChangeDialogue()
     {
         index++;
 
@@ -128,23 +98,6 @@ public class DialogueSystem : SequenceObject
         }
 
         ChangeState(printingState);
-    }
-
-    void Skip(InputAction.CallbackContext c) 
-    {
-        if (!current.cantSkip && state is PrintingState)
-        {
-            text.text = prevText + current.text;
-            ChangeState(waitingState);
-        }
-    }
-
-    void VariantInput(InputAction.CallbackContext c) 
-    {
-        if (!(state is WaitingState) || current.variants == null)
-            return;
-
-        ChangeVariant(currentVariant + (c.ReadValue<Vector2>().y > 0 ? -1 : 1));
     }
 
     public void ChangeVariant(int variant)
