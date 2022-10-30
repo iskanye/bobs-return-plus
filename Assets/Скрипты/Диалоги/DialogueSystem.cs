@@ -1,7 +1,9 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro;
 using Dialogues;
 
@@ -46,9 +48,6 @@ public class DialogueSystem : SequenceObject
         waitingState = new WaitingState(this);
 
         ChangeState(idleState);
-
-        InputManager.Input.Player.Submit.performed += state.Submit;
-        InputManager.Input.Player.Move.started += state.Move;
     }
 
     public void ChangeState(DialoguesState st)
@@ -71,9 +70,10 @@ public class DialogueSystem : SequenceObject
     {
         var active = Active;
 
-        if (active.state is PrintingState || active.state is WaitingState)
+        if (active.state is not IdleState)
             return;
-
+        
+        active.StopAllCoroutines();
         active.obj = obj;
         active.dialogues = dialogues;
         active.index = 0;
@@ -125,9 +125,19 @@ public class DialogueSystem : SequenceObject
         currentVariant = 0;
     }
 
-    public override System.Collections.IEnumerator Sequence()
+    public override IEnumerator Sequence()
     {
         yield return new WaitUntil(() => state is IdleState);
+    }
+
+    private void OnEnable()
+    {
+        StartCoroutine(state.Start());
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
     }
 }
 

@@ -3,7 +3,8 @@ using UnityEngine;
 //Тестовый скрипт передвижения
 public class TopDownMovement : BaseMovement
 {
-    public override bool IsWalking => dir != Vector2.zero && enabled;
+    public override bool IsWalking => dir != Vector2.zero && isEnabled;
+    private bool isEnabled = true;
 
     Vector2 dir => InputManager.Active.direction; //Направление
 
@@ -24,6 +25,22 @@ public class TopDownMovement : BaseMovement
 
     void FixedUpdate()
     {
-        rig.velocity = dir.normalized * speed; //Переводим кадры в секунды и прикладываем к обьекту скорость
+        if (!isEnabled)
+            return;
+
+        rig.velocity = dir.normalized * speed;
+    }
+
+    //Добавил ссылку на объект который вызывает эти функции в параметры
+    //Чтобы можно было всегда продебажить и понять кто вкл/откл движение игрока
+    public void Enable() 
+    {
+        isEnabled = true;
+    }
+    
+    public void Disable()
+    {
+        isEnabled = false;
+        rig.velocity = Vector2.zero;
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace Dialogues
 {
-    public class DialoguesState : State<DialogueSystem> 
+    public class DialoguesState : State<DialogueSystem>
     {
         public DialoguesState(DialogueSystem sys) : base(sys) { }
 
@@ -26,7 +26,7 @@ namespace Dialogues
             mn.character.text = "";
 
             if (mn.player != null)
-                mn.player.enabled = true;
+                mn.player.Enable();
 
             while (true)
             {
@@ -47,8 +47,7 @@ namespace Dialogues
         {
             if (mn.player != null)
             {
-                mn.player.enabled = false;
-                mn.player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                mn.player.Disable();
             }
 
             mn.current = mn.dialogues[mn.index];
@@ -56,11 +55,6 @@ namespace Dialogues
 
             if (mn.current.action != null)
                 mn.current.action.Invoke(mn.obj);
-
-            if (mn.current.clearPreviousText)
-                mn.text.text = "";
-
-            mn.prevText = mn.text.text;
 
             if (mn.current.dialogueCharacter != null)
             {
@@ -80,20 +74,20 @@ namespace Dialogues
 
             yield return new WaitForSeconds(mn.current.startDelay);
 
-            if (mn.current.showStraightaway)
-                mn.text.text += mn.current.text;
+            mn.text.text = GetCurrentText();
 
-            else
-                foreach (var j in mn.current.text)
+            if (!mn.current.showStraightaway)
+            {
+                int startPosition = mn.text.text.Length - mn.current.text.Length;
+                mn.text.ForceMeshUpdate();
+                yield return TextUtilities.MakeTextTransparent(mn.text, startPosition);
+                yield return TextUtilities.AnimateVertexColors(mn.text, Color.white, startPosition, 0.035f, () =>
                 {
                     mn.textSFX.pitch = Random.Range(.95f, 1.05f);
                     mn.textSFX.Play();
-
-                    mn.text.text += j;
-                    yield return new WaitForFixedUpdate();
-
-                    mn.textSFX.Stop();
-                }
+                });
+                mn.textSFX.Stop();
+            }
 
             mn.ChangeState(mn.waitingState);
         }
@@ -110,22 +104,30 @@ namespace Dialogues
             }
         }
 
-        public override void GUIInput()
+        public override IEnumerator Stop()
         {
-            if (!mn.current.cantSkip)
-            {
-                mn.text.text = mn.prevText + mn.current.text;
-                mn.ChangeState(mn.waitingState);
-            }
+            mn.text.text = GetCurrentText();
+            mn.prevText = mn.text.text;
+            yield return TextUtilities.ForceOriginalColor(mn.text);
+            yield return base.Stop();
         }
 
-        public override void Submit(InputAction.CallbackContext c) 
+        public override void GUIInput()
         {
-            if (!mn.current.cantSkip)
-            {
-                mn.text.text = mn.prevText + mn.current.text;
-                mn.ChangeState(mn.waitingState);
-            }
+            if (mn.current.cantSkip)
+                return;
+            
+            mn.ChangeState(mn.waitingState);
+        }
+
+        public override void Submit(InputAction.CallbackContext c)
+        {
+            GUIInput();
+        }
+
+        private string GetCurrentText()
+        {
+            return mn.current.clearPreviousText ? mn.current.text : mn.prevText + mn.current.text;
         }
     }
 
@@ -203,7 +205,7 @@ namespace Dialogues
                 mn.ChangeDialogue();
         }
 
-        public override void Move(InputAction.CallbackContext c) 
+        public override void Move(InputAction.CallbackContext c)
         {
             if (mn.current.variants != null)
                 mn.ChangeVariant(mn.currentVariant + (c.ReadValue<Vector2>().y > 0 ? -1 : 1));
