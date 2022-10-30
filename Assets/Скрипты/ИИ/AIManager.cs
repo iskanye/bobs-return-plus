@@ -63,12 +63,14 @@ public class AIManager : BaseMovement, IInteger
         ChangeState(searchState);
     }
 
-    void Update() 
+    void Update()
     {
         if (direction != Vector2.zero)
-            Direction = direction;
-
-        AI.maxSpeed = currentState is ChaseState ? spotSpeed : speed;
+        {
+            var x = Mathf.Round(direction.x);
+            var y = Mathf.Round(direction.y);
+            Direction = new Vector2(x, x == y ? 0 : y);
+        }
     }
 
     void OnDisable()

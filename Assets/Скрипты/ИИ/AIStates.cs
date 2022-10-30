@@ -39,6 +39,8 @@ namespace AI
 
             while (true)
             {
+                mn.AI.maxSpeed = mn.spotSpeed;
+
                 if (mn.CanSeePlayer())
                 {
                     mn.AI.destination = mn.currentTarget.position; //Меняем ему цель на объект
@@ -69,6 +71,8 @@ namespace AI
             //то мы назначаем ему время после которого ему надо будет идти к другой точке патруля
             while (true)
             {
+                mn.AI.maxSpeed = mn.speed;
+
                 if (mn.CanSeePlayer())
                 {
                     mn.ChangeState(mn.chaseState);

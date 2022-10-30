@@ -6,7 +6,7 @@ public class PropabilityActions : MonoBehaviour
     public struct Propability
     {
         public UnityEngine.Events.UnityAction<GameObject> action;
-        public int propability; 
+        public float propability; 
     }
 
     public Propability[] actions;
@@ -15,19 +15,19 @@ public class PropabilityActions : MonoBehaviour
 
     public void Action() 
     {
-        int rand = Random.Range(0, 101);
+        float random = Random.value;
 
-        int prevProp = 0;
-        int prop = actions[0].propability;
+        float prevPropability = 0;
+        float propability = actions[0].propability;
 
         for (int i = 0; i < actions.Length; i++) 
         {
-            prop += actions[i].propability;
+            propability += actions[i].propability;
 
-            if (rand >= prevProp && rand <= prop && actions[i].action != null)
+            if (random >= prevPropability && random <= propability && actions[i].action != null)
                 actions[i].action.Invoke(obj);
 
-            prevProp += actions[i].propability;
+            prevPropability += actions[i].propability;
         }
     }
 
