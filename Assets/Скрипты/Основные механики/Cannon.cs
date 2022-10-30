@@ -3,28 +3,28 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class Cannon : MonoBehaviour
 {
-    [SerializeField] GameObject bullet;
-    [SerializeField] DiscardingType bulletDiscarding;
-    [SerializeField] Vector2 detectionArea;
-    [SerializeField] Vector2Int direction;
-    [SerializeField] Vector2 bulletOffset;
-    [SerializeField] Vector2 offset;
-    [SerializeField] LayerMask player;
-    [SerializeField] float force;
-    [SerializeField] bool isReloadable;
-    [SerializeField] float reloadDelay;
-    [SerializeField] Animator animator;
+    [SerializeField] private GameObject bullet;
+    [SerializeField] private DiscardingType bulletDiscarding;
+    [SerializeField] private Vector2 detectionArea;
+    [SerializeField] private Vector2Int direction;
+    [SerializeField] private Vector2 bulletOffset;
+    [SerializeField] private Vector2 offset;
+    [SerializeField] private LayerMask player;
+    [SerializeField] private float force;
+    [SerializeField] private bool isReloadable;
+    [SerializeField] private float reloadDelay;
+    [SerializeField] private Animator animator;
 
-    bool haveShot;
-    
-    float shootTime;
-    PropertyHolder prop;
-    
-    static readonly int shoot = Animator.StringToHash("Shoot");
-    static readonly int dirX = Animator.StringToHash("DirX");
-    static readonly int dirY = Animator.StringToHash("DirY");
-    
-    BoxCollider2D trigger;
+    private bool haveShot;
+
+    private float shootTime;
+    private PropertyHolder prop;
+
+    private static readonly int shoot = Animator.StringToHash("Shoot");
+    private static readonly int dirX = Animator.StringToHash("DirX");
+    private static readonly int dirY = Animator.StringToHash("DirY");
+
+    private BoxCollider2D trigger;
     
     void Awake()
     {
