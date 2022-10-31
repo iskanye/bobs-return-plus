@@ -8,6 +8,7 @@ using Dialogues;
 
 public class DialogueSystem : SequenceObject
 {
+    public Color textColor = Color.white;
     public RectTransform dialogueBox;
     public RectTransform variantBox;
     public DialogueVariantObject variantPrefab;
