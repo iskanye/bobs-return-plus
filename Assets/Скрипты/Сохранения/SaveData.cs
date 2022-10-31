@@ -81,7 +81,8 @@ public class IdItem : IEquatable<IdItem>
 {
     public int id;
 
-    public IdItem(int id) => this.id = id;
+    public IdItem(int id) => 
+        this.id = id;
 
     public bool Equals(IdItem i)
     {
@@ -97,7 +98,8 @@ public class GuidItem : IEquatable<GuidItem>
 {
     public string id;
 
-    public GuidItem(string id) => this.id = id;
+    public GuidItem(string id) => 
+        this.id = id;
 
     public bool Equals(GuidItem i)
     {

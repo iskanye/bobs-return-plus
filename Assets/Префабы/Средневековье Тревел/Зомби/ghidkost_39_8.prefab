@@ -225,7 +225,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  time: 3
+  time: 2.95
 --- !u!114 &237226113370472000
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,7 +3,6 @@ using UnityEngine.Events;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using TMPro;
 using Dialogues;
 
@@ -70,7 +69,7 @@ public class DialogueSystem : SequenceObject
     {
         var active = Active;
 
-        if (active.state is not IdleState)
+        if (!(active.state is IdleState))
             return;
         
         active.StopAllCoroutines();

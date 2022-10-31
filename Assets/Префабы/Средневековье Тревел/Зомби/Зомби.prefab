@@ -263,7 +263,7 @@ MonoBehaviour:
   orientation: 1
   enableRotation: 0
   rotationSpeed: 10
-  interpolatePathSwitches: 0
+  interpolatePathSwitches: 1
   switchPathInterpolationSpeed: 5
   targetCompatibility: {fileID: 0}
   repathRateCompatibility: NaN
@@ -289,7 +289,7 @@ MonoBehaviour:
     m_Bits: 64
   seeRange: 8
   spotSpeed: 2
-  searchSpeed: 2
+  searchSpeed: 0.75
   direction: {x: -1, y: 0}
   viewAngle: 120
   isPatrol: 0

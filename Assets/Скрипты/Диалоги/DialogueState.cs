@@ -81,7 +81,7 @@ namespace Dialogues
                 int startPosition = mn.text.text.Length - mn.current.text.Length;
                 mn.text.ForceMeshUpdate();
                 yield return TextUtilities.MakeTextTransparent(mn.text, startPosition);
-                yield return TextUtilities.AnimateVertexColors(mn.text, Color.white, startPosition, 0.035f, () =>
+                yield return TextUtilities.AnimateVertexColors(mn.text, Color.white, startPosition, 0.015f, () =>
                 {
                     mn.textSFX.pitch = Random.Range(.95f, 1.05f);
                     mn.textSFX.Play();

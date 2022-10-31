@@ -43,7 +43,7 @@ namespace Dialogues
                 int vertexIndex = textInfo.characterInfo[i].vertexIndex;
 
                 Vector3[] destinationVertices = textInfo.meshInfo[materialIndex].vertices;
-                
+
                 // Only change the vertex color if the text element is visible.
                 if (textInfo.characterInfo[i].isVisible)
                 {
@@ -61,7 +61,8 @@ namespace Dialogues
                 doEveryCharacter?.Invoke();
                 if (delay>0)
                 {
-                    yield return new WaitForSeconds(delay);
+                    for (float j = delay; j > 0; j -= Time.deltaTime)
+                        yield return new WaitForFixedUpdate();
                 }
             }
         }

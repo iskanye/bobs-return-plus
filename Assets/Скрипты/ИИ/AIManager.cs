@@ -67,8 +67,8 @@ public class AIManager : BaseMovement, IInteger
     {
         if (direction != Vector2.zero)
         {
-            var x = Mathf.Round(direction.x);
-            var y = Mathf.Round(direction.y);
+            float x = Mathf.Round(direction.x);
+            float y = Mathf.Round(direction.y);
             Direction = new Vector2(x, x == y ? 0 : y);
         }
     }
