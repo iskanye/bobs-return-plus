@@ -9,6 +9,8 @@ public class UninteractiveDialogue : ScriptableObject
         public string character;
         public DialogueCharacter dialogueCharacter;
         public DialogueCharacter.Emotion emotion;
+        public Color color = Color.white;
+        public float delay = .015f;
         [TextArea] public string text;
 
         public float startDelay;

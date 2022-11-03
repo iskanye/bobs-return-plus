@@ -8,7 +8,6 @@ using Dialogues;
 
 public class DialogueSystem : SequenceObject
 {
-    public Color textColor = Color.white;
     public RectTransform dialogueBox;
     public RectTransform variantBox;
     public DialogueVariantObject variantPrefab;
@@ -147,6 +146,8 @@ public class Dialogue
     public string character;
     public DialogueCharacter dialogueCharacter;
     public DialogueCharacter.Emotion emotion;
+    public Color color = Color.white;
+    public float delay = .015f;
     [TextArea] public string text;
     public UnityEvent<GameObject> action;
 
@@ -167,7 +168,8 @@ public class Dialogue
     }
 
     public Dialogue(string character, DialogueCharacter dialogueCharacter, string text, UnityEvent<GameObject> action, 
-        bool clearPreviousText, bool showStraightaway, bool dontWait, float startDelay, bool cantSkip, DialogueCharacter.Emotion emotion)
+        bool clearPreviousText, bool showStraightaway, bool dontWait, float startDelay, bool cantSkip, DialogueCharacter.Emotion emotion,
+        float delay, Color color)
     {
         this.character = character;
         this.dialogueCharacter = dialogueCharacter;
@@ -179,5 +181,7 @@ public class Dialogue
         this.dontWait = dontWait;
         this.startDelay = startDelay;
         this.cantSkip = cantSkip;
+        this.delay = delay;
+        this.color = color;
     }
 }
