@@ -123,8 +123,8 @@ TextureImporter:
         y: 64
         width: 32
         height: 64
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -573,6 +573,132 @@ TextureImporter:
       bones: []
       spriteID: 3c2bcf7f497a89af7b78a6dd5f20a294
       internalID: 1305391637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_TimeTravel_DungeonDoors_1
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 320
+        width: 32
+        height: 128
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e639c06f97ee376bf6d57b73165103
+      internalID: 957985029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_TimeTravel_DungeonDoors_2
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 351
+        width: 32
+        height: 128
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8293d55b002f51c8e5ee09dd8096d6
+      internalID: 33124401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_TimeTravel_DungeonDoors_3
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 320
+        width: 32
+        height: 128
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1eaaa31e6ddacadaefa9f442a09499
+      internalID: 1521673277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_TimeTravel_DungeonDoors_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d72d3a35736bd12ab4e26514d3c6ca
+      internalID: -476912193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_TimeTravel_DungeonDoors_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cafa07cb6f89ddb9b95c421423ebd7c
+      internalID: 1232120734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_TimeTravel_DungeonDoors_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 64
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c8152d1fe101efcb2a195ad357eb5a
+      internalID: 1735023455
       vertices: []
       indices: 
       edges: []
