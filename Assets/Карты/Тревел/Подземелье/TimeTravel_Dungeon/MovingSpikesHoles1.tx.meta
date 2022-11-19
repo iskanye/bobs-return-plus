@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 73c70cbe6eef4c9efb84150b311f0d8b
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 4426ef1bd8d94d242b03d3dc2d544b32, type: 3}
+  missingFiles: []
+  errors:
+  - Could not find tile '4' in tileset
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  missingTags: []
+  importerVersion: 0

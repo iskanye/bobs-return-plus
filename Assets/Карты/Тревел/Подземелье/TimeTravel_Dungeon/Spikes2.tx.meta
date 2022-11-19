@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 025ffd5dea68c53b5abbb32623b793aa
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 4426ef1bd8d94d242b03d3dc2d544b32, type: 3}
+  missingFiles: []
+  errors:
+  - Could not find tile '5' in tileset
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  missingTags: []
+  importerVersion: 0

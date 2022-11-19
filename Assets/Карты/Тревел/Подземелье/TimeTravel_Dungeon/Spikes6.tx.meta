@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 00dd3ecd536645b098d3554e39a27df3
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 4426ef1bd8d94d242b03d3dc2d544b32, type: 3}
+  missingFiles: []
+  errors:
+  - Could not find tile '21' in tileset
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  missingTags: []
+  importerVersion: 0

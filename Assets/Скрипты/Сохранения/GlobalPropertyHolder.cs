@@ -21,7 +21,7 @@ public class GlobalPropertyHolder : UnityEngine.MonoBehaviour
     {
         var data = SceneData.Data;
 
-        if (data.level != UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex || data.version != SaveData.currentVersion)
+        if (data.version != SaveData.currentVersion)
             return;
 
         var prop = data.globalProperties.Find(i => i.id == id);

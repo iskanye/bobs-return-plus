@@ -1,6 +1,7 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class ActionBase : MonoBehaviour 
 {
-    public UnityEngine.Events.UnityEvent<GameObject> action;
+    public UnityEvent<GameObject> action = new UnityEvent<GameObject>();
 }

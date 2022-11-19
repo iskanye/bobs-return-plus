@@ -3,7 +3,7 @@ using UnityEngine;
 //Скрипт для обьектов, с которыми можно взаимодейвствовать
 public class Interact : ActionBase
 {   
-    public LayerMask playerMask; //Слой игрока
+    [SerializeField] private LayerMask playerMask; //Слой игрока
 
     void OnTriggerStay2D(Collider2D c)
     {

@@ -7,7 +7,9 @@ public class Trigger : ActionBase
     [SerializeField] private bool isOnStay;
     [SerializeField] private bool triggerNotExpected;
     [SerializeField] private bool colliderNotExpected;
-    
+
+    public LayerMask PlayerMask { set => playerMask = value; }
+
     void OnTriggerEnter2D(Collider2D c) 
     {
         if (IsTriggering(c) && !isOnStay) 
