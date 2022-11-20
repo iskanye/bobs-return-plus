@@ -98,7 +98,7 @@ public enum DiscardingType
 
 public enum ObjectType
 {
-    Fragile,
+    Fragile = 1,
     Wood,
     Strong,
     Impenetrable

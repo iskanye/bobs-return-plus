@@ -6,6 +6,8 @@ public class PenetratingObject : MonoBehaviour
     public GameObject destroyParticles;
     public Destroy destroy;
 
+    public ObjectType Durability { set => type = value; }
+
     public void Penetrate() 
     {
         Instantiate(destroyParticles, transform.position, Quaternion.identity);

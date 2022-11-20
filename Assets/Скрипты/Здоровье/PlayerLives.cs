@@ -60,6 +60,7 @@ public class PlayerLives : LivesBase
     {
         bob = GetComponent<BobController>();
         prevSpeed = bob.data.movement.speed;
+        Durability = ObjectType.Wood;
 
         melee = bob.character is MeleeBob meleeBob ? meleeBob : null;
         PlayerLiveCounter.Active.livesInOneHeart = livesInOneHeart;
