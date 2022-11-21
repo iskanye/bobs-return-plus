@@ -4,11 +4,18 @@ public class Damageable : MonoBehaviour
 {
     public int damage = 1;
     public bool isDeadly;
+    public bool addPersistentListener;
     public System.Action<int> onDamage;
 
     [HideInInspector] public DiscardingType discarding = DiscardingType.Small;
     [HideInInspector] public Vector2 direction;
     [HideInInspector] public ObjectType penetrating = ObjectType.Fragile;
+
+    void Awake()
+    {
+        if (addPersistentListener)
+            UnityEditor.Events.UnityEventTools.AddPersistentListener(GetComponent<Trigger>().action, Damage);
+    }
 
     public void Damage(GameObject g)
     {

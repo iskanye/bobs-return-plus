@@ -70,7 +70,6 @@ public class PlayerLives : LivesBase
     IEnumerator Death()
     {
         FindObjectOfType<PauseController>().gameObject.SetActive(false);
-        GetComponent<Collider2D>().enabled = false;
 
         foreach (var i in bob.data.animators)
             i.SetTrigger("Death");

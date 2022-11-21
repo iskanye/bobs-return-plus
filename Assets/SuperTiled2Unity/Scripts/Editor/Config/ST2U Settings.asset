@@ -55,6 +55,36 @@ MonoBehaviour:
   - {r: 0.7372549, g: 0.56078434, b: 0.56078434, a: 1}
   m_CustomObjectTypes: []
   m_PrefabReplacements:
-  - m_TypeName: HiddenSpike
+  - m_TypeName: HidenSpikes
     m_Prefab: {fileID: 8953534694902438779, guid: ae40a5ee8673bee579daf10f33c0ba22,
+      type: 3}
+  - m_TypeName: ShacklesOpen
+    m_Prefab: {fileID: 5063047909675392124, guid: a6e8f3f17254f8743afe382e22d14680,
+      type: 3}
+  - m_TypeName: ChainsTop
+    m_Prefab: {fileID: 7777531054665625679, guid: 3731543d4c1426c4680ad2cf152b6ec2,
+      type: 3}
+  - m_TypeName: ChainsCandles
+    m_Prefab: {fileID: 2459977192387035333, guid: 957aecaf049fa12438267948a54285e0,
+      type: 3}
+  - m_TypeName: ChainsCandlesEmpty
+    m_Prefab: {fileID: 3039232402213725764, guid: ee1589a3254a0a942b729d96c8dbe66b,
+      type: 3}
+  - m_TypeName: Chains
+    m_Prefab: {fileID: 9158670100678428852, guid: a779f06d0eb416f4283729cc249bfadf,
+      type: 3}
+  - m_TypeName: ChainsDown
+    m_Prefab: {fileID: 4438582320359179185, guid: 013cd74b0c444b146b892138ae3accb2,
+      type: 3}
+  - m_TypeName: ChainsCandlesFire
+    m_Prefab: {fileID: 9001575433928142343, guid: c0f8969d0157bbb4cb96515bf7c50d74,
+      type: 3}
+  - m_TypeName: LongWeapon
+    m_Prefab: {fileID: 4192583138486121502, guid: 53055e42f007dc04b9c3057b92876e71,
+      type: 3}
+  - m_TypeName: WoodenBarrelClosed
+    m_Prefab: {fileID: 9043275367725305105, guid: 9698c87fc7665c5478ea9f12d1b5daf8,
+      type: 3}
+  - m_TypeName: WoodenBarrel
+    m_Prefab: {fileID: 7139096414570187790, guid: 3c52dd70fbd974f43948e7b5de36dbbd,
       type: 3}

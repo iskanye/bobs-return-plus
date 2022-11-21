@@ -117,7 +117,7 @@ public class TutorialZombie : MonoBehaviour
         var damageable = coll.GetComponent<Damageable>();
         damageable.damage = damage;
         damageable.discarding = discarding;
-        damageable.penetrating = ObjectType.Fragile;
+        damageable.penetrating = ObjectType.Flimsy;
         damageable.direction = ai.Direction;
 
         yield return new WaitForSeconds(reloadDuration + hitDuration);

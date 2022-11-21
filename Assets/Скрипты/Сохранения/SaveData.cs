@@ -15,7 +15,6 @@ public class SaveData
     public List<Integer> integers;
 
     public List<CustomProperty> customProperties;
-    public List<CustomProperty> globalProperties;
 
     public List<IdItem> achievements;
     public List<GuidItem> inventory;
@@ -23,7 +22,6 @@ public class SaveData
     public SaveData() 
     {
         customProperties = new List<CustomProperty>();
-        globalProperties = new List<CustomProperty>();
         positions = new List<Position>();
         integers = new List<Integer>();
         achievements = new List<IdItem>();

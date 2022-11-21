@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" infinite="1" nextlayerid="118" nextobjectid="2572">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" infinite="1" nextlayerid="118" nextobjectid="2574">
+ <editorsettings>
+  <export target="../../TimeTravel_Dungeon.tmx" format="tmx"/>
+ </editorsettings>
  <tileset firstgid="1" source="0_TimeTravel_Dungeon.tsx"/>
  <tileset firstgid="257" source="0_TimeTravel_DungeonDoors.tsx"/>
  <tileset firstgid="491" source="../BasicTiles/0_Dark.tsx"/>
@@ -2812,7 +2815,7 @@
   <object id="2539" template="ShakyFloor.tx" x="640" y="-672"/>
   <object id="2540" template="ShakyFloor.tx" x="640" y="-640"/>
   <object id="2541" template="ShakyFloor.tx" x="672" y="-640"/>
-  <object id="2542" template="ShakyFloor.tx" x="704" y="-640"/>
+  <object id="2542" template="ShakyFloor.tx" class="ShakyFloor" x="704" y="-640"/>
   <object id="2543" template="ShakyFloor.tx" x="800" y="-736"/>
   <object id="2544" template="ShakyFloor.tx" x="800" y="-768"/>
   <object id="2545" template="ShakyFloor.tx" x="800" y="-800"/>
@@ -2842,7 +2845,7 @@
   <object id="2569" template="ShakyFloor.tx" x="832" y="-1696"/>
   <object id="2570" template="ShakyFloor.tx" x="832" y="-1728"/>
  </objectgroup>
- <layer id="41" name="SecretWay2" width="32" height="32">
+ <layer id="41" name="SecretWay2" width="32" height="32" opacity="0">
   <data encoding="csv">
    <chunk x="-80" y="-32" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -5412,7 +5415,7 @@
   </data>
  </layer>
  <objectgroup id="85" name="HidenSpikes">
-  <object id="754" template="HidenSpikes.tx" class="HidenSpikes" x="96" y="1696"/>
+  <object id="754" template="HidenSpikes.tx" class="HidenSpikes" gid="552" x="96" y="1696"/>
   <object id="769" template="HidenSpikes.tx" x="128" y="1696"/>
   <object id="770" template="HidenSpikes.tx" x="160" y="1696"/>
   <object id="771" template="HidenSpikes.tx" x="192" y="1696"/>
@@ -5938,7 +5941,7 @@
  </layer>
  <layer id="112" name="Spikes" width="32" height="32">
   <properties>
-   <property name="damageable" type="bool" value="true"/>
+   <property name="damageable" type="bool" value="false"/>
   </properties>
   <data encoding="csv">
    <chunk x="-64" y="-16" width="16" height="16">
@@ -6446,16 +6449,16 @@
   <object id="96" template="ChainsCandles.tx" class="ChainsCandles" x="-192" y="192"/>
   <object id="428" template="ShacklesOpen.tx" class="ShacklesOpen" x="-160" y="-96"/>
   <object id="431" template="ShacklesClosed.tx" class="ShacklesClosed" x="-544" y="-96"/>
-  <object id="432" template="ShacklesOpen.tx" x="-352" y="-96"/>
+  <object id="432" template="ShacklesOpen.tx" class="ShacklesOpen" x="-352" y="-96"/>
   <object id="452" template="ChainsTop.tx" x="-192" y="160"/>
   <object id="453" template="ChainsTop.tx" x="-288" y="160"/>
   <object id="454" template="ChainsTop.tx" x="-384" y="160"/>
-  <object id="455" template="ChainsTop.tx" x="-480" y="160"/>
-  <object id="456" template="ChainsTop.tx" x="-576" y="160"/>
+  <object id="455" template="ChainsTop.tx" class="ChainsTop" x="-480" y="160"/>
+  <object id="456" template="ChainsTop.tx" class="ChainsTop" x="-576" y="160"/>
   <object id="457" template="ChainsCandles.tx" x="-288" y="192"/>
   <object id="458" template="ChainsCandles.tx" x="-384" y="192"/>
-  <object id="459" template="ChainsCandles.tx" x="-576" y="192"/>
-  <object id="460" template="ChainsCandlesEmpty.tx" x="-480" y="192"/>
+  <object id="459" template="ChainsCandles.tx" class="ChainsCandles" x="-576" y="192"/>
+  <object id="460" template="ChainsCandlesEmpty.tx" class="ChainsCandlesEmpty" x="-480" y="192"/>
   <object id="461" template="ChainsTop.tx" x="-832" y="32"/>
   <object id="462" template="ChainsTop.tx" x="-672" y="32" visible="1"/>
   <object id="463" template="ChainsTop.tx" x="-928" y="160"/>
@@ -6463,24 +6466,24 @@
   <object id="465" template="Chains.tx" class="Chains" x="-832" y="64"/>
   <object id="468" template="Chains.tx" x="-672" y="64"/>
   <object id="469" template="Chains.tx" x="-928" y="192"/>
-  <object id="470" template="Chains.tx" x="-1024" y="192"/>
+  <object id="470" template="Chains.tx" class="Chains" x="-1024" y="192"/>
   <object id="471" template="ChainsDown.tx" class="ChainsDown" x="-832" y="96" visible="1"/>
-  <object id="472" gid="1494" x="-672" y="96" width="32" height="32"/>
-  <object id="473" gid="1494" x="-928" y="224" width="32" height="32"/>
-  <object id="474" gid="1494" x="-1024" y="224" width="32" height="32"/>
+  <object id="472" class="ChainsDown" gid="1494" x="-672" y="96" width="32" height="32"/>
+  <object id="473" class="ChainsDown" gid="1494" x="-928" y="224" width="32" height="32"/>
+  <object id="474" class="ChainsDown" gid="1494" x="-1024" y="224" width="32" height="32"/>
   <object id="509" template="LeverDungeonOFF.tx" class="LeverDungeonOFF" x="-800" y="64"/>
-  <object id="526" template="LongWeapon.tx" x="-896" y="256"/>
+  <object id="526" template="LongWeapon.tx" class="LongWeapon" x="-896" y="256"/>
   <object id="482" template="WoodenBarrelClosed.tx" class="WoodenBarrelClosed" x="-512" y="64"/>
   <object id="483" template="WoodenBarrelGold.tx" class="WoodenBarrelGold" x="-288" y="576"/>
   <object id="507" template="WoodenBarrelClosed.tx" x="-544" y="544"/>
-  <object id="522" template="WoodenBarrel.tx" x="-672" y="128"/>
+  <object id="522" template="WoodenBarrel.tx" class="WoodenBarrel" x="-672" y="128"/>
   <object id="523" template="WoodenBarrelClosed.tx" x="-704" y="128"/>
-  <object id="524" template="WoodenBarrelClosed.tx" x="-1024" y="256"/>
+  <object id="524" template="WoodenBarrelClosed.tx" class="WoodenBarrelClosed" x="-1024" y="256"/>
   <object id="527" template="WoodenStool.tx" class="WoodenStool" x="-736" y="128"/>
   <object id="528" template="WoodenBarrelClosed.tx" x="-672" y="160"/>
-  <object id="529" template="WoodenStool.tx" x="-678.667" y="190.333"/>
+  <object id="529" template="WoodenStool.tx" class="WoodenStool" x="-678.667" y="190.333"/>
   <object id="530" template="WoodenTable1.tx" class="WoodenTable1" x="-800" y="224"/>
-  <object id="532" gid="2147485283" x="-768" y="224" width="32" height="32"/>
+  <object id="532" class="WoodenStool2" gid="2147485283" x="-768" y="224" width="32" height="32"/>
   <object id="31" template="DeadButterfly.tx" class="DeadButterfly" x="-128" y="0"/>
   <object id="56" template="Moss.tx" class="Moss" x="-288" y="-32"/>
   <object id="57" template="PapyrusNote.tx" class="PapyrusNote" x="-288" y="480"/>
@@ -6495,7 +6498,7 @@
   <object id="441" template="Grass2.tx" gid="1556" x="-176.667" y="-26.6667" rotation="0"/>
   <object id="443" template="Grass2.tx" x="-361" y="-33"/>
   <object id="444" template="Grass2.tx" gid="2147485204" x="-318" y="-36.3333" rotation="0"/>
-  <object id="446" template="Grass2.tx" gid="2147485204" x="-305" y="60" rotation="0"/>
+  <object id="446" template="Grass2.tx" class="Grass2" gid="2147485204" x="-305" y="60" rotation="0"/>
   <object id="447" template="Grass2.tx" gid="2147485204" x="-314.333" y="286" rotation="0"/>
   <object id="448" template="Grass2.tx" class="Grass2" x="-351" y="381.333"/>
   <object id="449" template="Moss.tx" gid="2147485217" x="-384" y="480" rotation="0"/>
@@ -6597,8 +6600,8 @@
   <object id="853" template="Bones1.tx" x="256" y="1760"/>
   <object id="854" template="WoodenTabletStand.tx" x="320" y="1696"/>
   <object id="855" template="WoodenTable2.tx" class="WoodenTable2" x="320" y="1792"/>
-  <object id="861" gid="1635" x="313" y="1758" width="32" height="32"/>
-  <object id="862" gid="1635" x="312" y="1726" width="32" height="32"/>
+  <object id="861" class="WoodenStool" gid="1635" x="313" y="1758" width="32" height="32"/>
+  <object id="862" class="WoodenStool" gid="1635" x="312" y="1726" width="32" height="32"/>
   <object id="905" template="WoodPin1.tx" class="WoodPin1" x="288" y="2016"/>
   <object id="906" template="WoodPin2.tx" class="WoodPin2" x="352" y="2176"/>
   <object id="907" template="WoodenBarrel.tx" x="352" y="2208"/>
@@ -6752,7 +6755,7 @@
   <object id="1312" template="ChainsTop.tx" x="-2048" y="1792"/>
   <object id="1313" template="ChainsTop.tx" x="-1952" y="1824"/>
   <object id="1314" template="ChainsCandlesFire.tx" class="ChainsCandlesFire" x="-1600" y="1792"/>
-  <object id="1319" template="ChainsCandlesFire.tx" x="-1696" y="1792"/>
+  <object id="1319" template="ChainsCandlesFire.tx" class="ChainsCandlesFire" x="-1696" y="1792"/>
   <object id="1320" template="ChainsCandlesFire.tx" x="-1792" y="1856"/>
   <object id="1321" template="ChainsCandlesFire.tx" x="-1952" y="1856"/>
   <object id="1322" template="ChainsCandlesFire.tx" x="-2048" y="1824"/>
@@ -7093,7 +7096,7 @@
   <object id="2258" template="TorchDurableFire.tx" x="-1888" y="160"/>
   <object id="2259" template="TorchDurableFire.tx" x="-1760" y="160"/>
   <object id="2260" template="TorchDurableFire.tx" x="-1760" y="64"/>
-  <object id="2261" template="TorchDurableFire.tx" x="-1568" y="96"/>
+  <object id="2261" template="TorchDurableFire.tx" class="TorchDurableFire" x="-1568" y="96"/>
   <object id="2262" template="TorchDurableFire.tx" x="-1824" y="-192"/>
   <object id="2263" template="TorchDurableFire.tx" x="-1824" y="-320"/>
   <object id="2264" template="TorchDurableFire.tx" x="-1472" y="-192"/>
@@ -7111,7 +7114,7 @@
   <object id="2284" template="CrossbowStandDown.tx" x="-1536" y="-928"/>
   <object id="2285" template="CrossbowStandDown.tx" x="-1472" y="-928"/>
   <object id="2286" template="CrossbowStandDown.tx" x="-1440" y="-928"/>
-  <object id="2287" template="CrossbowStandDown.tx" x="-1408" y="-928"/>
+  <object id="2287" template="CrossbowStandDown.tx" x="-1408" y="-928" visible="1"/>
   <object id="2294" template="AutobowStandDown.tx" x="-1504" y="-896"/>
   <object id="2295" template="AutobowChargedDown.tx" x="-1504" y="-896"/>
   <object id="2296" template="CrossbowStandUp.tx" x="-1600" y="-512"/>
@@ -7308,7 +7311,7 @@
   <object id="1877" template="SwingingBallChains1.tx" x="-1152" y="-928"/>
   <object id="1878" template="SwingingBallChains1.tx" x="-1152" y="-960"/>
   <object id="1888" template="SwingingBallChains0.tx" x="-832" y="-896"/>
-  <object id="1889" template="SwingingBallChains1.tx" x="-832" y="-928"/>
+  <object id="1889" template="SwingingBallChains1.tx" class="SwingingBallChains1" x="-832" y="-928"/>
   <object id="1890" template="SwingingBallChains1.tx" x="-832" y="-960"/>
   <object id="1891" template="SwingingBallChains0.tx" x="-1152.5" y="-670.5"/>
   <object id="1892" template="SwingingBallChains1.tx" x="-1152.5" y="-702.5"/>
@@ -8176,7 +8179,7 @@
 </chunk>
   </data>
  </layer>
- <layer id="52" name="SecretWay3" width="32" height="32" visible="0">
+ <layer id="52" name="SecretWay3" width="32" height="32">
   <data encoding="csv">
    <chunk x="0" y="-32" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -8238,7 +8241,7 @@
 </chunk>
   </data>
  </layer>
- <layer id="108" name="InvisibleWallsAntifly" width="32" height="32" visible="0">
+ <layer id="108" name="InvisibleWallsAntifly" width="32" height="32" opacity="0">
   <data encoding="csv">
    <chunk x="16" y="-80" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -9234,8 +9237,8 @@
 1715,1715,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,1715,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,1715,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,1715,1715,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,1715,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,1715,1715,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,1715,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,1715,1715,0,0,0,0,0,0,
@@ -9321,11 +9324,11 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="-64" y="64" width="16" height="16">
-0,1715,0,0,0,0,0,0,0,1715,0,0,0,0,0,188,
-1715,0,0,0,0,0,0,0,0,0,1715,0,0,0,0,206,
-1715,0,0,0,0,0,0,0,0,0,1715,0,0,0,0,206,
-1715,0,0,0,0,0,0,0,0,0,1715,0,0,0,0,206,
-0,0,0,0,0,0,0,0,0,0,0,1715,0,0,0,1073742012,
+0,1715,0,0,0,0,0,0,0,1715,0,0,0,0,0,1715,
+1715,0,0,0,0,0,0,0,0,0,1715,0,0,0,0,1715,
+1715,0,0,0,0,0,0,0,0,0,1715,0,0,0,0,1715,
+1715,0,0,0,0,0,0,0,0,0,1715,0,0,0,0,1715,
+0,0,0,0,0,0,0,0,0,0,0,1715,0,0,0,1715,
 0,0,0,0,0,0,0,0,0,0,0,1715,0,0,0,1715,
 0,0,0,0,0,0,0,0,0,0,0,1715,0,0,0,1715,
 0,0,0,0,0,0,0,0,0,0,0,1715,0,0,0,0,
@@ -9484,7 +9487,7 @@
 </chunk>
   </data>
  </layer>
- <layer id="109" name="InvisibleWallsAntiground" width="32" height="32" visible="0">
+ <layer id="109" name="InvisibleWallsAntiground" width="32" height="32" opacity="0">
   <data encoding="csv">
    <chunk x="16" y="-80" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -10122,14 +10125,14 @@
 0,0,1716,1716,1716,1716,1716,0,0,0,0,1716,1716,0,0,0,
 0,0,1716,1716,1716,0,0,0,0,0,0,1716,1716,0,0,0,
 0,0,1716,1716,0,0,0,0,0,0,0,0,1716,0,0,0,
-0,0,1716,0,0,0,0,0,0,0,0,0,1716,0,0,1716,
-0,0,1716,0,0,0,0,0,0,0,0,0,1716,1716,1716,1716,
-0,0,1716,0,0,0,0,0,0,0,0,0,1716,1716,1716,1716,
-0,0,1716,0,0,0,0,0,0,0,0,0,1716,1716,1716,1716,
-0,0,1716,0,0,0,0,0,0,0,0,0,1716,1716,1716,1716,
-0,0,1716,0,0,0,0,0,0,0,0,0,0,1716,1716,0,
-0,0,1716,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,1716,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,1716,0,0,0,0,1716,1716,0,0,0,1716,0,0,1716,
+0,0,1716,0,0,0,1716,0,1716,0,0,0,1716,1716,1716,1716,
+0,0,1716,0,0,0,1716,0,0,1716,0,0,1716,1716,1716,1716,
+0,0,1716,0,0,1716,0,0,0,1716,0,0,1716,1716,1716,1716,
+0,0,1716,0,0,1716,0,0,0,1716,0,0,1716,1716,1716,1716,
+0,0,1716,0,0,1716,0,0,0,1716,0,0,0,1716,1716,0,
+0,0,1716,0,0,0,1716,0,1716,0,0,0,0,0,0,0,
+0,0,1716,0,0,0,0,1716,1716,0,0,0,0,0,0,0,
 0,0,1716,1716,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,1716,1716,0,0,0,0,0,0,0,0,0,1716,1716,
 0,0,0,0,1716,1716,1716,1716,1716,1716,1716,1716,1716,1716,1716,1716
@@ -10246,7 +10249,7 @@
 0,0,0,1716,1716,1716,1716,1716,0,0,0,0,0,0,0,0,
 0,0,0,1716,1716,1716,1716,1716,0,0,0,0,0,0,0,0,
 0,0,0,1716,0,0,0,1716,0,0,0,0,0,0,0,0,
-0,0,0,1716,0,0,0,1716,0,0,0,0,0,0,0,0,
+0,0,0,1716,0,1716,0,1716,0,0,0,0,0,0,0,0,
 0,0,0,1716,0,0,0,1716,0,0,0,0,0,0,0,0,
 1716,1716,1716,1716,1716,0,1716,1716,0,0,1716,1716,1716,1716,1716,0,
 1716,1716,1716,1716,1716,0,1716,1716,0,1716,1716,1716,1716,1716,1716,0,
@@ -10320,8 +10323,8 @@
 1716,1716,1716,0,0,0,0,0,0,0,1716,1716,1716,0,0,0,
 0,0,1716,0,0,0,0,0,0,0,1716,0,0,0,0,0,
 0,0,1716,0,0,0,0,0,0,0,1716,1716,0,0,0,0,
-0,0,1716,0,0,0,0,0,0,0,0,0,1716,0,0,0,
-0,0,1716,0,0,0,0,0,0,0,0,0,1716,0,0,0,
+0,0,1716,0,1716,1716,0,0,0,0,0,0,1716,0,0,0,
+0,0,1716,0,1716,1716,0,0,0,0,0,0,1716,0,0,0,
 0,0,1716,0,0,0,0,0,0,0,0,0,1716,0,0,0,
 0,0,0,1716,1716,1716,1716,1716,1716,0,0,1716,0,0,0,0,
 0,0,0,0,1716,1716,1716,1716,1716,0,0,1716,0,0,0,0,
@@ -10496,7 +10499,7 @@
 </chunk>
   </data>
  </layer>
- <layer id="110" name="SecretInvisibleWallsAntiall1" width="32" height="32" visible="0">
+ <layer id="110" name="SecretInvisibleWallsAntiall1" width="32" height="32" opacity="0">
   <data encoding="csv">
    <chunk x="0" y="32" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,1717,0,0,0,0,
@@ -10518,7 +10521,7 @@
 </chunk>
   </data>
  </layer>
- <layer id="111" name="SecretInvisibleWallsAntiall3" width="32" height="32" visible="0">
+ <layer id="111" name="SecretInvisibleWallsAntiall3" width="32" height="32" opacity="0">
   <data encoding="csv">
    <chunk x="0" y="-32" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

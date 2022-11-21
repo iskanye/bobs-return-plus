@@ -27,4 +27,7 @@ public class SimpleUnscaledSpriteAnimation : MonoBehaviour
 
         StartCoroutine(Animation());
     }
+
+    public void Stop() =>
+        StopAllCoroutines();
 }

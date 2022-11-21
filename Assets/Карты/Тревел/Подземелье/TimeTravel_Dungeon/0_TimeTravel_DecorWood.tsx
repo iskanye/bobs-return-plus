@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.9" tiledversion="1.9.0" name="0_TimeTravel_DecorWood" tilewidth="32" tileheight="32" tilecount="140" columns="14">
+<tileset version="1.9" tiledversion="1.9.2" name="0_TimeTravel_DecorWood" tilewidth="32" tileheight="32" tilecount="140" columns="14">
  <image source="../0_TimeTravel_DecorWood.png" width="448" height="320"/>
  <tile id="5">
   <animation>
