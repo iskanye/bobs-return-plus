@@ -88,3 +88,9 @@ MonoBehaviour:
   - m_TypeName: WoodenBarrel
     m_Prefab: {fileID: 7139096414570187790, guid: 3c52dd70fbd974f43948e7b5de36dbbd,
       type: 3}
+  - m_TypeName: Grass1
+    m_Prefab: {fileID: 8383106934975672111, guid: 384294989a88ea347b49b6783d51b09c,
+      type: 3}
+  - m_TypeName: Grass2
+    m_Prefab: {fileID: 5039336738637812080, guid: c2a2225ba18466642b6fc3d2b54d3216,
+      type: 3}

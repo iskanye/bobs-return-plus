@@ -6487,19 +6487,19 @@
   <object id="31" template="DeadButterfly.tx" class="DeadButterfly" x="-128" y="0"/>
   <object id="56" template="Moss.tx" class="Moss" x="-288" y="-32"/>
   <object id="57" template="PapyrusNote.tx" class="PapyrusNote" x="-288" y="480"/>
-  <object id="433" template="Grass1.tx" class="Grass1" x="-191.667" y="-31.3333"/>
-  <object id="434" template="Grass2.tx" class="Grass2" x="-189.333" y="-13.6667"/>
-  <object id="435" template="Grass1.tx" gid="1555" x="-382.667" y="-31.3333" rotation="0"/>
-  <object id="436" template="Grass1.tx" gid="2147485203" x="-286.333" y="4.33333" rotation="0"/>
-  <object id="437" template="Grass1.tx" gid="2147485203" x="-379" y="-18.6667" rotation="0"/>
+  <object id="433" template="Grass1.tx" class="Grass1" x="-192" y="-32"/>
+  <object id="434" template="Grass2.tx" class="Grass2" x="-189" y="-11"/>
+  <object id="435" template="Grass1.tx" gid="1555" x="-382" y="-31" rotation="0"/>
+  <object id="436" template="Grass1.tx" gid="2147485203" x="-287" y="4" rotation="0"/>
+  <object id="437" template="Grass1.tx" gid="2147485203" x="-379" y="-18" rotation="0"/>
   <object id="438" template="Grass1.tx" x="-479.667" y="-29.6667"/>
-  <object id="439" template="Grass1.tx" gid="2147485203" x="-352" y="226.333" rotation="0"/>
-  <object id="440" template="Grass1.tx" class="Grass1" x="-290.667" y="254.667"/>
+  <object id="439" template="Grass1.tx" gid="2147485203" x="-352" y="226" rotation="0"/>
+  <object id="440" template="Grass1.tx" class="Grass1" x="-291" y="254"/>
   <object id="441" template="Grass2.tx" gid="1556" x="-176.667" y="-26.6667" rotation="0"/>
   <object id="443" template="Grass2.tx" x="-361" y="-33"/>
-  <object id="444" template="Grass2.tx" gid="2147485204" x="-318" y="-36.3333" rotation="0"/>
+  <object id="444" template="Grass2.tx" gid="2147485204" x="-318" y="-35" rotation="0"/>
   <object id="446" template="Grass2.tx" class="Grass2" gid="2147485204" x="-305" y="60" rotation="0"/>
-  <object id="447" template="Grass2.tx" gid="2147485204" x="-314.333" y="286" rotation="0"/>
+  <object id="447" template="Grass2.tx" class="Grass2" gid="2147485204" x="-314" y="286" rotation="0"/>
   <object id="448" template="Grass2.tx" class="Grass2" x="-351" y="381.333"/>
   <object id="449" template="Moss.tx" gid="2147485217" x="-384" y="480" rotation="0"/>
   <object id="495" template="Bones1.tx" x="-544" y="448"/>

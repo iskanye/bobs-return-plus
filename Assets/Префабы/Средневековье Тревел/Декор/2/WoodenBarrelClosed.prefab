@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7867076083946530565}
   - component: {fileID: 859625094}
   - component: {fileID: 859625093}
+  - component: {fileID: 3560337080688191597}
   m_Layer: 0
   m_Name: WoodenBarrelClosed
   m_TagString: Untagged
@@ -117,7 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   particlesOffset: {x: 0, y: 0.5, z: 0}
-  particlesForce: 0.5
+  particlesForce: 3
   destroyParticles:
   - {fileID: 1081485952797413362, guid: aa33b3ca14bc04445b3480856f2ab3e8, type: 3}
   - {fileID: 4585545850013346039, guid: 1fffca52216968842a96f7d1d81e2369, type: 3}
@@ -130,6 +131,18 @@ MonoBehaviour:
   onPenetrate:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 3560337080688191597}
+        m_TargetAssemblyTypeName: SpreadRigidbodies, Assembly-CSharp
+        m_MethodName: Spread
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 859625093}
         m_TargetAssemblyTypeName: Destroy, Assembly-CSharp
         m_MethodName: Do
@@ -155,3 +168,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDestroy: {fileID: 0}
+--- !u!114 &3560337080688191597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9043275367725305105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5fd6443f125b7649a10aed8b839f9e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 0, y: 0.5, z: 0}
+  force: 3
+  rigidbodies:
+  - {fileID: 1081485952797413362, guid: aa33b3ca14bc04445b3480856f2ab3e8, type: 3}
+  - {fileID: 4585545850013346039, guid: 1fffca52216968842a96f7d1d81e2369, type: 3}
+  - {fileID: 4709746300904849131, guid: fd2110e7f221e304aa508868f1be41a0, type: 3}
+  - {fileID: 6133804647303199696, guid: 9f484aa20aeae0840a66d3081a814fdb, type: 3}
+  - {fileID: 1081485952797413362, guid: aa33b3ca14bc04445b3480856f2ab3e8, type: 3}
+  - {fileID: 4585545850013346039, guid: 1fffca52216968842a96f7d1d81e2369, type: 3}
+  - {fileID: 4709746300904849131, guid: fd2110e7f221e304aa508868f1be41a0, type: 3}
+  - {fileID: 6133804647303199696, guid: 9f484aa20aeae0840a66d3081a814fdb, type: 3}
