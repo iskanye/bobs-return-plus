@@ -20,18 +20,18 @@ public class ShakeObject : MonoBehaviour
     System.Collections.IEnumerator _StartShake(float magnitude, float time) 
     {
         float _time = 0;
-        var startPos = transform.position;
+        var startPos = transform.localPosition;
 
         while (_time < time)
         {
             magnitude = Mathf.Lerp(magnitude, 0, Mathf.Sin(_time / time * Mathf.PI / 2));
 
-            transform.position = startPos + Random.onUnitSphere * magnitude;
+            transform.localPosition = startPos + Random.onUnitSphere * magnitude;
             _time += Time.deltaTime;
 
             yield return new WaitForEndOfFrame();
         }
 
-        transform.position = startPos;
+        transform.localPosition = startPos;
     }
 }

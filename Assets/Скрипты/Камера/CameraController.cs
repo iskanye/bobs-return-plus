@@ -11,11 +11,8 @@ public class CameraController : MonoBehaviour
     public Vector3 offset;
 
 
-    void Awake()
-    {
-        pixelCamera = GetComponent<PixelPerfectCamera>();
+    void Awake() =>
         Active = this;
-    }
 
 #if UNITY_ANDROID
 

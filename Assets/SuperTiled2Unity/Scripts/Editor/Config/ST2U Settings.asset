@@ -94,3 +94,12 @@ MonoBehaviour:
   - m_TypeName: Grass2
     m_Prefab: {fileID: 5039336738637812080, guid: c2a2225ba18466642b6fc3d2b54d3216,
       type: 3}
+  - m_TypeName: WoodenStool
+    m_Prefab: {fileID: 3252480357661181399, guid: 8df8e31ed64a47f4c80c87fcdde998b2,
+      type: 3}
+  - m_TypeName: WoodenTable1
+    m_Prefab: {fileID: 3766970377513843017, guid: 94778f5839ceeb44a8cea7a5fc5b96ea,
+      type: 3}
+  - m_TypeName: LeverDungeonOFF
+    m_Prefab: {fileID: 1903427496883868781, guid: 5aeeb943d5637b240b5500606478b7bb,
+      type: 3}
