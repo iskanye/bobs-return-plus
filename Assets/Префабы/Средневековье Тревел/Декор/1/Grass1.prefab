@@ -117,13 +117,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  particlesOffset: {x: 0, y: 0, z: 0}
-  particlesForce: 0.2
-  destroyParticles:
-  - {fileID: 5153429563336592657, guid: b44bb58f12d5dce47bac8f8a8fc40cc1, type: 3}
-  - {fileID: 7723014726580571050, guid: 6ef9fb9ac6074624d9a789013b76b007, type: 3}
-  - {fileID: 4697478028274761425, guid: 8c424b222394ba8469846d6b60570b16, type: 3}
-  - {fileID: 8563347398693120432, guid: 86eb81ba9f93dcc468e137ca6052a4d8, type: 3}
   onPenetrate:
     m_PersistentCalls:
       m_Calls:
@@ -178,6 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 0, z: 0}
   force: 0.2
+  spreadRadius: 0.2
   rigidbodies:
   - {fileID: 5153429563336592657, guid: b44bb58f12d5dce47bac8f8a8fc40cc1, type: 3}
   - {fileID: 7723014726580571050, guid: 6ef9fb9ac6074624d9a789013b76b007, type: 3}

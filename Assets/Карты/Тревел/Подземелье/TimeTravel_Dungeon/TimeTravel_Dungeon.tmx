@@ -5029,8 +5029,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,3758096882,492,492,1610613234,0,0,0,0,3221225971,
-0,0,0,0,0,0,0,3758096882,492,492,1610613234,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3221225971,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,2684355060,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -5228,8 +5228,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,2684355058,492,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,2684355058,492,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -6512,16 +6512,16 @@
   <object id="503" template="Bones3.tx" x="-507" y="518.333"/>
   <object id="504" template="Bones6.tx" x="-537.667" y="504.667"/>
   <object id="505" template="Bones3.tx" x="-570.667" y="550.333"/>
-  <object id="521" template="MapDungeonsJail.tx" x="-736" y="64"/>
+  <object id="521" template="MapDungeonsJail.tx" class="MapDungeonsJail" x="-736" y="64"/>
   <object id="553" template="Stone2.tx" class="Stone2" x="-800" y="768"/>
-  <object id="557" gid="1622" x="-704" y="896" width="32" height="64"/>
-  <object id="559" gid="1624" x="-800" y="896" width="32" height="64"/>
+  <object id="557" class="Stone3" gid="1622" x="-704" y="896" width="32" height="64"/>
+  <object id="559" class="Stalagmite2" gid="1624" x="-800" y="896" width="32" height="64"/>
   <object id="560" template="Stalagmite1.tx" class="Stalagmite1" x="-672" y="832"/>
   <object id="561" template="Vase1.tx" class="Vase1" x="-704" y="768"/>
   <object id="562" template="Vase2.tx" class="Vase2" x="-832" y="832"/>
   <object id="564" template="Vase3.tx" x="-768" y="992"/>
   <object id="565" template="Vase2.tx" x="-736" y="1056"/>
-  <object id="633" template="Vase3.tx" x="-704" y="1152"/>
+  <object id="633" template="Vase3.tx" class="Vase3" x="-704" y="1152"/>
   <object id="637" template="TorchDurableStick.tx" class="TorchDurableStick" x="-832" y="1280"/>
   <object id="639" template="TorchDurableStick.tx" x="-768" y="1376"/>
   <object id="640" template="TorchDurableFire.tx" class="TorchDurableFire" x="-832" y="1248"/>
@@ -6532,7 +6532,7 @@
   <object id="645" template="WoodenBarrelMeat.tx" class="WoodenBarrelMeat" x="-832" y="1504"/>
   <object id="646" template="WoodenBarrelClosed.tx" x="-800" y="1504"/>
   <object id="648" template="Stalagmite1.tx" gid="2147485271" x="-736" y="1504" rotation="0"/>
-  <object id="649" template="Stalagmite2.tx" x="-640" y="1472"/>
+  <object id="649" template="Stalagmite2.tx" class="Stalagmite2" x="-640" y="1472"/>
   <object id="650" template="Stone2.tx" x="-608" y="1504"/>
   <object id="652" template="WoodenBarrelClosed.tx" x="-608" y="1408"/>
   <object id="653" template="WoodenBarrel.tx" x="-512" y="1344"/>
@@ -6646,7 +6646,7 @@
   <object id="968" template="TorchDurableFire.tx" x="-128" y="2240"/>
   <object id="970" template="WoodenFlag.tx" x="64" y="2048"/>
   <object id="971" template="Stone2.tx" x="32" y="2336"/>
-  <object id="972" template="Stone3.tx" x="32" y="2368"/>
+  <object id="972" template="Stone3.tx" class="Stone3" x="32" y="2368"/>
   <object id="973" template="Stone1.tx" x="0" y="2368"/>
   <object id="974" template="Bones1.tx" x="-96" y="2336"/>
   <object id="975" template="Bones4.tx" x="-64.5" y="2340.5"/>
@@ -7273,7 +7273,7 @@
   <object id="2151" gid="2147485002" x="-1984" y="-288" width="32" height="32"/>
   <object id="2152" gid="1356" x="-2016" y="-224" width="32" height="32"/>
  </objectgroup>
- <objectgroup id="102" name="SwingingBallChainsParts">
+ <objectgroup id="102" name="SwingingBallChainsParts" visible="0">
   <object id="1814" template="SwingingBallChains0.tx" x="-1824" y="160"/>
   <object id="1815" template="SwingingBallChains1.tx" x="-1824" y="128"/>
   <object id="1816" template="SwingingBallChains1.tx" x="-1824" y="96"/>
@@ -7320,11 +7320,11 @@
   <object id="1895" template="SwingingBallChains1.tx" x="-832" y="-704"/>
   <object id="1896" template="SwingingBallChains1.tx" x="-832" y="-736"/>
  </objectgroup>
- <objectgroup id="101" name="SwingingBallChainsPart2">
+ <objectgroup id="101" name="SwingingBallChainsPart2" visible="0">
   <object id="1795" template="SwingingBallChainsPart2.tx" x="-1712" y="336"/>
   <object id="1797" template="SwingingBallChainsPart2.tx" x="-1712" y="304"/>
  </objectgroup>
- <objectgroup id="100" name="SwingingBallChainsPart1">
+ <objectgroup id="100" name="SwingingBallChainsPart1" visible="0">
   <object id="1792" template="SwingingBallChainsPart1.tx" x="-1712" y="288"/>
   <object id="1793" template="SwingingBallChainsPart1.tx" x="-1712" y="320"/>
   <object id="1794" template="SwingingBallChainsPart1.tx" x="-1712" y="352"/>
