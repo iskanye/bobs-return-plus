@@ -140,14 +140,4 @@
    <frame tileid="31" duration="150"/>
   </animation>
  </tile>
- <tile id="32">
-  <objectgroup draworder="index" id="2">
-   <object id="1" x="8" y="11.1818" width="17.7273" height="16.8182"/>
-  </objectgroup>
- </tile>
- <tile id="33">
-  <objectgroup draworder="index" id="2">
-   <object id="1" x="5" y="6.54545" width="24" height="19.4545"/>
-  </objectgroup>
- </tile>
 </tileset>

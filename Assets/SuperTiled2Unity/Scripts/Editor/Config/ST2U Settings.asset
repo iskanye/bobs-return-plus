@@ -73,6 +73,9 @@ MonoBehaviour:
   - m_TypeName: ChainsTop
     m_Prefab: {fileID: 7777531054665625679, guid: 3731543d4c1426c4680ad2cf152b6ec2,
       type: 3}
+  - m_TypeName: DeadButterfly
+    m_Prefab: {fileID: 6776503316386423761, guid: b1814cc5cf5a5c44981f531ade2a9431,
+      type: 3}
   - m_TypeName: Grass1
     m_Prefab: {fileID: 8383106934975672111, guid: 384294989a88ea347b49b6783d51b09c,
       type: 3}
@@ -88,26 +91,38 @@ MonoBehaviour:
   - m_TypeName: LongWeapon
     m_Prefab: {fileID: 4192583138486121502, guid: 53055e42f007dc04b9c3057b92876e71,
       type: 3}
-  - m_TypeName: ShacklesOpen
-    m_Prefab: {fileID: 5063047909675392124, guid: a6e8f3f17254f8743afe382e22d14680,
-      type: 3}
-  - m_TypeName: WoodenBarrel
-    m_Prefab: {fileID: 7139096414570187790, guid: 3c52dd70fbd974f43948e7b5de36dbbd,
-      type: 3}
-  - m_TypeName: WoodenBarrelClosed
-    m_Prefab: {fileID: 9043275367725305105, guid: 9698c87fc7665c5478ea9f12d1b5daf8,
-      type: 3}
-  - m_TypeName: WoodenStool
-    m_Prefab: {fileID: 3252480357661181399, guid: 8df8e31ed64a47f4c80c87fcdde998b2,
-      type: 3}
-  - m_TypeName: WoodenTable1
-    m_Prefab: {fileID: 3766970377513843017, guid: 94778f5839ceeb44a8cea7a5fc5b96ea,
-      type: 3}
   - m_TypeName: MapDungeonsJail
     m_Prefab: {fileID: 8896103420401632298, guid: c6893be5b584b6041b0d33f8c0936105,
       type: 3}
   - m_TypeName: Moss
     m_Prefab: {fileID: 2060246739300950123, guid: f4db74f03da9e5e4eae3fa9d2cf919e3,
+      type: 3}
+  - m_TypeName: PapyrusNote
+    m_Prefab: {fileID: 562226478040099286, guid: 7ab44922a74da5e469593f53d9d9a027,
+      type: 3}
+  - m_TypeName: ShacklesOpen
+    m_Prefab: {fileID: 5063047909675392124, guid: a6e8f3f17254f8743afe382e22d14680,
+      type: 3}
+  - m_TypeName: Stalagmite1
+    m_Prefab: {fileID: 8522352504598071075, guid: 914c45d8cfde68a43b5781f1c9a61914,
+      type: 3}
+  - m_TypeName: Stalagmite2
+    m_Prefab: {fileID: 3764881498679388554, guid: a00455104dbb34043a37840a36920ae9,
+      type: 3}
+  - m_TypeName: Stone1
+    m_Prefab: {fileID: 7183264517023276131, guid: 27d3f3aefc3952e4c9e9ee17dde05ffb,
+      type: 3}
+  - m_TypeName: Stone2
+    m_Prefab: {fileID: 1400970487845947402, guid: dde50cf1db18a794b8a379e7e1d269d1,
+      type: 3}
+  - m_TypeName: Stone3
+    m_Prefab: {fileID: 1455019094394122291, guid: 228c70dce9d30d44186323b9e919ffeb,
+      type: 3}
+  - m_TypeName: TorchDurableFire
+    m_Prefab: {fileID: 5535435404405552018, guid: 32204a6ca601d8348af44f6aa6b47c2b,
+      type: 3}
+  - m_TypeName: TorchDurableStick
+    m_Prefab: {fileID: 7260045406989680967, guid: 1a182e67227392242b0a40afa4342b01,
       type: 3}
   - m_TypeName: Vase1
     m_Prefab: {fileID: 1434721698671544534, guid: 0fea768e72fb3fd4d8c3c8f841b2a2c4,
@@ -118,6 +133,24 @@ MonoBehaviour:
   - m_TypeName: Vase3
     m_Prefab: {fileID: 11353150674595358, guid: e194fab8d27a3ee45854ff3df7f6f932,
       type: 3}
-  - m_TypeName: Stone2
-    m_Prefab: {fileID: 1400970487845947402, guid: dde50cf1db18a794b8a379e7e1d269d1,
+  - m_TypeName: WoodenBarrel
+    m_Prefab: {fileID: 7139096414570187790, guid: 3c52dd70fbd974f43948e7b5de36dbbd,
+      type: 3}
+  - m_TypeName: WoodenBarrelClosed
+    m_Prefab: {fileID: 9043275367725305105, guid: 9698c87fc7665c5478ea9f12d1b5daf8,
+      type: 3}
+  - m_TypeName: WoodenBarrelGold
+    m_Prefab: {fileID: 3392225814322023813, guid: 0a83e7b4bd26f214996b1ee208a0156e,
+      type: 3}
+  - m_TypeName: WoodenBarrelMeat
+    m_Prefab: {fileID: 3417411340731257116, guid: 7249505e0d3a93245a16499349bf5a32,
+      type: 3}
+  - m_TypeName: WoodenStool
+    m_Prefab: {fileID: 3252480357661181399, guid: 8df8e31ed64a47f4c80c87fcdde998b2,
+      type: 3}
+  - m_TypeName: WoodenTable1
+    m_Prefab: {fileID: 3766970377513843017, guid: 94778f5839ceeb44a8cea7a5fc5b96ea,
+      type: 3}
+  - m_TypeName: WoodenTabletStandLeft
+    m_Prefab: {fileID: 3417411340731257116, guid: 7249505e0d3a93245a16499349bf5a32,
       type: 3}

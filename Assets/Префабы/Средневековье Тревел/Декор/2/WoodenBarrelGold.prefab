@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8383106934975672111
+--- !u!1 &3392225814322023813
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6747912190653485359}
-  - component: {fileID: 7621171847411016362}
-  - component: {fileID: 7343818850743038768}
-  - component: {fileID: 1502611312986689753}
-  - component: {fileID: 5019255703231580113}
+  - component: {fileID: 2321412591885010036}
+  - component: {fileID: 362067645312355207}
+  - component: {fileID: 4593329032174970769}
+  - component: {fileID: 5950293525301122578}
+  - component: {fileID: 5950293525301122577}
+  - component: {fileID: 893288445036178030}
   m_Layer: 0
-  m_Name: Grass1
+  m_Name: WoodenBarrelGold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6747912190653485359
+--- !u!4 &2321412591885010036
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8383106934975672111}
+  m_GameObject: {fileID: 3392225814322023813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7621171847411016362
+--- !u!212 &362067645312355207
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8383106934975672111}
+  m_GameObject: {fileID: 3392225814322023813}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,34 +77,50 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1304896177, guid: d15ab146e60b4a3db96c42ac4247075d, type: 3}
+  m_Sprite: {fileID: -1000518973, guid: 540c28baf3e5b55fcacf904dc37f2182, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!114 &7343818850743038768
+  m_SpriteSortPoint: 1
+--- !u!58 &4593329032174970769
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3392225814322023813}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.5}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &5950293525301122578
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8383106934975672111}
+  m_GameObject: {fileID: 3392225814322023813}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbd79b6fda7bc11069088146432d3ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+  type: 2
   onPenetrate:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5019255703231580113}
+      - m_Target: {fileID: 893288445036178030}
         m_TargetAssemblyTypeName: SpreadRigidbodies, Assembly-CSharp
         m_MethodName: Spread
         m_Mode: 1
@@ -115,7 +132,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1502611312986689753}
+      - m_Target: {fileID: 5950293525301122577}
         m_TargetAssemblyTypeName: Destroy, Assembly-CSharp
         m_MethodName: Do
         m_Mode: 0
@@ -127,36 +144,40 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1502611312986689753
+--- !u!114 &5950293525301122577
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8383106934975672111}
+  m_GameObject: {fileID: 3392225814322023813}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13f5de1025c26fad98bdfedd3de193a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDestroy: {fileID: 0}
---- !u!114 &5019255703231580113
+--- !u!114 &893288445036178030
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8383106934975672111}
+  m_GameObject: {fileID: 3392225814322023813}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5fd6443f125b7649a10aed8b839f9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 0, z: 0}
-  force: 0.2
-  spreadRadius: 0.2
+  offset: {x: 0, y: 0.5, z: 0}
+  force: 3
+  spreadRadius: 0
   rigidbodies:
-  - {fileID: 5153429563336592657, guid: b44bb58f12d5dce47bac8f8a8fc40cc1, type: 3}
-  - {fileID: 7723014726580571050, guid: 6ef9fb9ac6074624d9a789013b76b007, type: 3}
-  - {fileID: 4697478028274761425, guid: 8c424b222394ba8469846d6b60570b16, type: 3}
-  - {fileID: 8563347398693120432, guid: 86eb81ba9f93dcc468e137ca6052a4d8, type: 3}
+  - {fileID: 1081485952797413362, guid: aa33b3ca14bc04445b3480856f2ab3e8, type: 3}
+  - {fileID: 4585545850013346039, guid: 1fffca52216968842a96f7d1d81e2369, type: 3}
+  - {fileID: 4709746300904849131, guid: fd2110e7f221e304aa508868f1be41a0, type: 3}
+  - {fileID: 6133804647303199696, guid: 9f484aa20aeae0840a66d3081a814fdb, type: 3}
+  - {fileID: 1081485952797413362, guid: aa33b3ca14bc04445b3480856f2ab3e8, type: 3}
+  - {fileID: 4585545850013346039, guid: 1fffca52216968842a96f7d1d81e2369, type: 3}
+  - {fileID: 4709746300904849131, guid: fd2110e7f221e304aa508868f1be41a0, type: 3}
+  - {fileID: 6133804647303199696, guid: 9f484aa20aeae0840a66d3081a814fdb, type: 3}

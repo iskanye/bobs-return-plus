@@ -6917,11 +6917,11 @@
   <object id="1659" template="Stone1.tx" x="-2944" y="800"/>
   <object id="1660" template="Stone2.tx" x="-2816" y="864"/>
   <object id="1661" template="Stone1.tx" x="-2848" y="864"/>
-  <object id="1662" template="Stone1.tx" x="-2912" y="864"/>
+  <object id="1662" template="Stone1.tx" class="Stone1" x="-2912" y="864"/>
   <object id="1663" template="Stone1.tx" gid="2147485268" x="-2976" y="864" rotation="0"/>
   <object id="1664" template="Stone3.tx" gid="2147485270" x="-2976" y="896" rotation="0"/>
   <object id="1665" template="Stone2.tx" x="-2944" y="928"/>
-  <object id="1667" template="Stone3.tx" x="-2912" y="928"/>
+  <object id="1667" template="Stone3.tx" class="Stone3" x="-2912" y="928"/>
   <object id="1668" template="Stone1.tx" gid="2147485268" x="-2848" y="928" rotation="0"/>
   <object id="1669" template="Stone3.tx" x="-2816" y="928"/>
   <object id="1686" template="WoodenBarrel.tx" x="-2880" y="864"/>

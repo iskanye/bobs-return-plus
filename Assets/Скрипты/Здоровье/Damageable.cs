@@ -33,7 +33,7 @@ public class Damageable : MonoBehaviour
 
             else
             {
-                onDamage?.Invoke(lives.Lives - damage);
+                onDamage?.Invoke(damage);
                 lives.Lives -= damage;
             }
         }
