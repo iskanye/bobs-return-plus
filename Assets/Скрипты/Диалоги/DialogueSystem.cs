@@ -145,7 +145,7 @@ public class Dialogue
 {
     public string character;
     public DialogueCharacter dialogueCharacter;
-    public DialogueCharacter.Emotion emotion;
+    public int emotionId;
     public Color color = Color.white;
     public float delay = .015f;
     [TextArea] public string text;
@@ -167,21 +167,19 @@ public class Dialogue
         public UnityEvent action;
     }
 
-    public Dialogue(string character, DialogueCharacter dialogueCharacter, string text, UnityEvent<GameObject> action, 
-        bool clearPreviousText, bool showStraightaway, bool dontWait, float startDelay, bool cantSkip, DialogueCharacter.Emotion emotion,
-        float delay, Color color)
+    public Dialogue(UninteractiveDialogue.Dialog d, UnityEvent<GameObject> action)
     {
-        this.character = character;
-        this.dialogueCharacter = dialogueCharacter;
-        this.emotion = emotion;
-        this.text = text;
+        this.character = d.character;
+        this.dialogueCharacter = d.dialogueCharacter;
+        this.emotionId = d.emotionId;
+        this.text = d.text;
         this.action = action;
-        this.clearPreviousText = clearPreviousText;
-        this.showStraightaway = showStraightaway;
-        this.dontWait = dontWait;
-        this.startDelay = startDelay;
-        this.cantSkip = cantSkip;
-        this.delay = delay;
-        this.color = color;
+        this.clearPreviousText = d.clearPreviousText;
+        this.showStraightaway = d.showStraightaway;
+        this.dontWait = d.dontWait;
+        this.startDelay = d.startDelay;
+        this.cantSkip = d.cantSkip;
+        this.delay = d.delay;
+        this.color = d.color;
     }
 }

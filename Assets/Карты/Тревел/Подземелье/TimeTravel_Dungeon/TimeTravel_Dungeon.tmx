@@ -6420,7 +6420,7 @@
   <object id="1494" template="Stone1.tx" x="-2592" y="2048"/>
   <object id="1496" template="CrossbowStandLeft.tx" x="-2944" y="1856"/>
   <object id="1499" template="HaySheaf.tx" x="-2912" y="1760"/>
-  <object id="1500" template="HaySheaf.tx" x="-2784" y="1728"/>
+  <object id="1500" template="HaySheaf.tx" class="HaySheaf" x="-2784" y="1728"/>
   <object id="1501" template="WoodenBarrelHay.tx" x="-2912" y="1792"/>
   <object id="1502" template="WoodenBarrelHay.tx" x="-2912" y="1824"/>
   <object id="1503" template="WoodenTabletStand.tx" x="-2848" y="1792"/>
@@ -6483,7 +6483,7 @@
   <object id="528" template="WoodenBarrelClosed.tx" x="-672" y="160"/>
   <object id="529" template="WoodenStool.tx" class="WoodenStool" x="-678.667" y="190.333"/>
   <object id="530" template="WoodenTable1.tx" class="WoodenTable1" x="-800" y="224"/>
-  <object id="532" class="WoodenStool" gid="2147485283" x="-768" y="224" width="32" height="32"/>
+  <object id="532" class="WoodenStool" gid="2147485283" x="-768" y="232" width="32" height="32"/>
   <object id="31" template="DeadButterfly.tx" class="DeadButterfly" x="-128" y="0"/>
   <object id="56" template="Moss.tx" class="Moss" x="-288" y="-32"/>
   <object id="57" template="PapyrusNote.tx" class="PapyrusNote" x="-288" y="480"/>
@@ -6502,7 +6502,7 @@
   <object id="447" template="Grass2.tx" class="Grass2" gid="2147485204" x="-314" y="286" rotation="0"/>
   <object id="448" template="Grass2.tx" class="Grass2" x="-351" y="381.333"/>
   <object id="449" template="Moss.tx" gid="2147485217" x="-384" y="480" rotation="0"/>
-  <object id="495" template="Bones1.tx" x="-544" y="448"/>
+  <object id="495" template="Bones1.tx" class="Bones1" x="-544" y="448"/>
   <object id="497" template="Skull.tx" x="-512" y="448"/>
   <object id="498" template="Bones2.tx" gid="2147485184" x="-544" y="480" rotation="0"/>
   <object id="499" template="Bones5.tx" x="-569" y="488.333"/>
@@ -6556,7 +6556,7 @@
   <object id="711" template="Vase3.tx" x="-128" y="1600"/>
   <object id="718" template="WoodenTabletStandLeft.tx" gid="1693" x="-800" y="1184" rotation="0"/>
   <object id="720" template="WoodenTabletStandLeft.tx" gid="2147485341" x="-768" y="1184" rotation="0"/>
-  <object id="721" template="WoodenTabletStandDown.tx" x="-224" y="1536"/>
+  <object id="721" template="WoodenTabletStandDown.tx" class="WoodenTabletStandDown" x="-224" y="1536"/>
   <object id="722" template="WoodenTabletStand.tx" x="-128" y="1472"/>
   <object id="729" template="WoodenTablet.tx" x="32" y="1504"/>
   <object id="731" template="WoodenBarrelSpikes.tx" class="WoodenBarrelSpikes" x="96" y="1536"/>
@@ -6598,7 +6598,7 @@
   <object id="851" template="Bones3.tx" x="133" y="1542.33"/>
   <object id="852" template="Bones4.tx" x="224.333" y="1733.33"/>
   <object id="853" template="Bones1.tx" x="256" y="1760"/>
-  <object id="854" template="WoodenTabletStand.tx" x="320" y="1696"/>
+  <object id="854" template="WoodenTabletStand.tx" class="WoodenTabletStand" x="320" y="1696"/>
   <object id="855" template="WoodenTable2.tx" class="WoodenTable2" x="320" y="1792"/>
   <object id="861" class="WoodenStool" gid="1635" x="313" y="1758" width="32" height="32"/>
   <object id="862" class="WoodenStool" gid="1635" x="312" y="1726" width="32" height="32"/>
@@ -6665,7 +6665,7 @@
   <object id="1183" template="PuppetOnPole1.tx" x="-864" y="2304"/>
   <object id="1185" template="PuppetOnPole2.tx" gid="2147485222" x="-960" y="2080" rotation="0"/>
   <object id="1186" template="PuppetOnPole2.tx" x="-640" y="2144"/>
-  <object id="1187" template="PuppetOnPole1.tx" x="-736" y="1888"/>
+  <object id="1187" template="PuppetOnPole1.tx" class="PuppetOnPole1" x="-736" y="1888"/>
   <object id="1188" template="PuppetOnPole2.tx" x="-896" y="1856"/>
   <object id="1189" template="PuppetOnPole3.tx" x="-1088" y="1824"/>
   <object id="1190" template="PuppetOnPole2.tx" x="-1312" y="1856"/>
@@ -6728,12 +6728,12 @@
   <object id="1274" template="SpikyLog.tx" x="-1376" y="2176"/>
   <object id="1275" template="SpikyLog.tx" x="-1248" y="2304"/>
   <object id="1276" template="SpikyLog.tx" x="-1120" y="2176"/>
-  <object id="1277" template="WoodenTabletStandUp.tx" x="-864" y="2176"/>
-  <object id="1278" template="WoodenTabletStandUp.tx" x="-704" y="2176"/>
-  <object id="1279" template="WoodenTabletStandUp.tx" x="-704" y="2112"/>
-  <object id="1280" template="WoodenTabletStandUp.tx" x="-864" y="2112"/>
-  <object id="1281" template="WoodenTabletStandUp.tx" x="-864" y="2048"/>
-  <object id="1282" template="WoodenTabletStandUp.tx" x="-704" y="2048"/>
+  <object id="1277" template="WoodenTabletStandUp.tx" class="WoodenTabletStandUp" x="-864" y="2176"/>
+  <object id="1278" template="WoodenTabletStandUp.tx" class="WoodenTabletStandUp" x="-704" y="2176"/>
+  <object id="1279" template="WoodenTabletStandUp.tx" class="WoodenTabletStandUp" x="-704" y="2112"/>
+  <object id="1280" template="WoodenTabletStandUp.tx" class="WoodenTabletStandUp" x="-864" y="2112"/>
+  <object id="1281" template="WoodenTabletStandUp.tx" class="WoodenTabletStandUp" x="-864" y="2048"/>
+  <object id="1282" template="WoodenTabletStandUp.tx" class="WoodenTabletStandUp" x="-704" y="2048"/>
   <object id="1283" template="WoodenTabletStand.tx" x="-768" y="1920"/>
   <object id="1286" template="VaseRed1.tx" class="VaseRed1" x="-800" y="1888"/>
   <object id="1287" template="VaseRed2.tx" class="ViseRed2" x="-832" y="1920"/>
@@ -6768,7 +6768,7 @@
   <object id="1329" template="WoodenBarrel.tx" x="-1728" y="1888"/>
   <object id="1330" template="WoodenBarrelClosed.tx" x="-1696" y="1856"/>
   <object id="1331" template="Lute.tx" class="Lute" x="-1632" y="1856"/>
-  <object id="1334" template="DurableFlag.tx" x="-1574" y="1856"/>
+  <object id="1334" template="DurableFlag.tx" class="DurableFlag" x="-1574" y="1856"/>
   <object id="1335" template="LoungerWooden.tx" class="LoungerWooden" x="-1600" y="1920"/>
   <object id="1337" template="LoungerWooden.tx" gid="2147485323" x="-1696" y="1920" rotation="0"/>
   <object id="1340" template="PuppetMedievalLying.tx" x="-1600" y="1920"/>
@@ -6870,7 +6870,7 @@
   <object id="1545" template="Candle2Fire.tx" x="-3072" y="1632"/>
   <object id="1546" template="WoodenBarrelClosed.tx" x="-3136" y="1600"/>
   <object id="1547" template="WoodenBarrelClosed.tx" x="-3200" y="1632"/>
-  <object id="1548" template="HaySheaf.tx" x="-3104" y="1600"/>
+  <object id="1548" template="HaySheaf.tx" class="HaySheaf" x="-3104" y="1600"/>
   <object id="1549" template="WoodenBarrel.tx" x="-3104" y="1632"/>
   <object id="1550" template="WallWheel.tx" class="WallWheel" x="-1664" y="1792"/>
   <object id="1555" template="AutobowStandLeft.tx" x="-3232" y="1280"/>
@@ -6945,8 +6945,8 @@
   <object id="1726" template="WoodenBarrelArrows.tx" x="-2048" y="640"/>
   <object id="1727" template="WoodTarget1.tx" gid="2147485331" x="-2016" y="640" rotation="0"/>
   <object id="1728" template="WoodenBarrelClosed.tx" x="-1952" y="640"/>
-  <object id="1730" template="Hay.tx" x="-1888" y="640"/>
-  <object id="1732" template="WoodenBarrelHay.tx" x="-1856" y="640"/>
+  <object id="1730" template="Hay.tx" class="Hay" x="-1888" y="640"/>
+  <object id="1732" template="WoodenBarrelHay.tx" class="WoodenBarrelHay" x="-1856" y="640"/>
   <object id="1733" template="WoodenBarrelHay.tx" gid="2147485170" x="-1888" y="704" rotation="0"/>
   <object id="1734" template="WoodenBarrelSpikes.tx" gid="2147485169" x="-1824" y="640" rotation="0"/>
   <object id="1735" template="WoodenBarrel.tx" x="-1664" y="640"/>
@@ -7142,7 +7142,7 @@
   <object id="2326" template="MovingRock.tx" x="-1504" y="-896"/>
   <object id="2327" template="MovingRock.tx" x="-1440" y="-896"/>
   <object id="2328" template="MovingRock.tx" x="-1408" y="-896"/>
-  <object id="2329" template="MovingRock.tx" x="-1376" y="-896"/>
+  <object id="2329" template="MovingRock.tx" class="MovingRock" x="-1376" y="-896"/>
   <object id="2330" template="MovingRock.tx" x="-1568" y="-576"/>
   <object id="2331" template="MovingRock.tx" x="-1536" y="-576"/>
   <object id="2332" template="MovingRock.tx" x="-1504" y="-576"/>
@@ -7331,12 +7331,6 @@
  </objectgroup>
  <objectgroup id="79" name="OnTable">
   <object id="531" template="CardsOnTable.tx" class="CardsOnTable" x="-800" y="192" visible="0"/>
-  <object id="863" template="NoteArchitects.tx" class="NoteArchitects" x="320" y="1728"/>
-  <object id="864" class="ChestArchitects" gid="1505" x="320" y="1760" width="64" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
   <object id="1902" template="BoardGameMedieval.tx" class="BoardGameMedieval" x="-1568" y="384"/>
   <object id="1944" template="TorchDurableStick.tx" x="736" y="-736"/>
   <object id="1945" template="TorchDurableStick.tx" x="864" y="-736"/>

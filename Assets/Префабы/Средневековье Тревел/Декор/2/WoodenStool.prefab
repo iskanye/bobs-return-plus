@@ -149,8 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd79b6fda7bc11069088146432d3ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
-  onPenetrate:
+  action:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3252480357661181384}
@@ -177,3 +176,4 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  type: 2

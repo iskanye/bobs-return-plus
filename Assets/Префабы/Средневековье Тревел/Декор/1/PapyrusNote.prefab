@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5546271055576000755}
   - component: {fileID: 666985015503492958}
   - component: {fileID: 7232925064860780419}
-  - component: {fileID: 6887548368805999348}
   m_Layer: 0
   m_Name: PapyrusNote
   m_TagString: Untagged
@@ -86,7 +85,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!58 &666985015503492958
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -117,33 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   action:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6887548368805999348}
-        m_TargetAssemblyTypeName: UninteractiveDialogueActivator, Assembly-CSharp
-        m_MethodName: Dialogue
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   playerMask:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &6887548368805999348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 562226478040099286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c152e1fdb2e885002ae3a9595bcc9666, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogues: {fileID: 0}
-  events: []

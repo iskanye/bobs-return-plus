@@ -12,7 +12,7 @@ public class ChangeDialogue : MonoBehaviour
     
     void Awake() 
     {
-        if (uninteractiveEvents.Length <= 0) uninteractiveEvents = new UnityEvent<GameObject>[uninteractiveDialogue.dialogues.Length];
+        if (uninteractiveEvents.Length == 0) uninteractiveEvents = new UnityEvent<GameObject>[uninteractiveDialogue.dialogues.Length];
     }
 
     public void Change()
@@ -30,9 +30,7 @@ public class ChangeDialogue : MonoBehaviour
             var cache = uninteractiveDialogue.dialogues;
 
             for (int i = 0; i < cache.Length; i++) 
-                dial.Add(new Dialogue(cache[i].character, cache[i].dialogueCharacter, cache[i].text, uninteractiveEvents[i],
-                    cache[i].clearPreviousText, cache[i].showStraightaway, cache[i].dontWait, cache[i].startDelay, cache[i].cantSkip, cache[i].emotion,
-                    cache[i].delay, cache[i].color));
+                dial.Add(new Dialogue(cache[i], uninteractiveEvents[i]));
 
             interactiveActivator.dialogues = dial.ToArray();
             return;

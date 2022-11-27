@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6076456589699091823}
   - component: {fileID: 2694221577973509766}
   - component: {fileID: -1128153045330670276}
+  - component: {fileID: 6106244399573275027}
   m_Layer: 0
   m_Name: Grass2
   m_TagString: Untagged
@@ -86,7 +87,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &6076456589699091823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,8 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd79b6fda7bc11069088146432d3ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
-  onPenetrate:
+  action:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: -1128153045330670276}
@@ -127,6 +127,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  type: 1
 --- !u!114 &2694221577973509766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,3 +161,19 @@ MonoBehaviour:
   - {fileID: 7723014726580571050, guid: 6ef9fb9ac6074624d9a789013b76b007, type: 3}
   - {fileID: 4697478028274761425, guid: 8c424b222394ba8469846d6b60570b16, type: 3}
   - {fileID: 8563347398693120432, guid: 86eb81ba9f93dcc468e137ca6052a4d8, type: 3}
+--- !u!58 &6106244399573275027
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5039336738637812080}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5

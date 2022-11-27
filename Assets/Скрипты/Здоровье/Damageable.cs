@@ -21,7 +21,7 @@ public class Damageable : MonoBehaviour
     {
         var lives = g.GetComponent<LivesBase>();
 
-        if (lives)
+        if (lives && lives.Durability <= penetrating)
         {
             lives.hitDirection = direction * (int)discarding;
 

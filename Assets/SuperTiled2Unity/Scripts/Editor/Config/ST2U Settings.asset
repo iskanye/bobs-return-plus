@@ -118,6 +118,9 @@ MonoBehaviour:
   - m_TypeName: Stone3
     m_Prefab: {fileID: 1455019094394122291, guid: 228c70dce9d30d44186323b9e919ffeb,
       type: 3}
+  - m_TypeName: StoneThorns
+    m_Prefab: {fileID: 3057473326488814132, guid: 064dafac8d5cfc249b32d348bf589fc7,
+      type: 3}
   - m_TypeName: TorchDurableFire
     m_Prefab: {fileID: 5535435404405552018, guid: 32204a6ca601d8348af44f6aa6b47c2b,
       type: 3}
@@ -151,6 +154,75 @@ MonoBehaviour:
   - m_TypeName: WoodenTable1
     m_Prefab: {fileID: 3766970377513843017, guid: 94778f5839ceeb44a8cea7a5fc5b96ea,
       type: 3}
+  - m_TypeName: WoodenTabletStandDown
+    m_Prefab: {fileID: 1021613186704700756, guid: 97caddc70491122419880b3337a21229,
+      type: 3}
   - m_TypeName: WoodenTabletStandLeft
     m_Prefab: {fileID: 3417411340731257116, guid: 7249505e0d3a93245a16499349bf5a32,
+      type: 3}
+  - m_TypeName: WoodenTabletStandUp
+    m_Prefab: {fileID: 3469546483609737599, guid: d952c73ec106cf44597ba293249314cb,
+      type: 3}
+  - m_TypeName: Bones1
+    m_Prefab: {fileID: 5474111836789337542, guid: 20d00a7047ee9c34a89ddd9f6edd4c68,
+      type: 3}
+  - m_TypeName: Bones2
+    m_Prefab: {fileID: 8994350087262480146, guid: 7a8442d9363c45441b6dfeaa2c03dea4,
+      type: 3}
+  - m_TypeName: Bones3
+    m_Prefab: {fileID: 2724180612348024144, guid: 233d68772faf9724d8264fa60b0cf02e,
+      type: 3}
+  - m_TypeName: Bones4
+    m_Prefab: {fileID: 1294521506139571664, guid: bad322e5d8a080a44beec5977291c63a,
+      type: 3}
+  - m_TypeName: Bones5
+    m_Prefab: {fileID: 3832112630668153593, guid: 452c187bb5095254ea052379185c4f92,
+      type: 3}
+  - m_TypeName: Bones6
+    m_Prefab: {fileID: 975439312637750433, guid: b67a0d7efe65ba84d861f4f17182be3b,
+      type: 3}
+  - m_TypeName: WoodPin1
+    m_Prefab: {fileID: 3418783739550856997, guid: bc188c5b8e773f84b94925a3e1ba7a91,
+      type: 3}
+  - m_TypeName: WoodPin2
+    m_Prefab: {fileID: 4457989653921201467, guid: 5602f20f4b2b2534c802bd9797104884,
+      type: 3}
+  - m_TypeName: WoodenTabletStand
+    m_Prefab: {fileID: 2733844814677119022, guid: dcd20f57ac0b053489c49a5f8bdecfd8,
+      type: 3}
+  - m_TypeName: WallHammer
+    m_Prefab: {fileID: 1074357026460842627, guid: 838940b77c017d243aa62e5766331570,
+      type: 3}
+  - m_TypeName: StatueArchitect1
+    m_Prefab: {fileID: 979739014314701806, guid: c274ba921e165bd47b8c3531f6036549,
+      type: 3}
+  - m_TypeName: StatueArchitect2
+    m_Prefab: {fileID: 1903059072022887631, guid: e736ad8ef1eccd24591b0060af621e4d,
+      type: 3}
+  - m_TypeName: Candle1Fire
+    m_Prefab: {fileID: 1810451294838223742, guid: c764cf9a79fd4634d966c0c727555be4,
+      type: 3}
+  - m_TypeName: Candle2Fire
+    m_Prefab: {fileID: 1328790489253317155, guid: 3169ac88454a00045bca399170916fad,
+      type: 3}
+  - m_TypeName: WoodenFlag
+    m_Prefab: {fileID: 3986982203269080525, guid: 9c49ada92b169ca42b9552ec05f6ed14,
+      type: 3}
+  - m_TypeName: DurableFlag
+    m_Prefab: {fileID: 8141982863927637767, guid: 9ece4baa19eec0f4298af847e8219d0d,
+      type: 3}
+  - m_TypeName: MovingRock
+    m_Prefab: {fileID: 3794544952202391571, guid: ab077361aa0e6cf4ba5f510edde6093e,
+      type: 3}
+  - m_TypeName: HaySheaf
+    m_Prefab: {fileID: 3696990051255637164, guid: 77e0027a813212a49bb20a517aea408c,
+      type: 3}
+  - m_TypeName: Hay
+    m_Prefab: {fileID: 5608338681973789334, guid: 8f1b64b7661afcb4d9cd9ae96f9ad4d6,
+      type: 3}
+  - m_TypeName: WoodenTable2
+    m_Prefab: {fileID: 8895914878252849284, guid: c65c05dcae39556498befc9be3669271,
+      type: 3}
+  - m_TypeName: PuppetOnPole1
+    m_Prefab: {fileID: 6580432021043371057, guid: f2f4cbb3d57a6db40b731930f1630495,
       type: 3}

@@ -79,13 +79,16 @@
             "scaleInDock": 1
         },
         "0_TimeTravel_DecorDurable.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "0_TimeTravel_DecorFragile.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "0_TimeTravel_DecorOther.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "0_TimeTravel_DecorWood.tsx": {
             "scaleInDock": 1
@@ -134,7 +137,8 @@
             "scaleInDock": 1
         },
         "0_TimeTravel_MovingRock.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "0_TimeTravel_Note.tsx": {
             "scaleInDock": 1
@@ -172,7 +176,8 @@
             "scaleInDock": 1
         },
         "0_TimeTravel_StoneThorns.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "0_TimeTravel_Stones.tsx": {
             "scaleInDock": 1
@@ -240,6 +245,9 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "C:/Users/iskan/OneDrive/Рабочий стол/bobs-return-plus/Assets/Карты/Тревел/Подземелье/BasicTiles/0_Dark.tsx": {
+            "scaleInDock": 1
+        },
         "D:/Игры моего авторства/Bob's Return/Levels/BasicTiles/0_Dark.tsx": {
             "scaleInDock": 1
         },
@@ -251,19 +259,46 @@
             "scaleInEditor": 1
         },
         "TimeTravel_Ditch1.tmx": {
-            "scale": 1.67734375,
+            "scale": 3,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 343.66666666666663,
+                "y": 175.33333333333334
+            }
+        },
+        "TimeTravel_Ditch2.tmx": {
+            "scale": 3,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 256.059618071728,
-                "y": 256.35770843036795
+                "x": 254.33333333333331,
+                "y": 196.66666666666663
+            }
+        },
+        "TimeTravel_Ditch3.tmx": {
+            "scale": 5.5,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 298,
+                "y": 222.54545454545456
+            }
+        },
+        "TimeTravel_Ditch4.tmx": {
+            "scale": 3,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 206.66666666666663,
+                "y": 223
             }
         },
         "TimeTravel_Dungeon.tmx": {
-            "scale": 2,
-            "selectedLayer": 9,
+            "expandedObjectLayers": [
+                92
+            ],
+            "scale": 1,
+            "selectedLayer": 16,
             "viewCenter": {
-                "x": 429.25,
-                "y": 1465
+                "x": -1841,
+                "y": 671
             }
         },
         "fireLight.tsx": {
@@ -284,26 +319,25 @@
     "last.objectTemplatePath": "D:/Игры моего авторства/Bob's Return/Levels/TimeTravel_Dungeon",
     "openFiles": [
         "TimeTravel_Dungeon.tmx",
-        "TimeMachine.tsx",
-        "0_TimeTravel_WoodenTable3.tsx",
-        "0_InvisibleWall.tsx",
-        "0_TimeTravel_ShakyFloor.tsx"
+        "0_TimeTravel_DecorFragile.tsx",
+        "0_TimeTravel_Flags.tsx",
+        "0_TimeTravel_MovingRock.tsx"
     ],
     "project": "BobsReturn.tiled-project",
     "property.type": "int",
     "recentFiles": [
-        "0_TimeTravel_ShakyFloor.tsx",
+        "0_TimeTravel_MovingRock.tsx",
+        "0_TimeTravel_Flags.tsx",
+        "0_TimeTravel_DecorFragile.tsx",
+        "TimeTravel_Dungeon.tmx",
         "0_InvisibleWall.tsx",
         "0_TimeTravel_WoodenTable3.tsx",
         "TimeMachine.tsx",
-        "TimeTravel_Dungeon.tmx",
+        "0_TimeTravel_ShakyFloor.tsx",
         "0_TimeTravel_Chains.tsx",
         "0_TimeTravel_SmallDecor.tsx",
         "1_TimeTravel_Spinis.tsx",
-        "0_TimeTravel_Barrels.tsx",
-        "0_TimeTravel_Flags.tsx",
-        "0_TimeTravel_Torch.tsx",
-        "0_TimeTravel_CardsOnTable.tsx"
+        "0_TimeTravel_Barrels.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

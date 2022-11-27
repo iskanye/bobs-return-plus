@@ -8,6 +8,9 @@ public class InventorySystem : MonoBehaviour
     public Image[] panels;
     public Sprite regular;
     public Sprite selected;
+    public UninteractiveDialogue pickUpDialogue;
+    public UninteractiveDialogue fullDialogue;
+    public UninteractiveDialogueActivator activator;
     public TMPro.TMP_Text label;
 
     [HideInInspector] public Item[] items;
@@ -60,8 +63,16 @@ public class InventorySystem : MonoBehaviour
         for (int i = 0; i < maxItems; i++)
             if (items[i] == null)
             {
+                var pickUp = pickUpDialogue;
+                pickUp.dialogues[0].text.Replace("{}", item.name.ToLower());
+                activator.dialogues = pickUp;
+                activator.Dialogue();
+
                 items[i] = item;
-                break;
+                return;
             }
+
+        activator.dialogues = fullDialogue;
+        activator.Dialogue();
     }
 }

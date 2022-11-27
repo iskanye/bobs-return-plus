@@ -58,7 +58,7 @@ namespace Dialogues
 
             if (mn.current.dialogueCharacter != null)
             {
-                var sprite = mn.current.dialogueCharacter.emotions[mn.current.emotion];
+                var sprite = mn.current.dialogueCharacter.emotions[mn.current.emotionId];
                 mn.novelSprite.sprite = sprite;
                 mn.novelSprite.rectTransform.sizeDelta = new Vector2(sprite.texture.width, mn.novelSprite.rectTransform.sizeDelta.y);
             }
