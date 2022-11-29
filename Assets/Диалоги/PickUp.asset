@@ -12,4 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 613d5eea99f9bff1c8f0fb7687a3251e, type: 3}
   m_Name: PickUp
   m_EditorClassIdentifier: 
-  dialogues: []
+  dialogues:
+  - character: 
+    dialogueCharacter: {fileID: 0}
+    emotionId: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+    delay: 0
+    text: "\u0412\u044B \u043F\u043E\u043B\u043E\u0436\u0438\u043B\u0438 {} \u0432
+      \u0441\u0432\u043E\u0439 \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044C!"
+    startDelay: 0
+    clearPreviousText: 1
+    showStraightaway: 0
+    dontWait: 0
+    cantSkip: 0
