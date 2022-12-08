@@ -5,12 +5,8 @@ public class BobController : MonoBehaviour
     public PlayerData data;
     public BaseBob character;
 
-    void Start()
-    {
-        character.data = data;
-        character.controller = this;
-        StartCoroutine(character.Start());
-    }
+    void Start() =>
+        OnEnable();
 
     void OnDisable()
     {
@@ -20,8 +16,10 @@ public class BobController : MonoBehaviour
     }
 
     void OnEnable()
-    {
+    {      
         data.movement.enabled = true;
+        character.data = data;
+        character.controller = this;
         StartCoroutine(character.Start());
     }
 }

@@ -708,8 +708,8 @@ TextureImporter:
       name: 0_TimeTravel_Wreckage_28
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
+        x: 256
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -729,8 +729,8 @@ TextureImporter:
       name: 0_TimeTravel_Wreckage_29
       rect:
         serializedVersion: 2
-        x: 32
-        y: 192
+        x: 288
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -750,7 +750,7 @@ TextureImporter:
       name: 0_TimeTravel_Wreckage_30
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 192
         width: 32
         height: 32
@@ -771,7 +771,7 @@ TextureImporter:
       name: 0_TimeTravel_Wreckage_31
       rect:
         serializedVersion: 2
-        x: 96
+        x: 32
         y: 192
         width: 32
         height: 32
@@ -792,7 +792,7 @@ TextureImporter:
       name: 0_TimeTravel_Wreckage_32
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 192
         width: 32
         height: 32
@@ -813,7 +813,7 @@ TextureImporter:
       name: 0_TimeTravel_Wreckage_33
       rect:
         serializedVersion: 2
-        x: 160
+        x: 96
         y: 192
         width: 32
         height: 32
@@ -826,6 +826,174 @@ TextureImporter:
       bones: []
       spriteID: 0e79fd9a4f459ce44946efc7dfc1514a
       internalID: -1202021587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_TimeTravel_Wreckage_34
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a0f7685bddb7d43844f345a9d503ae
+      internalID: -307293677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_TimeTravel_Wreckage_35
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c2b9abc711ec2442b7ddccf468c8def
+      internalID: -1930479391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_TimeTravel_Wreckage_36
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2b26ece17c11a4bb9287bfc58e8fc1
+      internalID: -158934813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_TimeTravel_Wreckage_37
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c706b87169ee0ab48882a857f62d05fb
+      internalID: -1044833091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_TimeTravel_Wreckage_38
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e55a3eb3d493da34b8aafa3f82d60433
+      internalID: 426856220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_TimeTravel_Wreckage_39
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d0e0b9634356e54282c7c7d2795d789
+      internalID: 1327609436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_TimeTravel_Wreckage_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b1d4d5f607b12c419cc67c25a92040c
+      internalID: -20911472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_TimeTravel_Wreckage_41
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9205d647d92c139409c74a87ca0b06cb
+      internalID: 1605076276
       vertices: []
       indices: 
       edges: []
@@ -849,12 +1017,17 @@ TextureImporter:
       0_TimeTravel_Wreckage_27: -243447817
       0_TimeTravel_Wreckage_30: 1618734520
       0_TimeTravel_Wreckage_31: 584510818
+      0_TimeTravel_Wreckage_38: 426856220
       0_TimeTravel_Wreckage_33: -1202021587
       0_TimeTravel_Wreckage_4: 1974399329
       0_TimeTravel_Wreckage_18: 1848500075
+      0_TimeTravel_Wreckage_40: -20911472
+      0_TimeTravel_Wreckage_39: 1327609436
       0_TimeTravel_Wreckage_22: -980811026
+      0_TimeTravel_Wreckage_36: -158934813
       0_TimeTravel_Wreckage_15: -75669778
       0_TimeTravel_Wreckage_13: -701733900
+      0_TimeTravel_Wreckage_41: 1605076276
       0_TimeTravel_Wreckage_29: -1574798301
       0_TimeTravel_Wreckage_25: -245088680
       0_TimeTravel_Wreckage_26: -1405429835
@@ -863,11 +1036,13 @@ TextureImporter:
       0_TimeTravel_Wreckage_16: -424829639
       0_TimeTravel_Wreckage_20: -1996362402
       0_TimeTravel_Wreckage_2: -1915746328
+      0_TimeTravel_Wreckage_35: -1930479391
       0_TimeTravel_Wreckage_1: -469698128
       0_TimeTravel_Wreckage_10: -1344048048
       0_TimeTravel_Wreckage_6: 1733154635
       0_TimeTravel_Wreckage_11: -1046993805
       0_TimeTravel_Wreckage_12: -1009778795
+      0_TimeTravel_Wreckage_37: -1044833091
       0_TimeTravel_Wreckage_0: 15978896
       0_TimeTravel_Wreckage_32: 1476515466
       0_TimeTravel_Wreckage_19: -313733927
@@ -875,6 +1050,7 @@ TextureImporter:
       0_TimeTravel_Wreckage_21: 1529801867
       0_TimeTravel_Wreckage_5: -1856041103
       0_TimeTravel_Wreckage_9: 1078379712
+      0_TimeTravel_Wreckage_34: -307293677
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

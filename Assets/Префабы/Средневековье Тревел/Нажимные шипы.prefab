@@ -111,9 +111,9 @@ MonoBehaviour:
   damage: 1
   isDeadly: 0
   addPersistentListener: 0
+  penetrating: 1
   discarding: 3
   direction: {x: 0, y: 0}
-  penetrating: 0
 --- !u!1 &8953534694902438779
 GameObject:
   m_ObjectHideFlags: 0

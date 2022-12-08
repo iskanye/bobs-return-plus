@@ -1,12 +1,8 @@
 using UnityEngine;
 
-public class GlobalPropertyHolder : UnityEngine.MonoBehaviour
+public class GlobalPropertyHolder : GUIDHolder
 {
-    public string id;
     public UnityEngine.Events.UnityEvent<bool> action;
-
-    void Reset() => 
-        id = System.Guid.NewGuid().ToString();
 
     public void SetProperty()
     {

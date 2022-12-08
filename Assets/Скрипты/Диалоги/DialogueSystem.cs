@@ -146,7 +146,6 @@ public class Dialogue
     public string character;
     public DialogueCharacter dialogueCharacter;
     public int emotionId;
-    public Color color = Color.white;
     public float delay = .015f;
     [TextArea] public string text;
     public UnityEvent<GameObject> action;
@@ -180,6 +179,5 @@ public class Dialogue
         this.startDelay = d.startDelay;
         this.cantSkip = d.cantSkip;
         this.delay = d.delay;
-        this.color = d.color;
     }
 }

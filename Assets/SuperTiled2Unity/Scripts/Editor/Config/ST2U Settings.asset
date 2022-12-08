@@ -146,7 +146,7 @@ MonoBehaviour:
     m_Prefab: {fileID: 3392225814322023813, guid: 0a83e7b4bd26f214996b1ee208a0156e,
       type: 3}
   - m_TypeName: WoodenBarrelMeat
-    m_Prefab: {fileID: 3417411340731257116, guid: 7249505e0d3a93245a16499349bf5a32,
+    m_Prefab: {fileID: 42764904334052849, guid: 75ea820689b31ab4c8b53ee03187563f,
       type: 3}
   - m_TypeName: WoodenStool
     m_Prefab: {fileID: 3252480357661181399, guid: 8df8e31ed64a47f4c80c87fcdde998b2,
@@ -225,4 +225,16 @@ MonoBehaviour:
       type: 3}
   - m_TypeName: PuppetOnPole1
     m_Prefab: {fileID: 6580432021043371057, guid: f2f4cbb3d57a6db40b731930f1630495,
+      type: 3}
+  - m_TypeName: WoodenBarrelSpikes
+    m_Prefab: {fileID: 5825981423294139908, guid: be2233715a33f59499ee9063ec445595,
+      type: 3}
+  - m_TypeName: WoodenTablet
+    m_Prefab: {fileID: 4594636765643314415, guid: 50f777ef7e6bb184186411939e112a40,
+      type: 3}
+  - m_TypeName: WoodenChest
+    m_Prefab: {fileID: 7050667005365243755, guid: db5b166c161900f49a34b13e7c09b5c1,
+      type: 3}
+  - m_TypeName: BasketWithSpikes
+    m_Prefab: {fileID: 8466366420969960178, guid: 92b60c947d1509a468e896cf1bad7ce3,
       type: 3}

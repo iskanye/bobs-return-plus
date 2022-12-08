@@ -181,7 +181,9 @@ MonoBehaviour:
   current:
     character: 
     dialogueCharacter: {fileID: 0}
-    emotion: 0
+    emotionId: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+    delay: 0
     text: 
     action:
       m_PersistentCalls:
@@ -292,8 +294,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

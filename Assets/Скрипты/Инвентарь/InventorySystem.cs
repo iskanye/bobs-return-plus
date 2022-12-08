@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class InventorySystem : MonoBehaviour
 {
+    public static InventorySystem Active { get; private set; }
+
     public int maxItems;
     public Image[] icons;
     public Image[] panels;
@@ -19,6 +21,8 @@ public class InventorySystem : MonoBehaviour
 
     void Awake()
     {
+        Active = this;
+
         Index = 0;
         var inventory = SceneData.Data.inventory;
         items = new Item[maxItems];
@@ -64,7 +68,7 @@ public class InventorySystem : MonoBehaviour
             if (items[i] == null)
             {
                 var pickUp = pickUpDialogue;
-                pickUp.dialogues[0].text.Replace("{}", item.name.ToLower());
+                pickUp.dialogues[0].text = pickUp.dialogues[0].text.Replace("{", item.name.ToLower());
                 activator.dialogues = pickUp;
                 activator.Dialogue();
 

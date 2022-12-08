@@ -9,17 +9,7 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
   missingFiles: []
-  errors:
-  - "Custom importer 'DamageTilesImporter' threw an exception. Message = 'Sequence
-    contains no matching element', Stack:\n  at System.Linq.Enumerable.First[TSource]
-    (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult]
-    predicate) [0x00011] in <109e781b32ec464d8737a667de805742>:0 \r\n  at DamageTilesImporter.TmxAssetImported
-    (SuperTiled2Unity.Editor.TmxAssetImportedArgs args) [0x00000] in C:\\Users\\iskan\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439
-    \u0441\u0442\u043E\u043B\\bobs-return-plus\\Assets\\\u0421\u043A\u0440\u0438\u043F\u0442\u044B\\Tiled2Unity
-    \u043D\u0430\u0434\u0441\u0442\u0440\u043E\u0439\u043A\u0438\\DamageTilesImporter.cs:11
-    \r\n  at SuperTiled2Unity.Editor.TmxAssetImporter.RunCustomImporterType (System.Type
-    type) [0x00048] in C:\\Users\\iskan\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439
-    \u0441\u0442\u043E\u043B\\bobs-return-plus\\Assets\\SuperTiled2Unity\\Scripts\\Editor\\Importers\\TmxAssetImporter.cs:493 "
+  errors: []
   warnings: []
   missingSortingLayers: []
   missingLayers: []

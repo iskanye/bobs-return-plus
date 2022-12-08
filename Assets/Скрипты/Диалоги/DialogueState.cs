@@ -81,7 +81,7 @@ namespace Dialogues
                 int startPosition = mn.text.text.Length - mn.current.text.Length;
                 mn.text.ForceMeshUpdate();
                 yield return TextUtilities.MakeTextTransparent(mn.text, startPosition);
-                yield return TextUtilities.AnimateVertexColors(mn.text, mn.current.color, startPosition, 0.015f, () =>
+                yield return TextUtilities.AnimateVertexColors(mn.text, Color.white, startPosition, 0.015f, () =>
                 {
                     mn.textSFX.pitch = Random.Range(.95f, 1.05f);
                     mn.textSFX.Play();
@@ -107,7 +107,6 @@ namespace Dialogues
         public override IEnumerator Stop()
         {
             mn.text.text = GetCurrentText();
-            mn.text.color = mn.current.color;
             mn.prevText = mn.text.text;
             yield return TextUtilities.ForceOriginalColor(mn.text);
             yield return base.Stop();

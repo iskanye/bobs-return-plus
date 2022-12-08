@@ -1,10 +1,5 @@
-public class PositionHolder : UnityEngine.MonoBehaviour
+public class PositionHolder : GUIDHolder
 {
-    public string id;
-    
-    void Reset() => 
-        id = System.Guid.NewGuid().ToString();
-
     void Start()
     {
         var data = SceneData.Data;

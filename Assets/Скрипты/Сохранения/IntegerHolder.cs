@@ -1,14 +1,8 @@
-﻿using UnityEngine;
-
-public class IntegerHolder : MonoBehaviour
+﻿public class IntegerHolder : GUIDHolder
 {
-    public string id;
-    public MonoBehaviour integer;
+    public UnityEngine.MonoBehaviour integer;
 
     public IInteger Integer => integer as IInteger;
-
-    void Reset() =>
-        id = System.Guid.NewGuid().ToString();
 
     void Start()
     {

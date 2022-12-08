@@ -16,7 +16,8 @@
             "scaleInDock": 1
         },
         "0_TimeTravel_ArchitectsSubjects.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "0_TimeTravel_ArrowStatue.tsx": {
             "scaleInDock": 1
@@ -31,13 +32,15 @@
             "scaleInDock": 1
         },
         "0_TimeTravel_BagOfBalls.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "0_TimeTravel_Ball.tsx": {
             "scaleInDock": 1
         },
         "0_TimeTravel_Banners.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "0_TimeTravel_BarrelDrum.tsx": {
             "scaleInDock": 1
@@ -208,7 +211,8 @@
             "scaleInDock": 1
         },
         "0_TimeTravel_WallDecor.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "0_TimeTravel_WoodenChainsaw.tsx": {
             "scaleInDock": 1
@@ -297,8 +301,8 @@
             "scale": 1,
             "selectedLayer": 16,
             "viewCenter": {
-                "x": -519,
-                "y": 181
+                "x": -701,
+                "y": 1976
             }
         },
         "fireLight.tsx": {
@@ -330,14 +334,14 @@
         "0_TimeTravel_Flags.tsx",
         "0_TimeTravel_DecorFragile.tsx",
         "TimeTravel_Dungeon.tmx",
+        "0_TimeTravel_ArchitectsSubjects.tsx",
+        "0_TimeTravel_WallDecor.tsx",
+        "0_TimeTravel_Banners.tsx",
+        "0_TimeTravel_BagOfBalls.tsx",
         "0_InvisibleWall.tsx",
         "0_TimeTravel_WoodenTable3.tsx",
         "TimeMachine.tsx",
-        "0_TimeTravel_ShakyFloor.tsx",
-        "0_TimeTravel_Chains.tsx",
-        "0_TimeTravel_SmallDecor.tsx",
-        "1_TimeTravel_Spinis.tsx",
-        "0_TimeTravel_Barrels.tsx"
+        "0_TimeTravel_ShakyFloor.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

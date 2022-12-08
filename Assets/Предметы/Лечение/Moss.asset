@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c99a89d3d418542a6059be20833518, type: 3}
   m_Name: Moss
   m_EditorClassIdentifier: 
-  id: 9e75d628-21dd-44e0-84c1-9684624adba1
-  icon: {fileID: -934719172, guid: 4effdec2a02843b7d8a1fb81acb8a06e, type: 3}
+  id: 4840a93f-3bee-4343-b568-1836c1372fc7
+  icon: {fileID: 21300000, guid: 7b2e36fe3f357ee13bf659ec3fd34307, type: 3}
   name: "\u041C\u043E\u0445"
-  healing: 7
+  healing: 3
   effect: {fileID: 0}

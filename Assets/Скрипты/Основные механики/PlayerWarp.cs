@@ -2,11 +2,13 @@
 {
     public bool Enabled 
     { 
-        set => 
-            player.enabled = value;
-
-        get =>
-            player.enabled;
+        set 
+        {
+            if (value)
+                player.data.movement.Enable();
+            else 
+                player.data.movement.Disable();
+        }
     }
 
     public UnityEngine.UI.Image[] effectsImages;

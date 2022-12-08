@@ -14,7 +14,7 @@ public class SimpleMovement : BaseMovement
 
     void Awake()
     {
-        startPoint = transform.localPosition;
+        startPoint = transform.position;
         moveState = new MoveState(this);
 
         if (startDelay >= 0)
@@ -43,7 +43,7 @@ public class SimpleMovement : BaseMovement
         ChangeState(moveState);
 
     public void StopMove() =>
-        ChangeState(moveState);
+        ChangeState(null);
 }
 
 public class MoveState : State<SimpleMovement> 
@@ -54,25 +54,28 @@ public class MoveState : State<SimpleMovement>
 
     public override System.Collections.IEnumerator Update() 
     {
-        mn.endPoint += (Vector2)mn.transform.localPosition;
+        mn.endPoint += mn.startPoint;
         mn.IsWalking = true;
 
         while (true) 
         {
             mn.Direction = (mn.endPoint - mn.startPoint).normalized;
-            mn.transform.localPosition = Vector2.Lerp(mn.startPoint, mn.endPoint, t);
+            mn.transform.position = Vector2.Lerp(mn.startPoint, mn.endPoint, t);
 
             if (t >= 1) 
             {
                 if (mn.repeat)
                 {
+                    mn.IsWalking = false;
                     yield return new WaitForSeconds(mn.repeatDelay);
+                    mn.IsWalking = true;
+
                     t = 0;
                     (mn.startPoint, mn.endPoint) = (mn.endPoint, mn.startPoint);
                 }
                 else
                 {
-                    mn.ChangeState(null);
+                    mn.StopMove();
                     mn.IsWalking = false;
                 }
             }

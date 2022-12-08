@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class SceneTimer : SequenceObject
+public class Timer : SequenceObject
 {
     bool timerTrigger;
     float waitTime;
@@ -11,10 +11,8 @@ public class SceneTimer : SequenceObject
         waitTime = Time.time + time;
     }
 
-    void Update() 
-    {
+    void Update() =>
         timerTrigger |= waitTime <= Time.time;
-    }
 
     public override System.Collections.IEnumerator Sequence()
     {
