@@ -12,4 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 613d5eea99f9bff1c8f0fb7687a3251e, type: 3}
   m_Name: PedestalWithPotatoe
   m_EditorClassIdentifier: 
-  dialogues: []
+  dialogues:
+  - character: "\u0422\u0440\u0435\u0432\u0435\u043B"
+    dialogueCharacter: {fileID: 0}
+    emotionId: 0
+    delay: 0
+    text: "\u0412\u0430\u0443! "
+    startDelay: 0
+    clearPreviousText: 1
+    showStraightaway: 0
+    dontWait: 0
+    cantSkip: 0
+  - character: "\u0422\u0440\u0435\u0432\u0435\u043B"
+    dialogueCharacter: {fileID: 0}
+    emotionId: 0
+    delay: 0
+    text: "\u042D\u0442\u043E \u043A\u0430\u0440\u0442\u043E\u0448\u043A\u0430 \u043D\u0430
+      \u043F\u044C\u0435\u0434\u0435\u0441\u0442\u0430\u043B\u0435!"
+    startDelay: 0
+    clearPreviousText: 0
+    showStraightaway: 0
+    dontWait: 0
+    cantSkip: 0
