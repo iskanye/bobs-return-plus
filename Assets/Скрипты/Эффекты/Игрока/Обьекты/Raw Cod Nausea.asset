@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d658e3fef7c0c0b4f8837146188bd512, type: 3}
+  m_Name: Raw Cod Nausea
+  m_EditorClassIdentifier: 
+  mn: {fileID: 0}
+  data:
+    movement: {fileID: 0}
+    lives: {fileID: 0}
+    damageable: {fileID: 0}
+    gameObject: {fileID: 0}
+  id: nausea
+  duration: 10
+  sprite: {fileID: 291919959, guid: e505b836a555fa7429dc7e517da94699, type: 3}

@@ -88,6 +88,12 @@ public class SceneData : MonoBehaviour
 
     public static void DeleteSaves()
     {
+        PlayerPrefs.DeleteAll();
+        SoftDelete();
+    }
+    
+    public static void SoftDelete()
+    {
         var active = Active;
 
         active.StopAllCoroutines();
@@ -108,7 +114,6 @@ public class SceneData : MonoBehaviour
     IEnumerator Deleting()
     {
         SaveLoad.DeleteSaves();
-        PlayerPrefs.DeleteAll();
         Data = new SaveData();
 
         savingText.text = "удалено";

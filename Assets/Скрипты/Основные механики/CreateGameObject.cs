@@ -2,8 +2,17 @@
 
 public class CreateGameObject : MonoBehaviour
 {
-    public GameObject _object;
+    public GameObject[] _objects;
+    public System.Action<GameObject> onCreate;
 
-    public void Create() =>
-        Instantiate(_object, transform.position, Quaternion.identity);
+    public void Create() 
+    {
+        if (onCreate == null)
+            foreach (var i in _objects)
+                Instantiate(i, transform.position, Quaternion.identity);
+
+        else 
+            foreach (var i in _objects)
+                onCreate.Invoke(Instantiate(i, transform.position, Quaternion.identity));
+    }
 }

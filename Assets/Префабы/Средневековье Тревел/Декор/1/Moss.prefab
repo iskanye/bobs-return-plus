@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 6648720535575919393}
   - component: {fileID: 6035891650396193975}
   - component: {fileID: 8108047503230015848}
-  - component: {fileID: 6285831137408867755}
   - component: {fileID: 2382029743972875423}
   - component: {fileID: 4613192366048678293}
   - component: {fileID: 8251710512975618979}
+  - component: {fileID: -6221047778730231630}
   m_Layer: 0
   m_Name: Moss
   m_TagString: Untagged
@@ -144,18 +144,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 6285831137408867755}
-        m_TargetAssemblyTypeName: ChangeActionBaseEvent, Assembly-CSharp
-        m_MethodName: Change
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2382029743972875423}
         m_TargetAssemblyTypeName: PropertyHolder, Assembly-CSharp
         m_MethodName: set_property
@@ -185,22 +173,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues: {fileID: 11400000, guid: 2b59de5e14e09264096a8828c71de3f3, type: 2}
   events: []
---- !u!114 &6285831137408867755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2060246739300950123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 100ff012ac77e9813906744666f2cf4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionBase: {fileID: 6035891650396193975}
-  action:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &2382029743972875423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,9 +189,9 @@ MonoBehaviour:
   action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6285831137408867755}
-        m_TargetAssemblyTypeName: ChangeActionBaseEvent, Assembly-CSharp
-        m_MethodName: Change
+      - m_Target: {fileID: -6221047778730231630}
+        m_TargetAssemblyTypeName: Destroy, Assembly-CSharp
+        m_MethodName: Do
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -273,6 +245,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: -6221047778730231630}
+          m_TargetAssemblyTypeName: Destroy, Assembly-CSharp
+          m_MethodName: Do
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     sequenceObject: {fileID: 4613192366048678293}
   obj: {fileID: 0}
 --- !u!114 &8251710512975618979
@@ -288,3 +272,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 288da12a69486c443aebc851e2a10d51, type: 2}
+--- !u!114 &-6221047778730231630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060246739300950123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f5de1025c26fad98bdfedd3de193a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToDestroy: {fileID: 2060246739300950123}

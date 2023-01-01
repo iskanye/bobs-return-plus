@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="0_TimeTravel_Rov.tsx"/>
+ <object class="StoneStaircase" gid="13" width="32" height="32">
+  <properties>
+   <property name="Durability" type="int" value="4"/>
+  </properties>
+ </object>
+</template>

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: WoodenBarrelSpikes
   m_EditorClassIdentifier: 
   dialogues:
-  - character: "\u0422\u0440\u0435\u0432\u0435\u043B"
-    dialogueCharacter: {fileID: 0}
-    emotionId: 0
-    color: {r: 1, g: 1, b: 1, a: 1}
+  - character: "\u0411\u043E\u0431"
+    dialogueCharacter: {fileID: 11400000, guid: c408fcc1b7a5ff04db16bd0bfb473796,
+      type: 2}
+    emotionId: 5
     delay: 0
     text: "\u041D\u0435 \u0434\u0443\u043C\u0430\u044E, \u0447\u0442\u043E \u0441\u043C\u043E\u0433\u0443
       \u043D\u0430\u0439\u0442\u0438 \u0437\u0434\u0435\u0441\u044C \u0447\u0442\u043E-\u0442\u043E,

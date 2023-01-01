@@ -9,4 +9,7 @@ EditorBuildSettings:
     path: "Assets/\u0421\u0446\u0435\u043D\u044B/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Time
       Travel Dungeon.unity"
     guid: 07296356ff650655ca49f94a6bfbe40f
+  - enabled: 1
+    path: "Assets/\u0421\u0446\u0435\u043D\u044B/Titles.unity"
+    guid: 317bf3f4c4c647d4abb425cc8c478303
   m_configObjects: {}

@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 3417411340731257115}
   - component: {fileID: 3417411340731257114}
   - component: {fileID: 3417411340731257117}
-  m_Layer: 0
+  - component: {fileID: -9012285278664960260}
+  m_Layer: 3
   m_Name: WoodenTabletStandLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,6 +133,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -9012285278664960260}
+        m_TargetAssemblyTypeName: CreateGameObject, Assembly-CSharp
+        m_MethodName: Create
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 3417411340731257117}
         m_TargetAssemblyTypeName: Destroy, Assembly-CSharp
         m_MethodName: Do
@@ -178,6 +191,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDestroy: {fileID: 0}
+--- !u!114 &-9012285278664960260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3417411340731257116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ab62e77df651912b5a6ec0a4e52396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objects:
+  - {fileID: 1943007244304930363, guid: ebec3a94182e64342a89c4ae8c0ac734, type: 3}
 --- !u!1 &9028579108940914470
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,7 +216,7 @@ GameObject:
   - component: {fileID: 7135454060953655069}
   - component: {fileID: 7209486834887396124}
   - component: {fileID: 8955465094505098917}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -6,11 +6,15 @@ public class SimpleUnscaledSpriteAnimation : MonoBehaviour
     public UnityEngine.UI.Image image;
     public Sprite[] sprites;
     public float delay;
+    public bool isAwake = true;
 
     int index;
 
-    void Start() =>
-        StartCoroutine(Animation());
+    void Start() 
+    {
+        if (isAwake)
+            StartAnimation();
+    }
 
     System.Collections.IEnumerator Animation() 
     {
@@ -30,4 +34,7 @@ public class SimpleUnscaledSpriteAnimation : MonoBehaviour
 
     public void Stop() =>
         StopAllCoroutines();
+
+    public void StartAnimation() =>
+        StartCoroutine(Animation());
 }

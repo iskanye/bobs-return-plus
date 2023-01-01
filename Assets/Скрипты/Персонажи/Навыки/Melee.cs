@@ -15,23 +15,15 @@ public class Melee : BaseSkill
     public ObjectType penetrating;
     public BoxCollider2D meleePrefab;
 
-    [HideInInspector] public bool attackTrigger;
+    [HideInInspector] public bool attackTrigger => 
+        !isReloading && InputManager.Active.attack && !PlayerLiveCounter.Active.isInvincible;
 
     bool isReloading;
 
-    public override IEnumerator Start()
-    {
-        InputManager.Input.Player.Attack.started += (c) => attackTrigger = true;
-        yield return base.Start();
-    }
-
     public override IEnumerator Process()
     {
-        if (isReloading || !attackTrigger || !(DialogueSystem.Active.state is Dialogues.IdleState) || PlayerLiveCounter.Active.isInvincible)
-        {
-            attackTrigger = false;
+        if (!attackTrigger || !(DialogueSystem.Active.state is Dialogues.IdleState))        
             yield break;
-        }
 
         isReloading = true;
 
@@ -79,13 +71,11 @@ public class Melee : BaseSkill
         yield return new WaitForSeconds(reloadDuration);
 
         isReloading = false; 
-        attackTrigger = false;
     }
 
     public override void Stop()
     {
         isReloading = false;
-        attackTrigger = false;
     }
 }
 

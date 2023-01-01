@@ -8,6 +8,8 @@ public abstract class Item : ScriptableObject
     public Sprite icon;
     public new string name;
 
+    [HideInInspector] public InventorySystem mn;
+    
     public static List<Item> AllItems = new List<Item>();
 
     public static Item GetItem(string id) =>

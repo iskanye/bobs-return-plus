@@ -80,6 +80,15 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Throw Away"",
+                    ""type"": ""Button"",
+                    ""id"": ""4b3f1909-7e6c-4b8a-944f-5ada7f2989c8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -190,6 +199,17 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Item Choose"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e1943fa5-7c51-49eb-ab3e-c55869e79d99"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Throw Away"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -783,6 +803,7 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
         m_Player_Submit = m_Player.FindAction("Submit", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         m_Player_ItemChoose = m_Player.FindAction("Item Choose", throwIfNotFound: true);
+        m_Player_ThrowAway = m_Player.FindAction("Throw Away", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -860,6 +881,7 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Submit;
     private readonly InputAction m_Player_Pause;
     private readonly InputAction m_Player_ItemChoose;
+    private readonly InputAction m_Player_ThrowAway;
     public struct PlayerActions
     {
         private @InputMap m_Wrapper;
@@ -870,6 +892,7 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
         public InputAction @Submit => m_Wrapper.m_Player_Submit;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputAction @ItemChoose => m_Wrapper.m_Player_ItemChoose;
+        public InputAction @ThrowAway => m_Wrapper.m_Player_ThrowAway;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -897,6 +920,9 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                 @ItemChoose.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemChoose;
                 @ItemChoose.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemChoose;
                 @ItemChoose.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemChoose;
+                @ThrowAway.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrowAway;
+                @ThrowAway.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrowAway;
+                @ThrowAway.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrowAway;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -919,6 +945,9 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                 @ItemChoose.started += instance.OnItemChoose;
                 @ItemChoose.performed += instance.OnItemChoose;
                 @ItemChoose.canceled += instance.OnItemChoose;
+                @ThrowAway.started += instance.OnThrowAway;
+                @ThrowAway.performed += instance.OnThrowAway;
+                @ThrowAway.canceled += instance.OnThrowAway;
             }
         }
     }
@@ -1081,6 +1110,7 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
         void OnSubmit(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnItemChoose(InputAction.CallbackContext context);
+        void OnThrowAway(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

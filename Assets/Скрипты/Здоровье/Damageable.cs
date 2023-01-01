@@ -5,11 +5,11 @@ public class Damageable : MonoBehaviour
     public int damage = 1;
     public bool isDeadly;
     public bool addPersistentListener;
+    public bool directionBasedOnVelocity;
     public ObjectType penetrating = ObjectType.Fragile;
     public System.Action<int> onDamage;
-
-    [HideInInspector] public DiscardingType discarding = DiscardingType.Small;
-    [HideInInspector] public Vector2 direction;
+    public DiscardingType discarding = DiscardingType.Small;
+    public Vector2 direction;
 
     void Awake()
     {
@@ -23,6 +23,11 @@ public class Damageable : MonoBehaviour
 
         if (lives && lives.Durability <= penetrating)
         {
+            var rigid = GetComponent<Rigidbody2D>();
+
+            if (rigid && directionBasedOnVelocity)
+                direction = rigid.velocity;
+
             lives.hitDirection = direction * (int)discarding;
 
             if (isDeadly)

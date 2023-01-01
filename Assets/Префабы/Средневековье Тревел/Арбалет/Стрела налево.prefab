@@ -15,10 +15,9 @@ GameObject:
   - component: {fileID: 2806641625920271150}
   - component: {fileID: 2607118781465187357}
   - component: {fileID: 8785336444095844013}
-  - component: {fileID: 7243892724363717972}
   - component: {fileID: -5538095686853811427}
   - component: {fileID: -7697522168544319668}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: "\u0421\u0442\u0440\u0435\u043B\u0430 \u043D\u0430\u043B\u0435\u0432\u043E"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ec3ed57a3d5544329ab8a4ced0db6205, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -109,14 +108,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.78125, y: 0.15625}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.78125, y: 0.15625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.5}
+  m_Size: {x: 0.5, y: 0.2}
   m_EdgeRadius: 0
 --- !u!50 &5112451866397568823
 Rigidbody2D:
@@ -199,7 +198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f5de1025c26fad98bdfedd3de193a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDestroy: {fileID: 556203954447992246}
+  objectsToDestroy:
+  - {fileID: 556203954447992246}
 --- !u!114 &8785336444095844013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,45 +214,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   isDeadly: 0
-  discarding: 0
+  addPersistentListener: 0
+  directionBasedOnVelocity: 1
+  penetrating: 2
+  discarding: 3
   direction: {x: 0, y: 0}
-  penetrating: 0
---- !u!114 &7243892724363717972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 556203954447992246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95f36941413ad3943babb852ab66bbbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2607118781465187357}
-        m_TargetAssemblyTypeName: Destroy, Assembly-CSharp
-        m_MethodName: Do
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onExit:
-    m_PersistentCalls:
-      m_Calls: []
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 8
-  isOnStay: 0
-  triggerNotExpected: 1
-  colliderNotExpected: 0
 --- !u!114 &-5538095686853811427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,7 +263,7 @@ MonoBehaviour:
       m_Calls: []
   playerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 2184
   isOnStay: 0
   triggerNotExpected: 1
   colliderNotExpected: 0
@@ -315,6 +281,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 15
   isDeadly: 0
-  discarding: 0
+  addPersistentListener: 0
+  directionBasedOnVelocity: 1
+  penetrating: 2
+  discarding: 3
   direction: {x: 0, y: 0}
-  penetrating: 0

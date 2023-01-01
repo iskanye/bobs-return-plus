@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 876cec1111e6d4a61977967f3413a57c, type: 3}
+  m_Name: Travel
+  m_EditorClassIdentifier: 
+  emotions:
+  - id: 1
+    sprite: {fileID: 21300000, guid: ce3af026e2387b259ae936a587b2390a, type: 3}
+  - id: 2
+    sprite: {fileID: 21300000, guid: b825d958b75221c4492720fda12cc0d6, type: 3}
+  - id: 3
+    sprite: {fileID: 21300000, guid: 25d4759f98c41eb4c9763fa114e54200, type: 3}
+  - id: 4
+    sprite: {fileID: 21300000, guid: 51e3fba861019ff4490ee67ad523e3ab, type: 3}
+  - id: 5
+    sprite: {fileID: 21300000, guid: 0e651b454eac48e49b295de755f4ec95, type: 3}
+  - id: 6
+    sprite: {fileID: 21300000, guid: 10751f1b39188704ca40e88844fddf9b, type: 3}
+  - id: 7
+    sprite: {fileID: 21300000, guid: 4cdf0349142ef4341af8834c87e0df4e, type: 3}
+  - id: 8
+    sprite: {fileID: 21300000, guid: 04df755fb90c85f4b81befe436d4c77b, type: 3}
+  - id: 9
+    sprite: {fileID: 21300000, guid: 057e84ed8f3bb80449caa018f1d1cbef, type: 3}
+  - id: 10
+    sprite: {fileID: 21300000, guid: 1719221c97b88b945a7583f7b29c9e0f, type: 3}

@@ -1,10 +1,10 @@
 using UnityEngine;
 
-//Тестовый скрипт передвижения
 public class TopDownMovement : BaseMovement
-{
+{    
     public override bool IsWalking => dir != Vector2.zero && isEnabled;
-    private bool isEnabled = true;
+
+    [HideInInspector] public static bool isEnabled = true;
 
     Vector2 dir => InputManager.Active.direction; //Направление
 

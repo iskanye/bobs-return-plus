@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - character: "\u0414\u0438\u043A\u0442\u043E\u0440"
-    dialogueCharacter: {fileID: 0}
-    emotionId: 0
-    color: {r: 1, g: 1, b: 1, a: 1}
+    dialogueCharacter: {fileID: 11400000, guid: 08c1422a1f2209a4aa92a73397c1758a,
+      type: 2}
+    emotionId: 1
     delay: 0
     text: "\u0411\u043E\u0431, \u043D\u0435\u0443\u0436\u0435\u043B\u0438 \u0442\u0432\u043E\u0438
       \u043D\u043E\u0433\u0438 \u043D\u0430\u0441\u0442\u043E\u043B\u044C\u043A\u043E

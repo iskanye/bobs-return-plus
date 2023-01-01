@@ -31,7 +31,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2431295612555672725}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -79,9 +79,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 1985700037, guid: 1010c59a928e43abb9cc7bb4892b0e3d, type: 3}
-  m_Color: {r: 0.24705882, g: 0.29411766, b: 0.050980393, a: 1}
+  m_Color: {r: 0.24705884, g: 0.29411766, b: 0.050980397, a: 0.8862745}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -138,7 +138,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  time: 1.5
+  time: 5.9
 --- !u!114 &2431295612555672729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,9 +243,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   isDeadly: 0
-  discarding: 0
+  addPersistentListener: 0
+  directionBasedOnVelocity: 0
+  penetrating: 1
+  discarding: 5
   direction: {x: 0, y: 0}
-  penetrating: 0
 --- !u!114 &2431295612555672730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,4 +260,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f5de1025c26fad98bdfedd3de193a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDestroy: {fileID: 2830758833239876228}
+  objectsToDestroy:
+  - {fileID: 2431295612555672725}

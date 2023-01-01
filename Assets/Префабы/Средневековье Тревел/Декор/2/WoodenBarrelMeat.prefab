@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 9013890318186911334}
   - component: {fileID: 9013890318186911333}
   - component: {fileID: 2585607181657958938}
-  m_Layer: 0
+  - component: {fileID: 3152348300926238188}
+  m_Layer: 3
   m_Name: WoodenBarrelMeat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,6 +133,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3152348300926238188}
+        m_TargetAssemblyTypeName: CreateGameObject, Assembly-CSharp
+        m_MethodName: Create
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 9013890318186911333}
         m_TargetAssemblyTypeName: Destroy, Assembly-CSharp
         m_MethodName: Do
@@ -182,6 +195,20 @@ MonoBehaviour:
   - {fileID: 8299124655120533643, guid: 1e4e6ab27db7bfe4a8da3bdffbd6ebc5, type: 3}
   - {fileID: 7950372167756380857, guid: 30f3bed59494c6b42be6af96d34c2dcb, type: 3}
   - {fileID: 4985138977988113938, guid: 76a0c4b60e87b034c8759b8aca481de8, type: 3}
+--- !u!114 &3152348300926238188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42764904334052849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ab62e77df651912b5a6ec0a4e52396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objects:
+  - {fileID: 1943007244304930363, guid: ebec3a94182e64342a89c4ae8c0ac734, type: 3}
 --- !u!1 &8706896039117663847
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,7 +221,7 @@ GameObject:
   - component: {fileID: 5135553971380918201}
   - component: {fileID: 946278715630882154}
   - component: {fileID: 118038739216676937}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\u0422\u0440\u0438\u0433\u0433\u0435\u0440"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

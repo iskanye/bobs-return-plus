@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" infinite="1" nextlayerid="12" nextobjectid="1">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" infinite="1" nextlayerid="13" nextobjectid="7">
  <tileset firstgid="1" source="0_TimeTravel_Dungeon.tsx"/>
  <tileset firstgid="257" source="0_TimeTravel_Rov.tsx"/>
  <tileset firstgid="275" source="0_TimeTravel_DecorDurable.tsx"/>
  <tileset firstgid="375" source="0_TimeTravel_DecorFragile.tsx"/>
  <tileset firstgid="475" source="0_TimeTravel_Chest.tsx"/>
- <tileset firstgid="511" source="../BasicTiles/0_Dark.tsx"/>
- <tileset firstgid="541" source="0_TimeTravel_DecorWood.tsx"/>
- <layer id="10" name="Ditch" width="32" height="32">
-  <data encoding="csv"/>
- </layer>
+ <tileset firstgid="481" source="../BasicTiles/0_Dark.tsx"/>
+ <tileset firstgid="511" source="0_TimeTravel_DecorWood.tsx"/>
+ <tileset firstgid="651" source="0_TimeTravel_FlimsyDecor.tsx"/>
  <layer id="1" name="Floor" width="32" height="32">
   <data encoding="csv">
    <chunk x="0" y="0" width="16" height="16">
@@ -31,12 +29,6 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
   </data>
- </layer>
- <layer id="9" name="FloorDitch" width="32" height="32">
-  <data encoding="csv"/>
- </layer>
- <layer id="11" name="Shadow" width="32" height="32">
-  <data encoding="csv"/>
  </layer>
  <layer id="2" name="Wall" width="32" height="32">
   <data encoding="csv">
@@ -60,53 +52,10 @@
 </chunk>
   </data>
  </layer>
- <layer id="6" name="Decor2" width="32" height="32">
-  <data encoding="csv">
-   <chunk x="0" y="0" width="16" height="16">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,412,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,422,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</chunk>
-  </data>
- </layer>
- <layer id="5" name="Decor1" width="32" height="32">
-  <data encoding="csv"/>
- </layer>
- <layer id="4" name="Interaction" width="32" height="32">
-  <data encoding="csv">
-   <chunk x="0" y="0" width="16" height="16">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,269,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,269,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,270,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</chunk>
-  </data>
- </layer>
+ <objectgroup id="12" name="Objects">
+  <object id="1" template="StoneStaircaseDown.tx" x="160" y="160"/>
+  <object id="4" template="KeeperDoll.tx" class="KeeperDoll" x="224" y="160"/>
+ </objectgroup>
  <layer id="3" name="Roof" width="32" height="32">
   <data encoding="csv">
    <chunk x="0" y="0" width="16" height="16">

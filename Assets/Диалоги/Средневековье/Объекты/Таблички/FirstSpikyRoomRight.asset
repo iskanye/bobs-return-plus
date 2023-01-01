@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: FirstSpikyRoomRight
   m_EditorClassIdentifier: 
   dialogues:
-  - character: "\u0422\u0440\u0435\u0432\u0435\u043B"
-    dialogueCharacter: {fileID: 0}
-    emotionId: 0
-    color: {r: 1, g: 1, b: 1, a: 1}
+  - character: "\u0411\u043E\u0431"
+    dialogueCharacter: {fileID: 11400000, guid: c408fcc1b7a5ff04db16bd0bfb473796,
+      type: 2}
+    emotionId: 7
     delay: 0
     text: "\u041A\u043E\u0440\u043E\u0447\u0435... "
     startDelay: 0
@@ -24,10 +24,10 @@ MonoBehaviour:
     showStraightaway: 0
     dontWait: 1
     cantSkip: 0
-  - character: "\u0422\u0440\u0435\u0432\u0435\u043B"
-    dialogueCharacter: {fileID: 0}
-    emotionId: 0
-    color: {r: 1, g: 1, b: 1, a: 1}
+  - character: "\u0411\u043E\u0431"
+    dialogueCharacter: {fileID: 11400000, guid: c408fcc1b7a5ff04db16bd0bfb473796,
+      type: 2}
+    emotionId: 7
     delay: 0
     text: "\u043F\u0443\u0442\u044C... "
     startDelay: 0.15
@@ -35,10 +35,10 @@ MonoBehaviour:
     showStraightaway: 0
     dontWait: 0
     cantSkip: 0
-  - character: "\u0422\u0440\u0435\u0432\u0435\u043B"
-    dialogueCharacter: {fileID: 0}
-    emotionId: 0
-    color: {r: 1, g: 1, b: 1, a: 1}
+  - character: "\u0411\u043E\u0431"
+    dialogueCharacter: {fileID: 11400000, guid: c408fcc1b7a5ff04db16bd0bfb473796,
+      type: 2}
+    emotionId: 7
     delay: 0
     text: "\u0426\u0435\u043B\u0435\u0435... "
     startDelay: 0
@@ -46,10 +46,10 @@ MonoBehaviour:
     showStraightaway: 0
     dontWait: 1
     cantSkip: 0
-  - character: "\u0422\u0440\u0435\u0432\u0435\u043B"
-    dialogueCharacter: {fileID: 0}
-    emotionId: 0
-    color: {r: 1, g: 1, b: 1, a: 1}
+  - character: "\u0411\u043E\u0431"
+    dialogueCharacter: {fileID: 11400000, guid: c408fcc1b7a5ff04db16bd0bfb473796,
+      type: 2}
+    emotionId: 7
     delay: 0
     text: "\u043F\u043B\u043E\u0442\u044C... "
     startDelay: 0.15

@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider2D))]
 public class Cannon : MonoBehaviour
 {
     [SerializeField] private GameObject bullet;
@@ -14,6 +13,8 @@ public class Cannon : MonoBehaviour
     [SerializeField] private bool isReloadable;
     [SerializeField] private float reloadDelay;
     [SerializeField] private Animator animator;
+    [SerializeField] private bool isAutomatic;
+    [SerializeField] private float shootDelay;
 
     private bool haveShot;
 
@@ -32,6 +33,9 @@ public class Cannon : MonoBehaviour
 
         animator.SetFloat(dirX, direction.x);
         animator.SetFloat(dirY, direction.y);
+
+        if (isAutomatic)
+            StartCoroutine(Shoot());
     }
 
     void OnTriggerEnter2D(Collider2D c)
@@ -61,6 +65,9 @@ public class Cannon : MonoBehaviour
 
     void OnValidate()
     {
+        if (isAutomatic)
+            return;
+
         trigger = GetComponent<BoxCollider2D>();
         trigger.offset = offset + (Vector2)direction * detectionArea.x / 2;
         trigger.size = direction.x != 0 ? new Vector2(detectionArea.x, detectionArea.y) : new Vector2(detectionArea.y, detectionArea.x);
@@ -71,5 +78,24 @@ public class Cannon : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position + (Vector3)bulletOffset, .1f);
+    }
+
+    System.Collections.IEnumerator Shoot()
+    {
+        var bull = Instantiate(bullet, transform.position + (Vector3)bulletOffset, bullet.transform.rotation);
+        bull.GetComponent<Rigidbody2D>().AddForce((Vector2)direction * force, ForceMode2D.Impulse);
+
+        foreach (var i in bull.GetComponents<Damageable>()) 
+        {
+            i.direction = direction;
+            i.discarding = bulletDiscarding;
+        }
+
+        haveShot = true;
+        shootTime = Time.time + reloadDelay;
+        animator.SetTrigger(shoot);
+        
+        yield return new WaitForSeconds(shootDelay);
+        StartCoroutine(Shoot());
     }
 }

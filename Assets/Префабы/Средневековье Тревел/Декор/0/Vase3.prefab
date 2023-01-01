@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 2978583457626677034}
   - component: {fileID: 8831416613626541580}
   - component: {fileID: 7299500708580131395}
-  m_Layer: 0
+  - component: {fileID: 2690619405512139033}
+  m_Layer: 3
   m_Name: Vase3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,6 +132,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2690619405512139033}
+        m_TargetAssemblyTypeName: CreateGameObject, Assembly-CSharp
+        m_MethodName: Create
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHit:
     m_PersistentCalls:
       m_Calls:
@@ -158,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55aae0bfdf33f4d4dafb9b240b60311e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magnitude: 0.1
+  magnitude: 0.05
   time: 0.4
 --- !u!58 &2978583457626677034
 CircleCollider2D:
@@ -188,7 +201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f5de1025c26fad98bdfedd3de193a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDestroy: {fileID: 11353150674595358}
+  objectsToDestroy:
+  - {fileID: 11353150674595358}
 --- !u!114 &7299500708580131395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,3 +227,17 @@ MonoBehaviour:
   - {fileID: 7830670286981463673, guid: 102681fd94ddf1245b71e0f3f8d51e47, type: 3}
   - {fileID: 8214906076472035208, guid: 00b53dc751da50a4589f1a2652009e49, type: 3}
   - {fileID: 1518308017004304582, guid: 924a87e27848e394eb79f901af5f77cf, type: 3}
+--- !u!114 &2690619405512139033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11353150674595358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ab62e77df651912b5a6ec0a4e52396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objects:
+  - {fileID: 1943007244304930363, guid: ebec3a94182e64342a89c4ae8c0ac734, type: 3}

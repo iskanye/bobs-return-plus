@@ -23,6 +23,8 @@ public class BaseBob : ScriptableObject
     }
 
     public virtual void Stop() { }
+
+    public virtual void SetBool(string name) {}
 }
 
 public enum BobType

@@ -179,7 +179,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1052614442, guid: c303da79946447af199ac349b31780d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -323,6 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitDirection: {x: 0, y: 0}
+  type: 1
   maxLives: 30
   onDeath:
     m_PersistentCalls:
@@ -413,7 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbac3024d428928b2a6bd53f1f72f0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 
+  id: 0ebbaf0d-a4ce-4e08-a62b-eab5730e9f59
 --- !u!114 &2182320066840725019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,7 +431,7 @@ MonoBehaviour:
   discarding: 5
   zombieHead: {fileID: 3853071993284499550, guid: f62ce053f26813779930e03930b92021,
     type: 3}
-  colliderSize: {x: 1, y: 2}
+  colliderSize: {x: 1, y: 1.5}
   meleePrefab: {fileID: 4448214415045013748, guid: 2a60ec09248b8a0b48393ec39407f16e,
     type: 3}
   swingDuration: 0.3

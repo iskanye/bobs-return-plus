@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4429785073670184413}
   - component: {fileID: 174031717432917049}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 0_TimeTravel_ArchitectsSubjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 2461126113822921983}
   - component: {fileID: 1834614777546773920}
   - component: {fileID: 3942302995615232150}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\u0442\u0440\u0438\u0433\u0433\u0435\u04401"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.125, y: 0}
+  m_Offset: {x: -0.125, y: 0.012394428}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -142,7 +142,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.25, y: 1}
+  m_Size: {x: 2.25, y: 0.97521114}
   m_EdgeRadius: 0
 --- !u!114 &1834614777546773920
 MonoBehaviour:
@@ -188,6 +188,167 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues: {fileID: 11400000, guid: 555a2f6cf9f28c949b0ec0e34bb72042, type: 2}
   events: []
+--- !u!1 &6146688565724966944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3445502781729723235}
+  - component: {fileID: 6847973832553362650}
+  - component: {fileID: 31357653267360059}
+  - component: {fileID: 5767506422546504350}
+  - component: {fileID: 4562567948619926910}
+  - component: {fileID: 2213956151437053452}
+  m_Layer: 3
+  m_Name: "\u0442\u0440\u0438\u0433\u0433\u0435\u04402"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3445502781729723235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6146688565724966944}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8895914878252849295}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &6847973832553362650
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6146688565724966944}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.125, y: -1.75}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.25, y: 1.5}
+  m_EdgeRadius: 0
+--- !u!114 &31357653267360059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6146688565724966944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b03eac781278d52aa4afb457a70da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5767506422546504350}
+        m_TargetAssemblyTypeName: AddItem, Assembly-CSharp
+        m_MethodName: Add
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4562567948619926910}
+        m_TargetAssemblyTypeName: ChangeActionBaseEvent, Assembly-CSharp
+        m_MethodName: Change
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &5767506422546504350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6146688565724966944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503699cc75e6a9f439896494813be09d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 5c6dee0bebc81ed4ca51f849a90da206, type: 2}
+--- !u!114 &4562567948619926910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6146688565724966944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 100ff012ac77e9813906744666f2cf4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionBase: {fileID: 31357653267360059}
+  action:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2213956151437053452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6146688565724966944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a87426f22708f4ebe42aefbb90ed8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 3deba4c3-7cfd-4c72-a1b3-7bf06f109e48
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4562567948619926910}
+        m_TargetAssemblyTypeName: ChangeActionBaseEvent, Assembly-CSharp
+        m_MethodName: Change
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8895914878252849284
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +364,7 @@ GameObject:
   - component: {fileID: 8895914878252849291}
   - component: {fileID: 8895914878252849290}
   - component: {fileID: 8895914878252849285}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WoodenTable2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,6 +385,7 @@ Transform:
   m_Children:
   - {fileID: 4429785073670184413}
   - {fileID: 3597268726825306291}
+  - {fileID: 3445502781729723235}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -420,4 +582,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f5de1025c26fad98bdfedd3de193a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDestroy: {fileID: 8895914878252849284}
+  objectsToDestroy:
+  - {fileID: 8895914878252849284}

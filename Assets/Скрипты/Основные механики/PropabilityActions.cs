@@ -5,7 +5,7 @@ public class PropabilityActions : MonoBehaviour
     [System.Serializable]
     public struct Propability
     {
-        public UnityEngine.Events.UnityAction<GameObject> action;
+        public UnityEngine.Events.UnityEvent<GameObject> action;
         public float propability; 
     }
 
@@ -17,8 +17,7 @@ public class PropabilityActions : MonoBehaviour
     {
         float random = Random.value;
 
-        float prevPropability = 0;
-        float propability = actions[0].propability;
+        float prevPropability = 0, propability = 0;
 
         for (int i = 0; i < actions.Length; i++) 
         {

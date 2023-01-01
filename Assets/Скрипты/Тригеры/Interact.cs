@@ -7,7 +7,7 @@ public class Interact : ActionBase
 
     void OnTriggerStay2D(Collider2D c)
     {
-        if (action != null && ((1 << c.gameObject.layer) | playerMask) == playerMask && InputManager.Active.submit)
+        if (action != null && ((1 << c.gameObject.layer) | playerMask) == playerMask && InputManager.Active.submit && TopDownMovement.isEnabled)
             action.Invoke(c.gameObject);
     }
 }

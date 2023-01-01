@@ -11,9 +11,7 @@ GameObject:
   - component: {fileID: 1500357458769435148}
   - component: {fileID: 5476309984249370548}
   - component: {fileID: 9040594621839003248}
-  - component: {fileID: 7230579954320929632}
-  - component: {fileID: 703228154924230593}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: trigger_WoodenChest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,78 +87,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7230579954320929632}
-        m_TargetAssemblyTypeName: ChangeActionBaseEvent, Assembly-CSharp
-        m_MethodName: Change
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   playerMask:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &7230579954320929632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5541300985364713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 100ff012ac77e9813906744666f2cf4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionBase: {fileID: 9040594621839003248}
-  action:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &703228154924230593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5541300985364713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38a87426f22708f4ebe42aefbb90ed8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 3895f675-7233-44bd-8aa9-8e21eb98649c
-  action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7050667005365243753}
-        m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
-        m_MethodName: set_sprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: -1161623783, guid: 04a9f165715b4be50973c7734c486fc3,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 7230579954320929632}
-        m_TargetAssemblyTypeName: ChangeActionBaseEvent, Assembly-CSharp
-        m_MethodName: Change
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &7050667005365243755
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +104,8 @@ GameObject:
   - component: {fileID: 5988468288675458238}
   - component: {fileID: 4184254859236033376}
   - component: {fileID: 2298238377450696766}
-  m_Layer: 0
+  - component: {fileID: -6537086255883924857}
+  m_Layer: 9
   m_Name: WoodenChest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,6 +233,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -6537086255883924857}
+        m_TargetAssemblyTypeName: CreateGameObject, Assembly-CSharp
+        m_MethodName: Create
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2298238377450696766}
         m_TargetAssemblyTypeName: Destroy, Assembly-CSharp
         m_MethodName: Do
@@ -350,4 +292,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f5de1025c26fad98bdfedd3de193a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDestroy: {fileID: 0}
+  objectsToDestroy:
+  - {fileID: 0}
+--- !u!114 &-6537086255883924857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7050667005365243755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ab62e77df651912b5a6ec0a4e52396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objects:
+  - {fileID: 1943007244304930363, guid: ebec3a94182e64342a89c4ae8c0ac734, type: 3}

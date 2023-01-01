@@ -5,6 +5,7 @@ public class InventorySystem : MonoBehaviour
 {
     public static InventorySystem Active { get; private set; }
 
+    public PlayerWarp warp;
     public int maxItems;
     public Image[] icons;
     public Image[] panels;
@@ -16,7 +17,8 @@ public class InventorySystem : MonoBehaviour
     public TMPro.TMP_Text label;
 
     [HideInInspector] public Item[] items;
-
+    
+    public System.Action<Item> onItemUse;
     public int Index { get; set; }
 
     void Awake()
@@ -27,20 +29,19 @@ public class InventorySystem : MonoBehaviour
         var inventory = SceneData.Data.inventory;
         items = new Item[maxItems];
 
+        warp = FindObjectOfType<PlayerWarp>();
+
         if (inventory != null)
             for (int i = 0; i < (inventory.Count > maxItems ? maxItems : inventory.Count); i++)
-                items[i] = Item.GetItem(inventory[i].id);
+            {
+                var item = Item.GetItem(inventory[i].id);
+                item.mn = this;
+                items[i] = item;
+            }
 
-        InputManager.Input.Player.UseItem.started += i =>
-        {
-            if (items[Index] == null || !(DialogueSystem.Active.state is Dialogues.IdleState))
-                return;
-
-            if (items[Index].Action())
-                items[Index] = null;
-        };
-
-        InputManager.Input.Player.ItemChoose.started += i => Index = (Index + 1) % 4;
+        InputManager.Input.Player.UseItem.started += i => Use(Index);
+        InputManager.Input.Player.ItemChoose.started += i => Index = (Index + 1) % maxItems;
+        InputManager.Input.Player.ThrowAway.started += i => items[Index] = null;
     }
 
     void Update()
@@ -57,6 +58,9 @@ public class InventorySystem : MonoBehaviour
                 icons[i].color = new Color(0, 0, 0, 0);
 
             panels[i].sprite = i == Index ? selected : regular;
+
+            if (Input.GetKeyDown(KeyCode.Alpha1 + i))
+                Index = i;
         }
 
         label.text = items[Index] != null ? items[Index].name : "";
@@ -71,12 +75,28 @@ public class InventorySystem : MonoBehaviour
                 pickUp.dialogues[0].text = pickUp.dialogues[0].text.Replace("{", item.name.ToLower());
                 activator.dialogues = pickUp;
                 activator.Dialogue();
+                pickUp.dialogues[0].text = pickUp.dialogues[0].text.Replace(item.name.ToLower(), "{");
 
+                item.mn = this;
                 items[i] = item;
                 return;
             }
 
         activator.dialogues = fullDialogue;
         activator.Dialogue();
+    }
+
+    public void Use(int index)
+    {
+        if (items[index] == null || !(DialogueSystem.Active.state is Dialogues.IdleState))
+            return;
+
+        if (items[index].Action())
+        {
+            if (onItemUse != null)
+                onItemUse.Invoke(items[index]);
+                
+            items[index] = null;
+        }
     }
 }

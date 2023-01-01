@@ -4,16 +4,16 @@ using UnityEngine;
 public abstract class EffectBase : ScriptableObject, System.IEquatable<EffectBase>
 {
     [HideInInspector] public EffectsController mn;
+    [HideInInspector] public EffectData data;
+
+    public string id;
     public float duration;
 
     public IEnumerator start;
     public IEnumerator process;
 
-    protected EffectData data;
-
     public virtual IEnumerator Start()
     {
-        data = mn.data;
         process = Process();
         mn.StartCoroutine(process);
 
@@ -39,7 +39,7 @@ public abstract class EffectBase : ScriptableObject, System.IEquatable<EffectBas
         if (e == null)
             return false;
 
-        if (process == e.Process())
+        if (id == e.id)
             return true;
 
         return false;

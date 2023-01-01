@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" infinite="1" nextlayerid="11" nextobjectid="1">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" infinite="1" nextlayerid="14" nextobjectid="30">
  <tileset firstgid="1" source="0_TimeTravel_Dungeon.tsx"/>
  <tileset firstgid="257" source="0_TimeTravel_Rov.tsx"/>
  <tileset firstgid="275" source="0_TimeTravel_DecorDurable.tsx"/>
  <tileset firstgid="375" source="0_TimeTravel_DecorFragile.tsx"/>
+ <tileset firstgid="475" source="0_TimeTravel_Stones.tsx"/>
+ <tileset firstgid="487" source="0_TimeTravel_Bones.tsx"/>
+ <tileset firstgid="494" source="0_InvisibleWall.tsx"/>
  <layer id="10" name="Ditch" width="32" height="32">
   <data encoding="csv">
    <chunk x="0" y="0" width="16" height="16">
@@ -92,65 +95,45 @@
 </chunk>
   </data>
  </layer>
- <layer id="6" name="Decor2" width="32" height="32">
+ <objectgroup id="12" name="FloorObjects">
+  <object id="13" template="Bones1.tx" x="320" y="288"/>
+  <object id="15" template="Bones6.tx" x="183.667" y="297.333"/>
+  <object id="22" template="Bones4.tx" x="200.333" y="288.667"/>
+  <object id="23" template="Bones3.tx" gid="2147484137" x="212.667" y="290" rotation="0"/>
+  <object id="24" template="Bones1.tx" x="178.667" y="276.333"/>
+  <object id="25" template="Bones4.tx" gid="490" x="210.333" y="273.667" rotation="0"/>
+  <object id="26" template="Bones4.tx" gid="2147484138" x="197.667" y="264" rotation="0"/>
+  <object id="27" template="Bones4.tx" x="164.667" y="163.333"/>
+  <object id="28" template="Bones5.tx" x="176.667" y="173.333"/>
+  <object id="29" template="Bones3.tx" x="118.667" y="258.667"/>
+ </objectgroup>
+ <objectgroup id="11" name="Objects">
+  <object id="1" template="StoneStaircaseDown.tx" x="160" y="128"/>
+  <object id="4" template="Stalagmite1.tx" x="256" y="192"/>
+  <object id="5" template="Stalagmite1.tx" gid="2147484126" x="288" y="224" rotation="0"/>
+  <object id="6" template="Stalagmite1.tx" gid="2147484126" x="352" y="288" rotation="0"/>
+  <object id="7" template="Stalagmite1.tx" x="352" y="384"/>
+  <object id="8" template="Stalagmite2.tx" x="128" y="192"/>
+  <object id="9" template="Stalagmite2.tx" x="224" y="192"/>
+  <object id="10" template="Stalagmite2.tx" x="256" y="224"/>
+  <object id="11" template="Stalagmite2.tx" gid="2147484127" x="320" y="224" rotation="0"/>
+  <object id="12" template="Stalagmite2.tx" gid="2147484127" x="160" y="288" rotation="0"/>
+ </objectgroup>
+ <layer id="13" name="invisible wall" width="32" height="32" opacity="0">
   <data encoding="csv">
    <chunk x="0" y="0" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,328,0,0,328,327,0,0,0,0,0,0,0,
-0,0,0,0,338,0,0,338,337,2147483975,2147483976,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,2147483985,2147483986,0,0,0,0,0,
-0,0,0,0,0,2147483976,0,0,0,0,0,2147483975,0,0,0,0,
-0,0,0,0,0,2147483986,0,0,0,0,0,2147483985,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,327,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,337,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</chunk>
-  </data>
- </layer>
- <layer id="5" name="Decor1" width="32" height="32">
-  <data encoding="csv">
-   <chunk x="0" y="0" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,328,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,338,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</chunk>
-  </data>
- </layer>
- <layer id="4" name="Interaction" width="32" height="32">
-  <data encoding="csv">
-   <chunk x="0" y="0" width="16" height="16">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,269,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,269,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,270,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,496,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,496,496,496,496,496,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,496,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,496,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

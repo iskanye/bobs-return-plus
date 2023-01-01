@@ -38,4 +38,7 @@ public class PauseController : MonoBehaviour
 
         Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
     }
+
+    public void Pause() =>
+        isPaused = true;
 }

@@ -14,7 +14,7 @@ public class TouchJoystick : MonoBehaviour
         if (Input.touchCount > 0)
         {
             var touch = Input.GetTouch(0);
-
+            
             if (touch.phase == TouchPhase.Began)
                 startPos = touch.position;
 

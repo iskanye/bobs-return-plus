@@ -97,13 +97,18 @@
             "scaleInDock": 1
         },
         "0_TimeTravel_Dungeon.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "0_TimeTravel_DungeonDoors.tsx": {
             "scaleInDock": 1
         },
-        "0_TimeTravel_FakeStones.tsx": {
+        "0_TimeTravel_DungeonLaboratory.tsx": {
             "scaleInDock": 1
+        },
+        "0_TimeTravel_FakeStones.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "0_TimeTravel_Flags.tsx": {
             "scaleInDock": 1,
@@ -123,6 +128,10 @@
         },
         "0_TimeTravel_GuardsWeapon.tsx": {
             "scaleInDock": 1
+        },
+        "0_TimeTravel_Hay.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "0_TimeTravel_Lever.tsx": {
             "scaleInDock": 1
@@ -162,7 +171,8 @@
             "scaleInDock": 1
         },
         "0_TimeTravel_Rov.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 3
         },
         "0_TimeTravel_ShakyFloor.tsx": {
             "scaleInDock": 1,
@@ -215,7 +225,8 @@
             "scaleInEditor": 1
         },
         "0_TimeTravel_WoodenChainsaw.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "0_TimeTravel_WoodenFlag.tsx": {
             "scaleInDock": 1
@@ -232,6 +243,9 @@
         "0_TimeTravel_WoodenTable3.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
+        },
+        "0_TimeTravel_WoodenTableBread.tsx": {
+            "scaleInDock": 1
         },
         "0_TimeTravel_WoodenTablet.tsx": {
             "scaleInDock": 1
@@ -263,46 +277,96 @@
             "scaleInEditor": 1
         },
         "TimeTravel_Ditch1.tmx": {
-            "scale": 3,
+            "expandedObjectLayers": [
+                8,
+                7
+            ],
+            "scale": 5.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 343.66666666666663,
-                "y": 175.33333333333334
+                "x": 256,
+                "y": 255.9090909090909
             }
         },
         "TimeTravel_Ditch2.tmx": {
-            "scale": 3,
-            "selectedLayer": 0,
+            "expandedObjectLayers": [
+                11
+            ],
+            "scale": 2,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 254.33333333333331,
-                "y": 196.66666666666663
+                "x": 256,
+                "y": 255.75
             }
         },
         "TimeTravel_Ditch3.tmx": {
-            "scale": 5.5,
-            "selectedLayer": 6,
+            "expandedObjectLayers": [
+                11
+            ],
+            "scale": 2,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 298,
-                "y": 222.54545454545456
+                "x": 256,
+                "y": 255.75
             }
         },
         "TimeTravel_Ditch4.tmx": {
-            "scale": 3,
-            "selectedLayer": 0,
+            "expandedObjectLayers": [
+                12
+            ],
+            "scale": 2,
+            "selectedLayer": 7,
             "viewCenter": {
-                "x": 206.66666666666663,
-                "y": 223
+                "x": 256,
+                "y": 255.75
+            }
+        },
+        "TimeTravel_Ditch5.tmx": {
+            "expandedObjectLayers": [
+                12
+            ],
+            "scale": 3,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 256,
+                "y": 255.83333333333331
+            }
+        },
+        "TimeTravel_Ditch6.tmx": {
+            "expandedObjectLayers": [
+                17,
+                16
+            ],
+            "scale": 4,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 256,
+                "y": 255.875
             }
         },
         "TimeTravel_Dungeon.tmx": {
             "expandedObjectLayers": [
+                103,
+                117,
+                106,
                 92
             ],
-            "scale": 2,
-            "selectedLayer": 16,
+            "scale": 1.5,
+            "selectedLayer": 15,
             "viewCenter": {
-                "x": -560,
-                "y": 2240
+                "x": -1543.3333333333333,
+                "y": -759.3333333333333
+            }
+        },
+        "TimeTravel_DungeonLaboratoryStart.tmx": {
+            "expandedObjectLayers": [
+                5
+            ],
+            "scale": 2,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 480,
+                "y": 319.75
             }
         },
         "fireLight.tsx": {
@@ -312,36 +376,44 @@
             "scaleInDock": 1
         },
         "mertvetsUznik_smert.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 2
         },
         "rat.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         }
     },
     "frame.defaultDuration": 100,
+    "last.externalTilesetPath": "C:/Users/iskan/OneDrive/Рабочий стол/bobs-return-plus/Assets/Карты/Тревел/Подземелье/TimeTravel_Dungeon",
     "last.imagePath": "D:/Игры моего авторства/Bob's Return/Levels",
     "last.objectTemplatePath": "D:/Игры моего авторства/Bob's Return/Levels/TimeTravel_Dungeon",
     "openFiles": [
         "TimeTravel_Dungeon.tmx",
-        "0_TimeTravel_DecorFragile.tsx",
-        "0_TimeTravel_Flags.tsx",
-        "0_TimeTravel_MovingRock.tsx"
+        "TimeTravel_Ditch1.tmx",
+        "TimeTravel_Ditch2.tmx",
+        "TimeTravel_Ditch3.tmx",
+        "TimeTravel_Ditch4.tmx",
+        "TimeTravel_Ditch5.tmx",
+        "TimeTravel_Ditch6.tmx",
+        "TimeTravel_DungeonLaboratoryStart.tmx",
+        "1_TimeTravel_Spinis.tsx"
     ],
     "project": "BobsReturn.tiled-project",
     "property.type": "int",
     "recentFiles": [
-        "0_TimeTravel_MovingRock.tsx",
-        "0_TimeTravel_Flags.tsx",
-        "0_TimeTravel_DecorFragile.tsx",
+        "1_TimeTravel_Spinis.tsx",
+        "TimeTravel_DungeonLaboratoryStart.tmx",
+        "TimeTravel_Ditch6.tmx",
+        "TimeTravel_Ditch5.tmx",
+        "TimeTravel_Ditch4.tmx",
+        "TimeTravel_Ditch3.tmx",
+        "TimeTravel_Ditch2.tmx",
+        "TimeTravel_Ditch1.tmx",
         "TimeTravel_Dungeon.tmx",
-        "0_TimeTravel_ArchitectsSubjects.tsx",
-        "0_TimeTravel_WallDecor.tsx",
-        "0_TimeTravel_Banners.tsx",
-        "0_TimeTravel_BagOfBalls.tsx",
         "0_InvisibleWall.tsx",
-        "0_TimeTravel_WoodenTable3.tsx",
-        "TimeMachine.tsx",
-        "0_TimeTravel_ShakyFloor.tsx"
+        "0_TimeTravel_MovingRock.tsx",
+        "0_TimeTravel_Barrels.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

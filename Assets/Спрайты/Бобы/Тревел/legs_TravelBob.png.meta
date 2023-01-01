@@ -3,7 +3,7 @@ guid: 06d145b6f66ed12cc94b037807970979
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -44,7 +44,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
@@ -63,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -884,9 +885,9 @@ TextureImporter:
     nameFileIdTable:
       legs_TravelBob_14: -126440040
       legs_TravelBob_20: 1903642391
-      legs_TravelBob_15: 2139456734
-      legs_TravelBob_0: -880736258
       legs_TravelBob_29: 1523645702
+      legs_TravelBob_0: -880736258
+      legs_TravelBob_15: 2139456734
       legs_TravelBob_26: 917687708
       legs_TravelBob_35: 830974883
       legs_TravelBob_10: -215674366

@@ -439,8 +439,8 @@ TextureImporter:
         y: 128
         width: 32
         height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -639,7 +639,7 @@ TextureImporter:
       0_TimeTravel_DecorWood_31: 2110269326
       0_TimeTravel_DecorWood_46: -577050964
       0_TimeTravel_DecorWood_59: 1478211439
-      0_TimeTravel_DecorWood_39: -1929601371
+      0_TimeTravel_DecorWood_50: -619839410
       0_TimeTravel_DecorWood_2: 1722790708
       0_TimeTravel_DecorWood_19: -679383605
       0_TimeTravel_DecorWood_49: -1009340680
@@ -692,7 +692,7 @@ TextureImporter:
       0_TimeTravel_DecorWood_36: 559658456
       0_TimeTravel_DecorWood_17: -1038431460
       0_TimeTravel_DecorWood_34: -1811421355
-      0_TimeTravel_DecorWood_50: -619839410
+      0_TimeTravel_DecorWood_39: -1929601371
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

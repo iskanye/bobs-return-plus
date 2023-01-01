@@ -13,6 +13,9 @@ public class SceneDataWarp : UnityEngine.MonoBehaviour
     public void DeleteSaves() =>
         SceneData.DeleteSaves();
 
+    public void SoftDelete() =>
+        SceneData.SoftDelete();
+
     public void Reload() =>
         LoadScene(GetActiveScene().buildIndex);
 

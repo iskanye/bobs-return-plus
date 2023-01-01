@@ -77,9 +77,10 @@ MonoBehaviour:
   damage: 1
   isDeadly: 0
   addPersistentListener: 0
+  directionBasedOnVelocity: 0
+  penetrating: 0
   discarding: 0
   direction: {x: 0, y: 0}
-  penetrating: 0
 --- !u!114 &3481567044438545273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +113,7 @@ MonoBehaviour:
       m_Calls: []
   playerMask:
     serializedVersion: 2
-    m_Bits: 137
+    m_Bits: 649
   isOnStay: 0
   triggerNotExpected: 0
   colliderNotExpected: 0
@@ -156,4 +157,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f5de1025c26fad98bdfedd3de193a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDestroy: {fileID: 4448214415045013753}
+  objectsToDestroy:
+  - {fileID: 4448214415045013753}

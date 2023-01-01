@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4283528677038366537}
   - component: {fileID: 4249517358523886333}
   - component: {fileID: 7569102256826348225}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,8 @@ GameObject:
   - component: {fileID: 3267959887774782867}
   - component: {fileID: 3267959887774782864}
   - component: {fileID: 2031962918586968952}
-  m_Layer: 0
+  - component: {fileID: 3833943305878618323}
+  m_Layer: 3
   m_Name: WoodenBarrelSpikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,6 +227,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3833943305878618323}
+        m_TargetAssemblyTypeName: CreateGameObject, Assembly-CSharp
+        m_MethodName: Create
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 3267959887774782864}
         m_TargetAssemblyTypeName: Destroy, Assembly-CSharp
         m_MethodName: Do
@@ -274,3 +287,18 @@ MonoBehaviour:
   - {fileID: 6133804647303199696, guid: 9f484aa20aeae0840a66d3081a814fdb, type: 3}
   - {fileID: 5832147253119593909, guid: 402090db50945ea4d8391645b468a64f, type: 3}
   - {fileID: 8299124655120533643, guid: 1e4e6ab27db7bfe4a8da3bdffbd6ebc5, type: 3}
+--- !u!114 &3833943305878618323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5825981423294139908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ab62e77df651912b5a6ec0a4e52396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objects:
+  - {fileID: 1943007244304930363, guid: ebec3a94182e64342a89c4ae8c0ac734, type: 3}
+  - {fileID: 4117708335580346324, guid: 8d91865e2a549e141a16594187a49837, type: 3}

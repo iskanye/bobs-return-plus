@@ -8,7 +8,8 @@ using Dialogues;
 
 public class DialogueSystem : SequenceObject
 {
-    public RectTransform dialogueBox;
+    public Animator dialogueBoxAnimator;
+    public Animator novelAnimator;
     public RectTransform variantBox;
     public DialogueVariantObject variantPrefab;
     public UnityEngine.UI.Image novelSprite;
@@ -53,9 +54,9 @@ public class DialogueSystem : SequenceObject
     {
         if (state != null)
         {
-            StartCoroutine(state.Stop());
             InputManager.Input.Player.Submit.performed -= state.Submit;
             InputManager.Input.Player.Move.started -= state.Move;
+            StartCoroutine(state.Stop());
         }
 
         state = st;
@@ -72,6 +73,7 @@ public class DialogueSystem : SequenceObject
         if (!(active.state is IdleState))
             return;
         
+        active.dialogueBoxAnimator.Play("Opening");
         active.StopAllCoroutines();
         active.obj = obj;
         active.dialogues = dialogues;
@@ -90,7 +92,7 @@ public class DialogueSystem : SequenceObject
     {
         index++;
 
-        if (index >= dialogues.Length)
+        if (index == dialogues.Length)
         {
             ChangeState(idleState);
             return;
@@ -102,7 +104,7 @@ public class DialogueSystem : SequenceObject
     public void ChangeVariant(int variant)
     {
         if (variant >= 0 && variant < current.variants.Length)
-        {
+        {            
             currentVariant = variant;
 
             for (int i = 0; i < current.variants.Length; i++)
@@ -115,12 +117,13 @@ public class DialogueSystem : SequenceObject
         foreach (var i in variantObjects)
             Destroy(i);
 
-        variantObjects = new List<GameObject>();
+        variantObjects = new List<GameObject>();        
         ChangeState(idleState);
 
         if (current.variants[currentVariant].action != null)
-            current.variants[currentVariant].action.Invoke();
-
+            current.variants[currentVariant].action.Invoke(obj);
+        
+        variantBox.sizeDelta = new Vector2(variantBox.sizeDelta.x, 0);
         currentVariant = 0;
     }
 
@@ -163,7 +166,7 @@ public class Dialogue
     public class DialogueVariant
     {
         public string variant;
-        public UnityEvent action;
+        public UnityEvent<GameObject> action;
     }
 
     public Dialogue(UninteractiveDialogue.Dialog d, UnityEvent<GameObject> action)
@@ -179,5 +182,6 @@ public class Dialogue
         this.startDelay = d.startDelay;
         this.cantSkip = d.cantSkip;
         this.delay = d.delay;
+        this.variants = null;
     }
 }

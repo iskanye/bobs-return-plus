@@ -2,11 +2,13 @@
 
 public class Destroy : MonoBehaviour 
 {
-    public Object objectToDestroy;
+    public Object[] objectsToDestroy = new Object[1];
 
-    public void Do() =>
-        Destroy(objectToDestroy);
-
+    public void Do() 
+    {
+        foreach (var i in objectsToDestroy)
+            Destroy(i);
+    }
     public void Do(bool property)
     {
         if (property)
@@ -15,4 +17,5 @@ public class Destroy : MonoBehaviour
 
     public void Do(Object obj) =>
         Destroy(obj);
+
 }

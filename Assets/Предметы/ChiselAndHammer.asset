@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5435d842c5cdbfd4c8af19a9ba35e4c6, type: 3}
+  m_Name: ChiselAndHammer
+  m_EditorClassIdentifier: 
+  id: 14f3013e-b1a4-42b6-bd28-5f851a33806c
+  icon: {fileID: 21300000, guid: 4b86ceda932842f4299c0f6978647b4c, type: 3}
+  name: "\u0417\u0443\u0431\u0438\u043B\u043E \u0438 \u043C\u043E\u043B\u043E\u0442\u043E\u043A"
+  mn: {fileID: 0}
+  bullet: {fileID: 5770269244903044274, guid: 6439891270aa9cb478063ac5600e4133, type: 3}
+  force: 10

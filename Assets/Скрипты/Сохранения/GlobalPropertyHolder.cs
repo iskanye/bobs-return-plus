@@ -1,8 +1,9 @@
 using UnityEngine;
 
-public class GlobalPropertyHolder : GUIDHolder
+public class GlobalPropertyHolder : MonoBehaviour
 {
-    public UnityEngine.Events.UnityEvent<bool> action;
+    public string id;
+    public UnityEngine.Events.UnityEvent action;
 
     public void SetProperty()
     {
@@ -15,6 +16,6 @@ public class GlobalPropertyHolder : GUIDHolder
     void Start()
     {
         if (PlayerPrefs.HasKey(id))
-            action.Invoke(true);
+            action.Invoke();
     }
 }

@@ -14,8 +14,6 @@ public class PlayerLives : LivesBase
             if (melee && melee.melee.attackTrigger)
                 return;
 
-            bob.data.movement.speed = prevSpeed;
-
             if (value <= 0)
             {
                 CameraController.Active.StartShake(.15f, 1.5f);
@@ -35,7 +33,7 @@ public class PlayerLives : LivesBase
                     i.SetTrigger("Hit");
 
                 StartCoroutine(Hit());
-                CameraController.Active.StartShake(.15f, 1f);
+                CameraController.Active.StartShake(.1f, 1f);
             }
 
             if (livesCalculation == null)
@@ -54,12 +52,10 @@ public class PlayerLives : LivesBase
 
     BobController bob;
     MeleeBob melee;
-    float prevSpeed;
 
     void Awake()
     {
         bob = GetComponent<BobController>();
-        prevSpeed = bob.data.movement.speed;
         Durability = ObjectType.Flimsy;
 
         melee = bob.character is MeleeBob meleeBob ? meleeBob : null;
@@ -69,6 +65,7 @@ public class PlayerLives : LivesBase
 
     IEnumerator Death()
     {
+        StartCoroutine(SkipDeath());
         FindObjectOfType<PauseController>().gameObject.SetActive(false);
 
         foreach (var i in bob.data.animators)
@@ -83,21 +80,34 @@ public class PlayerLives : LivesBase
         yield return new WaitForSeconds(.4f);
         bob.enabled = false;
         deathScreen.Play("Death");
-        FadeInOut.active.FadeIn(.45f);
 
         yield return new WaitForSeconds(.3f);
+        deathScreen.GetComponent<SimpleUnscaledSpriteAnimation>().StartAnimation();
         Time.timeScale = 1;
 
-        yield return new WaitForSeconds(5.7f);
-        FadeInOut.active.FadeOut(.6f);
+        yield return new WaitForSeconds(6.2f);
+        deathScreen.GetComponent<SimpleUnscaledSpriteAnimation>().Stop();
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(4.2f);
+
         LoadScene(GetActiveScene().buildIndex);
+    }
+
+    IEnumerator SkipDeath() 
+    {
+        while (true)
+        {
+            if (InputManager.Active.attack)
+                LoadScene(GetActiveScene().buildIndex);
+
+            yield return null;
+        }
     }
 
     IEnumerator Invincible()
     {
         PlayerLiveCounter.Active.isInvincible = true;
+        bob.data.rigidbody.velocity = Vector2.zero;
 
         for (var time = invincibleTime; time >= 0; time -= .15f)
         {
@@ -115,7 +125,7 @@ public class PlayerLives : LivesBase
 
     IEnumerator Hit() 
     {
-        prevSpeed = bob.data.movement.speed;
+        var prevSpeed = bob.data.movement.speed;
         bob.data.movement.speed *= .1f;
         bob.data.rigidbody.velocity = hitDirection;
         yield return new WaitForSeconds(hitDuration);

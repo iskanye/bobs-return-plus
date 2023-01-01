@@ -16,7 +16,7 @@ public abstract class State<T> where T : UnityEngine.MonoBehaviour
     //Считать как за один проход по циклу. Если нужен сам цикл - использовать while(true)
     public virtual IEnumerator Update()
     {
-        yield break;
+        yield return null;
     }
 
     public virtual IEnumerator Stop()

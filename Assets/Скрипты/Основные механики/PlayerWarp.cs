@@ -15,7 +15,7 @@
     public InventorySystem inventory;
     public UnityEngine.Animator deathScreen;
 
-    [UnityEngine.HideInInspector] public BobController player;
+    public BobController player;
 
     void Awake()
     {
@@ -32,5 +32,13 @@
     {
         yield return player.GetComponent<AnimationMovementController>().Sequence();
     }
-}
 
+    public void PlayAnimation(string animation) 
+    {
+        foreach (var i in player.data.animators)
+            i.Play(animation);
+    }
+
+    public void SetCharacterBool(string name) =>
+        player.SetCharacterBool(name);
+}

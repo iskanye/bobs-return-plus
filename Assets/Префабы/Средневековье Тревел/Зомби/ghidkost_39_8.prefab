@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 1462405327, guid: 1010c59a928e43abb9cc7bb4892b0e3d, type: 3}
   m_Color: {r: 0.24705882, g: 0.29411766, b: 0.050980393, a: 1}
   m_FlipX: 0
@@ -167,9 +167,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   isDeadly: 0
+  addPersistentListener: 0
+  directionBasedOnVelocity: 0
+  penetrating: 0
   discarding: 0
   direction: {x: 0, y: 0}
-  penetrating: 0
 --- !u!114 &5954559820208445999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,7 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f5de1025c26fad98bdfedd3de193a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDestroy: {fileID: 0}
+  objectsToDestroy:
+  - {fileID: 0}
 --- !u!95 &3462384371091815179
 Animator:
   serializedVersion: 4

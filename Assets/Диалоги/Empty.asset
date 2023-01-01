@@ -16,11 +16,10 @@ MonoBehaviour:
   - character: 
     dialogueCharacter: {fileID: 0}
     emotionId: 0
-    color: {r: 1, g: 1, b: 1, a: 1}
     delay: 0
     text: "\u0417\u0434\u0435\u0441\u044C \u043F\u0443\u0441\u0442\u043E."
     startDelay: 0
-    clearPreviousText: 0
+    clearPreviousText: 1
     showStraightaway: 0
     dontWait: 0
     cantSkip: 0

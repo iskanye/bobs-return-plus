@@ -103,7 +103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f5de1025c26fad98bdfedd3de193a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDestroy: {fileID: 995041941049169118}
+  objectsToDestroy:
+  - {fileID: 0}
 --- !u!1 &3565138249473697437
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +181,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: -1
   m_Sprite: {fileID: 1882917808, guid: 1010c59a928e43abb9cc7bb4892b0e3d, type: 3}
   m_Color: {r: 0.24545231, g: 0.2924528, b: 0.051041294, a: 1}
   m_FlipX: 0
@@ -288,6 +289,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   isDeadly: 0
+  addPersistentListener: 0
+  directionBasedOnVelocity: 0
+  penetrating: 0
   discarding: 0
   direction: {x: 0, y: 0}
-  penetrating: 0

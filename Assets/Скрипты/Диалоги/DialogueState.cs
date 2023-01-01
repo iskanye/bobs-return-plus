@@ -2,6 +2,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using System.Linq;
 
 namespace Dialogues
 {
@@ -20,22 +21,25 @@ namespace Dialogues
     {
         public IdleState(DialogueSystem sys) : base(sys) { }
 
-        public override IEnumerator Update()
-        {
+        public override IEnumerator Start() 
+        { 
+            if (mn.text.text != "")                
+                mn.dialogueBoxAnimator.Play("Closing");
+
+            mn.novelAnimator.SetBool("Novel", false);               
             mn.text.text = "";
             mn.character.text = "";
 
+            yield return new WaitForSeconds(.1f);
+            yield return base.Start();
+        }
+
+        public override IEnumerator Update()
+        {
             if (mn.player != null)
                 mn.player.Enable();
 
-            while (true)
-            {
-                mn.dialogueBox.localScale = Vector3.Lerp(mn.dialogueBox.localScale, new Vector3(1, 0, 1), 8 * Time.deltaTime);
-                mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, new Vector3(1, 0, 1), 6 * Time.deltaTime);
-                mn.novelTransform.anchoredPosition = new Vector3(Mathf.Lerp(mn.novelTransform.anchoredPosition.x, mn.novelTransform.sizeDelta.x, 8 * Time.deltaTime), 0, 0);
-
-                yield return base.Update();
-            }
+            yield return base.Update();
         }
     }
 
@@ -56,23 +60,25 @@ namespace Dialogues
             if (mn.current.action != null)
                 mn.current.action.Invoke(mn.obj);
 
+            mn.novelAnimator.SetBool("Novel", mn.current.dialogueCharacter != null);
+
             if (mn.current.dialogueCharacter != null)
             {
-                var sprite = mn.current.dialogueCharacter.emotions[mn.current.emotionId];
+                var sprite = mn.current.dialogueCharacter.emotions.First(i => i.id == mn.current.emotionId).sprite;
                 mn.novelSprite.sprite = sprite;
                 mn.novelSprite.rectTransform.sizeDelta = new Vector2(sprite.texture.width, mn.novelSprite.rectTransform.sizeDelta.y);
+                ((RectTransform)mn.text.transform).anchoredPosition = new Vector2(-64, -6);
+                ((RectTransform)mn.text.transform).sizeDelta = new Vector2(320, 96);
             }
 
-            yield return base.Start();
-
-            while (mn.dialogueBox.localScale != Vector3.one)
+            else 
             {
-                mn.dialogueBox.localScale = Vector3.Lerp(mn.dialogueBox.localScale, Vector3.one, 14 * Time.deltaTime);
-
-                yield return base.Update();
+                ((RectTransform)mn.text.transform).anchoredPosition = new Vector2(0, -6);
+                ((RectTransform)mn.text.transform).sizeDelta = new Vector2(448, 96);
             }
 
-            yield return new WaitForSeconds(mn.current.startDelay);
+            yield return base.Start();    
+            yield return new WaitForSeconds(mn.current.startDelay + (mn.index == 0 ? .35f : 0));
 
             mn.text.text = GetCurrentText();
 
@@ -90,18 +96,6 @@ namespace Dialogues
             }
 
             mn.ChangeState(mn.waitingState);
-        }
-
-        public override IEnumerator Update()
-        {
-            while (true)
-            {
-                mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, new Vector3(1, 0, 1), 6 * Time.deltaTime);
-                mn.novelTransform.anchoredPosition = new Vector3(Mathf.Lerp(mn.novelTransform.anchoredPosition.x,
-                    mn.current.dialogueCharacter == null ? mn.novelTransform.sizeDelta.x : -32, 8 * Time.deltaTime), 0, 0);
-
-                yield return base.Update();
-            }
         }
 
         public override IEnumerator Stop()
@@ -139,60 +133,32 @@ namespace Dialogues
         {
             if (mn.current.dontWait)
             {
-                mn.index++;
-
-                if (mn.index >= mn.dialogues.Length)
-                {
-                    mn.ChangeState(mn.idleState);
-                    yield break;
-                }
-
-                mn.ChangeState(mn.printingState);
+                mn.ChangeDialogue();
+                yield break;
             }
 
-            yield return base.Start();
-
-            if (mn.current.variants != null)
-            {
-                mn.variantBox.sizeDelta = new Vector2(mn.variantBox.sizeDelta.x, 32 * mn.current.variants.Length);
-
-                while (mn.variantBox.localScale != Vector3.one)
-                {
-                    mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, Vector3.one, 14 * Time.deltaTime);
-                    yield return base.Update();
-                }
-
+            if (mn.current.variants != null && mn.current.variants.Length != 0)
+            { 
                 for (int i = 0; i < mn.current.variants.Length; i++)
                 {
-                    var variant = Object.Instantiate(mn.variantPrefab, mn.variantBox);
+                    var variant = GameObject.Instantiate(mn.variantPrefab, mn.variantBox);
                     variant.GetComponent<TMP_Text>().text = mn.current.variants[i].variant;
                     variant.GetComponent<TMP_Text>().faceColor = i == 0 ? Color.white : Color.grey;
                     variant.index = i;
                     variant.system = mn;
 
                     mn.variantObjects.Add(variant.gameObject);
-                }
+                } 
+
+                mn.variantBox.sizeDelta = new Vector2(mn.variantBox.sizeDelta.x, 32 * mn.current.variants.Length);
             }
-        }
 
-        public override IEnumerator Update()
-        {
-            while (true)
-            {
-                if (mn.current.variants == null)
-                    mn.variantBox.localScale = Vector3.Lerp(mn.variantBox.localScale, new Vector3(1, 0, 1), 6 * Time.deltaTime);
-
-                mn.novelTransform.anchoredPosition = new Vector3(Mathf.Lerp(mn.novelTransform.anchoredPosition.x,
-                    mn.current.dialogueCharacter == null ? mn.novelTransform.sizeDelta.x : 0, 8 * Time.deltaTime), 0, 0);
-                mn.dialogueBox.localScale = Vector3.Lerp(mn.dialogueBox.localScale, Vector3.one, 14 * Time.deltaTime);
-
-                yield return base.Update();
-            }
+            yield return base.Start();
         }
 
         public override void Submit(InputAction.CallbackContext c)
         {
-            if (mn.current.variants != null)
+            if (mn.current.variants != null && mn.current.variants.Length != 0)
                 mn.ChooseVariant();
 
             else
@@ -201,13 +167,13 @@ namespace Dialogues
 
         public override void GUIInput()
         {
-            if (mn.current.variants == null)
+            if (mn.current.variants == null || mn.current.variants.Length == 0)
                 mn.ChangeDialogue();
         }
 
         public override void Move(InputAction.CallbackContext c)
         {
-            if (mn.current.variants != null)
+            if (mn.current.variants != null && mn.current.variants.Length != 0)
                 mn.ChangeVariant(mn.currentVariant + (c.ReadValue<Vector2>().y > 0 ? -1 : 1));
         }
     }

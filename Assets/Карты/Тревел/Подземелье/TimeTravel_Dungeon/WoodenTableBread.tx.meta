@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 0e85cb23b84467b47b5162e28367850b
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 4426ef1bd8d94d242b03d3dc2d544b32, type: 3}
+  missingFiles:
+  - 0_TimeTravel_WoodenTableBread.tsx
+  errors:
+  - "Missing tileset asset: Assets/\u041A\u0430\u0440\u0442\u044B/\u0422\u0440\u0435\u0432\u0435\u043B/\u041F\u043E\u0434\u0437\u0435\u043C\u0435\u043B\u044C\u0435/TimeTravel_Dungeon/WoodenTableBread.tx"
+  - Unknown error encountered. Please report as bug. Stack track is in the console
+    output.
+  - 'Assertion failure. Value was Null
+
+    Expected: Value was not Null'
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  missingTags: []
+  importerVersion: 0

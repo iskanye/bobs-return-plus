@@ -178,6 +178,9 @@ public class TutorialZombie : MonoBehaviour
 
         anim.SetTrigger("Death");
 
+        for (int i = 0; i < transform.childCount; i++)
+            Destroy(transform.GetChild(i).gameObject);
+            
         Destroy((MonoBehaviour)ai.AI);
         Destroy(ai);
         Destroy(this);

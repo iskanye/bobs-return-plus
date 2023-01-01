@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class EffectsController : MonoBehaviour
 {
     public EffectData data;
-    [HideInInspector] public List<EffectBase> effects;
+    public List<EffectBase> effects;
 
     public void AddEffect(EffectBase effect) 
     {
@@ -12,6 +12,7 @@ public class EffectsController : MonoBehaviour
             return;
 
         effect.mn = this;
+        effect.data = data;
         effects.Add(effect);
 
         effect.start = effect.Start();
@@ -22,7 +23,7 @@ public class EffectsController : MonoBehaviour
     {
         for (int i = 0; i < effects.Count; i++)
             if (effects[i].Equals(effect)) 
-                StartCoroutine(effect.Stop());
+                StartCoroutine(effects[i].Stop());
     }
 }
 [System.Serializable]

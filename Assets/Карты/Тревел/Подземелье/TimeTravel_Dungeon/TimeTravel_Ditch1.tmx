@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" infinite="1" nextlayerid="7" nextobjectid="1">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" infinite="1" nextlayerid="9" nextobjectid="24">
  <tileset firstgid="1" source="0_TimeTravel_Dungeon.tsx"/>
  <tileset firstgid="257" source="0_TimeTravel_Rov.tsx"/>
  <tileset firstgid="275" source="0_TimeTravel_DecorDurable.tsx"/>
  <tileset firstgid="375" source="0_TimeTravel_DecorFragile.tsx"/>
+ <tileset firstgid="475" source="0_TimeTravel_Stones.tsx"/>
+ <tileset firstgid="487" source="0_TimeTravel_Bones.tsx"/>
  <layer id="1" name="Floor" width="32" height="32">
   <data encoding="csv">
    <chunk x="0" y="0" width="16" height="16">
@@ -48,72 +50,24 @@
 </chunk>
   </data>
  </layer>
- <layer id="6" name="Decor2" width="32" height="32">
-  <data encoding="csv">
-   <chunk x="0" y="0" width="16" height="16">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,328,0,0,2147483975,0,0,0,0,0,
-0,0,0,0,0,0,327,338,0,0,2147483985,0,328,0,0,0,
-0,0,0,0,0,328,337,0,0,0,0,328,338,0,0,0,
-0,0,0,0,0,338,0,0,0,0,0,338,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</chunk>
-  </data>
- </layer>
- <layer id="5" name="Decor1" width="32" height="32">
-  <data encoding="csv">
-   <chunk x="0" y="0" width="16" height="16">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,375,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,378,379,0,327,0,0,0,
-0,0,0,0,0,0,0,376,0,0,327,0,337,0,0,0,
-0,0,0,0,0,0,0,0,2147484023,0,337,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</chunk>
-  </data>
- </layer>
- <layer id="4" name="Interaction" width="32" height="32">
-  <data encoding="csv">
-   <chunk x="0" y="0" width="16" height="16">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,269,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,269,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,270,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</chunk>
-  </data>
- </layer>
+ <objectgroup id="8" name="FloorObjects">
+  <object id="19" template="Bones1.tx" x="287" y="192"/>
+  <object id="20" template="Bones2.tx" x="224" y="256"/>
+  <object id="21" template="Bones1.tx" gid="2147484135" x="256" y="288" rotation="0"/>
+  <object id="22" template="Bones4.tx" x="288.333" y="228.333"/>
+  <object id="23" template="Bones5.tx" x="320" y="224"/>
+ </objectgroup>
+ <objectgroup id="7" name="Objects">
+  <object id="1" template="Stalagmite1.tx" x="192" y="224"/>
+  <object id="2" template="Stalagmite1.tx" gid="2147484126" x="320" y="192" rotation="0"/>
+  <object id="3" template="Stalagmite1.tx" x="320" y="288"/>
+  <object id="4" template="Stalagmite1.tx" x="384" y="256"/>
+  <object id="5" template="Stalagmite2.tx" x="160" y="256"/>
+  <object id="6" template="Stalagmite2.tx" x="224" y="192"/>
+  <object id="7" template="Stalagmite2.tx" x="384" y="224"/>
+  <object id="8" template="Stalagmite2.tx" x="352" y="256"/>
+  <object id="17" template="StoneStaircaseDown.tx" class="StoneStaircaseDown" x="256" y="160"/>
+ </objectgroup>
  <layer id="3" name="Roof" width="32" height="32">
   <data encoding="csv">
    <chunk x="0" y="0" width="16" height="16">

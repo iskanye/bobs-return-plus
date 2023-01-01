@@ -22,4 +22,7 @@ public class BobController : MonoBehaviour
         character.controller = this;
         StartCoroutine(character.Start());
     }
+
+    public void SetCharacterBool(string name) =>
+        character.SetBool(name);
 }

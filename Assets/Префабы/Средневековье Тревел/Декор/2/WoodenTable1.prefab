@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3766970377195369564}
   - component: {fileID: 3766970377195369562}
   - component: {fileID: 3766970377195369563}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 0_TimeTravel_CardsOnTable_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,6 +103,7 @@ MonoBehaviour:
   - {fileID: 191310832, guid: 5a7d3e279f89e180c9fa46576b6064d5, type: 3}
   - {fileID: 826533784, guid: 5a7d3e279f89e180c9fa46576b6064d5, type: 3}
   delay: 0.1
+  isAwake: 1
 --- !u!1 &3766970377513843017
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +119,7 @@ GameObject:
   - component: {fileID: 3766970377513843014}
   - component: {fileID: 3766970377513843015}
   - component: {fileID: 3766970377513843016}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WoodenTable1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +340,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f5de1025c26fad98bdfedd3de193a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDestroy: {fileID: 3766970377513843017}
+  objectsToDestroy:
+  - {fileID: 3766970377513843017}
 --- !u!1 &4308875541650144403
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +354,7 @@ GameObject:
   - component: {fileID: 8055899543448625202}
   - component: {fileID: 6724871225616337705}
   - component: {fileID: 5301482090300105340}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

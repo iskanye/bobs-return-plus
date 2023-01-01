@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 5976803072012004530}
   - component: {fileID: 5976803072012004529}
   - component: {fileID: 866933921505071310}
-  m_Layer: 0
+  - component: {fileID: -1139696608535623834}
+  m_Layer: 3
   m_Name: WoodPin1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,6 +132,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -1139696608535623834}
+        m_TargetAssemblyTypeName: CreateGameObject, Assembly-CSharp
+        m_MethodName: Create
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 5976803072012004529}
         m_TargetAssemblyTypeName: Destroy, Assembly-CSharp
         m_MethodName: Do
@@ -177,3 +190,17 @@ MonoBehaviour:
   - {fileID: 4585545850013346039, guid: 1fffca52216968842a96f7d1d81e2369, type: 3}
   - {fileID: 4709746300904849131, guid: fd2110e7f221e304aa508868f1be41a0, type: 3}
   - {fileID: 6133804647303199696, guid: 9f484aa20aeae0840a66d3081a814fdb, type: 3}
+--- !u!114 &-1139696608535623834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418783739550856997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ab62e77df651912b5a6ec0a4e52396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objects:
+  - {fileID: 1943007244304930363, guid: ebec3a94182e64342a89c4ae8c0ac734, type: 3}
