@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 969c2619bd275a7678d05464f8afbc5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenSize: {x: 608, y: 416}
+  screenSize: {x: 608, y: 352}
 --- !u!1 &6339904484089518399
 GameObject:
   m_ObjectHideFlags: 0
