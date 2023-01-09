@@ -14,18 +14,17 @@ public class AchievementSystem : MonoBehaviour
 
     public void ShowAchievement(Achievement achievement)
     {
-        var ach = achievement;
-        var id = new IdItem(ach.id);
+        var id = new GuidItem(achievement.id);
+        
+        if (SceneData.Data.achievements.Contains(id))
+            return;
 
-        if (!SceneData.Data.achievements.Contains(id))
-        {
-            title.text = ach.title;
-            description.text = ach.description;
-            icon.sprite = ach.icon;
+        title.text = achievement.title;
+        description.text = achievement.description;
+        icon.sprite = achievement.icon;
 
-            StartCoroutine(PlayAnimation());
-            SceneData.Data.achievements.Add(id);
-        }
+        StartCoroutine(PlayAnimation());
+        SceneData.Data.achievements.Add(id);
     }
 
     System.Collections.IEnumerator PlayAnimation()

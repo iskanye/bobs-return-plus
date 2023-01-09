@@ -4,7 +4,7 @@ using System;
 using Pathfinding;
 
 //Скрипт ИИ
-public class AIManager : BaseMovement, IInteger
+public class AIManager : BaseMovement
 {
     public LayerMask obstacles = 1 << 3; //Слой с препятствиями
     public LayerMask player = 1 << 6; //Слой с игроком
@@ -19,15 +19,6 @@ public class AIManager : BaseMovement, IInteger
     public Vector2[] path; //Массив пути(для патрульного ИИ)
 
     public IAstarAI AI { get; private set; }
-
-    public int integer
-    {
-        get =>
-            currWay - 1;
-
-        set =>
-            currWay = value;
-    }
 
     public bool canMove { get => AI.canMove; set => AI.canMove = value; }
 

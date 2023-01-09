@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Fortune Bread", menuName = "Items/Special/Fortune Bread", order = 0)]
+[CreateAssetMenu(fileName = "Fortune Bread", menuName = "Items/Other/Fortune Bread", order = 0)]
 public class FortuneBread : HealingItem
 {
     public UninteractiveDialogue dontHaveAnything;
@@ -8,7 +8,7 @@ public class FortuneBread : HealingItem
 
     public override bool Action()
     {
-        if (PlayerLiveCounter.Active.LivesRemaining == PlayerLiveCounter.Active.maxLives || PlayerLiveCounter.Active.isInvincible)
+        if (PlayerLiveCounter.Active.isInvincible)
             return false;
 
         PlayerLiveCounter.Active.LivesRemaining += healing;

@@ -24,12 +24,11 @@ public class InventorySystem : MonoBehaviour
     void Awake()
     {
         Active = this;
-
+        warp = FindObjectOfType<PlayerWarp>();
+                
         Index = 0;
         var inventory = SceneData.Data.inventory;
         items = new Item[maxItems];
-
-        warp = FindObjectOfType<PlayerWarp>();
 
         if (inventory != null)
             for (int i = 0; i < (inventory.Count > maxItems ? maxItems : inventory.Count); i++)

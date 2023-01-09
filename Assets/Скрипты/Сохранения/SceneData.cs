@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using System.Collections.Generic;
 
 public class SceneData : MonoBehaviour
 {
@@ -12,16 +13,12 @@ public class SceneData : MonoBehaviour
     public static SceneData Active { get; private set; }
 
     PositionHolder[] positions;
-    PropertyHolder[] properties;
     IntegerHolder[] integers;
     PlayerLiveCounter lives;
     InventorySystem inventory;
 
-    void OnDisable()
-    {
-        var rebinds = actions.SaveBindingOverridesAsJson();
-        PlayerPrefs.SetString("rebinds", rebinds);
-    }
+    void OnDisable() => 
+        PlayerPrefs.SetString("rebinds", actions.SaveBindingOverridesAsJson());
 
     void Awake()
     {
@@ -40,61 +37,96 @@ public class SceneData : MonoBehaviour
         Data = SaveLoad.Load();
         UnityEngine.SceneManagement.SceneManager.sceneLoaded += (i, j) => Start();
         UnityEngine.SceneManagement.SceneManager.sceneUnloaded += i => OnDisable();
+
+        if (Data.version != SaveData.currentVersion)
+            Data = new SaveData();
+
+        if (Data.level != UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex)
+        { 
+            Data.localProperties = new List<Property<bool>>();           
+            Data.positions = new List<Property<Vector3>>();
+            Data.integers = new List<Property<int>>();
+            Data.inventory = new List<GuidItem>();
+        }
     }
 
     void Start()
     {
-        var rebinds = PlayerPrefs.GetString("rebinds");
         if (PlayerPrefs.HasKey("rebinds"))
-            actions.LoadBindingOverridesFromJson(rebinds);
+            actions.LoadBindingOverridesFromJson(PlayerPrefs.GetString("rebinds"));
 
         positions = FindObjectsOfType<PositionHolder>();
-        properties = FindObjectsOfType<PropertyHolder>();
         integers = FindObjectsOfType<IntegerHolder>();
-        lives = FindObjectOfType<PlayerLiveCounter>();
+        lives = PlayerLiveCounter.Active;
         inventory = FindObjectOfType<InventorySystem>();
+    }
+
+    public static bool HasProperty(string id, bool local = true) => 
+        local ? Data.localProperties.Exists(i => i.id == id) : Data.globalProperties.Exists(i => i.id == id);    
+
+    public static void SetProperty(string id, bool property, bool local = true) 
+    {
+        if (local) 
+        {
+            if (HasProperty(id))
+                Data.localProperties.Find(i => i.id == id).property = property;
+
+            else 
+                Data.localProperties.Add(new Property<bool>(id, property));
+        }
+
+        else 
+        {
+            if (HasProperty(id, false))
+                Data.globalProperties.Find(i => i.id == id).property = property;
+
+            else 
+                Data.globalProperties.Add(new Property<bool>(id, property));
+        }
+    } 
+
+    public static bool GetProperty(string id, bool local = true)
+    {
+        if (!HasProperty(id, local))
+            return false;
+
+        return local ? Data.localProperties.Find(i => i.id == id).property : Data.globalProperties.Find(i => i.id == id).property;
     }
 
     public static void Save()
     {
-        var active = Active;
-        var temp = Data.achievements;
+        Data.level = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
+        Data.lives = Active.lives.LivesRemaining;
+        Data.positions = new List<Property<Vector3>>();
+        Data.integers = new List<Property<int>>();
+        Data.inventory = new List<GuidItem>();
 
-        Data = new SaveData
-        {
-            level = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex,
-            lives = active.lives.LivesRemaining,
-            achievements = temp
-        };
+        foreach (var i in Active.positions) 
+            Data.positions.Add(new Property<Vector3>(i.id, i.gameObject.transform.position));
 
-        foreach (var i in active.positions) 
-            Data.positions.Add(new Position(i.id, i.gameObject.transform.position));
+        foreach (var i in Active.integers)
+            Data.integers.Add(new Property<int>(i.id, i.Integer.integer));
 
-        foreach (var i in active.properties) 
-            Data.customProperties.Add(new CustomProperty(i.id, i.property));
-
-        foreach (var i in active.integers)
-            Data.integers.Add(new Integer(i.id, i.Integer.integer));
-
-        foreach (var i in active.inventory.items)
+        foreach (var i in Active.inventory.items)
             if (i != null) 
                 Data.inventory.Add(new GuidItem(i.id));
+        
+        SaveLoad.Save(Data);
 
-        active.StopAllCoroutines();
+        Active.StopAllCoroutines();
 
-        if (active.savingText != null)
-            active.StartCoroutine(active.Saving());
-    }
-
-    public static void DeleteSaves()
-    {
-        PlayerPrefs.DeleteAll();
-        SoftDelete();
+        if (Active.savingText != null)
+            Active.StartCoroutine(Active.Saving());
     }
     
-    public static void SoftDelete()
+    public static void DeleteSaves()
     {
         var active = Active;
+        
+        SaveLoad.DeleteSaves();
+
+        var temp = Data.globalProperties;
+        Data = new SaveData();
 
         active.StopAllCoroutines();
 
@@ -104,8 +136,6 @@ public class SceneData : MonoBehaviour
 
     IEnumerator Saving()
     {
-        SaveLoad.Save(Data);
-
         savingText.text = "сохранено";
         yield return new WaitForSecondsRealtime(3);
         savingText.text = "";
@@ -113,9 +143,6 @@ public class SceneData : MonoBehaviour
 
     IEnumerator Deleting()
     {
-        SaveLoad.DeleteSaves();
-        Data = new SaveData();
-
         savingText.text = "удалено";
         yield return new WaitForSecondsRealtime(3);
         savingText.text = "";

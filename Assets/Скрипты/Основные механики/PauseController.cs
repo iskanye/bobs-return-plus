@@ -30,12 +30,7 @@ public class PauseController : MonoBehaviour
 
     public void FullScreen(bool p)
     {
-        if (p)
-            Screen.SetResolution(Display.main.systemWidth, Display.main.systemWidth, true);
-
-        else
-            Screen.SetResolution(608, 416, false);
-
+        Screen.fullScreen = p;
         Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
     }
 

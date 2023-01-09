@@ -5,89 +5,29 @@ using System.Collections.Generic;
 [Serializable]
 public class SaveData
 {
-    public const string currentVersion = "alpha 1.0";
+    public const string currentVersion = "tutorial";
     public string version = currentVersion;
 
     public int level;
     public int lives = -1;
 
-    public List<Position> positions;
-    public List<Integer> integers;
+    public List<Property<Vector3>> positions;
+    public List<Property<int>> integers;
 
-    public List<CustomProperty> customProperties;
+    public List<Property<bool>> localProperties;
+    public List<Property<bool>> globalProperties;
 
-    public List<IdItem> achievements;
+    public List<GuidItem> achievements;
     public List<GuidItem> inventory;
 
     public SaveData() 
     {
-        customProperties = new List<CustomProperty>();
-        positions = new List<Position>();
-        integers = new List<Integer>();
-        achievements = new List<IdItem>();
+        localProperties = new List<Property<bool>>();
+        globalProperties = new List<Property<bool>>();
+        positions = new List<Property<Vector3>>();
+        integers = new List<Property<int>>();
+        achievements = new List<GuidItem>();
         inventory = new List<GuidItem>();
-    }
-}
-
-[Serializable]
-public class Position 
-{
-    public string id;
-    public Vector3 position;
-
-    public Position() { }
-
-    public Position(string id, Vector3 position)
-    {
-        this.id = id;
-        this.position = position;
-    }
-}
-
-[Serializable]
-public class CustomProperty
-{
-    public string id;
-    public bool property;
-
-    public CustomProperty() { }
-
-    public CustomProperty(string id, bool property)
-    {
-        this.id = id;
-        this.property = property;
-    }
-}
-
-[Serializable]
-public class Integer
-{
-    public string id;
-    public int integer;
-
-    public Integer() { }
-
-    public Integer(string id, int integer)
-    {
-        this.id = id;
-        this.integer = integer;
-    }
-}
-
-[Serializable]
-public class IdItem : IEquatable<IdItem>
-{
-    public int id;
-
-    public IdItem(int id) => 
-        this.id = id;
-
-    public bool Equals(IdItem i)
-    {
-        if (id == i.id)
-            return true;
-
-        return false;
     }
 }
 
@@ -106,4 +46,13 @@ public class GuidItem : IEquatable<GuidItem>
 
         return false;
     }
+}
+
+[Serializable]
+public class Property<T> : GuidItem
+{
+    public T property;
+
+    public Property(string id, T property) : base(id) =>
+        this.property = property;
 }

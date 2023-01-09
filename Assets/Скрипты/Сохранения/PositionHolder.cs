@@ -10,6 +10,6 @@ public class PositionHolder : GUIDHolder
         var pos = data.positions.Find(i => i.id == id);
 
         if (pos != null)
-            transform.position = pos.position;
+            transform.position = pos.property;
     }
 }
