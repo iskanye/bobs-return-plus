@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<template>
- <tileset firstgid="1" source="0_TimeTravel_PedestalWithPotatoe.tsx"/>
- <object class="PedestalWithPotatoe" gid="1" width="32" height="64">
-  <properties>
-   <property name="PedestalWithPotatoe" type="int" value="4"/>
-  </properties>
- </object>
-</template>

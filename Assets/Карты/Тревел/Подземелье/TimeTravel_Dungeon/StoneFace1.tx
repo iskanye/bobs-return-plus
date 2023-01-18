@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<template>
- <tileset firstgid="1" source="0_TimeTravel_Stones.tsx"/>
- <object class="StoneFace1" gid="7" width="32" height="64">
-  <properties>
-   <property name="Durability" type="int" value="3"/>
-  </properties>
- </object>
-</template>

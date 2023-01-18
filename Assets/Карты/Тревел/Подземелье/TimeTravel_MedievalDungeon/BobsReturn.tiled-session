@@ -1,0 +1,888 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "TimeTravel_MedievalDungeon.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "Все файлы (*)",
+    "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
+        "0_Dark.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_InvisibleWall.tsx": {
+            "scaleInDock": 4,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_AccessoriesOfStones.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_ArchitectsSubjects.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_ArrowStatue.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_AutoCrossbow.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_AutoCrossbowStand.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_BabyPuppet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_BagOfBalls.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Ball.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_BannerArrow.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Banners.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Banners1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Banners2.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_BarrelDrum.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_BarrelOfWeapon.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Barrels.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_BasketWithSpikes.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_BoardGame.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Bones.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_CardsOnTable.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Chains.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_ChangesAreInevitable.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Chest.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Crossbow.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_CrossbowStand.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_DecorDurable.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_DecorFragile.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_DecorOther.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_DecorWood.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Dungeon.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_DungeonDoors.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_DungeonLaboratory.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_FakeStones.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Flags.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_FlimsyDecor.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Food.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_GeneralFivefinger.tsx": {
+            "scaleInDock": 1
+        },
+        "0_TimeTravel_GiantTorch.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Grass.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_GuardsWeapon.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Hay.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Lever.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_LikeShapedStatue.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Lute.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Mannequin.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Morgenstern.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Moss.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_MovingRock.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_MovingTower.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_MuseumOfYouStatues.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Note.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_OilLamp.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_PedestalWithPotatoe.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Pie.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_PuppetsOnPoles.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_RatsHouses.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_RatsWheel.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Ropes.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Rov.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_SafetyZone.tsx": {
+            "scaleInDock": 1
+        },
+        "0_TimeTravel_ShakyFloor.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_SignageBannersRed.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_SmallDecor.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_SpearArrow.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_SpikyLog.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_StalagmiteGiant.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_StoneStatues.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_StoneThorns.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Stones.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Stool.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_SwingingBall.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_SwingingBalls.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_SwingingBallsChains.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_TableTiles.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Target.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Torch.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_TrollStatue.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Vases.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_VillageToilet.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_WallDecor.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_WarningArrow.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_WarningTablet.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_WoodenChainsaw.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_WoodenFlag.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_WoodenLounger.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_WoodenSign.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_WoodenSignLeftRight.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_WoodenTable1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_WoodenTable2.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_WoodenTable3.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_WoodenTableBread.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_WoodenTablet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_WoodenTablets.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_WoodenTabletsBig.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Woods.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Wreckage.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "1_TimeTravel_Spinis.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/BasicTiles/0_Dark.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_InvisibleWall.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_AccessoriesOfStones.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_ArchitectsSubjects.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_ArrowStatue.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_AutoCrossbow.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_AutoCrossbowStand.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_BabyPuppet.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_BagOfBalls.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Ball.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Banners.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_BarrelDrum.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_BarrelOfWeapon.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Barrels.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_BasketWithSpikes.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_BoardGame.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Bones.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_CardsOnTable.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Chains.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_ChangesAreInevitable.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Chest.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Crossbow.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_CrossbowStand.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_DecorDurable.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_DecorFragile.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_DecorOther.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_DecorWood.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Dungeon.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_DungeonDoors.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_FakeStones.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Flags.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_FlimsyDecor.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Food.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_GiantTorch.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Grass.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_GuardsWeapon.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Lever.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_LikeShapedStatue.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Lute.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Mannequin.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Moss.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_MovingRock.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Note.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_PedestalWithPotatoe.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_PuppetsOnPoles.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_RatsHouses.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_RatsWheel.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Ropes.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Rov.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_ShakyFloor.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_SmallDecor.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_SpikyLog.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_StoneStatues.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_StoneThorns.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Stones.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Stool.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_SwingingBall.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_SwingingBalls.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_SwingingBallsChains.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_TableTiles.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Torch.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_TrollStatue.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Vases.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_WallDecor.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_WoodenChainsaw.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_WoodenFlag.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_WoodenLounger.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_WoodenTable1.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_WoodenTable2.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_WoodenTable3.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_WoodenTablet.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_WoodenTablets.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Woods.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/0_TimeTravel_Wreckage.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/1_TimeTravel_Spinis.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/TimeMachine.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/TimeTravel_Dungeon.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": -1023.5,
+                "y": 256
+            }
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/fireLight.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/fireLightGiant.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/mertvetsUznik_smert.tsx": {
+            "scaleInDock": 1
+        },
+        "C:/Users/Ромерт/Downloads/Podzemelye/Подземелье/TimeTravel_Dungeon/rat.tsx": {
+            "scaleInDock": 1
+        },
+        "D:/Игры моего авторства/Bob's Return/Levels/BasicTiles/0_Dark.tsx": {
+            "scaleInDock": 1
+        },
+        "D:/Игры моего авторства/Bob's Return/Levels/BasicTiles/TimeMachine.tsx": {
+            "scaleInDock": 1
+        },
+        "TimeMachine.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "TimeTravel_Ditch1.tmx": {
+            "expandedObjectLayers": [
+                7
+            ],
+            "scale": 3,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 255.83333333333331,
+                "y": 256
+            }
+        },
+        "TimeTravel_Ditch2.tmx": {
+            "scale": 2,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 255.75,
+                "y": 256
+            }
+        },
+        "TimeTravel_Ditch3.tmx": {
+            "scale": 2,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 255.75,
+                "y": 256
+            }
+        },
+        "TimeTravel_Ditch4.tmx": {
+            "scale": 3,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 255.83333333333331,
+                "y": 256
+            }
+        },
+        "TimeTravel_Ditch5.tmx": {
+            "scale": 3,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 255.83333333333331,
+                "y": 256
+            }
+        },
+        "TimeTravel_Ditch6.tmx": {
+            "expandedObjectLayers": [
+                16
+            ],
+            "scale": 3,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 255.83333333333331,
+                "y": 256
+            }
+        },
+        "TimeTravel_Dungeon.tmx": {
+            "expandedObjectLayers": [
+                92,
+                106
+            ],
+            "scale": 2,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": -985.75,
+                "y": -932.5
+            }
+        },
+        "TimeTravel_DungeonLaboratoryStart.tmx": {
+            "expandedObjectLayers": [
+                10,
+                9,
+                5
+            ],
+            "scale": 3,
+            "selectedLayer": 5,
+            "viewCenter": {
+                "x": 478.83333333333326,
+                "y": 275.3333333333333
+            }
+        },
+        "TimeTravel_MedievalDungeon.tmx": {
+            "expandedObjectLayers": [
+                4,
+                13,
+                9
+            ],
+            "scale": 1,
+            "selectedLayer": 11,
+            "viewCenter": {
+                "x": -1,
+                "y": 257
+            }
+        },
+        "TimeTravel_MedievalDungeonChallenges.tmx": {
+            "expandedObjectLayers": [
+                10,
+                9
+            ],
+            "scale": 0.33,
+            "selectedLayer": 19,
+            "viewCenter": {
+                "x": 1036.3636363636365,
+                "y": -151.5151515151515
+            }
+        },
+        "fireLight.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "fireLightGiant.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "mertvetsUznik_smert.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "rat.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "frame.defaultDuration": 100,
+    "last.externalTilesetPath": "D:/Игры моего авторства/Bob's Return/Levels",
+    "last.imagePath": "D:/Игры моего авторства/Bob's Return/Levels",
+    "last.objectTemplatePath": "D:/Игры моего авторства/Bob's Return/Levels/TimeTravel_MedievalDungeon",
+    "map.fixedSize": false,
+    "map.lastUsedFormat": "tmx",
+    "openFiles": [
+        "1_TimeTravel_Spinis.tsx",
+        "0_InvisibleWall.tsx",
+        "0_TimeTravel_ArrowStatue.tsx",
+        "0_TimeTravel_Barrels.tsx",
+        "0_TimeTravel_Bones.tsx",
+        "0_TimeTravel_CardsOnTable.tsx",
+        "0_TimeTravel_Chains.tsx",
+        "0_TimeTravel_ChangesAreInevitable.tsx",
+        "0_TimeTravel_Chest.tsx",
+        "0_TimeTravel_Crossbow.tsx",
+        "0_TimeTravel_CrossbowStand.tsx",
+        "0_TimeTravel_Dungeon.tsx",
+        "0_TimeTravel_DungeonDoors.tsx",
+        "0_TimeTravel_FakeStones.tsx",
+        "0_TimeTravel_Flags.tsx",
+        "0_TimeTravel_Grass.tsx",
+        "0_TimeTravel_GuardsWeapon.tsx",
+        "0_TimeTravel_Lever.tsx",
+        "0_TimeTravel_Lute.tsx",
+        "0_TimeTravel_Moss.tsx",
+        "0_TimeTravel_Note.tsx",
+        "0_TimeTravel_PedestalWithPotatoe.tsx",
+        "0_TimeTravel_PuppetsOnPoles.tsx",
+        "0_TimeTravel_RatsWheel.tsx",
+        "0_TimeTravel_Ropes.tsx",
+        "0_TimeTravel_Rov.tsx",
+        "0_TimeTravel_ShakyFloor.tsx",
+        "0_TimeTravel_SmallDecor.tsx",
+        "0_TimeTravel_SpikyLog.tsx",
+        "0_TimeTravel_Stones.tsx",
+        "0_TimeTravel_StoneStatues.tsx",
+        "0_TimeTravel_StoneThorns.tsx",
+        "0_TimeTravel_Stool.tsx",
+        "0_TimeTravel_SwingingBall.tsx",
+        "0_TimeTravel_SwingingBalls.tsx",
+        "0_TimeTravel_SwingingBallsChains.tsx",
+        "0_TimeTravel_TableTiles.tsx",
+        "0_TimeTravel_Torch.tsx",
+        "0_TimeTravel_TrollStatue.tsx",
+        "0_TimeTravel_Vases.tsx",
+        "0_TimeTravel_WallDecor.tsx",
+        "0_TimeTravel_WoodenChainsaw.tsx",
+        "0_TimeTravel_WoodenFlag.tsx",
+        "0_TimeTravel_WoodenTable1.tsx",
+        "0_TimeTravel_WoodenTableBread.tsx",
+        "0_TimeTravel_WoodenTablet.tsx",
+        "0_TimeTravel_WoodenTablets.tsx",
+        "0_TimeTravel_Woods.tsx",
+        "0_TimeTravel_Wreckage.tsx",
+        "0_Dark.tsx",
+        "0_TimeTravel_VillageToilet.tsx",
+        "0_TimeTravel_MovingTower.tsx",
+        "0_TimeTravel_WarningTablet.tsx",
+        "0_TimeTravel_WarningArrow.tsx",
+        "0_TimeTravel_StalagmiteGiant.tsx",
+        "0_TimeTravel_WoodenSign.tsx",
+        "0_TimeTravel_Morgenstern.tsx",
+        "0_TimeTravel_WoodenSignLeftRight.tsx",
+        "0_TimeTravel_Banners1.tsx",
+        "0_TimeTravel_Pie.tsx",
+        "0_TimeTravel_BannerArrow.tsx",
+        "0_TimeTravel_SignageBannersRed.tsx",
+        "0_TimeTravel_Target.tsx",
+        "0_TimeTravel_SpearArrow.tsx",
+        "0_TimeTravel_Banners2.tsx",
+        "0_TimeTravel_OilLamp.tsx",
+        "TimeTravel_MedievalDungeonChallenges.tmx",
+        "TimeTravel_MedievalDungeon.tmx"
+    ],
+    "project": "BobsReturn.tiled-project",
+    "property.type": "int",
+    "recentFiles": [
+        "1_TimeTravel_Spinis.tsx",
+        "0_InvisibleWall.tsx",
+        "0_TimeTravel_ArrowStatue.tsx",
+        "0_TimeTravel_Barrels.tsx",
+        "0_TimeTravel_Bones.tsx",
+        "0_TimeTravel_CardsOnTable.tsx",
+        "0_TimeTravel_Chains.tsx",
+        "0_TimeTravel_ChangesAreInevitable.tsx",
+        "0_TimeTravel_Chest.tsx",
+        "0_TimeTravel_Crossbow.tsx",
+        "0_TimeTravel_CrossbowStand.tsx",
+        "0_TimeTravel_Dungeon.tsx"
+    ],
+    "tileset.lastUsedFilter": "Все файлы (*)",
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 32,
+        "width": 32
+    }
+}

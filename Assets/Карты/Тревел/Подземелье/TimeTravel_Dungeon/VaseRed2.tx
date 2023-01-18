@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<template>
- <tileset firstgid="1" source="0_TimeTravel_Vases.tsx"/>
- <object class="ViseRed2" gid="5" width="32" height="64">
-  <properties>
-   <property name="Durability" type="int" value="0"/>
-  </properties>
- </object>
-</template>

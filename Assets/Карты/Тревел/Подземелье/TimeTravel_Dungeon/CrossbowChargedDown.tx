@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<template>
- <tileset firstgid="1" source="0_TimeTravel_Crossbow.tsx"/>
- <object class="CrossbowChargedDown" gid="19" width="96" height="96">
-  <properties>
-   <property name="Durability" type="int" value="2"/>
-  </properties>
- </object>
-</template>

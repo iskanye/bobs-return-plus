@@ -1,0 +1,54 @@
+fileFormatVersion: 2
+guid: dda4b19f17fd91d44806a7f7a2dc5c78
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
+  missingFiles: []
+  errors:
+  - Errors detected in tileset '1_TimeTravel_Spinis.tsx'. Check the tileset inspector
+    for more details. Your map may be broken until these are fixed.
+  - Errors detected in tileset '0_TimeTravel_Note.tsx'. Check the tileset inspector
+    for more details. Your map may be broken until these are fixed.
+  - Errors detected in tileset '0_TimeTravel_WallDecor.tsx'. Check the tileset inspector
+    for more details. Your map may be broken until these are fixed.
+  - Errors detected in tileset '0_InvisibleWall.tsx'. Check the tileset inspector
+    for more details. Your map may be broken until these are fixed.
+  - Missing tile '9' from template 'Spikes3.tx' on tile object 'Object_6 (TRS)'
+  - Missing tile '533' from template 'Spikes3.tx' on tile object 'Object_7 (TRS)'
+  - Missing tile '563' from template 'PapyrusNotes.tx' on tile object 'Object_21
+    (TRS)'
+  - Missing tile '2' from template 'PapyrusPicture.tx' on tile object 'Object_12
+    (TRS)'
+  - Missing tile '561' from template 'PapyrusNote.tx' on tile object 'Object_19 (TRS)'
+  - Missing tile '3' from template 'PapyrusNotes.tx' on tile object 'Object_17 (TRS)'
+  - Missing tile '593' on tile object ''
+  - Could not find tile 615. Make sure the tilesets were successfully imported.
+  - Could not find tile 615. Make sure the tilesets were successfully imported.
+  - Could not find tile 615. Make sure the tilesets were successfully imported.
+  - Could not find tile 615. Make sure the tilesets were successfully imported.
+  - Could not find tile 615. Make sure the tilesets were successfully imported.
+  - Could not find tile 615. Make sure the tilesets were successfully imported.
+  - Could not find tile 616. Make sure the tilesets were successfully imported.
+  - Could not find tile 616. Make sure the tilesets were successfully imported.
+  - Could not find tile 616. Make sure the tilesets were successfully imported.
+  - Could not find tile 616. Make sure the tilesets were successfully imported.
+  - Could not find tile 616. Make sure the tilesets were successfully imported.
+  - Could not find tile 616. Make sure the tilesets were successfully imported.
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  missingTags: []
+  importerVersion: 26
+  pixelsPerUnit: 32
+  edgesPerEllipse: 32
+  numberOfObjectsImported: 2
+  tilesAsObjects: 0
+  sortingMode: 0
+  isIsometric: 0
+  customImporterClassName: 
+  internalTilesets: []

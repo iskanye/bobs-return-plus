@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<template>
- <tileset firstgid="1" source="0_TimeTravel_Mannequin.tsx"/>
- <object class="MannequinBone1" gid="4" width="32" height="64">
-  <properties>
-   <property name="Durability" type="int" value="1"/>
-  </properties>
- </object>
-</template>
