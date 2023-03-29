@@ -10,5 +10,4 @@ public struct PlayerData
     public Animator[] animators;
     public InventorySystem inventory;
     public Rigidbody2D rigidbody;
-    public GameObject gameObject;
 }

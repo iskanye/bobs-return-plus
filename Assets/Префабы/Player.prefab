@@ -349,7 +349,6 @@ Transform:
   - {fileID: 1465116321457612522}
   - {fileID: 1465116322578561111}
   - {fileID: 726552645}
-  - {fileID: 1516161796412969328}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -422,9 +421,9 @@ Rigidbody2D:
   m_AngularDrag: 2
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!95 &1465116322805263033
 Animator:
@@ -498,8 +497,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitDirection: {x: 0, y: 0}
-  hitDuration: 0.4
-  invincibleTime: 0.6
+  hitDuration: 0.5
+  invincibleTime: 1
   livesInOneHeart:
   - lives: 2
     type: 0
@@ -567,65 +566,4 @@ MonoBehaviour:
     - {fileID: 1465116321457612524}
     inventory: {fileID: 0}
     rigidbody: {fileID: 1465116322805263028}
-    gameObject: {fileID: 1465116322805263026}
   character: {fileID: 11400000, guid: a1d3764cbf7d11f4aad148cee472fb59, type: 2}
---- !u!1 &3432519756994341324
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1516161796412969328}
-  - component: {fileID: 3621766058695561432}
-  m_Layer: 6
-  m_Name: "\u0442\u043E\u043F\u043E\u0440\u0438\u043A"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1516161796412969328
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3432519756994341324}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1465116322805263030}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3621766058695561432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3432519756994341324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cea2c733f2caee645b2a5f35cef056ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: travel_axe
-  action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1465116322805263039}
-        m_TargetAssemblyTypeName: BobController, Assembly-CSharp
-        m_MethodName: SetCharacterBool
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: HasAxe
-          m_BoolArgument: 0
-        m_CallState: 2

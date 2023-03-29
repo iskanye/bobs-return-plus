@@ -17,7 +17,8 @@ MonoBehaviour:
     dialogueCharacter: {fileID: 0}
     emotionId: 0
     delay: 0
-    text: "\u0417\u0434\u0435\u0441\u044C \u043F\u0443\u0441\u0442\u043E."
+    text: "\u041C\u0438\u043D\u0438-\u043A\u0430\u0440\u0438\u043A\u0430\u0442\u0443\u0440\u0430
+      *\u041C\u0443\u0445\u0430 \u043B\u0435\u0442\u0430\u0435\u0442*"
     startDelay: 0
     clearPreviousText: 1
     showStraightaway: 0

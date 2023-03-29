@@ -72,7 +72,7 @@ public class PlayerLives : LivesBase
             i.SetTrigger("Death");
 
         bob.gameObject.layer = LayerMask.GetMask(LayerMask.LayerToName(0));
-        bob.data.movement.enabled = false;
+        bob.data.movement.Disable();
 
         Time.timeScale = .25f;
         StartCoroutine(Invincible());
@@ -107,7 +107,6 @@ public class PlayerLives : LivesBase
     IEnumerator Invincible()
     {
         PlayerLiveCounter.Active.isInvincible = true;
-        bob.data.rigidbody.velocity = Vector2.zero;
 
         for (var time = invincibleTime; time >= 0; time -= .15f)
         {
@@ -125,10 +124,9 @@ public class PlayerLives : LivesBase
 
     IEnumerator Hit() 
     {
-        var prevSpeed = bob.data.movement.speed;
-        bob.data.movement.speed *= .1f;
-        bob.data.rigidbody.velocity = hitDirection;
-        yield return new WaitForSeconds(hitDuration);
-        bob.data.movement.speed = prevSpeed;
+        bob.data.movement.Disable();
+        bob.data.rigidbody.AddForce(hitDirection, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(hitDuration);    
+        bob.data.movement.Enable();
     }
 }

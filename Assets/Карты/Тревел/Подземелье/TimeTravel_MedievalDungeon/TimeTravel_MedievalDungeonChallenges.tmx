@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="1" nextlayerid="29" nextobjectid="467">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="1" nextlayerid="30" nextobjectid="467">
  <tileset firstgid="1" source="0_TimeTravel_Dungeon.tsx"/>
  <tileset firstgid="257" source="1_TimeTravel_Spinis.tsx"/>
  <tileset firstgid="293" source="0_TimeTravel_Vases.tsx"/>
@@ -16,36 +16,36 @@
  <tileset firstgid="402" source="0_TimeTravel_Woods.tsx"/>
  <tileset firstgid="411" source="0_TimeTravel_TrollStatue.tsx"/>
  <tileset firstgid="412" source="0_TimeTravel_MovingTower.tsx"/>
- <tileset firstgid="422" source="0_TimeTravel_WarningTablet.tsx"/>
- <tileset firstgid="424" source="0_TimeTravel_WarningArrow.tsx"/>
- <tileset firstgid="426" source="0_TimeTravel_Torch.tsx"/>
- <tileset firstgid="431" source="0_TimeTravel_SafetyZone.tsx"/>
- <tileset firstgid="432" source="0_TimeTravel_StalagmiteGiant.tsx"/>
- <tileset firstgid="433" source="0_TimeTravel_StoneThorns.tsx"/>
- <tileset firstgid="438" source="0_TimeTravel_Bones.tsx"/>
- <tileset firstgid="445" source="0_TimeTravel_WoodenSign.tsx"/>
- <tileset firstgid="448" source="0_TimeTravel_Morgenstern.tsx"/>
- <tileset firstgid="449" source="0_TimeTravel_WoodenSignLeftRight.tsx"/>
- <tileset firstgid="450" source="0_TimeTravel_Note.tsx"/>
- <tileset firstgid="453" source="0_TimeTravel_StoneStatues.tsx"/>
- <tileset firstgid="456" source="0_TimeTravel_Banners1.tsx"/>
- <tileset firstgid="458" source="0_TimeTravel_Pie.tsx"/>
- <tileset firstgid="459" source="0_TimeTravel_WoodenTabletsBig.tsx"/>
- <tileset firstgid="462" source="0_TimeTravel_Flags.tsx"/>
- <tileset firstgid="478" source="0_TimeTravel_PuppetsOnPoles.tsx"/>
- <tileset firstgid="482" source="0_TimeTravel_SmallDecor.tsx"/>
- <tileset firstgid="494" source="0_TimeTravel_GeneralFivefinger.tsx"/>
- <tileset firstgid="498" source="0_TimeTravel_Lute.tsx"/>
- <tileset firstgid="499" source="0_TimeTravel_BannerArrow.tsx"/>
- <tileset firstgid="500" source="0_TimeTravel_SignageBannersRed.tsx"/>
- <tileset firstgid="501" source="0_TimeTravel_Target.tsx"/>
- <tileset firstgid="503" source="0_TimeTravel_ArrowStatue.tsx"/>
- <tileset firstgid="504" source="0_TimeTravel_SpearArrow.tsx"/>
- <tileset firstgid="505" source="0_TimeTravel_WoodenTablet.tsx"/>
- <tileset firstgid="517" source="0_TimeTravel_Chains.tsx"/>
- <tileset firstgid="528" source="0_TimeTravel_Banners2.tsx"/>
- <tileset firstgid="530" source="0_TimeTravel_OilLamp.tsx"/>
- <tileset firstgid="533" source="0_InvisibleWall.tsx"/>
+ <tileset firstgid="442" source="0_TimeTravel_WarningTablet.tsx"/>
+ <tileset firstgid="444" source="0_TimeTravel_WarningArrow.tsx"/>
+ <tileset firstgid="446" source="0_TimeTravel_Torch.tsx"/>
+ <tileset firstgid="451" source="0_TimeTravel_SafetyZone.tsx"/>
+ <tileset firstgid="452" source="0_TimeTravel_StalagmiteGiant.tsx"/>
+ <tileset firstgid="453" source="0_TimeTravel_StoneThorns.tsx"/>
+ <tileset firstgid="458" source="0_TimeTravel_Bones.tsx"/>
+ <tileset firstgid="465" source="0_TimeTravel_WoodenSign.tsx"/>
+ <tileset firstgid="468" source="0_TimeTravel_Morgenstern.tsx"/>
+ <tileset firstgid="469" source="0_TimeTravel_WoodenSignLeftRight.tsx"/>
+ <tileset firstgid="470" source="0_TimeTravel_Note.tsx"/>
+ <tileset firstgid="473" source="0_TimeTravel_StoneStatues.tsx"/>
+ <tileset firstgid="476" source="0_TimeTravel_Banners1.tsx"/>
+ <tileset firstgid="478" source="0_TimeTravel_Pie.tsx"/>
+ <tileset firstgid="479" source="0_TimeTravel_WoodenTabletsBig.tsx"/>
+ <tileset firstgid="482" source="0_TimeTravel_Flags.tsx"/>
+ <tileset firstgid="498" source="0_TimeTravel_PuppetsOnPoles.tsx"/>
+ <tileset firstgid="502" source="0_TimeTravel_SmallDecor.tsx"/>
+ <tileset firstgid="514" source="0_TimeTravel_GeneralFivefinger.tsx"/>
+ <tileset firstgid="518" source="0_TimeTravel_Lute.tsx"/>
+ <tileset firstgid="519" source="0_TimeTravel_BannerArrow.tsx"/>
+ <tileset firstgid="521" source="0_TimeTravel_SignageBannersRed.tsx"/>
+ <tileset firstgid="522" source="0_TimeTravel_Target.tsx"/>
+ <tileset firstgid="524" source="0_TimeTravel_ArrowStatue.tsx"/>
+ <tileset firstgid="525" source="0_TimeTravel_SpearArrow.tsx"/>
+ <tileset firstgid="526" source="0_TimeTravel_WoodenTablet.tsx"/>
+ <tileset firstgid="538" source="0_TimeTravel_Chains.tsx"/>
+ <tileset firstgid="549" source="0_TimeTravel_Banners2.tsx"/>
+ <tileset firstgid="554" source="0_TimeTravel_OilLamp.tsx"/>
+ <tileset firstgid="557" source="0_InvisibleWall.tsx"/>
  <layer id="21" name="Stalagmites" width="30" height="20">
   <data encoding="csv">
    <chunk x="32" y="-64" width="16" height="16">
@@ -931,7 +931,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,431,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,451,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -944,7 +944,7 @@
 </chunk>
   </data>
  </layer>
- <layer id="14" name="SecretWay1" width="30" height="20" visible="0">
+ <layer id="14" name="SecretWay1" width="30" height="20" opacity="0.98">
   <data encoding="csv">
    <chunk x="16" y="-16" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -1332,24 +1332,6 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
-   <chunk x="0" y="0" width="16" height="16">
-318,318,318,318,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</chunk>
    <chunk x="16" y="0" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -1649,6 +1631,9 @@
   </data>
  </layer>
  <layer id="12" name="Spikes" width="30" height="20">
+  <properties>
+   <property name="damageable" type="int" value="0"/>
+  </properties>
   <data encoding="csv">
    <chunk x="16" y="-16" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -1837,20 +1822,20 @@
   <object id="275" template="Bones3.tx" x="795" y="60"/>
   <object id="276" template="Bones2.tx" x="797" y="-239"/>
   <object id="323" template="Bones1.tx" x="1079.5" y="544"/>
-  <object id="326" template="Bones2.tx" gid="2147484087" x="1151.5" y="692" rotation="0"/>
+  <object id="326" template="Bones2.tx" gid="2147484107" x="1151.5" y="692" rotation="0"/>
   <object id="327" template="Bones3.tx" x="1232" y="546"/>
   <object id="329" template="Bones3.tx" x="1324" y="502.5"/>
-  <object id="331" template="Bones4.tx" gid="2147484089" x="1103" y="436" rotation="0"/>
-  <object id="332" template="Bones4.tx" gid="2147484089" x="1316" y="513.5" rotation="0"/>
+  <object id="331" template="Bones4.tx" gid="2147484109" x="1103" y="436" rotation="0"/>
+  <object id="332" template="Bones4.tx" gid="2147484109" x="1316" y="513.5" rotation="0"/>
   <object id="333" template="Bones5.tx" x="1184" y="603"/>
-  <object id="343" class="WoodenGeneralFivefingers" gid="494" x="1232" y="-32" width="96" height="96">
+  <object id="343" class="WoodenGeneralFivefingers" gid="514" x="1232" y="-32" width="96" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
   <object id="388" template="Bones2.tx" x="1259" y="259"/>
   <object id="389" template="Bones4.tx" x="1111" y="268.333"/>
-  <object id="404" class="StoneThorns" gid="433" x="1888" y="-288" width="32" height="32">
+  <object id="404" class="StoneThorns" gid="453" x="1888" y="-288" width="32" height="32">
    <properties>
     <property name="Durability" type="int" value="3"/>
    </properties>
@@ -1887,7 +1872,7 @@
   <object id="1" template="Vase1.tx" x="768" y="224"/>
   <object id="2" template="Vase3.tx" gid="295" x="864" y="256" rotation="0"/>
   <object id="10" template="WoodenChestGold.tx" x="832" y="-384"/>
-  <object id="12" template="LeverDungeonOFF.tx" x="800" y="-448"/>
+  <object id="12" template="LeverDungeonOFF.tx" class="LeverDungeonOFF" x="800" y="-448"/>
   <object id="13" template="WoodenTabletStand.tx" x="928" y="64"/>
   <object id="15" class="WoodenToilet" gid="342" x="1136" y="544" width="96" height="160">
    <properties>
@@ -1903,7 +1888,6 @@
   <object id="43" template="WoodenBarrelClosed.tx" x="1728" y="-736"/>
   <object id="46" template="WoodenTabletStand.tx" x="1824" y="-416"/>
   <object id="47" template="WoodenBarrelGold.tx" x="2048" y="-704"/>
-  <object id="48" template="CrossbowStandDown.tx" x="2016" y="-800"/>
   <object id="49" template="CrossbowChargedDown.tx" gid="381" x="2016" y="-800" rotation="0"/>
   <object id="73" template="Stone1.tx" x="1504" y="-288"/>
   <object id="74" template="Stone3.tx" x="1632" y="-384"/>
@@ -1915,12 +1899,10 @@
   <object id="88" template="Stone3.tx" gid="392" x="2016" y="-736" rotation="0"/>
   <object id="90" template="WoodenBarrel.tx" x="1856" y="-384"/>
   <object id="91" template="WoodenBarrelClosed.tx" x="1888" y="-352"/>
-  <object id="116" template="CrossbowStandUp.tx" x="1440" y="-1248"/>
   <object id="117" template="CrossbowChargedUp.tx" x="1440" y="-1248"/>
   <object id="135" template="WoodenBarrelGold.tx" x="1536" y="-1536"/>
   <object id="136" template="WoodenChest.tx" x="1536" y="-1792"/>
   <object id="137" template="WoodenBarrel.tx" x="1504" y="-1792"/>
-  <object id="138" template="CrossbowStandDown.tx" x="1568" y="-1568"/>
   <object id="139" template="CrossbowChargedDown.tx" x="1568" y="-1568"/>
   <object id="140" template="WoodPin2.tx" x="1600" y="-1344"/>
   <object id="148" template="MovingTower.tx" class="MovingTower" x="1696" y="-1088"/>
@@ -1928,44 +1910,44 @@
   <object id="150" template="MovingTower.tx" x="1664" y="-1088"/>
   <object id="154" template="MovingTower.tx" x="1728" y="-768"/>
   <object id="155" template="MovingTower.tx" x="1728" y="-800"/>
-  <object id="156" template="MovingTower.tx" x="1728" y="-832"/>
+  <object id="156" template="MovingTower.tx" class="MovingTower" x="1728" y="-832"/>
   <object id="157" template="MovingTower.tx" x="1824" y="-608"/>
   <object id="158" template="MovingTower.tx" x="1824" y="-640"/>
   <object id="159" template="MovingTower.tx" x="1824" y="-672"/>
-  <object id="160" template="MovingTower.tx" x="1536" y="-1088"/>
+  <object id="160" template="MovingTower.tx" class="MovingTower" x="1536" y="-1088"/>
   <object id="166" template="Vase2.tx" x="1472" y="-1312"/>
-  <object id="167" class="WarningTabletFront" gid="422" x="256" y="96" width="96" height="96">
+  <object id="167" class="WarningTabletFront" gid="442" x="256" y="96" width="96" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="168" class="WarningTabletBack" gid="423" x="256" y="288" width="96" height="96">
+  <object id="168" class="WarningTabletBack" gid="443" x="256" y="288" width="96" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="171" class="WarningArrowFront" gid="424" x="192" y="128" width="64" height="96">
+  <object id="171" class="WarningArrowFront" gid="444" x="192" y="128" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="172" class="WarningArrowFront" gid="2147484072" x="352" y="128" width="64" height="96">
+  <object id="172" class="WarningArrowFront" gid="2147484092" x="352" y="128" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="173" class="WarningArrowBack" gid="425" x="192" y="256" width="64" height="96">
+  <object id="173" class="WarningArrowBack" gid="445" x="192" y="256" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="176" class="WarningArrowBack" gid="2147484073" x="352" y="256" width="64" height="96">
+  <object id="176" class="WarningArrowBack" gid="2147484093" x="352" y="256" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
   <object id="180" template="TorchFire.tx" class="TorchFire" x="160" y="160"/>
-  <object id="182" template="TorchFire.tx" x="416" y="160"/>
+  <object id="182" template="TorchFire.tx" class="TorchFire" x="416" y="160"/>
   <object id="183" template="TorchFire.tx" x="160" y="256"/>
   <object id="184" template="TorchFire.tx" x="416" y="256"/>
   <object id="185" template="TorchFire.tx" x="224" y="64"/>
@@ -1978,118 +1960,118 @@
   <object id="201" template="TorchFire.tx" x="640" y="288"/>
   <object id="202" template="WoodenTabletStand.tx" x="736" y="160"/>
   <object id="234" template="WoodenSignRight.tx" class="WoodenSignRight" x="736" y="384"/>
-  <object id="237" gid="446" x="941" y="160" width="64" height="64"/>
-  <object id="254" class="Morgenstern" gid="2147484096" x="666.5" y="224.5" width="32" height="64">
+  <object id="237" gid="466" x="941" y="160" width="64" height="64"/>
+  <object id="254" class="Morgenstern" gid="2147484116" x="666.5" y="224.5" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="4"/>
    </properties>
   </object>
-  <object id="257" gid="449" x="913" y="281" width="64" height="80">
+  <object id="257" gid="469" x="913" y="281" width="64" height="80">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
   <object id="258" template="PapyrusNotes.tx" x="768" y="-352"/>
-  <object id="277" class="StatueArchitect1" gid="453" x="704" y="-96" width="64" height="128"/>
-  <object id="278" class="StatueArchitect2" gid="454" x="960" y="-96" width="64" height="128"/>
+  <object id="277" class="StatueArchitect1" gid="473" x="704" y="-96" width="64" height="128"/>
+  <object id="278" class="StatueArchitect2" gid="474" x="960" y="-96" width="64" height="128"/>
   <object id="279" template="Stalagmite2.tx" x="928" y="-32"/>
   <object id="280" template="Stalagmite1.tx" x="768" y="-256"/>
   <object id="281" template="TorchFire.tx" x="736" y="0"/>
   <object id="282" template="TorchFire.tx" x="960" y="0"/>
   <object id="283" template="TorchFire.tx" x="736" y="-224"/>
   <object id="284" template="TorchFire.tx" x="949" y="-209.5"/>
-  <object id="285" gid="456" x="832" y="-440" width="64" height="64">
+  <object id="285" gid="476" x="832" y="-440" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="1"/>
    </properties>
   </object>
-  <object id="287" gid="458" x="1184" y="240" width="32" height="32">
+  <object id="287" gid="478" x="1184" y="240" width="32" height="32">
    <properties>
     <property name="Durability" type="int" value="0"/>
    </properties>
   </object>
-  <object id="289" class="WoodenTabletWarning" gid="459" x="1056" y="320" width="64" height="64">
+  <object id="289" class="WoodenTabletWarning" gid="479" x="1056" y="320" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="292" class="WoodenTabletToilet" gid="2147484108" x="1088" y="352" width="64" height="64">
+  <object id="292" class="WoodenTabletToilet" gid="2147484128" x="1088" y="352" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="294" class="WoodenTabletPie" gid="2147484109" x="1280" y="320" width="64" height="64">
+  <object id="294" class="WoodenTabletPie" gid="2147484129" x="1280" y="320" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="295" class="WoodenTabletWarning" gid="459" x="1248" y="352" width="64" height="64">
+  <object id="295" class="WoodenTabletWarning" gid="479" x="1248" y="352" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="296" class="WoodenTabletWarning" gid="459" x="928" y="544" width="64" height="64">
+  <object id="296" class="WoodenTabletWarning" gid="479" x="928" y="544" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="297" class="WoodenTabletWarning" gid="2147484107" x="1216" y="768" width="64" height="64">
+  <object id="297" class="WoodenTabletWarning" gid="2147484127" x="1216" y="768" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="298" class="WoodenTabletWarning" gid="2147484107" x="1408" y="576" width="64" height="64">
+  <object id="298" class="WoodenTabletWarning" gid="2147484127" x="1408" y="576" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="299" template="WoodenFlagStand.tx" gid="2147484115" x="1364" y="257" rotation="0"/>
-  <object id="300" class="PuppetOnPole1" gid="478" x="1312" y="416" width="64" height="96">
+  <object id="299" template="WoodenFlagStand.tx" gid="2147484135" x="1364" y="257" rotation="0"/>
+  <object id="300" class="PuppetOnPole1" gid="498" x="1312" y="416" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="304" class="PuppetOnPole3" gid="480" x="1301.67" y="656" width="64" height="96">
+  <object id="304" class="PuppetOnPole3" gid="500" x="1301.67" y="656" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="305" class="PuppetOnPole4" gid="481" x="1088" y="704" width="64" height="96">
+  <object id="305" class="PuppetOnPole4" gid="501" x="1088" y="704" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="306" class="PuppetOnPole1" gid="2147484126" x="1461" y="554" width="64" height="96">
+  <object id="306" class="PuppetOnPole1" gid="2147484146" x="1461" y="554" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="307" class="PuppetOnPole1" gid="2147484126" x="928" y="640" width="64" height="96">
+  <object id="307" class="PuppetOnPole1" gid="2147484146" x="928" y="640" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="308" class="PuppetOnPole1" gid="2147484126" x="1024" y="448" width="64" height="96">
+  <object id="308" class="PuppetOnPole1" gid="2147484146" x="1024" y="448" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="309" class="PuppetOnPole2" gid="2147484127" x="1415" y="487" width="64" height="96">
+  <object id="309" class="PuppetOnPole2" gid="2147484147" x="1415" y="487" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="310" class="PuppetOnPole2" gid="479" x="1035.5" y="633.5" width="64" height="96">
+  <object id="310" class="PuppetOnPole2" gid="499" x="1035.5" y="633.5" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="313" class="PuppetOnPole3" gid="480" x="896" y="512" width="64" height="96">
+  <object id="313" class="PuppetOnPole3" gid="500" x="896" y="512" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="316" class="PuppetOnPole2" gid="479" x="1263" y="711" width="64" height="96">
+  <object id="316" class="PuppetOnPole2" gid="499" x="1263" y="711" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
@@ -2099,58 +2081,47 @@
   <object id="321" template="Stalagmite2.tx" x="1376" y="416"/>
   <object id="322" template="Stalagmite2.tx" x="1376" y="640"/>
   <object id="334" template="Candle1Fire.tx" x="992" y="544"/>
-  <object id="335" template="Candle1Fire.tx" gid="482" x="1376" y="480" rotation="0"/>
+  <object id="335" template="Candle1Fire.tx" gid="502" x="1376" y="480" rotation="0"/>
   <object id="336" template="Candle1Fire.tx" x="1216" y="704"/>
   <object id="337" template="Candle1Fire.tx" x="1152" y="384"/>
   <object id="338" template="Candle2Fire.tx" x="1216" y="384"/>
   <object id="339" template="Candle2Fire.tx" x="992" y="480"/>
   <object id="340" template="Candle2Fire.tx" x="1152" y="704"/>
   <object id="341" template="Candle2Fire.tx" x="1376" y="544"/>
-  <object id="344" gid="498" x="1408" y="-64" width="32" height="64"/>
-  <object id="345" class="BannerArrow" gid="499" x="1408" y="-128" width="32" height="64">
+  <object id="344" gid="518" x="1408" y="-64" width="32" height="64"/>
+  <object id="345" class="BannerArrow" gid="519" x="1408" y="-128" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="1"/>
    </properties>
   </object>
-  <object id="346" class="BannerArrow" gid="499" x="1312" y="-128" width="32" height="64">
+  <object id="346" class="BannerArrow" gid="519" x="1312" y="-128" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="1"/>
    </properties>
   </object>
-  <object id="358" template="CrossbowStandDown.tx" x="1472" y="-416"/>
   <object id="359" template="CrossbowChargedDown.tx" x="1472" y="-416"/>
   <object id="361" template="WoodenBarrelArrows.tx" x="1344" y="-352"/>
-  <object id="362" class="BannerArrow" gid="499" x="1504" y="-544" width="32" height="64">
+  <object id="362" class="BannerArrow" gid="519" x="1504" y="-544" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="1"/>
    </properties>
   </object>
-  <object id="363" template="CrossbowStandUp.tx" x="1600" y="-256"/>
-  <object id="365" template="CrossbowStandLeft.tx" class="CrossbowStandLeft" x="1824" y="-512"/>
-  <object id="366" template="CrossbowStandRight.tx" class="CrossbowStandRight" x="1664" y="-576"/>
   <object id="367" template="CrossbowChargedRight.tx" class="CrossbowChargedRight" x="1664" y="-576"/>
   <object id="368" template="CrossbowChargedLeft.tx" class="CrossbowChargedLeft" x="1824" y="-512"/>
   <object id="369" template="CrossbowChargedUp.tx" x="1600" y="-256"/>
-  <object id="370" template="CrossbowStandRight.tx" x="1664" y="-800"/>
-  <object id="371" template="CrossbowStandRight.tx" x="1664" y="-832"/>
-  <object id="372" template="CrossbowStandRight.tx" x="1664" y="-864"/>
-  <object id="373" template="CrossbowStandLeft.tx" x="1824" y="-640"/>
-  <object id="374" template="CrossbowStandLeft.tx" x="1824" y="-672"/>
-  <object id="376" template="CrossbowStandLeft.tx" x="1824" y="-704"/>
   <object id="377" template="CrossbowChargedLeft.tx" x="1824" y="-640"/>
   <object id="378" template="CrossbowChargedLeft.tx" x="1824" y="-672"/>
   <object id="379" template="CrossbowChargedLeft.tx" x="1824" y="-704"/>
   <object id="380" template="CrossbowChargedRight.tx" x="1664" y="-800"/>
-  <object id="381" template="CrossbowChargedRight.tx" x="1664" y="-832"/>
+  <object id="381" template="CrossbowChargedRight.tx" class="CrossbowChargedRight" x="1664" y="-832"/>
   <object id="382" template="CrossbowChargedRight.tx" x="1664" y="-864"/>
-  <object id="384" template="CrossbowStandRight.tx" x="1472" y="-1120"/>
   <object id="385" template="CrossbowChargedRight.tx" x="1472" y="-1120"/>
-  <object id="386" class="WoodenTargetWall1" gid="501" x="1344" y="-416" width="64" height="64">
+  <object id="386" class="WoodenTargetWall1" gid="522" x="1344" y="-416" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="387" class="WoodenTargetWall1" gid="502" x="1413" y="-402" width="64" height="64">
+  <object id="387" class="WoodenTargetWall1" gid="523" x="1413" y="-402" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
@@ -2164,7 +2135,7 @@
   <object id="401" template="Candle1Fire.tx" x="1149" y="226"/>
   <object id="402" template="Candle2Fire.tx" x="1216" y="252"/>
   <object id="403" template="Candle2Fire.tx" x="1587" y="-317"/>
-  <object id="405" class="StatueArrowWithBow" gid="503" x="1728" y="-321.667" width="128" height="96">
+  <object id="405" class="StatueArrowWithBow" gid="524" x="1728" y="-321.667" width="128" height="96">
    <properties>
     <property name="Durability" type="int" value="4"/>
    </properties>
@@ -2182,64 +2153,63 @@
   <object id="436" template="ChainsTop.tx" x="1632" y="-1216"/>
   <object id="437" template="ChainsTop.tx" x="1728" y="-1216"/>
   <object id="444" template="WoodenTablet.tx" x="1536" y="-1376"/>
-  <object id="445" gid="529" x="2040" y="-896" width="32" height="64"/>
-  <object id="446" gid="528" x="1992" y="-896" width="32" height="64"/>
-  <object id="447" template="Candle1.tx" x="1987" y="-814"/>
-  <object id="448" template="Candle2.tx" x="2006" y="-831"/>
-  <object id="449" class="SpearArrow" gid="504" x="1696" y="-1056" width="32" height="64">
+  <object id="445" gid="550" x="2040" y="-896" width="32" height="64"/>
+  <object id="446" gid="549" x="1992" y="-896" width="32" height="64"/>
+  <object id="447" template="Candle1.tx" class="Candle1" x="1987" y="-814"/>
+  <object id="448" template="Candle2.tx" class="Candle2" x="2006" y="-831"/>
+  <object id="449" class="SpearArrow" gid="525" x="1696" y="-1056" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="450" class="SpearArrow" gid="504" x="1632" y="-1056" width="32" height="64">
+  <object id="450" class="SpearArrow" gid="525" x="1632" y="-1056" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="451" class="SpearArrow" gid="504" x="1568" y="-1056" width="32" height="64">
+  <object id="451" class="SpearArrow" gid="525" x="1568" y="-1056" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="452" template="WoodenSignRight.tx" class="WoodenSignRight" gid="2147484093" x="1824" y="-1120" rotation="0"/>
-  <object id="454" class="SpearArrow" gid="504" x="1408" y="-1376" width="32" height="64">
+  <object id="452" template="WoodenSignRight.tx" class="WoodenSignRight" gid="2147484113" x="1824" y="-1120" rotation="0"/>
+  <object id="454" class="SpearArrow" gid="525" x="1408" y="-1376" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="455" class="SpearArrow" gid="504" x="1408" y="-1472" width="32" height="64">
+  <object id="455" class="SpearArrow" gid="525" x="1408" y="-1472" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="456" class="SpearArrow" gid="504" x="1664" y="-1376" width="32" height="64">
+  <object id="456" class="SpearArrow" gid="525" x="1664" y="-1376" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="457" class="SpearArrow" gid="504" x="1664" y="-1472" width="32" height="64">
+  <object id="457" class="SpearArrow" gid="525" x="1664" y="-1472" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="460" class="PuppetOnPole2" gid="479" x="1408" y="-1760" width="64" height="96">
+  <object id="460" class="PuppetOnPole2" gid="499" x="1408" y="-1760" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="461" class="PuppetOnPole3" gid="480" x="1632" y="-1760" width="64" height="96">
+  <object id="461" class="PuppetOnPole3" gid="500" x="1632" y="-1760" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="465" gid="531" x="1502" y="-1756" width="32" height="32"/>
+  <object id="465" gid="555" x="1502" y="-1756" width="32" height="32"/>
   <object id="466" class="StatueTroll" gid="411" x="1952" y="-832" width="96" height="64">
    <properties>
     <property name="Durability" type="int" value="3"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="11" name="ObjectsOnTable"/>
  <layer id="3" name="Roof" width="30" height="20">
   <data encoding="csv">
    <chunk x="32" y="-48" width="16" height="16">
@@ -2358,9 +2328,9 @@
 0,0,0,0,0,0,0,0,0,17,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,17,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,17,0,0,4,34,5,0,
-0,0,0,0,0,0,0,0,0,17,500,0,19,0,33,34,
-0,0,0,0,0,0,0,0,0,17,500,0,19,0,0,0,
-0,0,0,0,0,0,0,0,1,21,500,0,20,3,0,0,
+0,0,0,0,0,0,0,0,0,17,521,0,19,0,33,34,
+0,0,0,0,0,0,0,0,0,17,521,0,19,0,0,0,
+0,0,0,0,0,0,0,0,1,21,521,0,20,3,0,0,
 0,0,0,0,0,0,1,2,21,0,0,0,0,20,3,0,
 0,0,0,0,0,0,17,0,0,0,0,0,0,0,19,0,
 0,0,0,0,0,0,17,0,0,0,0,0,0,0,19,0,
@@ -2462,6 +2432,24 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
+   <chunk x="0" y="0" width="16" height="16">
+318,318,318,318,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</chunk>
    <chunk x="32" y="0" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2491,16 +2479,16 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,533
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,557
 </chunk>
    <chunk x="48" y="-64" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2509,52 +2497,52 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-533,533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,533,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,533,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,533,533,0,0,0,0,0,0,0,0,0,0,0,0,0
+557,557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,557,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,557,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,557,557,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="32" y="-48" width="16" height="16">
-0,0,0,0,0,0,0,0,0,0,0,0,0,533,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,533,0,533,
-0,0,0,0,0,0,0,0,0,0,0,0,0,533,0,533,
-0,0,0,0,0,0,0,0,0,0,0,0,0,533,0,533,
-0,0,0,0,0,0,0,0,0,0,0,0,0,533,0,533,
-0,0,0,0,0,0,0,0,0,0,0,0,0,533,0,533,
-0,0,0,0,0,0,0,0,0,0,0,0,0,533,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,533,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,
+0,0,0,0,0,0,0,0,0,0,0,0,0,557,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,557,0,560,
+0,0,0,0,0,0,0,0,0,0,0,0,0,557,0,557,
+0,0,0,0,0,0,0,0,0,0,0,0,0,557,0,557,
+0,0,0,0,0,0,0,0,0,0,0,0,0,557,0,557,
+0,0,0,0,0,0,0,0,0,0,0,0,0,557,0,557,
+0,0,0,0,0,0,0,0,0,0,0,0,0,557,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,557,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="48" y="-48" width="16" height="16">
-0,0,0,533,0,0,0,0,0,0,0,0,0,0,0,0,
-533,533,0,533,0,0,0,0,0,0,0,0,0,0,0,0,
-0,533,0,0,533,0,0,0,0,0,0,0,0,0,0,0,
-0,533,0,0,533,0,0,0,0,0,0,0,0,0,0,0,
-0,533,0,533,0,0,0,0,0,0,0,0,0,0,0,0,
-533,533,0,533,533,533,533,533,533,533,533,533,533,533,533,533,
+0,0,0,557,0,0,0,0,0,0,0,0,0,0,0,0,
+560,560,0,557,0,0,0,0,0,0,0,0,0,0,0,0,
+0,557,0,0,557,0,0,0,0,0,0,0,0,0,0,0,
+0,557,0,0,557,0,0,0,0,0,0,0,0,0,0,0,
+0,557,0,557,0,0,0,0,0,0,0,0,0,0,0,0,
+557,557,0,557,557,557,557,557,557,557,557,557,557,557,557,557,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,533,533,533,533,533,533,533,533,533,533,533,533,533,533,533,
-0,533,533,533,533,533,533,533,533,0,0,0,0,0,0,0,
-0,533,0,0,0,0,0,0,533,0,0,0,0,0,0,0,
-0,533,0,0,0,0,0,0,533,0,0,0,0,0,0,0,
-0,533,533,533,533,533,533,533,533,533,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,533,0,0,0,0,0,0,
-533,533,533,533,533,533,533,0,0,533,0,0,0,0,0,0,
-0,0,0,0,0,0,533,0,0,533,0,0,0,0,0,0,
-0,0,0,0,0,0,533,0,0,533,0,0,0,0,0,0
+0,560,560,560,560,560,560,560,560,557,557,557,557,557,557,557,
+0,557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,557,557,557,557,557,557,557,557,557,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,557,0,0,0,0,0,0,
+557,557,557,557,557,557,557,0,0,557,0,0,0,0,0,0,
+0,0,0,0,0,0,557,0,0,557,0,0,0,0,0,0,
+0,0,0,0,0,0,557,0,0,557,0,0,0,0,0,0
 </chunk>
    <chunk x="64" y="-48" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2562,11 +2550,11 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-533,533,533,533,533,533,533,533,533,533,533,533,533,533,533,533,
+557,557,557,557,557,557,557,557,557,557,557,557,557,557,557,557,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-533,533,533,533,533,533,533,533,533,533,0,533,533,533,533,533,
-0,0,0,0,0,0,0,0,0,533,0,533,0,0,0,0,
-0,0,0,0,0,0,0,0,0,533,533,533,0,0,0,0,
+557,557,557,557,557,557,557,557,557,557,0,557,557,557,557,557,
+0,0,0,0,0,0,0,0,0,557,0,557,0,0,0,0,
+0,0,0,0,0,0,0,0,0,557,557,557,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2580,9 +2568,9 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-533,533,533,533,533,533,533,533,533,533,533,533,533,533,533,533,
+557,557,557,557,557,557,557,557,557,557,557,557,557,557,557,557,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-533,533,533,533,533,533,533,533,533,533,533,533,533,533,533,533,
+557,557,557,557,557,557,557,557,557,557,557,557,557,557,557,557,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2598,9 +2586,9 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2623,41 +2611,41 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,533,
-0,0,0,0,0,0,0,0,0,0,0,0,0,533,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,533,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,533,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,557,
+0,0,0,0,0,0,0,0,0,0,0,0,0,557,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,557,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,557,0,0
 </chunk>
    <chunk x="48" y="-32" width="16" height="16">
-0,0,0,0,0,0,533,0,0,533,0,0,0,0,0,0,
-0,0,0,0,0,0,533,0,0,533,0,0,0,533,533,533,
-0,0,0,0,0,0,533,0,0,533,0,0,0,533,0,0,
-0,0,0,0,0,0,533,0,0,533,0,0,533,533,0,0,
-0,0,0,0,0,533,0,0,0,533,0,0,533,533,533,533,
-0,0,0,0,0,533,0,0,0,533,0,0,533,533,0,0,
-0,0,0,0,0,533,0,0,0,533,533,533,533,533,0,0,
-0,0,0,0,0,0,533,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,533,0,0,0,533,533,533,533,533,0,0,
-0,0,0,0,0,0,533,0,0,0,533,0,0,533,0,0,
-0,0,0,0,0,0,533,0,0,0,533,0,0,533,533,533,
-0,0,0,0,0,0,533,0,0,0,533,0,0,0,0,0,
-533,0,0,0,0,0,533,0,0,533,0,0,0,0,0,0,
-0,533,0,0,0,533,0,0,0,533,0,0,0,0,0,0,
-0,533,0,0,0,0,533,0,0,533,0,0,0,0,0,0,
-0,533,0,0,0,0,533,0,0,0,533,0,0,0,0,0
+0,0,0,0,0,0,557,0,0,557,0,0,0,0,0,0,
+0,0,0,0,0,0,557,0,0,557,0,0,0,0,0,0,
+0,0,0,0,0,0,557,0,0,557,0,0,0,0,0,0,
+0,0,0,0,0,0,557,0,0,557,0,0,0,0,0,0,
+0,0,0,0,0,557,0,0,0,557,0,0,0,0,557,557,
+0,0,0,0,0,557,0,0,0,557,0,0,0,557,0,0,
+0,0,0,0,0,557,0,0,0,557,557,557,557,557,0,0,
+0,0,0,0,0,0,557,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,557,0,0,0,557,557,557,557,560,0,0,
+0,0,0,0,0,0,557,0,0,0,557,0,0,557,0,0,
+0,0,0,0,0,0,557,0,0,0,557,0,0,557,560,560,
+0,0,0,0,0,0,557,0,0,0,557,0,0,0,0,0,
+557,0,0,0,0,0,557,0,0,557,0,0,0,0,0,0,
+0,557,0,0,0,557,0,0,0,557,0,0,0,0,0,0,
+0,557,0,0,0,0,557,0,0,557,0,0,0,0,0,0,
+0,557,0,0,0,0,557,0,0,0,557,0,0,0,0,0
 </chunk>
    <chunk x="64" y="-32" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-533,533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-533,533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-533,533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+560,557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2679,56 +2667,56 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,533,533,0,0,0,0,0,0,0,0,0,0,0,0,0,
-533,0,0,533,0,0,0,0,0,0,0,0,0,0,0,0
+0,557,557,0,0,0,0,0,0,0,0,0,0,0,0,0,
+557,0,0,557,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="16" y="-16" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,533,533,533,0,0,0,0,
-0,0,0,0,0,0,0,0,533,0,0,0,533,533,533,0,
-0,0,0,0,0,0,0,533,0,0,0,0,0,0,0,533,
-0,0,0,0,0,0,0,0,533,533,0,0,533,533,533,0,
-0,0,0,0,0,0,0,0,0,533,0,0,533,0,0,0,
-0,0,0,0,0,0,0,0,533,0,0,0,0,533,0,0,
-0,0,0,0,0,0,0,0,533,0,0,0,0,533,0,0,
-0,0,0,0,0,0,0,0,533,0,0,0,0,533,0,0,
-0,0,0,0,0,0,0,0,533,0,0,0,0,533,0,0,
-0,0,0,0,0,0,0,0,533,0,0,0,0,533,0,0,
-0,0,0,0,0,0,0,0,533,0,0,0,0,533,0,0,
-0,0,0,0,0,0,0,0,533,0,0,0,0,533,0,0,
-0,0,0,0,0,0,0,0,533,0,0,0,0,533,0,0,
-0,0,0,0,0,0,0,0,533,0,0,0,0,533,0,0
+0,0,0,0,0,0,0,0,0,557,557,557,0,0,0,0,
+0,0,0,0,0,0,0,0,557,0,0,0,557,557,557,0,
+0,0,0,0,0,0,0,557,0,0,0,0,0,0,0,557,
+0,0,0,0,0,0,0,0,557,557,0,0,557,557,557,0,
+0,0,0,0,0,0,0,0,0,557,0,0,557,0,0,0,
+0,0,0,0,0,0,0,0,557,0,0,0,0,557,0,0,
+0,0,0,0,0,0,0,0,557,0,0,0,0,557,0,0,
+0,0,0,0,0,0,0,0,557,0,0,0,0,557,0,0,
+0,0,0,0,0,0,0,0,557,0,0,0,0,557,0,0,
+0,0,0,0,0,0,0,0,557,0,0,0,0,557,0,0,
+0,0,0,0,0,0,0,0,557,0,0,0,0,557,0,0,
+0,0,0,0,0,0,0,0,557,0,0,0,0,557,0,0,
+0,0,0,0,0,0,0,0,557,0,0,0,0,557,0,0,
+0,0,0,0,0,0,0,0,557,0,0,0,0,557,0,0
 </chunk>
    <chunk x="32" y="-16" width="16" height="16">
-0,0,0,0,0,0,0,0,0,0,0,0,0,533,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,533,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,533,0,0,
-0,0,0,0,0,0,0,0,0,0,533,533,533,533,0,0,
-0,0,0,0,0,0,0,0,0,533,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,533,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,533,0,0,533,533,533,0,
-0,0,0,0,0,0,0,0,0,533,0,0,533,0,0,533,
-0,0,0,0,0,0,0,0,0,533,0,0,533,0,0,0,
-0,0,0,0,0,0,0,0,0,533,0,0,533,0,0,0,
-0,0,0,0,0,0,0,0,0,533,0,0,533,0,0,0,
-0,0,0,0,0,0,0,0,0,533,0,0,533,0,0,0,
-0,0,0,0,0,0,0,0,0,533,0,0,533,0,0,0,
-0,0,0,0,0,0,0,533,533,0,0,0,0,533,0,0,
-0,0,0,0,0,0,533,0,0,0,0,0,0,0,533,0,
-0,0,0,0,0,0,0,533,533,0,0,0,0,533,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,557,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,557,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,557,0,0,
+0,0,0,0,0,0,0,0,0,0,557,557,557,557,0,0,
+0,0,0,0,0,0,0,0,0,557,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,557,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,557,0,0,560,560,560,0,
+0,0,0,0,0,0,0,0,0,557,0,0,557,0,557,560,
+0,0,0,0,0,0,0,0,0,557,0,0,557,0,0,0,
+0,0,0,0,0,0,0,0,0,557,0,0,557,0,0,0,
+0,0,0,0,0,0,0,0,0,557,0,0,557,0,0,0,
+0,0,0,0,0,0,0,0,0,557,0,0,557,0,0,0,
+0,0,0,0,0,0,0,0,0,557,0,0,557,0,0,0,
+0,0,0,0,0,0,0,557,557,0,0,0,0,557,0,0,
+0,0,0,0,0,0,557,0,0,0,0,0,0,0,557,0,
+0,0,0,0,0,0,557,560,560,0,0,0,0,560,557,0
 </chunk>
    <chunk x="48" y="-16" width="16" height="16">
-0,533,0,0,0,0,533,0,0,533,0,0,0,0,0,0,
-0,533,0,0,0,0,533,0,0,533,0,0,0,0,0,0,
-0,533,0,533,0,533,0,0,0,0,533,0,0,0,0,0,
-0,533,533,0,533,0,0,0,0,0,0,533,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,533,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,533,0,0,0,
-533,533,533,533,533,0,0,0,0,0,0,0,533,0,0,0,
-0,0,0,0,0,533,0,0,0,0,0,533,0,0,0,0,
-0,0,0,0,0,0,533,0,0,0,533,0,0,0,0,0,
-0,0,0,0,0,0,0,533,533,533,533,0,0,0,0,0,
+0,557,0,0,0,0,557,0,0,557,0,0,0,0,0,0,
+0,557,0,0,0,0,557,0,0,557,0,0,0,0,0,0,
+0,557,0,557,0,557,0,0,0,0,557,0,0,0,0,0,
+0,557,557,0,557,0,0,0,0,0,0,557,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,557,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,557,0,0,0,
+560,560,557,557,557,0,0,0,0,0,0,0,557,0,0,0,
+557,0,0,0,0,557,0,0,0,0,0,557,0,0,0,0,
+0,0,0,0,0,0,557,0,0,0,557,0,0,0,0,0,
+0,0,0,0,0,0,0,557,557,557,557,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2737,15 +2725,15 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="0" y="0" width="16" height="16">
-533,0,0,533,0,0,0,0,0,0,0,0,0,0,0,0,
-533,0,0,533,0,0,0,0,0,0,0,0,0,0,0,0,
-533,0,0,533,0,0,0,0,533,533,533,0,0,0,0,0,
-533,0,0,533,0,0,0,533,0,0,0,533,0,0,533,533,
-533,0,0,533,533,533,533,0,0,0,0,0,533,533,0,0,
-533,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,533,533,533,533,533,533,0,0,0,0,0,533,533,0,0,
-0,0,0,0,0,0,0,533,0,0,0,533,0,0,533,533,
-0,0,0,0,0,0,0,0,533,533,533,533,0,0,0,0,
+557,0,0,557,0,0,0,0,0,0,0,0,0,0,0,0,
+557,0,0,557,0,0,0,0,0,0,0,0,0,0,0,0,
+557,0,0,557,0,0,0,0,557,557,557,0,0,0,0,0,
+557,0,0,557,0,0,0,557,0,0,0,557,0,0,557,557,
+557,0,0,557,557,557,557,0,0,0,0,0,557,557,0,0,
+557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,557,557,557,557,557,557,0,0,0,0,0,557,557,0,0,
+0,0,0,0,0,0,0,557,0,0,0,557,0,0,557,557,
+0,0,0,0,0,0,0,0,557,557,557,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2755,44 +2743,44 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="16" y="0" width="16" height="16">
-0,0,0,0,0,0,0,0,533,0,0,0,0,533,0,0,
-0,0,0,0,0,0,0,0,533,0,0,0,0,0,533,0,
-0,0,0,0,0,0,0,533,533,533,0,0,533,533,533,533,
-533,533,533,533,533,533,533,533,0,0,0,0,0,0,533,0,
-0,0,0,0,0,0,0,533,0,0,0,0,0,0,533,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,0,
+0,0,0,0,0,0,0,0,557,0,0,0,0,557,0,0,
+0,0,0,0,0,0,0,0,557,0,0,0,0,0,557,0,
+0,0,0,0,0,0,0,0,557,557,0,0,557,557,0,557,
+557,557,557,557,557,557,557,557,0,0,0,0,0,0,557,0,
+0,0,0,0,0,0,0,557,0,0,0,0,0,0,557,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-533,533,533,533,533,533,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,533,0,0,0,0,0,0,533,0,533,533,
-0,0,0,0,0,533,0,0,0,0,0,0,533,533,0,0,
-0,0,0,0,0,0,533,533,533,533,533,533,0,0,0,0,
+557,557,557,557,557,557,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,557,0,0,0,0,0,0,557,0,557,557,
+0,0,0,0,0,557,0,0,0,0,0,0,557,557,0,0,
+0,0,0,0,0,0,557,557,557,557,557,557,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,0
 </chunk>
    <chunk x="32" y="0" width="16" height="16">
-0,0,0,0,0,0,0,0,0,533,0,0,533,0,0,0,
-0,0,0,0,0,0,0,0,0,533,0,0,533,0,0,0,
-0,0,0,0,0,0,0,0,0,533,0,0,533,0,0,0,
-533,0,0,0,0,0,0,0,0,533,0,0,533,0,0,0,
-533,0,0,0,0,0,0,0,0,533,0,0,533,0,0,0,
-533,533,533,533,533,533,533,533,533,533,0,0,533,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,533,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,533,0,0,0,
-533,533,533,0,0,0,0,0,533,533,533,533,0,0,0,0,
-0,0,533,533,0,0,0,533,533,0,0,0,0,0,0,0,
-0,0,0,0,533,0,533,0,0,0,0,0,0,0,0,0,
-0,0,533,533,0,0,0,533,533,0,0,0,0,0,0,0,
-0,533,0,0,0,0,0,0,0,533,0,0,0,0,0,0,
-533,533,0,0,0,0,0,0,0,533,533,533,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,533,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,533,0,0,0
+0,0,0,0,0,0,0,0,0,557,0,0,557,0,0,0,
+0,0,0,0,0,0,0,0,0,557,0,0,557,0,0,0,
+0,0,0,0,0,0,0,0,0,557,0,0,557,0,0,0,
+557,0,0,0,0,0,0,0,0,557,0,0,557,0,0,0,
+557,0,0,0,0,0,0,0,0,557,0,0,557,0,0,0,
+557,557,557,557,557,557,557,557,557,557,0,0,557,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,557,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,557,0,0,0,
+557,557,557,0,0,0,0,0,557,557,557,557,0,0,0,0,
+0,0,557,557,0,0,0,557,557,0,0,0,0,0,0,0,
+0,0,0,0,557,0,557,0,0,0,0,0,0,0,0,0,
+0,0,557,557,0,0,0,557,557,0,0,0,0,0,0,0,
+0,557,0,0,0,0,0,0,0,557,0,0,0,0,0,0,
+557,557,0,0,0,0,0,0,0,557,557,557,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,557,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,557,0,0,0
 </chunk>
    <chunk x="16" y="16" width="16" height="16">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,533,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2809,13 +2797,53 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="32" y="16" width="16" height="16">
-0,0,0,0,0,0,0,0,0,0,0,0,533,0,0,0,
-533,533,0,0,0,0,0,0,0,533,533,533,0,0,0,0,
-0,533,0,0,0,0,0,0,0,533,0,0,0,0,0,0,
-0,0,533,533,0,0,0,533,533,0,0,0,0,0,0,0,
-0,0,0,533,0,0,0,533,0,0,0,0,0,0,0,0,
-0,0,0,533,0,0,0,533,0,0,0,0,0,0,0,0,
-0,0,0,0,533,533,533,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,557,0,0,0,
+557,557,0,0,0,0,0,0,0,557,557,557,0,0,0,0,
+0,557,0,0,0,0,0,0,0,557,0,0,0,0,0,0,
+0,0,557,557,0,0,0,557,557,0,0,0,0,0,0,0,
+0,0,0,557,0,0,0,557,0,0,0,0,0,0,0,0,
+0,0,0,557,0,0,0,557,0,0,0,0,0,0,0,0,
+0,0,0,0,557,557,557,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</chunk>
+  </data>
+ </layer>
+ <layer id="29" name="BARRIER_SECRET_WAY_1" width="30" height="20" opacity="0">
+  <data encoding="csv">
+   <chunk x="16" y="-16" width="16" height="16">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,557,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</chunk>
+   <chunk x="16" y="0" width="16" height="16">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2833,31 +2861,31 @@
    <chunk x="32" y="-64" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,534,534,534,534,534,534,534,534,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,558,558,558,558,558,558,558,558,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="48" y="-64" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-534,534,534,534,534,534,534,534,534,534,534,534,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,534,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,534,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,534,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,534,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,534,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,534,534,534,534,
+558,558,558,558,558,558,558,558,558,558,558,558,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,558,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,558,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,558,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,558,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,558,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,558,558,558,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2875,7 +2903,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-534,534,534,534,534,534,534,534,534,534,534,534,534,534,534,534,
+558,558,558,558,558,558,558,558,558,558,558,558,558,558,558,558,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2893,7 +2921,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-534,534,534,534,534,534,534,534,534,534,534,534,534,534,534,534,
+558,558,558,558,558,558,558,558,558,558,558,558,558,558,558,558,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2911,50 +2939,50 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="32" y="-48" width="16" height="16">
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,534,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,534,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,534,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,534,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,534,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,561,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,558,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,558,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,558,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,558,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="48" y="-48" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-534,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-534,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-534,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+561,561,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+558,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,534,534,534,534,534,534,534,0,0,0,0,0,0,0,
-0,534,534,534,534,534,534,534,534,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,534,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,534,0,0,0,0,0,0,0,
-0,534,534,534,534,534,534,534,534,0,0,0,0,0,0,0,
+0,561,561,561,561,561,561,561,561,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,558,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,558,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,558,0,0,0,0,0,0,0,
+0,558,558,558,558,558,558,558,558,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,534,534,534,534
+0,0,0,0,0,0,0,0,0,0,0,0,0,558,558,558
 </chunk>
    <chunk x="64" y="-48" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2972,7 +3000,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-534,534,534,534,534,534,534,534,534,534,534,534,534,534,534,534
+558,558,558,558,558,558,558,558,558,558,558,558,558,558,558,558
 </chunk>
    <chunk x="80" y="-48" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2990,30 +3018,30 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-534,534,534,534,534,534,534,534,534,534,534,534,534,534,534,534
+558,558,558,558,558,558,558,558,558,558,558,558,558,558,558,558
 </chunk>
    <chunk x="96" y="-48" width="16" height="16">
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="32" y="-32" width="16" height="16">
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,534,534,534,534,534,534,534,534,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,558,558,558,558,558,558,558,558,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -3026,43 +3054,43 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,534,534
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,558,558
 </chunk>
    <chunk x="48" y="-32" width="16" height="16">
-0,0,0,0,0,0,0,0,0,0,0,0,534,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,534,0,0,0,
-534,534,534,0,0,0,0,0,0,0,0,0,534,0,0,0,
-0,0,534,0,0,0,0,0,0,0,0,0,534,0,0,0,
-0,0,534,0,0,0,0,0,0,0,0,0,534,0,534,534,
-0,0,534,0,0,0,0,0,0,0,0,0,534,534,0,0,
-0,0,534,0,0,0,0,0,0,0,0,0,534,534,0,0,
-0,0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,534,0,0,0,0,0,0,0,0,0,534,534,0,0,
-0,0,534,0,0,0,0,0,0,0,0,0,534,534,0,0,
-0,0,534,0,0,0,0,0,0,0,0,0,534,0,534,534,
-0,0,534,0,0,0,0,0,0,0,0,0,534,0,0,0,
-0,0,534,0,0,0,0,0,0,0,0,0,534,534,0,0,
-0,0,534,0,0,0,0,0,0,0,0,0,0,0,534,0,
-0,0,534,0,0,0,0,0,0,0,0,0,0,0,534,0,
-534,0,534,0,0,0,0,0,0,0,0,0,0,0,534,534
+0,0,0,0,0,0,0,0,0,0,0,0,558,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,558,0,0,0,
+558,558,0,0,0,0,0,0,0,0,0,0,558,0,0,0,
+0,0,558,0,0,0,0,0,0,0,0,0,558,0,0,0,
+0,0,558,0,0,0,0,0,0,0,0,0,558,0,558,558,
+0,0,558,0,0,0,0,0,0,0,0,0,558,558,0,0,
+0,0,558,0,0,0,0,0,0,0,0,0,558,558,0,0,
+0,0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,558,0,0,0,0,0,0,0,0,0,561,561,0,0,
+0,0,558,0,0,0,0,0,0,0,0,0,558,558,0,0,
+0,0,558,0,0,0,0,0,0,0,0,0,558,558,561,561,
+0,0,558,0,0,0,0,0,0,0,0,0,558,0,0,0,
+0,0,558,0,0,0,0,0,0,0,0,0,558,558,0,0,
+0,0,558,0,0,0,0,0,0,0,0,0,0,0,558,0,
+0,0,558,0,0,0,0,0,0,0,0,0,0,0,558,0,
+558,0,558,0,0,0,0,0,0,0,0,0,0,0,0,558
 </chunk>
    <chunk x="64" y="-32" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+561,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-534,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+558,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="-16" y="-16" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -3079,8 +3107,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,534,534,534,534,534,534,
-0,0,0,0,0,0,0,0,0,534,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,558,558,558,558,558,558,
+0,0,0,0,0,0,0,0,0,558,0,0,0,0,0,0
 </chunk>
    <chunk x="0" y="-16" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -3094,101 +3122,101 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,534,534,534,534,534,534,534,534,534,534,
-0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,0,
-534,534,534,534,534,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,558,558,558,558,558,558,558,558,558,558,
+0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,0,
+558,558,558,558,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="16" y="-16" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,534,534,534,534,534,534,534,534,534,534,
-0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,0,
-534,534,534,534,534,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,558,558,558,558,558,558,558,558,558,558,
+0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,0,
+558,558,558,558,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="32" y="-16" width="16" height="16">
-0,0,0,0,0,0,0,0,0,0,0,0,0,534,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,534,0,0,
-534,0,0,0,0,0,0,0,0,0,0,0,0,534,0,0,
-0,534,0,0,0,0,0,0,0,0,534,534,534,534,0,0,
-0,534,0,0,0,0,0,0,0,534,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,534,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,534,0,0,534,534,534,0,
-0,534,0,0,0,0,0,0,0,534,0,0,534,0,0,534,
-0,534,0,0,0,0,0,0,0,534,0,0,534,0,0,0,
-0,534,0,0,0,0,0,0,0,534,0,0,534,0,0,0,
-0,534,0,0,0,0,0,0,0,534,0,0,534,0,0,0,
-0,534,0,0,0,0,0,0,0,534,0,0,534,0,0,0,
-0,534,0,0,0,0,0,0,0,534,0,0,534,0,0,0,
-0,534,0,0,0,0,0,534,534,0,0,0,0,534,0,0,
-0,534,0,0,0,0,534,0,0,0,0,0,0,0,534,0,
-0,534,0,0,0,0,0,534,534,0,0,0,0,534,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,558,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,558,0,0,
+558,0,0,0,0,0,0,0,0,0,0,0,0,558,0,0,
+0,558,0,0,0,0,0,0,0,0,558,558,558,558,0,0,
+0,558,0,0,0,0,0,0,0,558,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,558,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,558,0,0,561,561,561,0,
+0,558,0,0,0,0,0,0,0,558,0,0,558,0,558,561,
+0,558,0,0,0,0,0,0,0,558,0,0,558,0,0,0,
+0,558,0,0,0,0,0,0,0,558,0,0,558,0,0,0,
+0,558,0,0,0,0,0,0,0,558,0,0,558,0,0,0,
+0,558,0,0,0,0,0,0,0,558,0,0,558,0,0,0,
+0,558,0,0,0,0,0,0,0,558,0,0,558,0,0,0,
+0,558,0,0,0,0,0,558,558,0,0,0,0,558,0,0,
+0,558,0,0,0,0,558,0,0,0,0,0,0,0,558,0,
+0,558,0,0,0,0,558,561,561,0,0,0,0,561,558,0
 </chunk>
    <chunk x="48" y="-16" width="16" height="16">
-0,534,534,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,534,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,534,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,534,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,558,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,558,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,558,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,558,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-534,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,534,534,534,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,534,0,0,0,0,0,534,534,
-0,0,0,0,0,0,0,0,0,534,534,534,534,534,0,0,
+561,561,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+558,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,558,558,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,558,0,0,0,0,0,558,558,
+0,0,0,0,0,0,0,0,0,558,558,558,558,558,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="64" y="-16" width="16" height="16">
-0,0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="-16" y="0" width="16" height="16">
-0,0,0,0,0,0,0,0,0,534,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,534,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,534,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,534,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,534,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,534,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,534,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,534,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,534,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,534,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,534,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,534,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,534,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,534,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,534,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,534,534,534,534,534,534,534
+0,0,0,0,0,0,0,0,0,558,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,558,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,558,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,558,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,558,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,558,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,558,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,558,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,558,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,558,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,558,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,558,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,558,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,558,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,558,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,558,558,558,558,558,558
 </chunk>
    <chunk x="0" y="0" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -3206,15 +3234,15 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-534,534,534,534,534,534,534,534,534,534,534,534,534,534,0,0
+558,558,558,558,558,558,558,558,558,558,558,558,558,558,0,0
 </chunk>
    <chunk x="32" y="0" width="16" height="16">
-0,534,0,0,0,0,0,0,0,534,0,0,534,0,0,0,
-0,534,0,0,0,0,0,0,0,534,0,0,534,0,0,0,
-0,534,0,0,0,0,0,0,0,534,0,0,534,0,0,0,
-0,534,0,0,0,0,0,0,0,534,0,0,534,0,0,0,
-0,534,0,0,0,0,0,0,0,534,0,0,534,0,0,0,
-0,534,534,534,534,534,534,534,534,534,0,0,534,534,534,534,
+0,558,0,0,0,0,0,0,0,558,0,0,558,0,0,0,
+0,558,0,0,0,0,0,0,0,558,0,0,558,0,0,0,
+0,558,0,0,0,0,0,0,0,558,0,0,558,0,0,0,
+0,558,0,0,0,0,0,0,0,558,0,0,558,0,0,0,
+0,558,0,0,0,0,0,0,0,558,0,0,558,0,0,0,
+0,558,558,558,558,558,558,558,558,558,0,0,558,558,558,558,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -3232,21 +3260,21 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,534,534,534,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0
+558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,558,558,558,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="0" y="16" width="16" height="16">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,534,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,534,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,558,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,558,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -3264,21 +3292,21 @@
 </chunk>
    <chunk x="16" y="16" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,534,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,534,534,534,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,534,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,534,534,534,534,534,534,534,534
+558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,558,558,558,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,558,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,558,558,558,558,558,558,558,558
 </chunk>
    <chunk x="32" y="16" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -3296,25 +3324,25 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-534,534,534,534,534,534,534,534,534,534,534,534,534,534,534,534
+558,558,558,558,558,558,558,558,558,558,558,558,558,558,558,558
 </chunk>
    <chunk x="48" y="16" width="16" height="16">
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,534,0,0,0,0,0,0,0,0,0,0,
-0,0,0,534,534,0,0,0,0,0,0,0,0,0,0,0,
-534,534,534,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,558,558,0,0,0,0,0,0,0,0,0,0,0,
+558,558,558,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
   </data>
  </layer>

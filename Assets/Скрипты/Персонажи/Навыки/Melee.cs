@@ -35,11 +35,11 @@ public class Melee : BaseSkill
             i.SetTrigger("Attack");
 
         var isWalk = bob.data.movement.IsWalking;
-        bob.data.movement.enabled = false;
+        bob.data.movement.Disable();
 
         if (isWalk && dash)
         {
-            rigid.velocity += dir * 2;
+            rigid.velocity = dir * 2;
             yield return new WaitForSeconds(dashDuration);
         }
 
@@ -66,7 +66,7 @@ public class Melee : BaseSkill
 
         yield return new WaitForSeconds(hitDuration);
 
-        bob.data.movement.enabled = true;
+        bob.data.movement.Enable();
 
         yield return new WaitForSeconds(reloadDuration);
 
@@ -81,9 +81,9 @@ public class Melee : BaseSkill
 
 public enum DiscardingType
 {
-    Small = 3,
-    Normal = 5,
-    Big = 10
+    Small = 1,
+    Normal = 8,
+    Big = 15
 }
 
 public enum ObjectType

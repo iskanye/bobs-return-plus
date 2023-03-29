@@ -13,21 +13,21 @@ public class Trigger : ActionBase
     void OnTriggerEnter2D(Collider2D c) 
     {
         if (IsTriggering(c) && !isOnStay) 
-            action.Invoke(c.gameObject); 
+            action?.Invoke(c.gameObject); 
     }
 
     void OnTriggerStay2D(Collider2D c) 
     {
         if (IsTriggering(c) && isOnStay) 
-            action.Invoke(c.gameObject); 
+            action?.Invoke(c.gameObject); 
     }
 
     void OnTriggerExit2D(Collider2D c)
     {
         if (IsTriggering(c))
-            onExit.Invoke(c.gameObject);
+            onExit?.Invoke(c.gameObject);
     }
 
     bool IsTriggering(Collider2D c) => 
-        action != null && ((1 << c.gameObject.layer) & playerMask) != 0 && ((c.isTrigger && !triggerNotExpected) || (!c.isTrigger && !colliderNotExpected));
+        ((1 << c.gameObject.layer) & playerMask) != 0 && ((c.isTrigger && !triggerNotExpected) || (!c.isTrigger && !colliderNotExpected));
 }

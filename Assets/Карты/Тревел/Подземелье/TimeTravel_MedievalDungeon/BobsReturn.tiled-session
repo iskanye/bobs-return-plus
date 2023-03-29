@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "TimeTravel_MedievalDungeon.tmx",
+    "activeFile": "TimeTravel_MedievalDungeonRatKingRoom.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -33,6 +33,10 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "0_TimeTravel_Arrows.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "0_TimeTravel_AutoCrossbow.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
@@ -57,6 +61,11 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "0_TimeTravel_BannerStand.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "0_TimeTravel_Banners.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
@@ -69,11 +78,19 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "0_TimeTravel_BarrelCheese.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "0_TimeTravel_BarrelDrum.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "0_TimeTravel_BarrelOfWeapon.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_BarrelSkis.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -85,11 +102,27 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "0_TimeTravel_BlackOil.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "0_TimeTravel_BoardGame.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "0_TimeTravel_Bones.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Cage1.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Cage2.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Cage3.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -101,11 +134,19 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "0_TimeTravel_ChainsOnFloor.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        },
         "0_TimeTravel_ChangesAreInevitable.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "0_TimeTravel_Chest.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_ColumnAngle.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -130,6 +171,14 @@
             "scaleInEditor": 1
         },
         "0_TimeTravel_DecorWood.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_DummyBloodsucker.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_DummyQuest.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -164,6 +213,10 @@
         },
         "0_TimeTravel_GeneralFivefinger.tsx": {
             "scaleInDock": 1
+        },
+        "0_TimeTravel_GiantGuillotine.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "0_TimeTravel_GiantTorch.tsx": {
             "scaleInDock": 1,
@@ -202,6 +255,7 @@
             "scaleInEditor": 1
         },
         "0_TimeTravel_Moss.tsx": {
+            "dynamicWrapping": false,
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -282,6 +336,10 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "0_TimeTravel_StatueOfTheSilent.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "0_TimeTravel_StoneStatues.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
@@ -322,6 +380,10 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "0_TimeTravel_TorchBig.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        },
         "0_TimeTravel_TrollStatue.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
@@ -349,6 +411,10 @@
             "scaleInEditor": 1
         },
         "0_TimeTravel_WoodenChainsaw.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_WoodenCircularSaw.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -405,6 +471,7 @@
             "scaleInEditor": 1
         },
         "1_TimeTravel_Spinis.tsx": {
+            "dynamicWrapping": false,
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -748,14 +815,14 @@
         "TimeTravel_MedievalDungeon.tmx": {
             "expandedObjectLayers": [
                 4,
-                13,
-                9
+                9,
+                13
             ],
-            "scale": 1,
-            "selectedLayer": 11,
+            "scale": 2,
+            "selectedLayer": 5,
             "viewCenter": {
-                "x": -1,
-                "y": 257
+                "x": 0,
+                "y": 255.75
             }
         },
         "TimeTravel_MedievalDungeonChallenges.tmx": {
@@ -763,11 +830,36 @@
                 10,
                 9
             ],
-            "scale": 0.33,
-            "selectedLayer": 19,
+            "scale": 2,
+            "selectedLayer": 14,
             "viewCenter": {
-                "x": 1036.3636363636365,
-                "y": -151.5151515151515
+                "x": 1536,
+                "y": -768.25
+            }
+        },
+        "TimeTravel_MedievalDungeonRatKingRoom.tmx": {
+            "expandedObjectLayers": [
+                10,
+                9,
+                30
+            ],
+            "scale": 2,
+            "selectedLayer": 24,
+            "viewCenter": {
+                "x": 1555,
+                "y": -4992
+            }
+        },
+        "TimeTravel_MedievalDungeonStoreroom.tmx": {
+            "expandedObjectLayers": [
+                10,
+                9
+            ],
+            "scale": 2,
+            "selectedLayer": 10,
+            "viewCenter": {
+                "x": 256,
+                "y": -512.25
             }
         },
         "fireLight.tsx": {
@@ -783,6 +875,10 @@
             "scaleInEditor": 1
         },
         "rat.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "zombieRat6.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         }
@@ -860,8 +956,33 @@
         "0_TimeTravel_SpearArrow.tsx",
         "0_TimeTravel_Banners2.tsx",
         "0_TimeTravel_OilLamp.tsx",
+        "TimeTravel_MedievalDungeon.tmx",
+        "0_TimeTravel_FlimsyDecor.tsx",
+        "0_TimeTravel_BarrelDrum.tsx",
+        "0_TimeTravel_BarrelCheese.tsx",
+        "0_TimeTravel_Mannequin.tsx",
+        "0_TimeTravel_BannerStand.tsx",
+        "TimeTravel_MedievalDungeonStoreroom.tmx",
+        "0_TimeTravel_StatueOfTheSilent.tsx",
+        "0_TimeTravel_DummyQuest.tsx",
+        "0_TimeTravel_WoodenCircularSaw.tsx",
+        "0_TimeTravel_BarrelOfWeapon.tsx",
+        "0_TimeTravel_GiantTorch.tsx",
+        "0_TimeTravel_TorchBig.tsx",
         "TimeTravel_MedievalDungeonChallenges.tmx",
-        "TimeTravel_MedievalDungeon.tmx"
+        "0_TimeTravel_Cage1.tsx",
+        "0_TimeTravel_Cage2.tsx",
+        "0_TimeTravel_Cage3.tsx",
+        "0_TimeTravel_ChainsOnFloor.tsx",
+        "0_TimeTravel_DummyBloodsucker.tsx",
+        "0_TimeTravel_ColumnAngle.tsx",
+        "0_TimeTravel_Food.tsx",
+        "0_TimeTravel_GiantGuillotine.tsx",
+        "0_TimeTravel_BlackOil.tsx",
+        "0_TimeTravel_BarrelSkis.tsx",
+        "zombieRat6.tsx",
+        "0_TimeTravel_Arrows.tsx",
+        "TimeTravel_MedievalDungeonRatKingRoom.tmx"
     ],
     "project": "BobsReturn.tiled-project",
     "property.type": "int",

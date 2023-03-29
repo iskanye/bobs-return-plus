@@ -319,7 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 5417837822214879037, guid: 68b6e1286e1fc4e48b59587cb22175ab, type: 3}
   bulletDiscarding: 3
-  detectionArea: {x: 1, y: 0.9}
+  detectionArea: {x: 1, y: 0.7}
   direction: {x: 0, y: 1}
   bulletOffset: {x: 0.0125, y: 1.6}
   offset: {x: 0.0125, y: 0}
@@ -376,5 +376,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 1}
+  m_Size: {x: 0.7, y: 1}
   m_EdgeRadius: 0

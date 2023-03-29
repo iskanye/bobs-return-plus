@@ -1,13 +1,16 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class SimpleMovement : BaseMovement
 {
     public Vector2 endPoint;
-    public float startDelay;
+    public float startDelay = -1;
     public bool repeat;
     public float repeatDelay;
+    public float stopRadius = .1f;
 
     [HideInInspector] public Vector2 startPoint;
+    [HideInInspector] public Rigidbody2D rigid;
 
     MoveState moveState;
     State<SimpleMovement> state;
@@ -15,6 +18,7 @@ public class SimpleMovement : BaseMovement
     void Awake()
     {
         startPoint = transform.position;
+        rigid = GetComponent<Rigidbody2D>();
         moveState = new MoveState(this);
 
         if (startDelay >= 0)
@@ -24,8 +28,8 @@ public class SimpleMovement : BaseMovement
     void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawLine(transform.position, (Vector3)endPoint + transform.position);
-        Gizmos.DrawWireSphere((Vector3)endPoint + transform.position, .1f);
+        Gizmos.DrawLine(transform.position, (Vector3)endPoint);
+        Gizmos.DrawWireSphere((Vector3)endPoint, .1f);
     }
 
     public void ChangeState(State<SimpleMovement> state) 
@@ -50,19 +54,16 @@ public class MoveState : State<SimpleMovement>
 { 
     public MoveState(SimpleMovement mn) : base(mn) { }
 
-    float t;
-
     public override System.Collections.IEnumerator Update() 
     {
-        mn.endPoint += mn.startPoint;
         mn.IsWalking = true;
 
         while (true) 
         {
-            mn.Direction = (mn.endPoint - mn.startPoint).normalized;
-            mn.transform.position = Vector2.Lerp(mn.startPoint, mn.endPoint, t);
+            mn.Direction = (mn.endPoint - (Vector2)mn.transform.position).normalized;
+            mn.rigid.velocity = mn.Direction * mn.speed;
 
-            if (t >= 1) 
+            if ((mn.endPoint - (Vector2)mn.transform.position).magnitude <= mn.stopRadius) 
             {
                 if (mn.repeat)
                 {
@@ -70,17 +71,16 @@ public class MoveState : State<SimpleMovement>
                     yield return new WaitForSeconds(mn.repeatDelay);
                     mn.IsWalking = true;
 
-                    t = 0;
                     (mn.startPoint, mn.endPoint) = (mn.endPoint, mn.startPoint);
                 }
                 else
                 {
+                    mn.rigid.velocity = Vector2.zero;
                     mn.StopMove();
                     mn.IsWalking = false;
                 }
             }
 
-            t += mn.speed * Time.deltaTime;
             yield return base.Update();
         }
     }

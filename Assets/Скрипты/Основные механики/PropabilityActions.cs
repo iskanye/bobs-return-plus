@@ -1,19 +1,18 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class PropabilityActions : MonoBehaviour
 {
     [System.Serializable]
     public struct Propability
     {
-        public UnityEngine.Events.UnityEvent<GameObject> action;
+        public UnityEvent<GameObject> action;
         public float propability; 
     }
 
     public Propability[] actions;
 
-    GameObject obj;
-
-    public void Action() 
+    public void Action(GameObject obj) 
     {
         float random = Random.value;
 
@@ -24,15 +23,9 @@ public class PropabilityActions : MonoBehaviour
             propability += actions[i].propability;
 
             if (random >= prevPropability && random <= propability && actions[i].action != null)
-                actions[i].action.Invoke(obj);
+                actions[i].action?.Invoke(obj);
 
             prevPropability += actions[i].propability;
         }
-    }
-
-    public void Action(GameObject obj) 
-    {
-        this.obj = obj;
-        Action(); 
     }
 }

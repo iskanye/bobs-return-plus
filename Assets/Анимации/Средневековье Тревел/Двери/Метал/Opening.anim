@@ -30,7 +30,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.2
+        time: 0.4
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -61,34 +61,34 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: "\u0442\u0440\u0438\u0433\u0433\u0435\u0440"
+    path: "\u0422\u0440\u0438\u0433\u0433\u0435\u0440"
     classID: 1
     script: {fileID: 0}
   m_PPtrCurves:
   - curve:
     - time: 0
       value: {fileID: -476912193, guid: 291bbd77a3ccab994bfa7b753d934738, type: 3}
-    - time: 0.1
-      value: {fileID: 1232120734, guid: 291bbd77a3ccab994bfa7b753d934738, type: 3}
     - time: 0.2
+      value: {fileID: 1232120734, guid: 291bbd77a3ccab994bfa7b753d934738, type: 3}
+    - time: 0.4
       value: {fileID: 1735023455, guid: 291bbd77a3ccab994bfa7b753d934738, type: 3}
-    - time: 0.3
+    - time: 0.6
       value: {fileID: 0}
     attribute: m_Sprite
-    path: 0_TimeTravel_DungeonDoors_0 (1)
+    path: 0_TimeTravel_DungeonDoors_4 (1)
     classID: 212
     script: {fileID: 0}
   - curve:
     - time: 0
       value: {fileID: -476912193, guid: 291bbd77a3ccab994bfa7b753d934738, type: 3}
-    - time: 0.1
-      value: {fileID: 1232120734, guid: 291bbd77a3ccab994bfa7b753d934738, type: 3}
     - time: 0.2
+      value: {fileID: 1232120734, guid: 291bbd77a3ccab994bfa7b753d934738, type: 3}
+    - time: 0.4
       value: {fileID: 1735023455, guid: 291bbd77a3ccab994bfa7b753d934738, type: 3}
-    - time: 0.3
+    - time: 0.6
       value: {fileID: 0}
     attribute: m_Sprite
-    path: 0_TimeTravel_DungeonDoors_0
+    path: 0_TimeTravel_DungeonDoors_4
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 60
@@ -106,21 +106,21 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 4130091668
+      path: 3630012439
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 352470950
+      path: 3766673766
       attribute: 0
       script: {fileID: 0}
       typeID: 212
       customType: 23
       isPPtrCurve: 1
     - serializedVersion: 2
-      path: 3854223403
+      path: 3805744178
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -140,7 +140,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.3166667
+    m_StopTime: 0.6166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -169,7 +169,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.2
+        time: 0.4
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -200,7 +200,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: "\u0442\u0440\u0438\u0433\u0433\u0435\u0440"
+    path: "\u0422\u0440\u0438\u0433\u0433\u0435\u0440"
     classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves: []

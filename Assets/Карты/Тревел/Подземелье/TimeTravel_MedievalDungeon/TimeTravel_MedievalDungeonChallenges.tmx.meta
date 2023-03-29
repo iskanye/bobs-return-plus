@@ -9,93 +9,7 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
   missingFiles: []
-  errors:
-  - Errors detected in tileset '1_TimeTravel_Spinis.tsx'. Check the tileset inspector
-    for more details. Your map may be broken until these are fixed.
-  - Errors detected in tileset '0_TimeTravel_VillageToilet.tsx'. Check the tileset
-    inspector for more details. Your map may be broken until these are fixed.
-  - Errors detected in tileset '0_TimeTravel_WarningTablet.tsx'. Check the tileset
-    inspector for more details. Your map may be broken until these are fixed.
-  - Errors detected in tileset '0_TimeTravel_WoodenSign.tsx'. Check the tileset inspector
-    for more details. Your map may be broken until these are fixed.
-  - Errors detected in tileset '0_TimeTravel_Note.tsx'. Check the tileset inspector
-    for more details. Your map may be broken until these are fixed.
-  - Errors detected in tileset '0_TimeTravel_GeneralFivefinger.tsx'. Check the tileset
-    inspector for more details. Your map may be broken until these are fixed.
-  - Errors detected in tileset '0_InvisibleWall.tsx'. Check the tileset inspector
-    for more details. Your map may be broken until these are fixed.
-  - Could not find tile 257. Make sure the tilesets were successfully imported.
-  - Could not find tile 257. Make sure the tilesets were successfully imported.
-  - Could not find tile 257. Make sure the tilesets were successfully imported.
-  - Could not find tile 257. Make sure the tilesets were successfully imported.
-  - Could not find tile 269. Make sure the tilesets were successfully imported.
-  - Could not find tile 281. Make sure the tilesets were successfully imported.
-  - Could not find tile 265. Make sure the tilesets were successfully imported.
-  - Could not find tile 265. Make sure the tilesets were successfully imported.
-  - Could not find tile 257. Make sure the tilesets were successfully imported.
-  - Could not find tile 281. Make sure the tilesets were successfully imported.
-  - Could not find tile 265. Make sure the tilesets were successfully imported.
-  - Could not find tile 257. Make sure the tilesets were successfully imported.
-  - Could not find tile 258. Make sure the tilesets were successfully imported.
-  - Could not find tile 257. Make sure the tilesets were successfully imported.
-  - Could not find tile 262. Make sure the tilesets were successfully imported.
-  - Could not find tile 258. Make sure the tilesets were successfully imported.
-  - Missing tile '494' on tile object ''
-  - Missing tile '445' from template 'WoodenSignRight.tx' on tile object 'Object_452
-    (TRS)'
-  - Missing tile '3' from template 'PapyrusNotes.tx' on tile object 'Object_258 (TRS)'
-  - Missing tile '422' on tile object ''
-  - Missing tile '446' on tile object ''
-  - Missing tile '423' on tile object ''
-  - Missing tile '1' from template 'WoodenSignRight.tx' on tile object 'Object_234
-    (TRS)'
-  - Missing tile '342' on tile object ''
-  - Could not find tile 533. Make sure the tilesets were successfully imported.
-  - Could not find tile 533. Make sure the tilesets were successfully imported.
-  - Could not find tile 533. Make sure the tilesets were successfully imported.
-  - Could not find tile 533. Make sure the tilesets were successfully imported.
-  - Could not find tile 533. Make sure the tilesets were successfully imported.
-  - Could not find tile 533. Make sure the tilesets were successfully imported.
-  - Could not find tile 533. Make sure the tilesets were successfully imported.
-  - Could not find tile 533. Make sure the tilesets were successfully imported.
-  - Could not find tile 533. Make sure the tilesets were successfully imported.
-  - Could not find tile 533. Make sure the tilesets were successfully imported.
-  - Could not find tile 533. Make sure the tilesets were successfully imported.
-  - Could not find tile 533. Make sure the tilesets were successfully imported.
-  - Could not find tile 533. Make sure the tilesets were successfully imported.
-  - Could not find tile 533. Make sure the tilesets were successfully imported.
-  - Could not find tile 533. Make sure the tilesets were successfully imported.
-  - Could not find tile 533. Make sure the tilesets were successfully imported.
-  - Could not find tile 533. Make sure the tilesets were successfully imported.
-  - Could not find tile 533. Make sure the tilesets were successfully imported.
-  - Could not find tile 533. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
-  - Could not find tile 534. Make sure the tilesets were successfully imported.
+  errors: []
   warnings: []
   missingSortingLayers: []
   missingLayers: []
@@ -107,5 +21,5 @@ ScriptedImporter:
   tilesAsObjects: 0
   sortingMode: 0
   isIsometric: 0
-  customImporterClassName: 
+  customImporterClassName: DamageTilesImporter
   internalTilesets: []

@@ -26,7 +26,7 @@ public class Damageable : MonoBehaviour
             var rigid = GetComponent<Rigidbody2D>();
 
             if (rigid && directionBasedOnVelocity)
-                direction = rigid.velocity;
+                direction = rigid.velocity.normalized;
 
             lives.hitDirection = direction * (int)discarding;
 

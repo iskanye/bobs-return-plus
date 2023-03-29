@@ -65,7 +65,7 @@ public class InventorySystem : MonoBehaviour
         label.text = items[Index] != null ? items[Index].name : "";
     }
 
-    public void AddItem(Item item)
+    public bool AddItem(Item item)
     {
         for (int i = 0; i < maxItems; i++)
             if (items[i] == null)
@@ -78,11 +78,12 @@ public class InventorySystem : MonoBehaviour
 
                 item.mn = this;
                 items[i] = item;
-                return;
+                return true;
             }
 
         activator.dialogues = fullDialogue;
         activator.Dialogue();
+        return false;
     }
 
     public void Use(int index)

@@ -29,6 +29,7 @@ namespace Dialogues
             mn.novelAnimator.SetBool("Novel", false);               
             mn.text.text = "";
             mn.character.text = "";
+            mn.prevText = "";
 
             yield return new WaitForSeconds(.1f);
             yield return base.Start();
@@ -61,33 +62,25 @@ namespace Dialogues
                 mn.current.action.Invoke(mn.obj);
 
             mn.novelAnimator.SetBool("Novel", mn.current.dialogueCharacter != null);
+            ((RectTransform)mn.text.transform).anchoredPosition = mn.current.dialogueCharacter != null ? new Vector2(-64, -6) : new Vector2(0, -6);
+            ((RectTransform)mn.text.transform).sizeDelta = mn.current.dialogueCharacter != null ? new Vector2(320, 96) : new Vector2(448, 96);
 
             if (mn.current.dialogueCharacter != null)
             {
                 var sprite = mn.current.dialogueCharacter.emotions.First(i => i.id == mn.current.emotionId).sprite;
                 mn.novelSprite.sprite = sprite;
                 mn.novelSprite.rectTransform.sizeDelta = new Vector2(sprite.texture.width, mn.novelSprite.rectTransform.sizeDelta.y);
-                ((RectTransform)mn.text.transform).anchoredPosition = new Vector2(-64, -6);
-                ((RectTransform)mn.text.transform).sizeDelta = new Vector2(320, 96);
-            }
-
-            else 
-            {
-                ((RectTransform)mn.text.transform).anchoredPosition = new Vector2(0, -6);
-                ((RectTransform)mn.text.transform).sizeDelta = new Vector2(448, 96);
             }
 
             yield return base.Start();    
             yield return new WaitForSeconds(mn.current.startDelay + (mn.index == 0 ? .35f : 0));
 
-            mn.text.text = GetCurrentText();
+            if (mn.current.clearPreviousText)
+                mn.text.text = mn.prevText = "";
 
             if (!mn.current.showStraightaway)
             {
-                int startPosition = mn.text.text.Length - mn.current.text.Length;
-                mn.text.ForceMeshUpdate();
-                yield return TextUtilities.MakeTextTransparent(mn.text, startPosition);
-                yield return TextUtilities.AnimateVertexColors(mn.text, Color.white, startPosition, 0.015f, () =>
+                yield return TextUtilities.AnimateText(mn.text, mn.current.text, 0.015f, () =>
                 {
                     mn.textSFX.pitch = Random.Range(.95f, 1.05f);
                     mn.textSFX.Play();
@@ -95,14 +88,15 @@ namespace Dialogues
                 mn.textSFX.Stop();
             }
 
+            else
+                mn.text.text += mn.current.text;
+
             mn.ChangeState(mn.waitingState);
         }
 
         public override IEnumerator Stop()
-        {
-            mn.text.text = GetCurrentText();
-            mn.prevText = mn.text.text;
-            yield return TextUtilities.ForceOriginalColor(mn.text);
+        {            
+            mn.prevText = mn.text.text = mn.prevText + mn.current.text;
             yield return base.Stop();
         }
 
@@ -117,11 +111,6 @@ namespace Dialogues
         public override void Submit(InputAction.CallbackContext c)
         {
             GUIInput();
-        }
-
-        private string GetCurrentText()
-        {
-            return mn.current.clearPreviousText ? mn.current.text : mn.prevText + mn.current.text;
         }
     }
 

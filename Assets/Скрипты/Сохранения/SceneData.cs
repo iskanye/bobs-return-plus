@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class SceneData : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class SceneData : MonoBehaviour
     public static SaveData Data { get; private set; }
 
     public static SceneData Active { get; private set; }
+
+    public static Dictionary<string, List<UnityEngine.Events.UnityEvent<bool>>> OnPropertySet { get; set; }
 
     PositionHolder[] positions;
     IntegerHolder[] integers;
@@ -33,10 +36,15 @@ public class SceneData : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
+        
+        OnPropertySet = new Dictionary<string, List<UnityEngine.Events.UnityEvent<bool>>>();
         Data = SaveLoad.Load();
         UnityEngine.SceneManagement.SceneManager.sceneLoaded += (i, j) => Start();
-        UnityEngine.SceneManagement.SceneManager.sceneUnloaded += i => OnDisable();
+        UnityEngine.SceneManagement.SceneManager.sceneUnloaded += i => 
+        { 
+            OnPropertySet.Clear();
+            OnDisable();
+        };
 
         if (Data.version != SaveData.currentVersion)
             Data = new SaveData();
@@ -62,7 +70,7 @@ public class SceneData : MonoBehaviour
     }
 
     public static bool HasProperty(string id, bool local = true) => 
-        local ? Data.localProperties.Exists(i => i.id == id) : Data.globalProperties.Exists(i => i.id == id);    
+        id != "" && (local ? Data.localProperties.Exists(i => i.id == id) : Data.globalProperties.Exists(i => i.id == id));    
 
     public static void SetProperty(string id, bool property, bool local = true) 
     {
@@ -83,6 +91,9 @@ public class SceneData : MonoBehaviour
             else 
                 Data.globalProperties.Add(new Property<bool>(id, property));
         }
+
+        if (OnPropertySet.ContainsKey(id))
+            OnPropertySet[id].ForEach(e => e.Invoke(property));
     } 
 
     public static bool GetProperty(string id, bool local = true)
