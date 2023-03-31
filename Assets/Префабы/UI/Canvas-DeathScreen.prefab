@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 5192541919542384301}
   - component: {fileID: 7946644631171797253}
   - component: {fileID: 4297696950117553719}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas-DeathScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
