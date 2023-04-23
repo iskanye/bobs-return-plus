@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 
-public class Damageable : MonoBehaviour
+public class Damageable : ActionBase
 {
     public int damage = 1;
     public bool isDeadly;
     public bool addPersistentListener;
     public bool directionBasedOnVelocity;
     public ObjectType penetrating = ObjectType.Fragile;
+    public bool onlyThisPenetratingType;
     public System.Action<int> onDamage;
     public DiscardingType discarding = DiscardingType.Small;
     public Vector2 direction;
@@ -19,13 +20,10 @@ public class Damageable : MonoBehaviour
 
     public void Damage(GameObject g)
     {
-        var lives = g.GetComponent<LivesBase>();
-
-        if (lives && lives.Durability <= penetrating)
+        if (g.TryGetComponent<LivesBase>(out var lives) && ((lives.Durability <= penetrating && !onlyThisPenetratingType) 
+            || (lives.Durability == penetrating && onlyThisPenetratingType)))
         {
-            var rigid = GetComponent<Rigidbody2D>();
-
-            if (rigid && directionBasedOnVelocity)
+            if (TryGetComponent<Rigidbody2D>(out var rigid) && directionBasedOnVelocity)
                 direction = rigid.velocity.normalized;
 
             lives.hitDirection = direction * (int)discarding;
@@ -41,11 +39,15 @@ public class Damageable : MonoBehaviour
                 onDamage?.Invoke(damage);
                 lives.Lives -= damage;
             }
+
+            action?.Invoke(g);
         }
 
-        var penetr = g.GetComponent<PenetratingObject>();
-
-        if (penetr && penetr.type <= penetrating)
+        if (g.TryGetComponent<PenetratingObject>(out var penetr) && ((penetr.type <= penetrating && !onlyThisPenetratingType) 
+            || (penetr.type == penetrating && onlyThisPenetratingType)))
+        {
             penetr.Penetrate();
+            action?.Invoke(g);
+        }
     }
 }

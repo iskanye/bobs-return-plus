@@ -1,4 +1,6 @@
-public abstract class ConditionBase : UnityEngine.MonoBehaviour
+using UnityEngine;
+
+public abstract class ConditionBase : MonoBehaviour
 {
-    public abstract bool Condition();
+    public abstract bool Condition(GameObject obj);
 }

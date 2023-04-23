@@ -176,7 +176,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8709415119419877457}
   - component: {fileID: 456939997601096430}
-  - component: {fileID: 5192541919542384301}
   - component: {fileID: 7946644631171797253}
   - component: {fileID: 4297696950117553719}
   m_Layer: 5
@@ -228,29 +227,6 @@ Canvas:
   m_SortingLayerID: -129539767
   m_SortingOrder: 4
   m_TargetDisplay: 0
---- !u!114 &5192541919542384301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8952031183014985112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 32
-  m_ScaleFactor: 2
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
 --- !u!114 &7946644631171797253
 MonoBehaviour:
   m_ObjectHideFlags: 0

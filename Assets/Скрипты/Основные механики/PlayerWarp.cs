@@ -5,9 +5,9 @@
         set 
         {
             if (value)
-                player.data.movement.Enable();
+                player.Enable();
             else 
-                player.data.movement.Disable();
+                player.Disable();
         }
     }
 

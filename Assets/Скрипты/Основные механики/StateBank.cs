@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class StateBank : MonoBehaviour
+public class StateBank : ActionBase
 {
     public int stateCount;
-    public UnityEvent action;
     public string rightOrder;
     public UnityEvent wrongOrderAction;
 
@@ -37,7 +36,7 @@ public class StateBank : MonoBehaviour
 
         if (states == (ulong)Mathf.Pow(2, stateCount) - 1)
         {
-            action.Invoke();
+            action?.Invoke(gameObject);
             states |= 1UL << stateCount;
         }
     }

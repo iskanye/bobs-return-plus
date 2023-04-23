@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="1" nextlayerid="39" nextobjectid="1435">
+<map version="1.10" tiledversion="1.10.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="1" nextlayerid="39" nextobjectid="1459">
  <tileset firstgid="1" source="0_TimeTravel_Dungeon.tsx"/>
  <tileset firstgid="257" source="1_TimeTravel_Spinis.tsx"/>
  <tileset firstgid="293" source="0_TimeTravel_Vases.tsx"/>
@@ -1988,83 +1988,83 @@
   </data>
  </layer>
  <objectgroup id="30" name="ShakyFloor">
-  <object id="834" template="ShakyFloor.tx" class="ShakyFloor" x="1472" y="-14144"/>
-  <object id="839" template="ShakyFloor.tx" class="ShakyFloor" x="1504" y="-14144"/>
-  <object id="840" template="ShakyFloor.tx" class="ShakyFloor" x="1536" y="-14144"/>
-  <object id="847" template="ShakyFloor.tx" class="ShakyFloor" x="1472" y="-14400"/>
-  <object id="848" template="ShakyFloor.tx" class="ShakyFloor" x="1504" y="-14400"/>
-  <object id="849" template="ShakyFloor.tx" class="ShakyFloor" x="1536" y="-14400"/>
-  <object id="854" template="ShakyFloor.tx" class="ShakyFloor" x="1440" y="-14176"/>
-  <object id="855" template="ShakyFloor.tx" class="ShakyFloor" x="1408" y="-14208"/>
-  <object id="856" template="ShakyFloor.tx" class="ShakyFloor" x="1408" y="-14176"/>
-  <object id="857" template="ShakyFloor.tx" class="ShakyFloor" x="1376" y="-14208"/>
-  <object id="858" template="ShakyFloor.tx" class="ShakyFloor" x="1376" y="-14240"/>
-  <object id="859" template="ShakyFloor.tx" class="ShakyFloor" x="1376" y="-14272"/>
-  <object id="860" template="ShakyFloor.tx" class="ShakyFloor" x="1376" y="-14304"/>
-  <object id="864" template="ShakyFloor.tx" class="ShakyFloor" x="1376" y="-14336"/>
-  <object id="865" template="ShakyFloor.tx" class="ShakyFloor" x="1408" y="-14368"/>
-  <object id="866" template="ShakyFloor.tx" class="ShakyFloor" x="1408" y="-14336"/>
-  <object id="867" template="ShakyFloor.tx" class="ShakyFloor" x="1440" y="-14368"/>
-  <object id="880" template="ShakyFloor.tx" class="ShakyFloor" x="1568" y="-14176"/>
-  <object id="881" template="ShakyFloor.tx" class="ShakyFloor" x="1568" y="-14368"/>
-  <object id="882" template="ShakyFloor.tx" class="ShakyFloor" x="1600" y="-14208"/>
-  <object id="883" template="ShakyFloor.tx" class="ShakyFloor" x="1600" y="-14176"/>
-  <object id="884" template="ShakyFloor.tx" class="ShakyFloor" x="1600" y="-14368"/>
-  <object id="885" template="ShakyFloor.tx" class="ShakyFloor" x="1600" y="-14336"/>
-  <object id="886" template="ShakyFloor.tx" class="ShakyFloor" x="1632" y="-14208"/>
-  <object id="887" template="ShakyFloor.tx" class="ShakyFloor" x="1632" y="-14240"/>
-  <object id="888" template="ShakyFloor.tx" class="ShakyFloor" x="1632" y="-14272"/>
-  <object id="889" template="ShakyFloor.tx" class="ShakyFloor" x="1632" y="-14304"/>
-  <object id="890" template="ShakyFloor.tx" class="ShakyFloor" x="1632" y="-14336"/>
-  <object id="891" template="ShakyFloor.tx" class="ShakyFloor" x="1472" y="-14432"/>
-  <object id="892" template="ShakyFloor.tx" class="ShakyFloor" x="1504" y="-14432"/>
-  <object id="893" template="ShakyFloor.tx" class="ShakyFloor" x="1536" y="-14432"/>
-  <object id="894" template="ShakyFloor.tx" class="ShakyFloor" x="1472" y="-14464"/>
-  <object id="895" template="ShakyFloor.tx" class="ShakyFloor" x="1504" y="-14464"/>
-  <object id="896" template="ShakyFloor.tx" class="ShakyFloor" x="1536" y="-14464"/>
-  <object id="897" template="ShakyFloor.tx" class="ShakyFloor" x="1472" y="-14496"/>
-  <object id="898" template="ShakyFloor.tx" class="ShakyFloor" x="1504" y="-14496"/>
-  <object id="899" template="ShakyFloor.tx" class="ShakyFloor" x="1536" y="-14496"/>
-  <object id="900" template="ShakyFloor.tx" class="ShakyFloor" x="1472" y="-14528"/>
-  <object id="901" template="ShakyFloor.tx" class="ShakyFloor" x="1504" y="-14528"/>
-  <object id="902" template="ShakyFloor.tx" class="ShakyFloor" x="1536" y="-14528"/>
-  <object id="903" template="ShakyFloor.tx" class="ShakyFloor" x="1472" y="-14560"/>
-  <object id="904" template="ShakyFloor.tx" class="ShakyFloor" x="1504" y="-14560"/>
-  <object id="905" template="ShakyFloor.tx" class="ShakyFloor" x="1536" y="-14560"/>
-  <object id="906" template="ShakyFloor.tx" class="ShakyFloor" x="1472" y="-14592"/>
-  <object id="907" template="ShakyFloor.tx" class="ShakyFloor" x="1504" y="-14592"/>
-  <object id="908" template="ShakyFloor.tx" class="ShakyFloor" x="1536" y="-14592"/>
-  <object id="909" template="ShakyFloor.tx" class="ShakyFloor" x="1472" y="-14624"/>
-  <object id="910" template="ShakyFloor.tx" class="ShakyFloor" x="1504" y="-14624"/>
-  <object id="911" template="ShakyFloor.tx" class="ShakyFloor" x="1536" y="-14624"/>
-  <object id="912" template="ShakyFloor.tx" class="ShakyFloor" x="1472" y="-14656"/>
-  <object id="913" template="ShakyFloor.tx" class="ShakyFloor" x="1504" y="-14656"/>
-  <object id="914" template="ShakyFloor.tx" class="ShakyFloor" x="1536" y="-14656"/>
-  <object id="915" template="ShakyFloor.tx" class="ShakyFloor" x="1472" y="-14688"/>
-  <object id="916" template="ShakyFloor.tx" class="ShakyFloor" x="1504" y="-14688"/>
-  <object id="917" template="ShakyFloor.tx" class="ShakyFloor" x="1536" y="-14688"/>
-  <object id="918" template="ShakyFloor.tx" class="ShakyFloor" x="1472" y="-14720"/>
-  <object id="919" template="ShakyFloor.tx" class="ShakyFloor" x="1504" y="-14720"/>
-  <object id="920" template="ShakyFloor.tx" class="ShakyFloor" x="1536" y="-14720"/>
-  <object id="921" template="ShakyFloor.tx" class="ShakyFloor" x="1472" y="-14752"/>
-  <object id="922" template="ShakyFloor.tx" class="ShakyFloor" x="1504" y="-14752"/>
-  <object id="923" template="ShakyFloor.tx" class="ShakyFloor" x="1536" y="-14752"/>
-  <object id="924" template="ShakyFloor.tx" class="ShakyFloor" x="1472" y="-14784"/>
-  <object id="925" template="ShakyFloor.tx" class="ShakyFloor" x="1504" y="-14784"/>
-  <object id="926" template="ShakyFloor.tx" class="ShakyFloor" x="1536" y="-14784"/>
-  <object id="927" template="ShakyFloor.tx" class="ShakyFloor" x="1472" y="-14816"/>
-  <object id="928" template="ShakyFloor.tx" class="ShakyFloor" x="1504" y="-14816"/>
-  <object id="929" template="ShakyFloor.tx" class="ShakyFloor" x="1536" y="-14816"/>
-  <object id="930" template="ShakyFloor.tx" class="ShakyFloor" x="1472" y="-14848"/>
-  <object id="931" template="ShakyFloor.tx" class="ShakyFloor" x="1504" y="-14848"/>
-  <object id="932" template="ShakyFloor.tx" class="ShakyFloor" x="1536" y="-14848"/>
-  <object id="933" template="ShakyFloor.tx" class="ShakyFloor" x="1440" y="-14400"/>
-  <object id="934" template="ShakyFloor.tx" class="ShakyFloor" x="1568" y="-14400"/>
-  <object id="936" template="ShakyFloor.tx" class="ShakyFloor" x="1440" y="-14144"/>
-  <object id="937" template="ShakyFloor.tx" class="ShakyFloor" x="1568" y="-14144"/>
-  <object id="938" template="ShakyFloor.tx" class="ShakyFloor" x="1472" y="-14112"/>
-  <object id="939" template="ShakyFloor.tx" class="ShakyFloor" x="1504" y="-14112"/>
-  <object id="940" template="ShakyFloor.tx" class="ShakyFloor" x="1536" y="-14112"/>
+  <object id="834" template="ShakyFloor.tx" type="ShakyFloor" x="1472" y="-14144"/>
+  <object id="839" template="ShakyFloor.tx" type="ShakyFloor" x="1504" y="-14144"/>
+  <object id="840" template="ShakyFloor.tx" type="ShakyFloor" x="1536" y="-14144"/>
+  <object id="847" template="ShakyFloor.tx" type="ShakyFloor" x="1472" y="-14400"/>
+  <object id="848" template="ShakyFloor.tx" type="ShakyFloor" x="1504" y="-14400"/>
+  <object id="849" template="ShakyFloor.tx" type="ShakyFloor" x="1536" y="-14400"/>
+  <object id="854" template="ShakyFloor.tx" type="ShakyFloor" x="1440" y="-14176"/>
+  <object id="855" template="ShakyFloor.tx" type="ShakyFloor" x="1408" y="-14208"/>
+  <object id="856" template="ShakyFloor.tx" type="ShakyFloor" x="1408" y="-14176"/>
+  <object id="857" template="ShakyFloor.tx" type="ShakyFloor" x="1376" y="-14208"/>
+  <object id="858" template="ShakyFloor.tx" type="ShakyFloor" x="1376" y="-14240"/>
+  <object id="859" template="ShakyFloor.tx" type="ShakyFloor" x="1376" y="-14272"/>
+  <object id="860" template="ShakyFloor.tx" type="ShakyFloor" x="1376" y="-14304"/>
+  <object id="864" template="ShakyFloor.tx" type="ShakyFloor" x="1376" y="-14336"/>
+  <object id="865" template="ShakyFloor.tx" type="ShakyFloor" x="1408" y="-14368"/>
+  <object id="866" template="ShakyFloor.tx" type="ShakyFloor" x="1408" y="-14336"/>
+  <object id="867" template="ShakyFloor.tx" type="ShakyFloor" x="1440" y="-14368"/>
+  <object id="880" template="ShakyFloor.tx" type="ShakyFloor" x="1568" y="-14176"/>
+  <object id="881" template="ShakyFloor.tx" type="ShakyFloor" x="1568" y="-14368"/>
+  <object id="882" template="ShakyFloor.tx" type="ShakyFloor" x="1600" y="-14208"/>
+  <object id="883" template="ShakyFloor.tx" type="ShakyFloor" x="1600" y="-14176"/>
+  <object id="884" template="ShakyFloor.tx" type="ShakyFloor" x="1600" y="-14368"/>
+  <object id="885" template="ShakyFloor.tx" type="ShakyFloor" x="1600" y="-14336"/>
+  <object id="886" template="ShakyFloor.tx" type="ShakyFloor" x="1632" y="-14208"/>
+  <object id="887" template="ShakyFloor.tx" type="ShakyFloor" x="1632" y="-14240"/>
+  <object id="888" template="ShakyFloor.tx" type="ShakyFloor" x="1632" y="-14272"/>
+  <object id="889" template="ShakyFloor.tx" type="ShakyFloor" x="1632" y="-14304"/>
+  <object id="890" template="ShakyFloor.tx" type="ShakyFloor" x="1632" y="-14336"/>
+  <object id="891" template="ShakyFloor.tx" type="ShakyFloor" x="1472" y="-14432"/>
+  <object id="892" template="ShakyFloor.tx" type="ShakyFloor" x="1504" y="-14432"/>
+  <object id="893" template="ShakyFloor.tx" type="ShakyFloor" x="1536" y="-14432"/>
+  <object id="894" template="ShakyFloor.tx" type="ShakyFloor" x="1472" y="-14464"/>
+  <object id="895" template="ShakyFloor.tx" type="ShakyFloor" x="1504" y="-14464"/>
+  <object id="896" template="ShakyFloor.tx" type="ShakyFloor" x="1536" y="-14464"/>
+  <object id="897" template="ShakyFloor.tx" type="ShakyFloor" x="1472" y="-14496"/>
+  <object id="898" template="ShakyFloor.tx" type="ShakyFloor" x="1504" y="-14496"/>
+  <object id="899" template="ShakyFloor.tx" type="ShakyFloor" x="1536" y="-14496"/>
+  <object id="900" template="ShakyFloor.tx" type="ShakyFloor" x="1472" y="-14528"/>
+  <object id="901" template="ShakyFloor.tx" type="ShakyFloor" x="1504" y="-14528"/>
+  <object id="902" template="ShakyFloor.tx" type="ShakyFloor" x="1536" y="-14528"/>
+  <object id="903" template="ShakyFloor.tx" type="ShakyFloor" x="1472" y="-14560"/>
+  <object id="904" template="ShakyFloor.tx" type="ShakyFloor" x="1504" y="-14560"/>
+  <object id="905" template="ShakyFloor.tx" type="ShakyFloor" x="1536" y="-14560"/>
+  <object id="906" template="ShakyFloor.tx" type="ShakyFloor" x="1472" y="-14592"/>
+  <object id="907" template="ShakyFloor.tx" type="ShakyFloor" x="1504" y="-14592"/>
+  <object id="908" template="ShakyFloor.tx" type="ShakyFloor" x="1536" y="-14592"/>
+  <object id="909" template="ShakyFloor.tx" type="ShakyFloor" x="1472" y="-14624"/>
+  <object id="910" template="ShakyFloor.tx" type="ShakyFloor" x="1504" y="-14624"/>
+  <object id="911" template="ShakyFloor.tx" type="ShakyFloor" x="1536" y="-14624"/>
+  <object id="912" template="ShakyFloor.tx" type="ShakyFloor" x="1472" y="-14656"/>
+  <object id="913" template="ShakyFloor.tx" type="ShakyFloor" x="1504" y="-14656"/>
+  <object id="914" template="ShakyFloor.tx" type="ShakyFloor" x="1536" y="-14656"/>
+  <object id="915" template="ShakyFloor.tx" type="ShakyFloor" x="1472" y="-14688"/>
+  <object id="916" template="ShakyFloor.tx" type="ShakyFloor" x="1504" y="-14688"/>
+  <object id="917" template="ShakyFloor.tx" type="ShakyFloor" x="1536" y="-14688"/>
+  <object id="918" template="ShakyFloor.tx" type="ShakyFloor" x="1472" y="-14720"/>
+  <object id="919" template="ShakyFloor.tx" type="ShakyFloor" x="1504" y="-14720"/>
+  <object id="920" template="ShakyFloor.tx" type="ShakyFloor" x="1536" y="-14720"/>
+  <object id="921" template="ShakyFloor.tx" type="ShakyFloor" x="1472" y="-14752"/>
+  <object id="922" template="ShakyFloor.tx" type="ShakyFloor" x="1504" y="-14752"/>
+  <object id="923" template="ShakyFloor.tx" type="ShakyFloor" x="1536" y="-14752"/>
+  <object id="924" template="ShakyFloor.tx" type="ShakyFloor" x="1472" y="-14784"/>
+  <object id="925" template="ShakyFloor.tx" type="ShakyFloor" x="1504" y="-14784"/>
+  <object id="926" template="ShakyFloor.tx" type="ShakyFloor" x="1536" y="-14784"/>
+  <object id="927" template="ShakyFloor.tx" type="ShakyFloor" x="1472" y="-14816"/>
+  <object id="928" template="ShakyFloor.tx" type="ShakyFloor" x="1504" y="-14816"/>
+  <object id="929" template="ShakyFloor.tx" type="ShakyFloor" x="1536" y="-14816"/>
+  <object id="930" template="ShakyFloor.tx" type="ShakyFloor" x="1472" y="-14848"/>
+  <object id="931" template="ShakyFloor.tx" type="ShakyFloor" x="1504" y="-14848"/>
+  <object id="932" template="ShakyFloor.tx" type="ShakyFloor" x="1536" y="-14848"/>
+  <object id="933" template="ShakyFloor.tx" type="ShakyFloor" x="1440" y="-14400"/>
+  <object id="934" template="ShakyFloor.tx" type="ShakyFloor" x="1568" y="-14400"/>
+  <object id="936" template="ShakyFloor.tx" type="ShakyFloor" x="1440" y="-14144"/>
+  <object id="937" template="ShakyFloor.tx" type="ShakyFloor" x="1568" y="-14144"/>
+  <object id="938" template="ShakyFloor.tx" type="ShakyFloor" x="1472" y="-14112"/>
+  <object id="939" template="ShakyFloor.tx" type="ShakyFloor" x="1504" y="-14112"/>
+  <object id="940" template="ShakyFloor.tx" type="ShakyFloor" x="1536" y="-14112"/>
  </objectgroup>
  <layer id="1" name="Floor" width="30" height="20">
   <data encoding="csv">
@@ -3770,7 +3770,7 @@
 </chunk>
   </data>
  </layer>
- <layer id="14" name="SecretWay1" width="30" height="20" visible="0">
+ <layer id="14" name="SecretWay1" width="30" height="20">
   <data encoding="csv">
    <chunk x="32" y="-272" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -6005,7 +6005,7 @@
   <object id="471" template="SpikyLog.tx" x="1472" y="-1760"/>
   <object id="472" template="SpikyLog.tx" x="1536" y="-1760"/>
   <object id="473" template="SpikyLog.tx" x="1568" y="-1888"/>
-  <object id="479" template="SpikyLog.tx" x="1440" y="-1888"/>
+  <object id="479" template="SpikyLog.tx" type="SpikyLog" x="1440" y="-1888"/>
   <object id="480" template="WoodenBarrelCheeseClosed.tx" x="1504" y="-1728"/>
   <object id="483" template="WoodenBarrel.tx" x="1504" y="-1792"/>
   <object id="491" template="WoodenBarrelCheeseClosed.tx" x="1440" y="-2208"/>
@@ -6014,16 +6014,6 @@
   <object id="494" template="CrossbowChargedRight.tx" x="1376" y="-2368"/>
   <object id="495" template="CrossbowChargedRight.tx" x="1376" y="-2400"/>
   <object id="496" template="WoodenBarrel.tx" x="1568" y="-2432"/>
-  <object id="507" class="IronTowerMiddle" gid="417" x="1440" y="-2401" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="503" class="IronTowerUp" gid="412" x="1440" y="-2399" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
   <object id="508" template="WoodenBarrelClosed.tx" x="1440" y="-2176"/>
   <object id="513" template="WoodenBarrelSpikes.tx" x="1440" y="-2560"/>
   <object id="514" template="WoodenBarrelSpikes.tx" gid="2147483996" x="1536" y="-2656" rotation="0"/>
@@ -6047,41 +6037,6 @@
   <object id="566" template="CrossbowChargedRight.tx" x="1376" y="-5216"/>
   <object id="567" template="WoodenBarrelCheeseClosed.tx" x="1440" y="-5152"/>
   <object id="568" template="WoodenBarrelCheeseClosed.tx" x="1408" y="-5856"/>
-  <object id="569" class="IronTowerUp" gid="412" x="1440" y="-2433" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="571" class="IronTowerMiddle" gid="417" x="1440" y="-2367" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="572" class="IronTowerMiddle" gid="417" x="1568" y="-2305" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="573" class="IronTowerUp" gid="412" x="1568" y="-2303" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="574" class="IronTowerUp" gid="412" x="1568" y="-2337" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="575" class="IronTowerMiddle" gid="417" x="1568" y="-2271" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="576" class="IronTowerUp" gid="412" x="1504" y="-6176" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
   <object id="577" template="Vase2.tx" x="1504" y="-6176"/>
   <object id="579" template="CrossbowChargedLeft.tx" x="1536" y="-6176"/>
   <object id="580" template="WoodPin1.tx" x="1536" y="-6368"/>
@@ -6137,83 +6092,13 @@
   <object id="751" template="WoodenBarrelSpikes.tx" x="1408" y="-9888"/>
   <object id="752" template="WoodenBarrelSpikes.tx" x="1376" y="-9984"/>
   <object id="753" template="WoodenBarrelSpikes.tx" x="1504" y="-10080"/>
-  <object id="755" class="IronTowerUp" gid="412" x="1440" y="-10304" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="756" class="IronTowerMiddle" gid="417" x="1440" y="-10272" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
   <object id="759" template="WoodenBarrelCheeseClosed.tx" x="1536" y="-10208"/>
-  <object id="760" class="IronTowerUp" gid="412" x="1472" y="-10336" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="761" class="IronTowerMiddle" gid="417" x="1472" y="-10304" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="762" class="IronTowerUp" gid="412" x="1504" y="-10368" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="763" class="IronTowerMiddle" gid="417" x="1504" y="-10336" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="764" class="IronTowerUp" gid="412" x="1536" y="-10400" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="765" class="IronTowerMiddle" gid="417" x="1536" y="-10368" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="766" class="IronTowerUp" gid="412" x="1568" y="-10432" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="767" class="IronTowerMiddle" gid="417" x="1568" y="-10400" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
   <object id="769" template="CrossbowChargedLeft.tx" x="1568" y="-10400"/>
   <object id="771" template="CrossbowChargedRight.tx" x="1376" y="-10272"/>
   <object id="774" gid="585" x="1504" y="-10592" width="32" height="64"/>
   <object id="777" template="SpikyLog.tx" x="1536" y="-10976"/>
   <object id="778" template="SpikyLog.tx" x="1472" y="-10880"/>
   <object id="805" template="WoodenBarrelCheeseClosed.tx" x="1600" y="-10816"/>
-  <object id="806" class="IronTowerUp" gid="412" x="1472" y="-10816" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="807" class="IronTowerMiddle" gid="417" x="1472" y="-10784" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="808" class="IronTowerUp" gid="412" x="1536" y="-10912" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="809" class="IronTowerMiddle" gid="417" x="1536" y="-10880" width="32" height="32">
-   <properties>
-    <property name="Durability" type="int" value="4"/>
-   </properties>
-  </object>
   <object id="810" gid="597" x="1504" y="-11072" width="32" height="32"/>
   <object id="811" gid="597" x="1472" y="-11136" width="32" height="32"/>
   <object id="812" gid="597" x="1440" y="-11200" width="32" height="32"/>
@@ -6256,7 +6141,7 @@
   <object id="977" template="WoodenBarrelHay.tx" x="1568" y="-8544"/>
   <object id="978" template="HayBundle.tx" x="1568" y="-8512"/>
   <object id="979" template="HayBundle.tx" x="1568" y="-8608"/>
-  <object id="980" template="HayBundle.tx" x="1504" y="-8544"/>
+  <object id="980" template="HayBundle.tx" type="HayBundle" x="1504" y="-8544"/>
   <object id="982" template="WoodenBarrelClosed.tx" x="1536" y="-8384"/>
   <object id="983" template="WoodenBarrelClosed.tx" x="1504" y="-8448"/>
   <object id="984" template="WoodPin1.tx" x="1504" y="-8384"/>
@@ -6271,127 +6156,127 @@
   <object id="998" template="WoodPin1.tx" x="1536" y="-8768"/>
   <object id="999" template="WoodPin1.tx" x="1536" y="-8960"/>
   <object id="1000" template="Mannequin1.tx" gid="2147484219" x="1536" y="-8896" rotation="0"/>
-  <object id="1111" class="PuppetOnPole1" gid="2147484146" x="1632" y="192" width="64" height="96">
+  <object id="1111" type="PuppetOnPole1" gid="2147484146" x="1632" y="192" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1112" class="PuppetOnPole2" gid="499" x="1312" y="-160" width="64" height="96">
+  <object id="1112" type="PuppetOnPole2" gid="499" x="1312" y="-160" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1113" class="PuppetOnPole3" gid="2147484148" x="1664" y="-512" width="64" height="96">
+  <object id="1113" type="PuppetOnPole3" gid="2147484148" x="1664" y="-512" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1114" class="PuppetOnPole1" gid="498" x="1312" y="320" width="64" height="96">
+  <object id="1114" type="PuppetOnPole1" gid="498" x="1312" y="320" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1115" class="PuppetOnPole2" gid="2147484147" x="1312" y="-512" width="64" height="96">
+  <object id="1115" type="PuppetOnPole2" gid="2147484147" x="1312" y="-512" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1116" class="PuppetOnPole1" gid="2147484146" x="1664" y="-992" width="64" height="96">
+  <object id="1116" type="PuppetOnPole1" gid="2147484146" x="1664" y="-992" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1117" class="PuppetOnPole3" gid="500" x="1312" y="-1344" width="64" height="96">
+  <object id="1117" type="PuppetOnPole3" gid="500" x="1312" y="-1344" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1118" class="PuppetOnPole2" gid="2147484147" x="1664" y="-1888" width="64" height="96">
+  <object id="1118" type="PuppetOnPole2" gid="2147484147" x="1664" y="-1888" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1119" class="PuppetOnPole1" gid="498" x="1312" y="-3264" width="64" height="96">
+  <object id="1119" type="PuppetOnPole1" gid="498" x="1312" y="-3264" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1120" class="PuppetOnPole1" gid="2147484146" x="1664" y="-2944" width="64" height="96">
+  <object id="1120" type="PuppetOnPole1" gid="2147484146" x="1664" y="-2944" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1122" class="PuppetOnPole2" gid="2147484147" x="1312" y="-2656" width="64" height="96">
+  <object id="1122" type="PuppetOnPole2" gid="2147484147" x="1312" y="-2656" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1123" class="PuppetOnPole1" gid="2147484146" x="1664" y="-5198" width="64" height="96">
+  <object id="1123" type="PuppetOnPole1" gid="2147484146" x="1664" y="-5198" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1124" class="PuppetOnPole3" gid="500" x="1280" y="-5888" width="64" height="96">
+  <object id="1124" type="PuppetOnPole3" gid="500" x="1280" y="-5888" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1125" class="PuppetOnPole2" gid="2147484147" x="1664" y="-5600" width="64" height="96">
+  <object id="1125" type="PuppetOnPole2" gid="2147484147" x="1664" y="-5600" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1126" class="PuppetOnPole1" gid="2147484146" x="1664" y="-6496" width="64" height="96">
+  <object id="1126" type="PuppetOnPole1" gid="2147484146" x="1664" y="-6496" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1127" class="PuppetOnPole2" gid="2147484147" x="1280" y="-6336" width="64" height="96">
+  <object id="1127" type="PuppetOnPole2" gid="2147484147" x="1280" y="-6336" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1128" class="PuppetOnPole3" gid="2147484148" x="1312" y="-6784" width="64" height="96">
+  <object id="1128" type="PuppetOnPole3" gid="2147484148" x="1312" y="-6784" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1129" class="PuppetOnPole2" gid="499" x="1664" y="-6976" width="64" height="96">
+  <object id="1129" type="PuppetOnPole2" gid="499" x="1664" y="-6976" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1130" class="PuppetOnPole1" gid="498" x="1312" y="-9376" width="64" height="96">
+  <object id="1130" type="PuppetOnPole1" gid="498" x="1312" y="-9376" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1131" class="PuppetOnPole3" gid="2147484148" x="1696" y="-9632" width="64" height="96">
+  <object id="1131" type="PuppetOnPole3" gid="2147484148" x="1696" y="-9632" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1132" class="PuppetOnPole2" gid="499" x="1280" y="-10016" width="64" height="96">
+  <object id="1132" type="PuppetOnPole2" gid="499" x="1280" y="-10016" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1133" class="PuppetOnPole3" gid="2147484148" x="1696" y="-10240" width="64" height="96">
+  <object id="1133" type="PuppetOnPole3" gid="2147484148" x="1696" y="-10240" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1134" class="PuppetOnPole1" gid="498" x="1312" y="-10496" width="64" height="96">
+  <object id="1134" type="PuppetOnPole1" gid="498" x="1312" y="-10496" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1135" class="PuppetOnPole3" gid="500" x="1280" y="-11104" width="64" height="96">
+  <object id="1135" type="PuppetOnPole3" gid="500" x="1280" y="-11104" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1136" class="PuppetOnPole1" gid="2147484146" x="1696" y="-10880" width="64" height="96">
+  <object id="1136" type="PuppetOnPole1" gid="2147484146" x="1696" y="-10880" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
@@ -6469,13 +6354,13 @@
   <object id="1242" template="TorchFire.tx" x="1376" y="-14112"/>
   <object id="1243" template="TorchFire.tx" x="1376" y="-14464"/>
   <object id="1244" template="TorchFire.tx" x="1632" y="-14464"/>
-  <object id="1245" template="Cage1.tx" class="Cage1" x="1728" y="-224"/>
-  <object id="1246" template="Cage2.tx" class="Cage2" x="1728" y="-192"/>
-  <object id="1249" template="Cage3.tx" class="Cage3" x="1792" y="-256"/>
-  <object id="1250" template="Cage3.tx" class="Cage3" x="1792" y="-224"/>
-  <object id="1251" template="Cage1.tx" class="Cage1" x="1696" y="-832"/>
-  <object id="1252" template="Cage3.tx" class="Cage3" x="1664" y="-800"/>
-  <object id="1253" template="Cage2.tx" class="Cage2" x="1728" y="-800"/>
+  <object id="1245" template="Cage1.tx" type="Cage1" x="1728" y="-224"/>
+  <object id="1246" template="Cage2.tx" type="Cage2" x="1728" y="-192"/>
+  <object id="1249" template="Cage3.tx" type="Cage3" x="1792" y="-256"/>
+  <object id="1250" template="Cage3.tx" type="Cage3" x="1792" y="-224"/>
+  <object id="1251" template="Cage1.tx" type="Cage1" x="1696" y="-832"/>
+  <object id="1252" template="Cage3.tx" type="Cage3" x="1664" y="-800"/>
+  <object id="1253" template="Cage2.tx" type="Cage2" x="1728" y="-800"/>
   <object id="1255" template="Cage2.tx" x="1248" y="-1600"/>
   <object id="1257" template="Cage3.tx" x="1280" y="-1568"/>
   <object id="1258" template="Cage3.tx" x="1248" y="-1632"/>
@@ -6501,7 +6386,7 @@
   <object id="1306" template="Cage3.tx" x="1664" y="-10656"/>
   <object id="1307" template="Cage1.tx" x="1696" y="-11104"/>
   <object id="1308" template="Cage3.tx" x="1696" y="-11168"/>
-  <object id="1309" template="ChainsOnFloor2.tx" class="ChainsOnFloor2" x="1728" y="-753"/>
+  <object id="1309" template="ChainsOnFloor2.tx" type="ChainsOnFloor2" x="1728" y="-753"/>
   <object id="1311" template="ChainsOnFloor1.tx" x="1328" y="-2097"/>
   <object id="1312" template="ChainsOnFloor2.tx" x="1745" y="-1247" rotation="90"/>
   <object id="1313" template="ChainsOnFloor1.tx" x="1711" y="-3121"/>
@@ -6518,22 +6403,22 @@
   <object id="1331" template="ChainsOnFloor2.tx" x="1250" y="-7090"/>
   <object id="1333" template="ChainsOnFloor1.tx" gid="618" x="1711" y="-6704" rotation="0"/>
   <object id="1336" template="ChainsOnFloor1.tx" gid="2147484266" x="1681" y="-10578" rotation="0"/>
-  <object id="1338" class="DummyBloodsucker" gid="620" x="1440" y="-3584" width="32" height="64">
+  <object id="1338" type="DummyBloodsucker" gid="620" x="1440" y="-3584" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1341" class="DummyBloodsucker" gid="620" x="1504" y="-3872" width="32" height="64">
+  <object id="1341" type="DummyBloodsucker" gid="620" x="1504" y="-3872" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1342" class="DummyBloodsucker" gid="2147484268" x="1536" y="-4416" width="32" height="64">
+  <object id="1342" type="DummyBloodsucker" gid="2147484268" x="1536" y="-4416" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1343" class="DummyBloodsucker" gid="620" x="1440" y="-4576" width="32" height="64">
+  <object id="1343" type="DummyBloodsucker" gid="620" x="1440" y="-4576" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
@@ -6569,42 +6454,54 @@
   <object id="1377" template="Stalagmite2.tx" x="1632" y="-3968"/>
   <object id="1380" template="Stalagmite2.tx" x="1376" y="-3584"/>
   <object id="1381" template="StalagmiteGiant.tx" x="1344" y="-4736"/>
-  <object id="1390" class="Cheese" gid="624" x="1504" y="-4960" width="32" height="32">
+  <object id="1390" type="Cheese" gid="624" x="1504" y="-4960" width="32" height="32">
    <properties>
     <property name="Durability" type="int" value="1"/>
    </properties>
   </object>
   <object id="1407" template="LeverDungeonOFF.tx" x="1632" y="-5088"/>
-  <object id="1412" class="GiantGillotineWall" gid="630" x="1600" y="-5024" width="32" height="32">
+  <object id="1412" type="GiantGillotineWall" gid="630" x="1600" y="-5024" width="32" height="32">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1413" class="GiantGillotineWall" gid="2147484284" x="1408" y="-5024" width="32" height="32">
+  <object id="1413" type="GiantGillotineWall" gid="2147484284" x="1408" y="-5024" width="32" height="32">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1414" class="GiantGillotineWall" gid="2147484278" x="1408" y="-4992" width="32" height="32">
+  <object id="1414" type="GiantGillotineWall" gid="2147484278" x="1408" y="-4992" width="32" height="32">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="1415" class="BarrelSkis" gid="670" x="1504" y="-11424" width="32" height="64">
+  <object id="1415" type="BarrelSkis" gid="670" x="1504" y="-11424" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="4"/>
    </properties>
   </object>
   <object id="1416" gid="671" x="1683" y="-13059" width="96" height="96"/>
-  <object id="1417" class="GiantGillotineWallDown" gid="643" x="1408" y="-4960" width="32" height="32"/>
-  <object id="1418" class="GiantGillotineWall" gid="637" x="1408" y="-4992" width="32" height="32"/>
-  <object id="1419" class="GiantGillotineWall" gid="637" x="1408" y="-5024" width="32" height="32"/>
-  <object id="1420" class="GiantGillotineWallDown" gid="643" x="1600" y="-4960" width="32" height="32"/>
-  <object id="1421" class="GiantGillotineWall" gid="637" x="1600" y="-4992" width="32" height="32"/>
-  <object id="1422" class="GiantGillotineWall" gid="637" x="1600" y="-5024" width="32" height="32"/>
+  <object id="1417" type="GiantGillotineWallDown" gid="643" x="1408" y="-4960" width="32" height="32"/>
+  <object id="1418" type="GiantGillotineWall" gid="637" x="1408" y="-4992" width="32" height="32"/>
+  <object id="1419" type="GiantGillotineWall" gid="637" x="1408" y="-5024" width="32" height="32"/>
+  <object id="1420" type="GiantGillotineWallDown" gid="643" x="1600" y="-4960" width="32" height="32"/>
+  <object id="1421" type="GiantGillotineWall" gid="637" x="1600" y="-4992" width="32" height="32"/>
+  <object id="1422" type="GiantGillotineWall" gid="637" x="1600" y="-5024" width="32" height="32"/>
   <object id="1432" template="Cage1.tx" x="1696" y="-1216"/>
   <object id="1433" template="Cage3.tx" x="1760" y="-1248"/>
   <object id="1434" template="Cage3.tx" x="1664" y="-1216"/>
+  <object id="1447" type="MovingTowerUp" gid="412" x="1568" y="-2304" width="32" height="64"/>
+  <object id="1448" type="MovingTowerUp" gid="412" x="1568" y="-2272" width="32" height="64"/>
+  <object id="1449" type="MovingTowerUp" gid="412" x="1440" y="-2368" width="32" height="64"/>
+  <object id="1450" type="MovingTowerUp" gid="412" x="1440" y="-2400" width="32" height="64"/>
+  <object id="1451" type="MovingTowerUp" gid="412" x="1504" y="-6176" width="32" height="64"/>
+  <object id="1452" type="MovingTowerUp" gid="412" x="1440" y="-10272" width="32" height="64"/>
+  <object id="1453" type="MovingTowerUp" gid="412" x="1472" y="-10304" width="32" height="64"/>
+  <object id="1454" type="MovingTowerUp" gid="412" x="1504" y="-10336" width="32" height="64"/>
+  <object id="1455" type="MovingTowerUp" gid="412" x="1536" y="-10368" width="32" height="64"/>
+  <object id="1456" type="MovingTowerUp" gid="412" x="1568" y="-10400" width="32" height="64"/>
+  <object id="1457" type="MovingTowerUp" gid="412" x="1472" y="-10784" width="32" height="64"/>
+  <object id="1458" type="MovingTowerUp" gid="412" x="1536" y="-10880" width="32" height="64"/>
  </objectgroup>
  <objectgroup id="11" name="CageOnOtherCages">
   <object id="1264" template="Cage3.tx" x="1264" y="-1641"/>

@@ -10,7 +10,7 @@ public class SkullEye : MonoBehaviour
     void Start() 
     {
         startPos = transform.position;
-        follow = FindObjectOfType<TopDownMovement>().transform;
+        follow = FindObjectOfType<PlayerWarp>().player.transform;
     }
 
     void Update() =>

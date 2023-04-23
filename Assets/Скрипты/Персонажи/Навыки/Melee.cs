@@ -22,7 +22,7 @@ public class Melee : BaseSkill
 
     public override IEnumerator Process()
     {
-        if (!attackTrigger || !(DialogueSystem.Active.state is Dialogues.IdleState))        
+        if (!attackTrigger)        
             yield break;
 
         isReloading = true;

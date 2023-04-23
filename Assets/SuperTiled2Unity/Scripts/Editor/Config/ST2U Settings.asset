@@ -73,6 +73,18 @@ MonoBehaviour:
   - m_TypeName: Bones6
     m_Prefab: {fileID: 975439312637750433, guid: b67a0d7efe65ba84d861f4f17182be3b,
       type: 3}
+  - m_TypeName: Candle1
+    m_Prefab: {fileID: 711858836126987872, guid: 810bc2e417dc41c4eb610c0331b2136b,
+      type: 3}
+  - m_TypeName: Candle1Fire
+    m_Prefab: {fileID: 1810451294838223742, guid: c764cf9a79fd4634d966c0c727555be4,
+      type: 3}
+  - m_TypeName: Candle2
+    m_Prefab: {fileID: 2582138594216961801, guid: 386f7c49cbffdbd488c1c68a0a0a7012,
+      type: 3}
+  - m_TypeName: Candle2Fire
+    m_Prefab: {fileID: 1328790489253317155, guid: 3169ac88454a00045bca399170916fad,
+      type: 3}
   - m_TypeName: Chains
     m_Prefab: {fileID: 9158670100678428852, guid: a779f06d0eb416f4283729cc249bfadf,
       type: 3}
@@ -85,23 +97,38 @@ MonoBehaviour:
   - m_TypeName: ChainsTop
     m_Prefab: {fileID: 7777531054665625679, guid: 3731543d4c1426c4680ad2cf152b6ec2,
       type: 3}
+  - m_TypeName: Cheese
+    m_Prefab: {fileID: 2557198380639421272, guid: bc63e135748f8e34798c9bb1ab40c641,
+      type: 3}
   - m_TypeName: CrossbowChargedDown
-    m_Prefab: {fileID: 1556323048800539617, guid: 1572328b702601b40b67c8a6f87ecc47,
+    m_Prefab: {fileID: 3296584701978215515, guid: 45856b06cbbdcf04e91bd19d72a1c3ac,
       type: 3}
   - m_TypeName: CrossbowChargedLeft
-    m_Prefab: {fileID: 581625206785088097, guid: d92c7506532d03244991f7576486b694,
+    m_Prefab: {fileID: 4442702810706384993, guid: c74624a85a993ff4297c0fe6f72f5c3d,
       type: 3}
   - m_TypeName: CrossbowChargedRight
     m_Prefab: {fileID: 5592297322059243411, guid: 713284b0af6aeb6439079fc77680a3da,
       type: 3}
   - m_TypeName: CrossbowChargedUp
-    m_Prefab: {fileID: 8557610215038015807, guid: 245522366554a85428139329737c42ca,
+    m_Prefab: {fileID: 3511780892109844867, guid: 3b40d1301251b04448bf60bdc2ec7e93,
+      type: 3}
+  - m_TypeName: DummyBloodsucker
+    m_Prefab: {fileID: 3741305615712515347, guid: 6a2e2c70f9549b644a0dbabe8fdf701a,
+      type: 3}
+  - m_TypeName: HayBundle
+    m_Prefab: {fileID: 3696990051255637164, guid: 77e0027a813212a49bb20a517aea408c,
       type: 3}
   - m_TypeName: LeverDungeonOFF
     m_Prefab: {fileID: 1903427496883868781, guid: 5aeeb943d5637b240b5500606478b7bb,
       type: 3}
   - m_TypeName: LongWeapon
     m_Prefab: {fileID: 4192583138486121502, guid: 53055e42f007dc04b9c3057b92876e71,
+      type: 3}
+  - m_TypeName: Mannequin1
+    m_Prefab: {fileID: 5228698339341561909, guid: 13cbe885658eaf0439059da8602fe2b4,
+      type: 3}
+  - m_TypeName: Mannequin2
+    m_Prefab: {fileID: 6142916350486985176, guid: db146eeab5c08464d981099e05c017e5,
       type: 3}
   - m_TypeName: MapDungeonsJail
     m_Prefab: {fileID: 8896103420401632298, guid: c6893be5b584b6041b0d33f8c0936105,
@@ -139,11 +166,29 @@ MonoBehaviour:
   - m_TypeName: StatueArrowWithBow
     m_Prefab: {fileID: 2468766004690014721, guid: 6dc3565bf40678647bdce0786fc28958,
       type: 3}
+  - m_TypeName: Stone1
+    m_Prefab: {fileID: 7183264517023276131, guid: 27d3f3aefc3952e4c9e9ee17dde05ffb,
+      type: 3}
+  - m_TypeName: Stone2
+    m_Prefab: {fileID: 1400970487845947402, guid: dde50cf1db18a794b8a379e7e1d269d1,
+      type: 3}
+  - m_TypeName: Stone3
+    m_Prefab: {fileID: 1455019094394122291, guid: 228c70dce9d30d44186323b9e919ffeb,
+      type: 3}
   - m_TypeName: TorchDurableFire
     m_Prefab: {fileID: 5535435404405552018, guid: 32204a6ca601d8348af44f6aa6b47c2b,
       type: 3}
   - m_TypeName: TorchDurableStick
     m_Prefab: {fileID: 7260045406989680967, guid: 1a182e67227392242b0a40afa4342b01,
+      type: 3}
+  - m_TypeName: Vase1
+    m_Prefab: {fileID: 1434721698671544534, guid: 0fea768e72fb3fd4d8c3c8f841b2a2c4,
+      type: 3}
+  - m_TypeName: Vase2
+    m_Prefab: {fileID: 7334403017765935812, guid: baabaa69c3161c14f9cc0da6d91098fe,
+      type: 3}
+  - m_TypeName: Vase3
+    m_Prefab: {fileID: 11353150674595358, guid: e194fab8d27a3ee45854ff3df7f6f932,
       type: 3}
   - m_TypeName: WarningArrowFront
     m_Prefab: {fileID: 5358086709744056334, guid: 46f281ad40d521d45a65d8e0f1b1f850,
@@ -154,8 +199,20 @@ MonoBehaviour:
   - m_TypeName: WoodenBarrel
     m_Prefab: {fileID: 7139096414570187790, guid: 3c52dd70fbd974f43948e7b5de36dbbd,
       type: 3}
+  - m_TypeName: WoodenBarrelCheeseClosed
+    m_Prefab: {fileID: 1796855078582598358, guid: e4bf6fd43db0c124f92c2891a8da5890,
+      type: 3}
   - m_TypeName: WoodenBarrelClosed
     m_Prefab: {fileID: 9043275367725305105, guid: 9698c87fc7665c5478ea9f12d1b5daf8,
+      type: 3}
+  - m_TypeName: WoodenBarrelGold
+    m_Prefab: {fileID: 3392225814322023813, guid: 0a83e7b4bd26f214996b1ee208a0156e,
+      type: 3}
+  - m_TypeName: WoodenBarrelHay
+    m_Prefab: {fileID: 472302859018670533, guid: 8192d571a91113249b1451c5bc36178a,
+      type: 3}
+  - m_TypeName: WoodenBarrelPoison
+    m_Prefab: {fileID: 294768369369065381, guid: 54e703ee60c7baa4689a9b4ef6a339af,
       type: 3}
   - m_TypeName: WoodenBarrelSpikes
     m_Prefab: {fileID: 5825981423294139908, guid: be2233715a33f59499ee9063ec445595,
@@ -165,4 +222,13 @@ MonoBehaviour:
       type: 3}
   - m_TypeName: WoodenTable1
     m_Prefab: {fileID: 3766970377513843017, guid: 94778f5839ceeb44a8cea7a5fc5b96ea,
+      type: 3}
+  - m_TypeName: WoodPin1
+    m_Prefab: {fileID: 3418783739550856997, guid: bc188c5b8e773f84b94925a3e1ba7a91,
+      type: 3}
+  - m_TypeName: WoodPin2
+    m_Prefab: {fileID: 4457989653921201467, guid: 5602f20f4b2b2534c802bd9797104884,
+      type: 3}
+  - m_TypeName: MovingTowerUp
+    m_Prefab: {fileID: 2279190153285008424, guid: 0c878ac5493e146418064be8d9307288,
       type: 3}

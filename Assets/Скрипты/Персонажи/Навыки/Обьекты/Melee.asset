@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1398202019bccaf7e8fcebc2bf94e2dd, type: 3}
   m_Name: Melee
   m_EditorClassIdentifier: 
-  bob: {fileID: 11400000, guid: dc6e7bb48206f0b6b9081b634eae8ebd, type: 2}
+  bob: {fileID: 11400000, guid: a1d3764cbf7d11f4aad148cee472fb59, type: 2}
   dash: 1
   damage: 15
   swingDuration: 0.375
@@ -20,8 +20,7 @@ MonoBehaviour:
   hitDuration: 0.4
   reloadDuration: 0.6
   colliderSize: {x: 1.5, y: 2}
-  discarding: 5
+  discarding: 8
   penetrating: 2
   meleePrefab: {fileID: 4448214415045013748, guid: beab6803bc128be84a8fe556fbf29ed2,
     type: 3}
-  attackTrigger: 0

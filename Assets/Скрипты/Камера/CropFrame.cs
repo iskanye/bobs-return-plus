@@ -4,14 +4,14 @@ using UnityEngine;
 public class CropFrame : MonoBehaviour
 {
     public Camera mainCamera;
-    public Vector2Int screenSize;
+    public float PPU;
 
     void Update()
     {
-        Vector2Int scaler = new Vector2Int(Mathf.CeilToInt(Screen.width / screenSize.x), Mathf.CeilToInt(Screen.height / screenSize.y));
-        float scaleFactor = scaler.x == scaler.y ? scaler.x : scaler.x < scaler.y ? scaler.x : scaler.y;
-        var w = (scaleFactor * screenSize.x / Screen.width);
-        var h = (scaleFactor * screenSize.y / Screen.height);
+        float scaleFactor = Constants.scaleFactor;
+        var w = scaleFactor * Constants.screenWight / Screen.width;
+        var h = scaleFactor * Constants.screenHeight / Screen.height;
         mainCamera.rect = new Rect(.5f * (1 - w), .5f * (1 - h), w, h);
+        mainCamera.orthographicSize = Constants.screenHeight * .5f / PPU;
     }
 }

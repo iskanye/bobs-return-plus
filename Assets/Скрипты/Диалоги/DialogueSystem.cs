@@ -22,7 +22,7 @@ public class DialogueSystem : SequenceObject
 
     [HideInInspector] public Dialogue[] dialogues;
     [HideInInspector] public Dialogue current;
-    [HideInInspector] public TopDownMovement player;
+    [HideInInspector] public PlayerWarp player;
 
     [HideInInspector] public IdleState idleState;
     [HideInInspector] public PrintingState printingState;
@@ -40,7 +40,7 @@ public class DialogueSystem : SequenceObject
     {
         Active = this;
 
-        player = FindObjectOfType<TopDownMovement>();
+        player = FindObjectOfType<PlayerWarp>();
         variantObjects = new List<GameObject>();
 
         idleState = new IdleState(this);

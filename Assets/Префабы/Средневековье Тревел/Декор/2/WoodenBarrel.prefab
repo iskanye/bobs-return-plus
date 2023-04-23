@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 400611835, guid: 540c28baf3e5b55fcacf904dc37f2182, type: 3}
+  m_Sprite: {fileID: 1797696254, guid: 232c350ae6601c63d85c438fbefb78ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -106,7 +106,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.51
 --- !u!114 &2203106111186982809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +192,9 @@ MonoBehaviour:
   - {fileID: 1081485952797413362, guid: aa33b3ca14bc04445b3480856f2ab3e8, type: 3}
   - {fileID: 4585545850013346039, guid: 1fffca52216968842a96f7d1d81e2369, type: 3}
   - {fileID: 4709746300904849131, guid: fd2110e7f221e304aa508868f1be41a0, type: 3}
+  - {fileID: 6133804647303199696, guid: 5d926d77ca2d4a048a374e79d27de554, type: 3}
   - {fileID: 6133804647303199696, guid: 9f484aa20aeae0840a66d3081a814fdb, type: 3}
+  - {fileID: 6133804647303199696, guid: bddf864c1f99e244285aa0166fd945bd, type: 3}
   - {fileID: 5832147253119593909, guid: 402090db50945ea4d8391645b468a64f, type: 3}
   - {fileID: 8299124655120533643, guid: 1e4e6ab27db7bfe4a8da3bdffbd6ebc5, type: 3}
 --- !u!114 &5087094636622662128

@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 909335215, guid: 540c28baf3e5b55fcacf904dc37f2182, type: 3}
+  m_Sprite: {fileID: -505220151, guid: 232c350ae6601c63d85c438fbefb78ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -188,10 +188,12 @@ MonoBehaviour:
   force: 3
   spreadRadius: 0
   rigidbodies:
-  - {fileID: 6040774766495979184, guid: 416b65863cd080447adad4462d277ed7, type: 3}
-  - {fileID: 2203883605914574476, guid: c4ecb72d7bf39234ba86eed647cca5e9, type: 3}
-  - {fileID: 1808558555690173816, guid: 3a135cbe301a3ac459660a250917c8b9, type: 3}
-  - {fileID: 919579466923467681, guid: 1771d67001630d048ab365e8cabb186f, type: 3}
+  - {fileID: 1081485952797413362, guid: 68e9cb721e751bd4a9b2d49824cdf9d3, type: 3}
+  - {fileID: 4585545850013346039, guid: dd401934fcd911c409e5c72eb3f5e800, type: 3}
+  - {fileID: 4709746300904849131, guid: 87fcf7831cc63bb4d939a6b84d9030fa, type: 3}
+  - {fileID: 6133804647303199696, guid: 0b26752e672a0e14eb7e1125450d5a84, type: 3}
+  - {fileID: 6133804647303199696, guid: ac0875b256f1a0747ad9e308bea04638, type: 3}
+  - {fileID: 6133804647303199696, guid: e4397fda50f22e54ab907c652496d3b4, type: 3}
   - {fileID: 5832147253119593909, guid: 402090db50945ea4d8391645b468a64f, type: 3}
   - {fileID: 8299124655120533643, guid: 1e4e6ab27db7bfe4a8da3bdffbd6ebc5, type: 3}
 --- !u!114 &7380645787666589484
@@ -268,11 +270,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls: []
   damage: 1
   isDeadly: 0
   addPersistentListener: 0
   directionBasedOnVelocity: 0
   penetrating: 1
+  onlyThisPenetratingType: 0
   discarding: 3
   direction: {x: 0, y: 0}
 --- !u!1 &7258349851703226147

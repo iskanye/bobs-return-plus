@@ -182,7 +182,8 @@ MonoBehaviour:
   addPersistentListener: 0
   directionBasedOnVelocity: 0
   penetrating: 1
-  discarding: 3
+  onlyThisPenetratingType: 0
+  discarding: 1
   direction: {x: 0, y: 0}
 --- !u!114 &2217542506071352602
 MonoBehaviour:

@@ -10,12 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2738784149873192542}
   - component: {fileID: 8755656965390608158}
-  - component: {fileID: 2988057067133271043}
-  - component: {fileID: 2207181271703602510}
-  - component: {fileID: 8105415929533967040}
   - component: {fileID: 2568542274122810342}
   - component: {fileID: 4352513742768633769}
   - component: {fileID: 1042609255282460355}
+  - component: {fileID: -1619336694545766237}
+  - component: {fileID: 1478527686211580399}
   m_Layer: 3
   m_Name: VaseRed1
   m_TagString: Untagged
@@ -79,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 646913503, guid: f50322b292f38e5649960c62c9538c97, type: 3}
+  m_Sprite: {fileID: 571950978, guid: f963f582c4885e5b3bbde9a3bfff2889, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90,105 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &2988057067133271043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6413795098430086132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b471f63b1431854d8dc63b73ae10b11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitDirection: {x: 0, y: 0}
-  type: 0
-  maxLives: 3
-  onDeath:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4352513742768633769}
-        m_TargetAssemblyTypeName: SpreadRigidbodies, Assembly-CSharp
-        m_MethodName: Spread
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2568542274122810342}
-        m_TargetAssemblyTypeName: Destroy, Assembly-CSharp
-        m_MethodName: Do
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1042609255282460355}
-        m_TargetAssemblyTypeName: CreateGameObject, Assembly-CSharp
-        m_MethodName: Create
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onHit:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2207181271703602510}
-        m_TargetAssemblyTypeName: ShakeObject, Assembly-CSharp
-        m_MethodName: StartShake
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2207181271703602510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6413795098430086132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55aae0bfdf33f4d4dafb9b240b60311e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  magnitude: 0.05
-  time: 0.4
---- !u!58 &8105415929533967040
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6413795098430086132}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.6
 --- !u!114 &2568542274122810342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,11 +122,9 @@ MonoBehaviour:
   - {fileID: 1451064065777815990, guid: 346e42cfaa808a34cb8d9b3530056d78, type: 3}
   - {fileID: 7830670286981463673, guid: 102681fd94ddf1245b71e0f3f8d51e47, type: 3}
   - {fileID: 8214906076472035208, guid: 00b53dc751da50a4589f1a2652009e49, type: 3}
-  - {fileID: 1518308017004304582, guid: 924a87e27848e394eb79f901af5f77cf, type: 3}
   - {fileID: 1451064065777815990, guid: 346e42cfaa808a34cb8d9b3530056d78, type: 3}
   - {fileID: 7830670286981463673, guid: 102681fd94ddf1245b71e0f3f8d51e47, type: 3}
   - {fileID: 8214906076472035208, guid: 00b53dc751da50a4589f1a2652009e49, type: 3}
-  - {fileID: 1518308017004304582, guid: 924a87e27848e394eb79f901af5f77cf, type: 3}
 --- !u!114 &1042609255282460355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,3 +140,81 @@ MonoBehaviour:
   _objects:
   - {fileID: 1943007244304930363, guid: ebec3a94182e64342a89c4ae8c0ac734, type: 3}
   - {fileID: 2217542506071352603, guid: 5082a1f5d30b51d4b9f1b8c7bbc0b178, type: 3}
+--- !u!61 &-1619336694545766237
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6413795098430086132}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.25}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1478527686211580399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6413795098430086132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbd79b6fda7bc11069088146432d3ae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4352513742768633769}
+        m_TargetAssemblyTypeName: SpreadRigidbodies, Assembly-CSharp
+        m_MethodName: Spread
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1042609255282460355}
+        m_TargetAssemblyTypeName: CreateGameObject, Assembly-CSharp
+        m_MethodName: Create
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2568542274122810342}
+        m_TargetAssemblyTypeName: Destroy, Assembly-CSharp
+        m_MethodName: Do
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  type: 0

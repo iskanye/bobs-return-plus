@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1000518973, guid: 540c28baf3e5b55fcacf904dc37f2182, type: 3}
+  m_Sprite: {fileID: 1804805583, guid: 232c350ae6601c63d85c438fbefb78ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -189,10 +189,12 @@ MonoBehaviour:
   force: 3
   spreadRadius: 0
   rigidbodies:
-  - {fileID: 2258856034801666452, guid: ef9376d46ad67b0458923a17f77d0121, type: 3}
-  - {fileID: 1267633808005799092, guid: 8589ed2aad9bcfb4d991f37c24d76e6a, type: 3}
-  - {fileID: 6529692199958236770, guid: 2f4011aa28849404baec978194d0857d, type: 3}
-  - {fileID: 3645329041485207814, guid: 8e3a9a4973844bb478437061521d478f, type: 3}
+  - {fileID: 1081485952797413362, guid: 4d93139952edc034faf88bbe45b2bbea, type: 3}
+  - {fileID: 4585545850013346039, guid: 1d7d53294d7bb0546992980b2b346e4c, type: 3}
+  - {fileID: 4709746300904849131, guid: 4038c7adace8871439c2729e58e277d8, type: 3}
+  - {fileID: 6133804647303199696, guid: 49478dbcfde843044b089f1f75a44d5c, type: 3}
+  - {fileID: 6133804647303199696, guid: 77f26cdaaccc06f43add81bcdb2f7f76, type: 3}
+  - {fileID: 6133804647303199696, guid: 51d591a2691982347a09b13d25042382, type: 3}
   - {fileID: 5832147253119593909, guid: 402090db50945ea4d8391645b468a64f, type: 3}
   - {fileID: 8299124655120533643, guid: 1e4e6ab27db7bfe4a8da3bdffbd6ebc5, type: 3}
 --- !u!114 &7610688614624253460
@@ -238,7 +240,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7610688614624253460}
         m_TargetAssemblyTypeName: CreateGameObject, Assembly-CSharp
         m_MethodName: Create
         m_Mode: 1
@@ -403,5 +405,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 881d98cbf2ab41a4d9e4d44347c094a5, type: 2}
   - {fileID: 11400000, guid: fb21cf4908fdc1446bf3a58a010c82fa, type: 2}
   - {fileID: 11400000, guid: c5288b1d64b998d40855ecec5a122ec7, type: 2}
-  noItemPropability: 0.33
+  noItemPropability: 0
   empty: {fileID: 11400000, guid: 82a3b34a81f432b44865026af1f55d4c, type: 2}

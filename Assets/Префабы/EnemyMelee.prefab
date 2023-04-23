@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4448214415045013748}
   - component: {fileID: 4448214415045013755}
   - component: {fileID: 3481567044438545273}
-  - component: {fileID: 382989758084663898}
   - component: {fileID: -2136026656427658848}
+  - component: {fileID: 382989758084663898}
   m_Layer: 0
   m_Name: EnemyMelee
   m_TagString: Untagged
@@ -74,11 +74,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls: []
   damage: 1
   isDeadly: 0
-  discarding: 0
-  direction: {x: 0, y: 0}
+  addPersistentListener: 0
+  directionBasedOnVelocity: 0
   penetrating: 0
+  onlyThisPenetratingType: 0
+  discarding: 8
+  direction: {x: 0, y: 0}
 --- !u!114 &3481567044438545273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,6 +99,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   action:
     m_PersistentCalls:
+      m_Calls: []
+  onExit:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4448214415045013755}
         m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
@@ -106,28 +115,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onExit:
-    m_PersistentCalls:
-      m_Calls: []
   playerMask:
     serializedVersion: 2
     m_Bits: 64
   isOnStay: 0
   triggerNotExpected: 0
   colliderNotExpected: 0
---- !u!114 &382989758084663898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4448214415045013753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13f5de1025c26fad98bdfedd3de193a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToDestroy: {fileID: 4448214415045013753}
 --- !u!114 &-2136026656427658848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,3 +149,17 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   time: 0
+--- !u!114 &382989758084663898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4448214415045013753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f5de1025c26fad98bdfedd3de193a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToDestroy:
+  - {fileID: 4448214415045013753}

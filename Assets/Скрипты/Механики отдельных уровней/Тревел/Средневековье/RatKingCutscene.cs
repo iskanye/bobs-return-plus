@@ -13,41 +13,46 @@ public class RatKingCutscene : MonoBehaviour
     public float ySpawnOffset;
     public int ratLimit;
     public RatKing ratKing;
-    public Transform player;
+    public PlayerWarp player;
     public CameraController cam;
 
     List<GameObject> rats = new List<GameObject>();
+    Coroutine spawnRats;
 
     public void StartRatsSpawn() =>
-        StartCoroutine(SpawnRats());
+        spawnRats = StartCoroutine(SpawnRats());
 
     public void StartRatKingSpawn() =>
         StartCoroutine(SpawnRatKing());
 
     IEnumerator SpawnRats()
     {
-        var rat = Instantiate(ratPrefab, new Vector2(Random.Range(leftSpawnBorder, rightSpawnBorder), player.position.y - ySpawnOffset), Quaternion.identity, ratSpawner);
-        rat.target = player;
-        rat.stopRadius = Random.Range(2, maxStopRadius);
-        rats.Add(rat.gameObject);
-        
-        if (rats.Count >= ratLimit)
+        while (true)
         {
-            Destroy(rats[0]);            
-            rats.RemoveAt(0);
-        }
+            var rat = Instantiate(ratPrefab, new Vector2(Random.Range(leftSpawnBorder, rightSpawnBorder), 
+                                  player.player.transform.position.y - ySpawnOffset), Quaternion.identity, ratSpawner);
+            rat.target = player.player.transform;
+            rat.stopRadius = Random.Range(2, maxStopRadius);
+            rats.Add(rat.gameObject);
+        
+            if (rats.Count >= ratLimit)
+            {
+                Destroy(rats[0]);            
+                rats.RemoveAt(0);
+            }
 
-        yield return new WaitForSeconds(spawnDelay);
-        StartCoroutine(SpawnRats());
+            yield return new WaitForSeconds(spawnDelay);
+        }
     }
 
     IEnumerator SpawnRatKing()
     {     
+        StopCoroutine(spawnRats);
         ratKing.gameObject.SetActive(true);
         cam.StartShake(.1f, 3);
+        player.Enabled = false;
 
-        var playerMov = player.GetComponent<TopDownMovement>();
-        playerMov.Disable();
+        var playerMov = player.player.data.movement;
 
         yield return new WaitForSeconds(.5f);
         playerMov.Direction = Vector2.left;
@@ -63,14 +68,7 @@ public class RatKingCutscene : MonoBehaviour
 
         yield return new WaitForSeconds(1.5f);    
         
-        cam.ChangeTarget(player);
-        playerMov.Enable();
-    }
-
-    void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(new Vector2(leftSpawnBorder, player.position.y), .125f);
-        Gizmos.DrawWireSphere(new Vector2(rightSpawnBorder, player.position.y), .125f);
-        Gizmos.DrawWireSphere(new Vector2(player.position.x, player.position.y - ySpawnOffset), .125f);
+        cam.ChangeTarget(player.player.transform);
+        player.Enabled = true;
     }
 }

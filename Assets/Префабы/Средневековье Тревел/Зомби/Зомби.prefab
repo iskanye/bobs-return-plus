@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  discarding: 5
+  discarding: 8
   zombieHead: {fileID: 3853071993284499550, guid: f62ce053f26813779930e03930b92021,
     type: 3}
   colliderSize: {x: 1, y: 1.5}

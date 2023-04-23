@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -1961943329, guid: 5cba3cc380acd782c9f31ab867c57f48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -108,6 +108,7 @@ MonoBehaviour:
   - {fileID: -1961943329, guid: 5cba3cc380acd782c9f31ab867c57f48, type: 3}
   - {fileID: -1121323359, guid: 5cba3cc380acd782c9f31ab867c57f48, type: 3}
   delay: 0.1
+  isAwake: 1
 --- !u!58 &591200811910096424
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -189,11 +190,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 0, z: 0}
-  force: 0.5
+  force: 0.3
   spreadRadius: 0
   rigidbodies:
   - {fileID: 7696807870786539337, guid: 4231413fe9f9d18439e83dacf0545b2b, type: 3}
   - {fileID: 6053448299323187206, guid: cb3ce8f534fd0f348ac35e70a4cc4e3b, type: 3}
+  - {fileID: 6053448299323187206, guid: c0847e97602ee0141983955fd683b2ee, type: 3}
+  - {fileID: 6053448299323187206, guid: 84d11eb323e97764b9d3730259c1ddb4, type: 3}
 --- !u!114 &4528332993171286541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,4 +223,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f5de1025c26fad98bdfedd3de193a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDestroy: {fileID: 0}
+  objectsToDestroy:
+  - {fileID: 0}

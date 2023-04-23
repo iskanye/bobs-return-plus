@@ -334,9 +334,11 @@ MonoBehaviour:
   - {fileID: 1081485952797413362, guid: aa33b3ca14bc04445b3480856f2ab3e8, type: 3}
   - {fileID: 4585545850013346039, guid: 1fffca52216968842a96f7d1d81e2369, type: 3}
   - {fileID: 4709746300904849131, guid: fd2110e7f221e304aa508868f1be41a0, type: 3}
+  - {fileID: 6133804647303199696, guid: 5d926d77ca2d4a048a374e79d27de554, type: 3}
   - {fileID: 6133804647303199696, guid: 9f484aa20aeae0840a66d3081a814fdb, type: 3}
-  - {fileID: 2698196093431903055, guid: 95ffbd2ae5b9375479dc89caca3068e1, type: 3}
-  - {fileID: 2269822759046125448, guid: 0e955ed40a6dd3646bf9b71bd70587d4, type: 3}
+  - {fileID: 6133804647303199696, guid: bddf864c1f99e244285aa0166fd945bd, type: 3}
+  - {fileID: 5832147253119593909, guid: 402090db50945ea4d8391645b468a64f, type: 3}
+  - {fileID: 8299124655120533643, guid: 1e4e6ab27db7bfe4a8da3bdffbd6ebc5, type: 3}
 --- !u!114 &5070368168439139348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -954,7 +956,7 @@ GameObject:
   - component: {fileID: 2973586342616245780}
   - component: {fileID: 6825350562007576342}
   - component: {fileID: 6910664920247935201}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: spikes damage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1024,12 +1026,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls: []
   damage: 1
   isDeadly: 0
   addPersistentListener: 0
   directionBasedOnVelocity: 0
   penetrating: 1
-  discarding: 3
+  onlyThisPenetratingType: 0
+  discarding: 1
   direction: {x: 0, y: 0}
 --- !u!61 &6910664920247935201
 BoxCollider2D:
@@ -1041,7 +1047,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1055,7 +1061,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.05, y: 1.05}
+  m_Size: {x: 1.1, y: 1.1}
   m_EdgeRadius: 0
 --- !u!1 &9029298056786049981
 GameObject:

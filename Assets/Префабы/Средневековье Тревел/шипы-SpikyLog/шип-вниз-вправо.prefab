@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 673575783437615350}
   - component: {fileID: 8667921555815443653}
   - component: {fileID: 3466544062793755330}
+  - component: {fileID: 4610409010286581843}
   m_Layer: 0
   m_Name: "\u0448\u0438\u043F-\u0432\u043D\u0438\u0437-\u0432\u043F\u0440\u0430\u0432\u043E"
   m_TagString: Untagged
@@ -271,6 +272,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4610409010286581843}
+        m_TargetAssemblyTypeName: CreateGameObject, Assembly-CSharp
+        m_MethodName: Create
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 8667921555815443653}
         m_TargetAssemblyTypeName: Destroy, Assembly-CSharp
         m_MethodName: Do
@@ -292,3 +305,17 @@ MonoBehaviour:
   isOnStay: 0
   triggerNotExpected: 0
   colliderNotExpected: 0
+--- !u!114 &4610409010286581843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7527425686423216353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ab62e77df651912b5a6ec0a4e52396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objects:
+  - {fileID: 1943007244304930363, guid: ebec3a94182e64342a89c4ae8c0ac734, type: 3}

@@ -46,12 +46,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls: []
   damage: 1
   isDeadly: 0
   addPersistentListener: 0
   directionBasedOnVelocity: 0
   penetrating: 0
-  discarding: 3
+  onlyThisPenetratingType: 0
+  discarding: 1
   direction: {x: 0, y: 0}
 --- !u!114 &726552646
 MonoBehaviour:
@@ -103,7 +107,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0125, y: -0.025}
-  m_Size: {x: 0.6, y: 0.2}
+  m_Size: {x: 0.6, y: 0.25}
   m_Direction: 1
 --- !u!1 &1465116321457612521
 GameObject:
@@ -521,7 +525,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0125, y: -0.025}
-  m_Size: {x: 0.5, y: 0.125}
+  m_Size: {x: 0.5, y: 0.175}
   m_Direction: 1
 --- !u!114 &1465116322805263038
 MonoBehaviour:

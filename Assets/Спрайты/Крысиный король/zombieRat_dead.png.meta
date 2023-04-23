@@ -121,11 +121,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 480
+        y: 0
         width: 96
         height: 96
-      alignment: 9
-      pivot: {x: 0.5, y: 0.6041667}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -141,12 +141,12 @@ TextureImporter:
       name: zombieRat_dead_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 384
+        x: 96
+        y: 0
         width: 96
         height: 96
-      alignment: 9
-      pivot: {x: 0.39583334, y: 0.5833333}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,90 +154,6 @@ TextureImporter:
       bones: []
       spriteID: a5594b3ccb5119648ae005b2ee83c90b
       internalID: -1055937784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zombieRat_dead_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 288
-        width: 96
-        height: 96
-      alignment: 9
-      pivot: {x: 0.3125, y: 0.29166666}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7dcff5e9b9aea14e885845796ee98d2
-      internalID: -1406935041
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zombieRat_dead_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 192
-        width: 96
-        height: 96
-      alignment: 9
-      pivot: {x: 0.5, y: 0.20833333}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b12d3e2385b56a4cb8a697b39b4dac6
-      internalID: -2048292908
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zombieRat_dead_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 96
-        height: 96
-      alignment: 9
-      pivot: {x: 0.6875, y: 0.29166666}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a19d13afbfac9f2449cd3da436dc0d69
-      internalID: -1022882706
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zombieRat_dead_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 96
-        height: 96
-      alignment: 9
-      pivot: {x: 0.625, y: 0.5833333}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d0c60dc98ff08341b786b5f93595e32
-      internalID: 857508086
       vertices: []
       indices: 
       edges: []
@@ -253,12 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      zombieRat_dead_2: -1406935041
-      zombieRat_dead_5: 857508086
-      zombieRat_dead_4: -1022882706
       zombieRat_dead_0: 1170776474
       zombieRat_dead_1: -1055937784
-      zombieRat_dead_3: -2048292908
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

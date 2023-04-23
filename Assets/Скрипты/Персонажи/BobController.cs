@@ -6,18 +6,18 @@ public class BobController : MonoBehaviour
     public BaseBob character;
 
     void Start() =>
-        OnEnable();
+        Enable();
 
-    void OnDisable()
+    public void Disable()
     {
-        data.movement.enabled = false;
         StopAllCoroutines();
+        data.movement.Disable();
         character.Stop();
     }
 
-    void OnEnable()
+    public void Enable()
     {      
-        data.movement.enabled = true;
+        data.movement.Enable();
         character.data = data;
         character.controller = this;
         StartCoroutine(character.Start());

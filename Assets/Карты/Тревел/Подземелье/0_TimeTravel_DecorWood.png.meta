@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -639,7 +639,7 @@ TextureImporter:
       0_TimeTravel_DecorWood_31: 2110269326
       0_TimeTravel_DecorWood_46: -577050964
       0_TimeTravel_DecorWood_59: 1478211439
-      0_TimeTravel_DecorWood_50: -619839410
+      0_TimeTravel_DecorWood_39: -1929601371
       0_TimeTravel_DecorWood_2: 1722790708
       0_TimeTravel_DecorWood_19: -679383605
       0_TimeTravel_DecorWood_49: -1009340680
@@ -692,7 +692,7 @@ TextureImporter:
       0_TimeTravel_DecorWood_36: 559658456
       0_TimeTravel_DecorWood_17: -1038431460
       0_TimeTravel_DecorWood_34: -1811421355
-      0_TimeTravel_DecorWood_39: -1929601371
+      0_TimeTravel_DecorWood_50: -619839410
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

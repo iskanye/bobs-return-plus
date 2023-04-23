@@ -176,8 +176,9 @@ MonoBehaviour:
   damage: 1
   isDeadly: 0
   addPersistentListener: 0
+  directionBasedOnVelocity: 0
   penetrating: 1
-  discarding: 3
+  discarding: 1
   direction: {x: 0, y: 0}
 --- !u!1 &3057473326994360642
 GameObject:

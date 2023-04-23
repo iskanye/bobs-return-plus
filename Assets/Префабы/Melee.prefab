@@ -74,12 +74,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls: []
   damage: 1
   isDeadly: 0
   addPersistentListener: 0
   directionBasedOnVelocity: 0
   penetrating: 0
-  discarding: 0
+  onlyThisPenetratingType: 0
+  discarding: 8
   direction: {x: 0, y: 0}
 --- !u!114 &3481567044438545273
 MonoBehaviour:
@@ -95,6 +99,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   action:
     m_PersistentCalls:
+      m_Calls: []
+  onExit:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4448214415045013755}
         m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
@@ -108,9 +115,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onExit:
-    m_PersistentCalls:
-      m_Calls: []
   playerMask:
     serializedVersion: 2
     m_Bits: 649

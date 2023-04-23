@@ -18,7 +18,7 @@ public class Naming : MonoBehaviour
         this.obj = obj;
         namingWindow.SetActive(true);
         inventoryLayout.SetActive(false);
-        warp.player.enabled = false;
+        warp.player.Disable();
     }
 
     public void Confirm()
@@ -47,7 +47,7 @@ public class Naming : MonoBehaviour
             dialogue.dialogues[i].text = dialogue.dialogues[i].text.Replace(inputField.text, "{топор}");       
         
         warp.Enabled = true;
-        warp.player.enabled = true;
+        warp.player.Enable();
         
         inventoryLayout.SetActive(true);
     }

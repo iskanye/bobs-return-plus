@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3114925022121557244}
   - component: {fileID: 3114925022121557247}
   - component: {fileID: 3114925022121557246}
-  m_Layer: 11
+  m_Layer: 3
   m_Name: MovingTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 3114925022545430382}
   - component: {fileID: 3114925022545430380}
   - component: {fileID: 3114925022545430383}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.98, y: 0.98}
+  m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
 --- !u!114 &3114925022545430383
 MonoBehaviour:
@@ -236,7 +236,7 @@ MonoBehaviour:
         m_CallState: 2
   playerMask:
     serializedVersion: 2
-    m_Bits: 64
-  isOnStay: 0
+    m_Bits: 72
+  isOnStay: 1
   triggerNotExpected: 0
   colliderNotExpected: 0

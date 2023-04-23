@@ -284,6 +284,111 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: 0_TimeTravel_MovingTower_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9228223604b8bef4dbcbcbf61af2b304
+      internalID: 539015773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_TimeTravel_MovingTower_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e122de98f37ff8245a5ef0b7ec789cd0
+      internalID: -710631282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_TimeTravel_MovingTower_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b7ec580f4f8044aad7508d95891dca
+      internalID: 497521372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_TimeTravel_MovingTower_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afe564cbe4ef576468652700fbc17ade
+      internalID: -1239068291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0_TimeTravel_MovingTower_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6823d8226ef251743a6ccca864a063a3
+      internalID: -806637207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -295,11 +400,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      0_TimeTravel_MovingTower_10: 497521372
       0_TimeTravel_MovingTower_5: 429811736
+      0_TimeTravel_MovingTower_8: 539015773
       0_TimeTravel_MovingTower_1: 1953623392
+      0_TimeTravel_MovingTower_11: -1239068291
       0_TimeTravel_MovingTower_3: 1211495489
       0_TimeTravel_MovingTower_4: -279215584
       0_TimeTravel_MovingTower_0: -1468007800
+      0_TimeTravel_MovingTower_12: -806637207
+      0_TimeTravel_MovingTower_9: -710631282
       0_TimeTravel_MovingTower_7: -1844850393
       0_TimeTravel_MovingTower_2: -1112946277
       0_TimeTravel_MovingTower_6: 304450795

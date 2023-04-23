@@ -288,7 +288,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 4
 --- !u!1 &1673453276775912105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,7 +1135,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 4
 --- !u!114 &1673453277026332918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1229,7 +1229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 32, y: -160}
+  m_AnchoredPosition: {x: 32, y: -96}
   m_SizeDelta: {x: 192, y: 32}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1673453277059997737
@@ -1495,7 +1495,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 4
 --- !u!95 &1673453277150031984
 Animator:
   serializedVersion: 4
@@ -1744,7 +1744,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 4
 --- !u!114 &1673453277321262959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2414,7 +2414,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1673453277997190566}
   - component: {fileID: 1673453277997190570}
-  - component: {fileID: 1673453277997190569}
   - component: {fileID: 1673453277997190568}
   - component: {fileID: 1673453277997190567}
   m_Layer: 5
@@ -2469,29 +2468,6 @@ Canvas:
   m_SortingLayerID: -129539767
   m_SortingOrder: 3
   m_TargetDisplay: 0
---- !u!114 &1673453277997190569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1673453277997190565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 32
-  m_ScaleFactor: 2
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
 --- !u!114 &1673453277997190568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3359,7 +3335,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 4
 --- !u!114 &1673453278515197503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3494,7 +3470,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 4
 --- !u!114 &1673453278577629336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3618,7 +3594,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 535153941, guid: 2f204e0d80811c3ed9106a675b8f39a9, type: 3}
+  m_Sprite: {fileID: -1386935833, guid: 2f204e0d80811c3ed9106a675b8f39a9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3874,11 +3850,11 @@ RectTransform:
   m_Father: {fileID: 1673453277762540977}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -176, y: -22}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 256, y: 64}
-  m_Pivot: {x: 0.5, y: 1}
+  m_Pivot: {x: 0, y: 1}
 --- !u!222 &6265412750963538712
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3911,12 +3887,12 @@ MonoBehaviour:
   m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 2
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
 --- !u!1001 &1673453276809530757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4483,6 +4459,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1673453277762540977}
     m_Modifications:
+    - target: {fileID: 5630662941450709984, guid: 4111aab03c948a234820ce17963987df,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630662941450709984, guid: 4111aab03c948a234820ce17963987df,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5762258686752581812, guid: 4111aab03c948a234820ce17963987df,
         type: 3}
       propertyPath: m_text

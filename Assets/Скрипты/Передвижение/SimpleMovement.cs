@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -54,7 +55,7 @@ public class MoveState : State<SimpleMovement>
 { 
     public MoveState(SimpleMovement mn) : base(mn) { }
 
-    public override System.Collections.IEnumerator Update() 
+    public override IEnumerator Update() 
     {
         mn.IsWalking = true;
 

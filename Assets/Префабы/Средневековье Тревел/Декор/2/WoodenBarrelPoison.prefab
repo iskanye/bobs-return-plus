@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1264726203, guid: 540c28baf3e5b55fcacf904dc37f2182, type: 3}
+  m_Sprite: {fileID: -1411632753, guid: 232c350ae6601c63d85c438fbefb78ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -192,7 +192,9 @@ MonoBehaviour:
   - {fileID: 1081485952797413362, guid: aa33b3ca14bc04445b3480856f2ab3e8, type: 3}
   - {fileID: 4585545850013346039, guid: 1fffca52216968842a96f7d1d81e2369, type: 3}
   - {fileID: 4709746300904849131, guid: fd2110e7f221e304aa508868f1be41a0, type: 3}
+  - {fileID: 6133804647303199696, guid: 5d926d77ca2d4a048a374e79d27de554, type: 3}
   - {fileID: 6133804647303199696, guid: 9f484aa20aeae0840a66d3081a814fdb, type: 3}
+  - {fileID: 6133804647303199696, guid: bddf864c1f99e244285aa0166fd945bd, type: 3}
   - {fileID: 5832147253119593909, guid: 402090db50945ea4d8391645b468a64f, type: 3}
   - {fileID: 8299124655120533643, guid: 1e4e6ab27db7bfe4a8da3bdffbd6ebc5, type: 3}
 --- !u!114 &7059909625459157362
@@ -225,12 +227,12 @@ MonoBehaviour:
   renderer: {fileID: 3315480247437222311}
   image: {fileID: 0}
   sprites:
-  - {fileID: -1264726203, guid: 540c28baf3e5b55fcacf904dc37f2182, type: 3}
-  - {fileID: 769432360, guid: 540c28baf3e5b55fcacf904dc37f2182, type: 3}
-  - {fileID: -1038431460, guid: 540c28baf3e5b55fcacf904dc37f2182, type: 3}
-  - {fileID: 1299929408, guid: 540c28baf3e5b55fcacf904dc37f2182, type: 3}
-  - {fileID: -679383605, guid: 540c28baf3e5b55fcacf904dc37f2182, type: 3}
-  - {fileID: 1463908035, guid: 540c28baf3e5b55fcacf904dc37f2182, type: 3}
+  - {fileID: -1411632753, guid: 232c350ae6601c63d85c438fbefb78ba, type: 3}
+  - {fileID: -1699215666, guid: 232c350ae6601c63d85c438fbefb78ba, type: 3}
+  - {fileID: 687331755, guid: 232c350ae6601c63d85c438fbefb78ba, type: 3}
+  - {fileID: -1714713865, guid: 232c350ae6601c63d85c438fbefb78ba, type: 3}
+  - {fileID: 103280897, guid: 232c350ae6601c63d85c438fbefb78ba, type: 3}
+  - {fileID: 877860138, guid: 232c350ae6601c63d85c438fbefb78ba, type: 3}
   delay: 0.1
   isAwake: 1
 --- !u!1 &2200026108548723319
@@ -282,7 +284,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.55
+  m_Radius: 0.6
 --- !u!114 &6028443783708093284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,10 +333,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls: []
   damage: 1
   isDeadly: 0
   addPersistentListener: 0
   directionBasedOnVelocity: 0
   penetrating: 1
-  discarding: 3
+  onlyThisPenetratingType: 0
+  discarding: 1
   direction: {x: 0, y: 0}

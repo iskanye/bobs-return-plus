@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6375032317464550153}
   - component: {fileID: 7640232911458607242}
   - component: {fileID: -7173245909545116272}
+  - component: {fileID: 7142592547471886787}
   m_Layer: 3
   m_Name: Hay
   m_TagString: Untagged
@@ -119,7 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f5de1025c26fad98bdfedd3de193a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDestroy: {fileID: 0}
+  objectsToDestroy:
+  - {fileID: 0}
 --- !u!114 &5317870066641874585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +177,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  time: 0.2
+  time: 0.1
 --- !u!114 &6375032317464550153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +197,18 @@ MonoBehaviour:
       - m_Target: {fileID: -7173245909545116272}
         m_TargetAssemblyTypeName: CreateGameObject, Assembly-CSharp
         m_MethodName: Create
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7142592547471886787}
+        m_TargetAssemblyTypeName: SpreadRigidbodies, Assembly-CSharp
+        m_MethodName: Spread
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -246,3 +260,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objects:
   - {fileID: 1943007244304930363, guid: ebec3a94182e64342a89c4ae8c0ac734, type: 3}
+--- !u!114 &7142592547471886787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5608338681973789334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5fd6443f125b7649a10aed8b839f9e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 0, y: 0, z: 0}
+  force: 1
+  spreadRadius: 0.2
+  rigidbodies:
+  - {fileID: 8214906076472035208, guid: 430664c488aa77343831b5880286f1b7, type: 3}
+  - {fileID: 8214906076472035208, guid: 79c7698f6fb13ed4586a1bb92b8058f5, type: 3}
+  - {fileID: 8214906076472035208, guid: c8056b71d87ca0c4785059cd6e1d924f, type: 3}
+  - {fileID: 8214906076472035208, guid: 430664c488aa77343831b5880286f1b7, type: 3}
+  - {fileID: 8214906076472035208, guid: 79c7698f6fb13ed4586a1bb92b8058f5, type: 3}
+  - {fileID: 8214906076472035208, guid: c8056b71d87ca0c4785059cd6e1d924f, type: 3}
