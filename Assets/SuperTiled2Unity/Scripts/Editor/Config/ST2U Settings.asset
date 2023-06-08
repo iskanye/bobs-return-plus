@@ -175,11 +175,8 @@ MonoBehaviour:
   - m_TypeName: Stone3
     m_Prefab: {fileID: 1455019094394122291, guid: 228c70dce9d30d44186323b9e919ffeb,
       type: 3}
-  - m_TypeName: TorchDurableFire
+  - m_TypeName: TorchFire
     m_Prefab: {fileID: 5535435404405552018, guid: 32204a6ca601d8348af44f6aa6b47c2b,
-      type: 3}
-  - m_TypeName: TorchDurableStick
-    m_Prefab: {fileID: 7260045406989680967, guid: 1a182e67227392242b0a40afa4342b01,
       type: 3}
   - m_TypeName: Vase1
     m_Prefab: {fileID: 1434721698671544534, guid: 0fea768e72fb3fd4d8c3c8f841b2a2c4,
@@ -231,4 +228,37 @@ MonoBehaviour:
       type: 3}
   - m_TypeName: MovingTowerUp
     m_Prefab: {fileID: 2279190153285008424, guid: 0c878ac5493e146418064be8d9307288,
+      type: 3}
+  - m_TypeName: SwingingBall
+    m_Prefab: {fileID: 1453411864877508260, guid: 84755c810addaf14bb4357c89e663081,
+      type: 3}
+  - m_TypeName: NecromancerStatue
+    m_Prefab: {fileID: 8616038684348512292, guid: a517fc86af9c8b74ba0bf1040c867ee3,
+      type: 3}
+  - m_TypeName: GiantGuillotineWallLeft
+    m_Prefab: {fileID: 3236287375723178329, guid: ccceb3f176aa0f740a5ef4e0e76c88ec,
+      type: 3}
+  - m_TypeName: GiantGuillotineWallRight
+    m_Prefab: {fileID: 5349775381142381633, guid: 78e0eff6a1e3a5744a7b33e871fcc43f,
+      type: 3}
+  - m_TypeName: GuillotineBlade
+    m_Prefab: {fileID: 7210686903385011169, guid: bea7884ca33085b43a6833a0a6094f48,
+      type: 3}
+  - m_TypeName: WoodenBarrelArrows
+    m_Prefab: {fileID: 3852689292089445605, guid: b9107f82cfb37fa4a8cecc9f139ff95b,
+      type: 3}
+  - m_TypeName: CircularsawRat
+    m_Prefab: {fileID: 8645662910301891568, guid: 851f3674f1c1ba8499cd55c331b97ae8,
+      type: 3}
+  - m_TypeName: TimeMachine
+    m_Prefab: {fileID: 8311383911098775483, guid: 566ce27662adde64db4847567b1655c1,
+      type: 3}
+  - m_TypeName: DeadButterfly
+    m_Prefab: {fileID: 6776503316386423761, guid: b1814cc5cf5a5c44981f531ade2a9431,
+      type: 3}
+  - m_TypeName: WoodenTabletStand
+    m_Prefab: {fileID: 2733844814677119022, guid: dcd20f57ac0b053489c49a5f8bdecfd8,
+      type: 3}
+  - m_TypeName: Morgenstern
+    m_Prefab: {fileID: 5122690901169739556, guid: 97b86048150ece948a5017bb031674f2,
       type: 3}

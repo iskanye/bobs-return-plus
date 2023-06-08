@@ -221,6 +221,8 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 64
+  spriteRenderers:
+  - {fileID: 2893966115065180239}
 --- !u!114 &4817855488781898449
 MonoBehaviour:
   m_ObjectHideFlags: 0

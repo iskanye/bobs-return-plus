@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2016516199, guid: 2325253460c376767b77cc247eec09a7, type: 3}
+  m_Sprite: {fileID: 1706916067, guid: 44ca47133c3215dcabd691d991bb700f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,9 +102,10 @@ MonoBehaviour:
   renderer: {fileID: 4704485350446708216}
   image: {fileID: 0}
   sprites:
-  - {fileID: -2016516199, guid: 2325253460c376767b77cc247eec09a7, type: 3}
-  - {fileID: -1818983544, guid: 2325253460c376767b77cc247eec09a7, type: 3}
+  - {fileID: 1706916067, guid: 44ca47133c3215dcabd691d991bb700f, type: 3}
+  - {fileID: -1121956179, guid: 44ca47133c3215dcabd691d991bb700f, type: 3}
   delay: 0.1
+  isAwake: 1
 --- !u!61 &4617284791547180819
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163,7 +164,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: -1457475998, guid: 2325253460c376767b77cc247eec09a7,
+          m_ObjectArgument: {fileID: 1175275241, guid: 44ca47133c3215dcabd691d991bb700f,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0

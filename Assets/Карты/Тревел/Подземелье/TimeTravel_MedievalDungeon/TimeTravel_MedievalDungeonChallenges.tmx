@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="1" nextlayerid="30" nextobjectid="467">
+<map version="1.10" tiledversion="1.10.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="1" nextlayerid="30" nextobjectid="467">
  <tileset firstgid="1" source="0_TimeTravel_Dungeon.tsx"/>
  <tileset firstgid="257" source="1_TimeTravel_Spinis.tsx"/>
  <tileset firstgid="293" source="0_TimeTravel_Vases.tsx"/>
@@ -1296,24 +1296,6 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
-   <chunk x="80" y="-48" width="16" height="16">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2684354878,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2684354878,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2684354878,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</chunk>
    <chunk x="16" y="-16" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -1610,6 +1592,24 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
+   <chunk x="48" y="-16" width="16" height="16">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,3758096702,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,3758096702,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,3758096702,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</chunk>
    <chunk x="32" y="0" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -1828,14 +1828,14 @@
   <object id="331" template="Bones4.tx" gid="2147484109" x="1103" y="436" rotation="0"/>
   <object id="332" template="Bones4.tx" gid="2147484109" x="1316" y="513.5" rotation="0"/>
   <object id="333" template="Bones5.tx" x="1184" y="603"/>
-  <object id="343" class="WoodenGeneralFivefingers" gid="514" x="1232" y="-32" width="96" height="96">
+  <object id="343" type="WoodenGeneralFivefingers" gid="514" x="1232" y="-32" width="96" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
   <object id="388" template="Bones2.tx" x="1259" y="259"/>
   <object id="389" template="Bones4.tx" x="1111" y="268.333"/>
-  <object id="404" class="StoneThorns" gid="453" x="1888" y="-288" width="32" height="32">
+  <object id="404" type="StoneThorns" gid="453" x="1888" y="-288" width="32" height="32">
    <properties>
     <property name="Durability" type="int" value="3"/>
    </properties>
@@ -1872,9 +1872,9 @@
   <object id="1" template="Vase1.tx" x="768" y="224"/>
   <object id="2" template="Vase3.tx" gid="295" x="864" y="256" rotation="0"/>
   <object id="10" template="WoodenChestGold.tx" x="832" y="-384"/>
-  <object id="12" template="LeverDungeonOFF.tx" class="LeverDungeonOFF" x="800" y="-448"/>
+  <object id="12" template="LeverDungeonOFF.tx" type="LeverDungeonOFF" x="800" y="-448"/>
   <object id="13" template="WoodenTabletStand.tx" x="928" y="64"/>
-  <object id="15" class="WoodenToilet" gid="342" x="1136" y="544" width="96" height="160">
+  <object id="15" type="WoodenToilet" gid="342" x="1136" y="544" width="96" height="160">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
@@ -1905,49 +1905,49 @@
   <object id="137" template="WoodenBarrel.tx" x="1504" y="-1792"/>
   <object id="139" template="CrossbowChargedDown.tx" x="1568" y="-1568"/>
   <object id="140" template="WoodPin2.tx" x="1600" y="-1344"/>
-  <object id="148" template="MovingTower.tx" class="MovingTower" x="1696" y="-1088"/>
+  <object id="148" template="MovingTower.tx" type="MovingTower" x="1696" y="-1088"/>
   <object id="149" template="MovingTower.tx" x="1728" y="-1088"/>
   <object id="150" template="MovingTower.tx" x="1664" y="-1088"/>
   <object id="154" template="MovingTower.tx" x="1728" y="-768"/>
   <object id="155" template="MovingTower.tx" x="1728" y="-800"/>
-  <object id="156" template="MovingTower.tx" class="MovingTower" x="1728" y="-832"/>
+  <object id="156" template="MovingTower.tx" type="MovingTower" x="1728" y="-832"/>
   <object id="157" template="MovingTower.tx" x="1824" y="-608"/>
   <object id="158" template="MovingTower.tx" x="1824" y="-640"/>
   <object id="159" template="MovingTower.tx" x="1824" y="-672"/>
-  <object id="160" template="MovingTower.tx" class="MovingTower" x="1536" y="-1088"/>
+  <object id="160" template="MovingTower.tx" type="MovingTower" x="1536" y="-1088"/>
   <object id="166" template="Vase2.tx" x="1472" y="-1312"/>
-  <object id="167" class="WarningTabletFront" gid="442" x="256" y="96" width="96" height="96">
+  <object id="167" type="WarningTabletFront" gid="442" x="256" y="96" width="96" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="168" class="WarningTabletBack" gid="443" x="256" y="288" width="96" height="96">
+  <object id="168" type="WarningTabletBack" gid="443" x="256" y="288" width="96" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="171" class="WarningArrowFront" gid="444" x="192" y="128" width="64" height="96">
+  <object id="171" type="WarningArrowFront" gid="444" x="192" y="128" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="172" class="WarningArrowFront" gid="2147484092" x="352" y="128" width="64" height="96">
+  <object id="172" type="WarningArrowFront" gid="2147484092" x="352" y="128" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="173" class="WarningArrowBack" gid="445" x="192" y="256" width="64" height="96">
+  <object id="173" type="WarningArrowBack" gid="445" x="192" y="256" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="176" class="WarningArrowBack" gid="2147484093" x="352" y="256" width="64" height="96">
+  <object id="176" type="WarningArrowBack" gid="2147484093" x="352" y="256" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="180" template="TorchFire.tx" class="TorchFire" x="160" y="160"/>
-  <object id="182" template="TorchFire.tx" class="TorchFire" x="416" y="160"/>
+  <object id="180" template="TorchFire.tx" type="TorchFire" x="160" y="160"/>
+  <object id="182" template="TorchFire.tx" type="TorchFire" x="416" y="160"/>
   <object id="183" template="TorchFire.tx" x="160" y="256"/>
   <object id="184" template="TorchFire.tx" x="416" y="256"/>
   <object id="185" template="TorchFire.tx" x="224" y="64"/>
@@ -1958,10 +1958,10 @@
   <object id="198" template="Stalagmite1.tx" x="544" y="288"/>
   <object id="200" template="TorchFire.tx" x="544" y="128"/>
   <object id="201" template="TorchFire.tx" x="640" y="288"/>
-  <object id="202" template="WoodenTabletStand.tx" x="736" y="160"/>
-  <object id="234" template="WoodenSignRight.tx" class="WoodenSignRight" x="736" y="384"/>
+  <object id="202" template="WoodenTabletStand.tx" type="WoodenTabletStand" x="736" y="160"/>
+  <object id="234" template="WoodenSignRight.tx" type="WoodenSignRight" x="736" y="384"/>
   <object id="237" gid="466" x="941" y="160" width="64" height="64"/>
-  <object id="254" class="Morgenstern" gid="2147484116" x="666.5" y="224.5" width="32" height="64">
+  <object id="254" type="Morgenstern" gid="2147484116" x="666.5" y="224.5" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="4"/>
    </properties>
@@ -1972,8 +1972,8 @@
    </properties>
   </object>
   <object id="258" template="PapyrusNotes.tx" x="768" y="-352"/>
-  <object id="277" class="StatueArchitect1" gid="473" x="704" y="-96" width="64" height="128"/>
-  <object id="278" class="StatueArchitect2" gid="474" x="960" y="-96" width="64" height="128"/>
+  <object id="277" type="StatueArchitect1" gid="473" x="704" y="-96" width="64" height="128"/>
+  <object id="278" type="StatueArchitect2" gid="474" x="960" y="-96" width="64" height="128"/>
   <object id="279" template="Stalagmite2.tx" x="928" y="-32"/>
   <object id="280" template="Stalagmite1.tx" x="768" y="-256"/>
   <object id="281" template="TorchFire.tx" x="736" y="0"/>
@@ -1990,88 +1990,88 @@
     <property name="Durability" type="int" value="0"/>
    </properties>
   </object>
-  <object id="289" class="WoodenTabletWarning" gid="479" x="1056" y="320" width="64" height="64">
+  <object id="289" type="WoodenTabletWarning" gid="479" x="1056" y="320" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="292" class="WoodenTabletToilet" gid="2147484128" x="1088" y="352" width="64" height="64">
+  <object id="292" type="WoodenTabletToilet" gid="2147484128" x="1088" y="352" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="294" class="WoodenTabletPie" gid="2147484129" x="1280" y="320" width="64" height="64">
+  <object id="294" type="WoodenTabletPie" gid="2147484129" x="1280" y="320" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="295" class="WoodenTabletWarning" gid="479" x="1248" y="352" width="64" height="64">
+  <object id="295" type="WoodenTabletWarning" gid="479" x="1248" y="352" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="296" class="WoodenTabletWarning" gid="479" x="928" y="544" width="64" height="64">
+  <object id="296" type="WoodenTabletWarning" gid="479" x="928" y="544" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="297" class="WoodenTabletWarning" gid="2147484127" x="1216" y="768" width="64" height="64">
+  <object id="297" type="WoodenTabletWarning" gid="2147484127" x="1216" y="768" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="298" class="WoodenTabletWarning" gid="2147484127" x="1408" y="576" width="64" height="64">
+  <object id="298" type="WoodenTabletWarning" gid="2147484127" x="1408" y="576" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
   <object id="299" template="WoodenFlagStand.tx" gid="2147484135" x="1364" y="257" rotation="0"/>
-  <object id="300" class="PuppetOnPole1" gid="498" x="1312" y="416" width="64" height="96">
+  <object id="300" type="PuppetOnPole1" gid="498" x="1312" y="416" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="304" class="PuppetOnPole3" gid="500" x="1301.67" y="656" width="64" height="96">
+  <object id="304" type="PuppetOnPole3" gid="500" x="1301.67" y="656" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="305" class="PuppetOnPole4" gid="501" x="1088" y="704" width="64" height="96">
+  <object id="305" type="PuppetOnPole4" gid="501" x="1088" y="704" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="306" class="PuppetOnPole1" gid="2147484146" x="1461" y="554" width="64" height="96">
+  <object id="306" type="PuppetOnPole1" gid="2147484146" x="1461" y="554" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="307" class="PuppetOnPole1" gid="2147484146" x="928" y="640" width="64" height="96">
+  <object id="307" type="PuppetOnPole1" gid="2147484146" x="928" y="640" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="308" class="PuppetOnPole1" gid="2147484146" x="1024" y="448" width="64" height="96">
+  <object id="308" type="PuppetOnPole1" gid="2147484146" x="1024" y="448" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="309" class="PuppetOnPole2" gid="2147484147" x="1415" y="487" width="64" height="96">
+  <object id="309" type="PuppetOnPole2" gid="2147484147" x="1415" y="487" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="310" class="PuppetOnPole2" gid="499" x="1035.5" y="633.5" width="64" height="96">
+  <object id="310" type="PuppetOnPole2" gid="499" x="1035.5" y="633.5" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="313" class="PuppetOnPole3" gid="500" x="896" y="512" width="64" height="96">
+  <object id="313" type="PuppetOnPole3" gid="500" x="896" y="512" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="316" class="PuppetOnPole2" gid="499" x="1263" y="711" width="64" height="96">
+  <object id="316" type="PuppetOnPole2" gid="499" x="1263" y="711" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
@@ -2089,39 +2089,39 @@
   <object id="340" template="Candle2Fire.tx" x="1152" y="704"/>
   <object id="341" template="Candle2Fire.tx" x="1376" y="544"/>
   <object id="344" gid="518" x="1408" y="-64" width="32" height="64"/>
-  <object id="345" class="BannerArrow" gid="519" x="1408" y="-128" width="32" height="64">
+  <object id="345" type="BannerArrow" gid="519" x="1408" y="-128" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="1"/>
    </properties>
   </object>
-  <object id="346" class="BannerArrow" gid="519" x="1312" y="-128" width="32" height="64">
+  <object id="346" type="BannerArrow" gid="519" x="1312" y="-128" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="1"/>
    </properties>
   </object>
   <object id="359" template="CrossbowChargedDown.tx" x="1472" y="-416"/>
   <object id="361" template="WoodenBarrelArrows.tx" x="1344" y="-352"/>
-  <object id="362" class="BannerArrow" gid="519" x="1504" y="-544" width="32" height="64">
+  <object id="362" type="BannerArrow" gid="519" x="1504" y="-544" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="1"/>
    </properties>
   </object>
-  <object id="367" template="CrossbowChargedRight.tx" class="CrossbowChargedRight" x="1664" y="-576"/>
-  <object id="368" template="CrossbowChargedLeft.tx" class="CrossbowChargedLeft" x="1824" y="-512"/>
+  <object id="367" template="CrossbowChargedRight.tx" type="CrossbowChargedRight" x="1664" y="-576"/>
+  <object id="368" template="CrossbowChargedLeft.tx" type="CrossbowChargedLeft" x="1824" y="-512"/>
   <object id="369" template="CrossbowChargedUp.tx" x="1600" y="-256"/>
   <object id="377" template="CrossbowChargedLeft.tx" x="1824" y="-640"/>
   <object id="378" template="CrossbowChargedLeft.tx" x="1824" y="-672"/>
   <object id="379" template="CrossbowChargedLeft.tx" x="1824" y="-704"/>
   <object id="380" template="CrossbowChargedRight.tx" x="1664" y="-800"/>
-  <object id="381" template="CrossbowChargedRight.tx" class="CrossbowChargedRight" x="1664" y="-832"/>
+  <object id="381" template="CrossbowChargedRight.tx" type="CrossbowChargedRight" x="1664" y="-832"/>
   <object id="382" template="CrossbowChargedRight.tx" x="1664" y="-864"/>
   <object id="385" template="CrossbowChargedRight.tx" x="1472" y="-1120"/>
-  <object id="386" class="WoodenTargetWall1" gid="522" x="1344" y="-416" width="64" height="64">
+  <object id="386" type="WoodenTargetWall1" gid="522" x="1344" y="-416" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="387" class="WoodenTargetWall1" gid="523" x="1413" y="-402" width="64" height="64">
+  <object id="387" type="WoodenTargetWall1" gid="523" x="1413" y="-402" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
@@ -2135,7 +2135,7 @@
   <object id="401" template="Candle1Fire.tx" x="1149" y="226"/>
   <object id="402" template="Candle2Fire.tx" x="1216" y="252"/>
   <object id="403" template="Candle2Fire.tx" x="1587" y="-317"/>
-  <object id="405" class="StatueArrowWithBow" gid="524" x="1728" y="-321.667" width="128" height="96">
+  <object id="405" type="StatueArrowWithBow" gid="524" x="1728" y="-321.667" width="128" height="96">
    <properties>
     <property name="Durability" type="int" value="4"/>
    </properties>
@@ -2155,56 +2155,56 @@
   <object id="444" template="WoodenTablet.tx" x="1536" y="-1376"/>
   <object id="445" gid="550" x="2040" y="-896" width="32" height="64"/>
   <object id="446" gid="549" x="1992" y="-896" width="32" height="64"/>
-  <object id="447" template="Candle1.tx" class="Candle1" x="1987" y="-814"/>
-  <object id="448" template="Candle2.tx" class="Candle2" x="2006" y="-831"/>
-  <object id="449" class="SpearArrow" gid="525" x="1696" y="-1056" width="32" height="64">
+  <object id="447" template="Candle1.tx" type="Candle1" x="1987" y="-814"/>
+  <object id="448" template="Candle2.tx" type="Candle2" x="2006" y="-831"/>
+  <object id="449" type="SpearArrow" gid="525" x="1696" y="-1056" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="450" class="SpearArrow" gid="525" x="1632" y="-1056" width="32" height="64">
+  <object id="450" type="SpearArrow" gid="525" x="1632" y="-1056" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="451" class="SpearArrow" gid="525" x="1568" y="-1056" width="32" height="64">
+  <object id="451" type="SpearArrow" gid="525" x="1568" y="-1056" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="452" template="WoodenSignRight.tx" class="WoodenSignRight" gid="2147484113" x="1824" y="-1120" rotation="0"/>
-  <object id="454" class="SpearArrow" gid="525" x="1408" y="-1376" width="32" height="64">
+  <object id="452" template="WoodenSignRight.tx" type="WoodenSignRight" gid="2147484113" x="1824" y="-1120" rotation="0"/>
+  <object id="454" type="SpearArrow" gid="525" x="1408" y="-1376" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="455" class="SpearArrow" gid="525" x="1408" y="-1472" width="32" height="64">
+  <object id="455" type="SpearArrow" gid="525" x="1408" y="-1472" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="456" class="SpearArrow" gid="525" x="1664" y="-1376" width="32" height="64">
+  <object id="456" type="SpearArrow" gid="525" x="1664" y="-1376" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="457" class="SpearArrow" gid="525" x="1664" y="-1472" width="32" height="64">
+  <object id="457" type="SpearArrow" gid="525" x="1664" y="-1472" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="460" class="PuppetOnPole2" gid="499" x="1408" y="-1760" width="64" height="96">
+  <object id="460" type="PuppetOnPole2" gid="499" x="1408" y="-1760" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
-  <object id="461" class="PuppetOnPole3" gid="500" x="1632" y="-1760" width="64" height="96">
+  <object id="461" type="PuppetOnPole3" gid="500" x="1632" y="-1760" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="2"/>
    </properties>
   </object>
   <object id="465" gid="555" x="1502" y="-1756" width="32" height="32"/>
-  <object id="466" class="StatueTroll" gid="411" x="1952" y="-832" width="96" height="64">
+  <object id="466" type="StatueTroll" gid="411" x="1952" y="-832" width="96" height="64">
    <properties>
     <property name="Durability" type="int" value="3"/>
    </properties>
@@ -2320,6 +2320,24 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
+   <chunk x="0" y="-16" width="16" height="16">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+308,308,308,308,0,0,0,0,0,0,0,0,0,0,0,0,
+308,308,308,308,0,0,0,0,0,0,0,0,0,0,0,0
+</chunk>
    <chunk x="32" y="-16" width="16" height="16">
 0,0,0,0,0,0,0,0,0,1,2,2,2,21,0,0,
 0,0,0,0,0,0,0,0,0,17,0,0,0,0,0,0,
@@ -2378,6 +2396,42 @@
  </layer>
  <layer id="4" name="RoofShadow" width="30" height="20">
   <data encoding="csv">
+   <chunk x="80" y="-48" width="16" height="16">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2684354878,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2684354878,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2684354878,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2684354878,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</chunk>
+   <chunk x="96" y="-48" width="16" height="16">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+308,308,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+308,308,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+308,308,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+308,308,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</chunk>
    <chunk x="16" y="-32" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2415,10 +2469,10 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="48" y="-16" width="16" height="16">
-0,0,2684354878,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,2684354878,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,2684354878,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,2684354878,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,3758096702,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

@@ -174,6 +174,9 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 64
+  spriteRenderers:
+  - {fileID: 7305885159702715409}
+  - {fileID: 8898456913936038124}
 --- !u!114 &7828262752020187085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,8 +286,6 @@ GameObject:
   - component: {fileID: 8023535032040684066}
   - component: {fileID: 5794961481299227792}
   - component: {fileID: 468717334155207670}
-  - component: {fileID: 8617819714936782975}
-  - component: {fileID: 2862229073257342926}
   m_Layer: 0
   m_Name: "\u0414\u0432\u0435\u0440\u044C \u043C\u0435\u0445\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F"
   m_TagString: Untagged
@@ -356,60 +357,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 0.25}
   m_EdgeRadius: 0
---- !u!114 &8617819714936782975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9046007424359457159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38a87426f22708f4ebe42aefbb90ed8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 
-  isLocal: 1
-  invokeOnUpdate: 0
-  action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2862229073257342926}
-        m_TargetAssemblyTypeName: BooleanAction, Assembly-CSharp
-        m_MethodName: Action
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &2862229073257342926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9046007424359457159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb2d6f576747d3a4793b90c3a6ceb611, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5794961481299227792}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Open
-          m_BoolArgument: 0
-        m_CallState: 2

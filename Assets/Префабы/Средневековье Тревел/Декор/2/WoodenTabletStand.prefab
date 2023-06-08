@@ -190,7 +190,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f5de1025c26fad98bdfedd3de193a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToDestroy: {fileID: 0}
+  objectsToDestroy:
+  - {fileID: 0}
 --- !u!114 &-5663843200492802465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +217,7 @@ GameObject:
   - component: {fileID: 1593325820112842639}
   - component: {fileID: 6669025633589585655}
   - component: {fileID: 2589686404195716406}
+  - component: {fileID: 474505479504162015}
   m_Layer: 3
   m_Name: Trigger
   m_TagString: Untagged
@@ -268,7 +270,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   action:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 474505479504162015}
+        m_TargetAssemblyTypeName: UninteractiveDialogueActivator, Assembly-CSharp
+        m_MethodName: Dialogue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   playerMask:
     serializedVersion: 2
     m_Bits: 64
+  spriteRenderers:
+  - {fileID: 2733844814677119019}
+--- !u!114 &474505479504162015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4182478123013501783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c152e1fdb2e885002ae3a9595bcc9666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues: {fileID: 0}
+  events: []

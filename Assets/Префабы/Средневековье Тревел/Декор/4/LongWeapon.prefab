@@ -117,6 +117,8 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 64
+  spriteRenderers:
+  - {fileID: 608141711845816766}
 --- !u!1 &4192583138486121502
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +194,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1466082449, guid: 2325253460c376767b77cc247eec09a7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ad01afc6beafb2a9ba1e1d6714a66502, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

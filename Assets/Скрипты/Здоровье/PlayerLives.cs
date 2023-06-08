@@ -126,7 +126,9 @@ public class PlayerLives : LivesBase
     {
         bob.data.movement.Disable();
         bob.data.rigidbody.AddForce(hitDirection, ForceMode2D.Impulse);
-        yield return new WaitForSeconds(hitDuration);    
-        bob.data.movement.Enable();
+        yield return new WaitForSeconds(hitDuration);  
+
+        if (DialogueSystem.Active.state is Dialogues.IdleState)  
+            bob.data.movement.Enable();
     }
 }

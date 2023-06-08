@@ -58,8 +58,7 @@ namespace Dialogues
             mn.current = mn.dialogues[mn.index];
             mn.character.text = mn.current.character;
 
-            if (mn.current.action != null)
-                mn.current.action.Invoke(mn.obj);
+            mn.current.action?.Invoke(mn.obj);
 
             mn.novelAnimator.SetBool("Novel", mn.current.dialogueCharacter != null);
             ((RectTransform)mn.text.transform).anchoredPosition = mn.current.dialogueCharacter != null ? new Vector2(-64, -6) : new Vector2(0, -6);

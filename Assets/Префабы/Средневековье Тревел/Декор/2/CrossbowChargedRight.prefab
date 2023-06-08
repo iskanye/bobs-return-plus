@@ -357,7 +357,7 @@ MonoBehaviour:
   bulletDiscarding: 8
   detectionArea: {x: 2.5, y: 0.5}
   direction: {x: 1, y: 0}
-  bulletOffset: {x: 1, y: 0.71875}
+  bulletOffset: {x: 0.5625, y: 0.71875}
   offset: {x: 0, y: 0}
   player:
     serializedVersion: 2

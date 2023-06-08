@@ -235,6 +235,10 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 64
+  spriteRenderers:
+  - {fileID: 8449546055959385503}
+  - {fileID: 6708089153821750994}
+  selectedBrightness: 0.8
 --- !u!114 &6504018021534555483
 MonoBehaviour:
   m_ObjectHideFlags: 0

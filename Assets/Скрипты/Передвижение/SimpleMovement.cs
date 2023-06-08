@@ -4,11 +4,11 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class SimpleMovement : BaseMovement
 {
-    public Vector2 endPoint;
+    public Vector2[] path = new Vector2[1];
     public float startDelay = -1;
+    public float delay;
     public bool repeat;
-    public float repeatDelay;
-    public float stopRadius = .1f;
+    public float changePointRadius = .1f;
 
     [HideInInspector] public Vector2 startPoint;
     [HideInInspector] public Rigidbody2D rigid;
@@ -29,8 +29,17 @@ public class SimpleMovement : BaseMovement
     void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawLine(transform.position, (Vector3)endPoint);
-        Gizmos.DrawWireSphere((Vector3)endPoint, .1f);
+        var prevPoint = transform.position;
+
+        for (int i = 0; i < path.Length; i++) 
+        {       
+            Gizmos.DrawLine(prevPoint, path[i]);
+            Gizmos.DrawWireSphere(path[i], .1f);
+            prevPoint = path[i];
+        }
+
+        if (repeat)
+            Gizmos.DrawLine(path[^1], path[0]);
     }
 
     public void ChangeState(State<SimpleMovement> state) 
@@ -57,32 +66,39 @@ public class MoveState : State<SimpleMovement>
 
     public override IEnumerator Update() 
     {
-        mn.IsWalking = true;
+        mn.IsWalking = true;        
+        Vector2 prevPoint = mn.transform.position;
+        var currPoint = 0;
 
         while (true) 
         {
-            mn.Direction = (mn.endPoint - (Vector2)mn.transform.position).normalized;
+            mn.Direction = (mn.path[currPoint] - prevPoint).normalized;
             mn.rigid.velocity = mn.Direction * mn.speed;
 
-            if ((mn.endPoint - (Vector2)mn.transform.position).magnitude <= mn.stopRadius) 
+            if ((mn.path[currPoint] - (Vector2)mn.transform.position).magnitude <= mn.changePointRadius) 
+            {
+                prevPoint = mn.path[currPoint];
+                currPoint++;
+                
+                mn.IsWalking = false;
+                yield return new WaitForSeconds(mn.delay);
+                mn.IsWalking = true;
+            }
+
+            if (currPoint == mn.path.Length)
             {
                 if (mn.repeat)
-                {
-                    mn.IsWalking = false;
-                    yield return new WaitForSeconds(mn.repeatDelay);
-                    mn.IsWalking = true;
+                    currPoint = 0;
 
-                    (mn.startPoint, mn.endPoint) = (mn.endPoint, mn.startPoint);
-                }
                 else
                 {
                     mn.rigid.velocity = Vector2.zero;
-                    mn.StopMove();
                     mn.IsWalking = false;
+                    mn.StopMove();
                 }
             }
 
-            yield return base.Update();
+            yield return new WaitForFixedUpdate();
         }
     }
 }

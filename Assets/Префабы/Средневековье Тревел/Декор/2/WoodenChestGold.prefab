@@ -77,19 +77,6 @@ MonoBehaviour:
   action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7945396177919602926}
-        m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
-        m_MethodName: set_sprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1329074504, guid: 04a9f165715b4be50973c7734c486fc3,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 457372324949645382}
         m_TargetAssemblyTypeName: PropertyHolder, Assembly-CSharp
         m_MethodName: set_property
@@ -102,21 +89,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 7764937877672414439}
-        m_TargetAssemblyTypeName: ChangeActionBaseEvent, Assembly-CSharp
-        m_MethodName: Change
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   playerMask:
     serializedVersion: 2
     m_Bits: 64
+  spriteRenderers:
+  - {fileID: 7945396177919602926}
 --- !u!114 &7764937877672414439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,6 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3895f675-7233-44bd-8aa9-8e21eb98649c
+  isLocal: 1
+  invokeOnUpdate: 1
   action:
     m_PersistentCalls:
       m_Calls:

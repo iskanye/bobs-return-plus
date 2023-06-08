@@ -90,6 +90,8 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 64
+  spriteRenderers:
+  - {fileID: 7050667005365243753}
 --- !u!1 &7050667005365243755
 GameObject:
   m_ObjectHideFlags: 0

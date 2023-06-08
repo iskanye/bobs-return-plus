@@ -86,7 +86,7 @@ PrefabInstance:
     - target: {fileID: 4786315318207958364, guid: 713284b0af6aeb6439079fc77680a3da,
         type: 3}
       propertyPath: bulletOffset.x
-      value: -1
+      value: -0.53125
       objectReference: {fileID: 0}
     - target: {fileID: 5592297322059243411, guid: 713284b0af6aeb6439079fc77680a3da,
         type: 3}

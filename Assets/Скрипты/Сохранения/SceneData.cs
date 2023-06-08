@@ -6,7 +6,6 @@ using System.Linq;
 
 public class SceneData : MonoBehaviour
 {
-    public InputActionAsset actions;
     public TMPro.TMP_Text savingText;
 
     public static SaveData Data { get; private set; }
@@ -19,9 +18,6 @@ public class SceneData : MonoBehaviour
     IntegerHolder[] integers;
     PlayerLiveCounter lives;
     InventorySystem inventory;
-
-    void OnDisable() => 
-        PlayerPrefs.SetString("rebinds", actions.SaveBindingOverridesAsJson());
 
     void Awake()
     {
@@ -38,14 +34,27 @@ public class SceneData : MonoBehaviour
         }
         
         OnPropertySet = new Dictionary<string, List<UnityEngine.Events.UnityEvent<bool>>>();
-        Data = SaveLoad.Load();
-        UnityEngine.SceneManagement.SceneManager.sceneLoaded += (i, j) => Start();
-        UnityEngine.SceneManagement.SceneManager.sceneUnloaded += i => 
-        { 
-            OnPropertySet.Clear();
-            OnDisable();
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded += (i, j) => 
+        {
+            Start();
+            Load();
         };
+        UnityEngine.SceneManagement.SceneManager.sceneUnloaded += i => OnPropertySet.Clear();
+        Load();
+    }
 
+    void Start()
+    {     
+        positions = FindObjectsOfType<PositionHolder>();
+        integers = FindObjectsOfType<IntegerHolder>();
+        lives = PlayerLiveCounter.Active;
+        inventory = FindObjectOfType<InventorySystem>();
+    }
+
+    void Load()
+    {
+        Data = SaveLoad.Load();
+        
         if (Data.version != SaveData.currentVersion)
             Data = new SaveData();
 
@@ -56,17 +65,6 @@ public class SceneData : MonoBehaviour
             Data.integers = new List<Property<int>>();
             Data.inventory = new List<GuidItem>();
         }
-    }
-
-    void Start()
-    {
-        if (PlayerPrefs.HasKey("rebinds"))
-            actions.LoadBindingOverridesFromJson(PlayerPrefs.GetString("rebinds"));
-
-        positions = FindObjectsOfType<PositionHolder>();
-        integers = FindObjectsOfType<IntegerHolder>();
-        lives = PlayerLiveCounter.Active;
-        inventory = FindObjectOfType<InventorySystem>();
     }
 
     public static bool HasProperty(string id, bool local = true) => 

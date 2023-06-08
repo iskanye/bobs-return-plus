@@ -363,6 +363,9 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 64
+  spriteRenderers:
+  - {fileID: 3213385471063742407}
+  selectedBrightness: 0.8
 --- !u!114 &1652833160501656711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,9 +398,9 @@ MonoBehaviour:
   - action:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7723929677295489592}
-          m_TargetAssemblyTypeName: UninteractiveDialogueActivator, Assembly-CSharp
-          m_MethodName: Dialogue
+        - m_Target: {fileID: 2444984559839742877}
+          m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
+          m_MethodName: Damage
           m_Mode: 0
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -407,9 +410,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 2444984559839742877}
-          m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
-          m_MethodName: Damage
+        - m_Target: {fileID: 7723929677295489592}
+          m_TargetAssemblyTypeName: UninteractiveDialogueActivator, Assembly-CSharp
+          m_MethodName: Dialogue
           m_Mode: 0
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

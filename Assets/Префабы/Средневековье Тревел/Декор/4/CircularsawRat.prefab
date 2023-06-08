@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8645662910301891567}
   - component: {fileID: 8645662910301891564}
   - component: {fileID: 2563788366061590210}
+  - component: {fileID: 2439525939908976567}
   m_Layer: 0
   m_Name: CircularsawRat
   m_TagString: Untagged
@@ -120,12 +121,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa9fb69a6493ef5c1a29160e498ab49e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  endPoint: {x: 0, y: 0}
+  speed: 4
+  path:
+  - {x: 0, y: 0}
   startDelay: 0
+  delay: 0
   repeat: 1
-  repeatDelay: 1
+  changePointRadius: 0.2
   startPoint: {x: 0, y: 0}
+  rigid: {fileID: 0}
 --- !u!114 &2563788366061590210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +143,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingObject: {fileID: 8645662910301891564}
+--- !u!50 &2439525939908976567
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8645662910301891568}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &8645662911373202267
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,10 +272,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38800a2039edd038e9e86734df54c917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls: []
   damage: 1
   isDeadly: 0
   addPersistentListener: 0
   directionBasedOnVelocity: 0
   penetrating: 1
+  onlyThisPenetratingType: 0
   discarding: 3
   direction: {x: 0, y: 0}

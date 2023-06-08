@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="1" nextlayerid="30" nextobjectid="595">
+<map version="1.10" tiledversion="1.10.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="1" nextlayerid="30" nextobjectid="595">
  <tileset firstgid="1" source="0_TimeTravel_Dungeon.tsx"/>
  <tileset firstgid="257" source="1_TimeTravel_Spinis.tsx"/>
  <tileset firstgid="293" source="0_TimeTravel_Vases.tsx"/>
@@ -46,14 +46,14 @@
  <tileset firstgid="549" source="0_TimeTravel_Banners2.tsx"/>
  <tileset firstgid="554" source="0_TimeTravel_OilLamp.tsx"/>
  <tileset firstgid="557" source="0_InvisibleWall.tsx"/>
- <tileset firstgid="560" source="0_TimeTravel_FakeStones.tsx"/>
- <tileset firstgid="564" source="TimeMachine.tsx"/>
- <tileset firstgid="565" source="0_TimeTravel_BarrelCheese.tsx"/>
- <tileset firstgid="568" source="0_TimeTravel_BarrelDrum.tsx"/>
- <tileset firstgid="569" source="0_TimeTravel_FlimsyDecor.tsx"/>
- <tileset firstgid="572" source="0_TimeTravel_Mannequin.tsx"/>
- <tileset firstgid="578" source="0_TimeTravel_BannerStand.tsx"/>
- <tileset firstgid="580" source="0_TimeTravel_WallDecor.tsx"/>
+ <tileset firstgid="563" source="0_TimeTravel_FakeStones.tsx"/>
+ <tileset firstgid="567" source="TimeMachine.tsx"/>
+ <tileset firstgid="568" source="0_TimeTravel_BarrelCheese.tsx"/>
+ <tileset firstgid="571" source="0_TimeTravel_BarrelDrum.tsx"/>
+ <tileset firstgid="572" source="0_TimeTravel_FlimsyDecor.tsx"/>
+ <tileset firstgid="575" source="0_TimeTravel_Mannequin.tsx"/>
+ <tileset firstgid="581" source="0_TimeTravel_BannerStand.tsx"/>
+ <tileset firstgid="583" source="0_TimeTravel_WallDecor.tsx"/>
  <layer id="1" name="Floor" width="30" height="20">
   <data encoding="csv">
    <chunk x="16" y="-32" width="16" height="16">
@@ -69,7 +69,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-308,308,308,308,308,308,308,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,114,114,114,114,114,0,0,0,0,0,0,0,0,0,0,
 0,0,114,114,114,0,0,0,0,0,0,0,0,0,0,0,
 0,0,114,117,118,0,0,0,0,0,0,0,0,0,0,0
@@ -125,31 +125,6 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</chunk>
-  </data>
- </layer>
- <layer id="23" name="FloorDecor" width="30" height="20">
-  <data encoding="csv"/>
- </layer>
- <layer id="6" name="FloorShadow" width="30" height="20">
-  <data encoding="csv">
-   <chunk x="16" y="-32" width="16" height="16">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,317,317,317,317,317,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
@@ -213,9 +188,6 @@
 </chunk>
   </data>
  </layer>
- <layer id="12" name="Spikes" width="30" height="20">
-  <data encoding="csv"/>
- </layer>
  <objectgroup id="10" name="ObjectsFloor">
   <object id="585" template="Bones1.tx" x="640" y="-544"/>
   <object id="586" template="Bones2.tx" x="597" y="-457"/>
@@ -228,18 +200,18 @@
   <object id="594" template="Bones3.tx" gid="2147484108" x="596" y="-417" rotation="0"/>
  </objectgroup>
  <objectgroup id="9" name="Objects">
-  <object id="469" class="FakeStatue1" gid="560" x="-96" y="-288" width="32" height="64">
+  <object id="469" type="FakeStatue1" gid="563" x="-96" y="-288" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="3"/>
    </properties>
   </object>
-  <object id="470" class="FakeStatue2_1" gid="561" x="128" y="-280" width="32" height="64">
+  <object id="470" type="FakeStatue2_1" gid="564" x="128" y="-280" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="3"/>
    </properties>
   </object>
-  <object id="471" gid="564" x="385" y="-271" width="96" height="96"/>
-  <object id="473" class="FakeStatue3" gid="563" x="160" y="-320" width="32" height="64">
+  <object id="471" gid="567" x="385" y="-271" width="96" height="96"/>
+  <object id="473" type="FakeStatue3" gid="566" x="160" y="-320" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="3"/>
    </properties>
@@ -255,21 +227,21 @@
   <object id="494" template="WoodenBarrelPoisonClosed.tx" x="224" y="-320"/>
   <object id="495" template="WoodenBarrelSpikes.tx" x="32" y="-320"/>
   <object id="501" template="WoodenBarrelArrows.tx" x="-128" y="-320"/>
-  <object id="510" template="WoodenBarrelCheeseClosed.tx" class="WoodenBarrelCheeseClosed" x="-288" y="-320"/>
+  <object id="510" template="WoodenBarrelCheeseClosed.tx" type="WoodenBarrelCheeseClosed" x="-288" y="-320"/>
   <object id="512" template="WoodenBarrelCheeseClosed.tx" x="64" y="-256"/>
   <object id="513" template="WoodenBarrelCheeseClosed.tx" x="320" y="-256"/>
-  <object id="515" gid="568" x="416" y="-256" width="96" height="64"/>
-  <object id="516" template="HayBundle.tx" class="HayBundle" x="416" y="-320"/>
-  <object id="517" template="HaySheaf.tx" class="HaySheaf" x="352" y="-320"/>
-  <object id="522" template="Mannequin1.tx" class="Mannequin1" x="96" y="-320"/>
-  <object id="523" template="Mannequin2.tx" class="Mannequin2" x="-32" y="-320"/>
-  <object id="524" class="MannequinPlague" gid="575" x="256" y="-320" width="32" height="64">
+  <object id="515" gid="571" x="416" y="-256" width="96" height="64"/>
+  <object id="516" template="HayBundle.tx" type="HayBundle" x="416" y="-320"/>
+  <object id="517" template="HaySheaf.tx" type="HaySheaf" x="352" y="-320"/>
+  <object id="522" template="Mannequin1.tx" type="Mannequin1" x="96" y="-320"/>
+  <object id="523" template="Mannequin2.tx" type="Mannequin2" x="-32" y="-320"/>
+  <object id="524" type="MannequinPlague" gid="578" x="256" y="-320" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="1"/>
    </properties>
   </object>
-  <object id="527" template="Mannequin1.tx" gid="2147484225" x="32" y="-256" rotation="0"/>
-  <object id="528" template="Mannequin2.tx" gid="2147484224" x="224" y="-288" rotation="0"/>
+  <object id="527" template="Mannequin1.tx" gid="2147484228" x="32" y="-256" rotation="0"/>
+  <object id="528" template="Mannequin2.tx" gid="2147484227" x="224" y="-288" rotation="0"/>
   <object id="529" template="Mannequin2.tx" x="352" y="-256"/>
   <object id="531" template="Vase1.tx" x="-288" y="-256"/>
   <object id="532" template="Vase1.tx" x="64" y="-320"/>
@@ -277,26 +249,26 @@
   <object id="534" template="Vase2.tx" x="-32" y="-256"/>
   <object id="535" template="Vase2.tx" x="-256" y="-256"/>
   <object id="536" template="Vase3.tx" x="-64" y="-320"/>
-  <object id="552" template="HayBundle.tx" class="HayBundle" x="448" y="-320"/>
-  <object id="553" template="HayBundle.tx" class="HayBundle" x="384" y="-320"/>
-  <object id="554" class="BannerStandPoison" gid="578" x="-160" y="-320" width="32" height="64">
+  <object id="552" template="HayBundle.tx" type="HayBundle" x="448" y="-320"/>
+  <object id="553" template="HayBundle.tx" type="HayBundle" x="384" y="-320"/>
+  <object id="554" type="BannerStandPoison" gid="581" x="-160" y="-320" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="4"/>
    </properties>
   </object>
   <object id="555" template="WoodenBarrelPoisonClosed.tx" x="-192" y="-320"/>
   <object id="556" template="Vase1.tx" gid="2147483941" x="-64" y="-288" rotation="0"/>
-  <object id="557" class="PictureManVsRat" gid="585" x="-96" y="-384" width="64" height="64">
+  <object id="557" type="PictureManVsRat" gid="588" x="-96" y="-384" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="1"/>
    </properties>
   </object>
-  <object id="558" class="PictureAssassin" gid="586" x="416" y="-384" width="64" height="64">
+  <object id="558" type="PictureAssassin" gid="589" x="416" y="-384" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="1"/>
    </properties>
   </object>
-  <object id="559" class="PicturePiedPiper" gid="587" x="64" y="-384" width="64" height="64">
+  <object id="559" type="PicturePiedPiper" gid="590" x="64" y="-384" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="1"/>
    </properties>
@@ -309,27 +281,27 @@
   <object id="569" template="ChainsTop.tx" x="0" y="-416"/>
   <object id="570" template="ChainsTop.tx" x="160" y="-416"/>
   <object id="571" template="ChainsTop.tx" x="320" y="-416"/>
-  <object id="572" class="BannerPoison" gid="551" x="-224" y="-384" width="32" height="64">
+  <object id="572" type="BannerPoison" gid="551" x="-224" y="-384" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="1"/>
    </properties>
   </object>
-  <object id="574" class="BannerCrystal" gid="553" x="-288" y="-384" width="32" height="64">
+  <object id="574" type="BannerCrystal" gid="553" x="-288" y="-384" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="1"/>
    </properties>
   </object>
-  <object id="577" class="BannerCheese" gid="552" x="224" y="-384" width="32" height="64">
+  <object id="577" type="BannerCheese" gid="552" x="224" y="-384" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="1"/>
    </properties>
   </object>
-  <object id="579" class="BannerCheese" gid="552" x="256" y="-384" width="32" height="64">
+  <object id="579" type="BannerCheese" gid="552" x="256" y="-384" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="1"/>
    </properties>
   </object>
-  <object id="581" class="BannerCrystal" gid="553" x="384" y="-384" width="32" height="64">
+  <object id="581" type="BannerCrystal" gid="553" x="384" y="-384" width="32" height="64">
    <properties>
     <property name="Durability" type="int" value="1"/>
    </properties>
@@ -425,15 +397,33 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+308,308,308,308,308,308,308,0,0,0,0,0,0,0,0,0,
+308,308,308,308,308,308,308,0,0,0,0,0,0,0,0,0,
+318,318,318,318,318,318,318,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</chunk>
+   <chunk x="-16" y="-16" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-316,0,0,0,0,0,316,0,0,0,0,0,0,0,0,0,
+0,308,308,1610613054,0,0,0,0,0,0,0,0,0,0,0,0,
+0,308,308,1610613054,0,0,0,0,0,0,0,0,0,0,0,0,
+0,308,308,1610613054,0,0,0,0,0,0,0,0,0,0,0,0,
+0,308,308,1610613054,0,0,0,0,0,0,0,0,0,0,0,0,
+0,308,308,1610613054,0,0,0,0,0,0,0,0,0,0,0,0,
+0,308,308,1610613054,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
   </data>
  </layer>
- <layer id="27" name="BARRIER_GROUND" width="30" height="20" visible="0">
+ <layer id="27" name="BARRIER_GROUND" width="30" height="20" opacity="0">
   <data encoding="csv">
    <chunk x="16" y="-32" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -447,22 +437,22 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-557,557,557,557,557,557,557,0,0,0,0,0,0,0,0,0,
+0,557,557,557,557,557,0,0,0,0,0,0,0,0,0,0,
 557,0,0,0,0,0,557,0,0,0,0,0,0,0,0,0,
 557,0,0,0,0,0,557,0,0,0,0,0,0,0,0,0,
-557,557,0,0,0,557,557,0,0,0,0,0,0,0,0,0,
+0,557,0,0,0,557,0,0,0,0,0,0,0,0,0,0,
 0,557,0,0,0,557,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="-16" y="-16" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,557,557,557,557,557,557,557,557,557,557,557,
-0,0,0,557,557,557,557,0,0,0,0,0,0,0,0,0,
-0,0,0,557,0,557,557,0,0,0,0,0,0,0,0,0,
-0,0,0,557,0,557,557,557,557,557,557,557,557,557,557,557,
-0,0,557,557,557,557,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,557,557,557,557,557,557,557,557,557,557,
+0,0,0,557,557,557,0,0,0,0,0,0,0,0,0,0,
 0,0,557,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,557,557,557,557,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,557,557,557,557,557,557,557,557,557,557,557,
+0,0,0,557,557,557,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,557,557,557,557,557,557,557,557,557,557,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -473,9 +463,9 @@
 </chunk>
    <chunk x="0" y="-16" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-557,557,557,557,557,557,557,557,557,557,557,557,557,557,557,557,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,557,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 557,557,557,557,557,557,557,557,557,557,557,557,557,557,557,557,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -491,14 +481,14 @@
 </chunk>
    <chunk x="16" y="-16" width="16" height="16">
 0,557,0,0,0,557,0,0,0,0,0,0,0,0,0,0,
-557,557,0,0,0,557,0,0,0,0,0,0,0,0,0,0,
-557,557,0,0,0,557,0,0,0,0,0,0,0,0,0,0,
-557,557,0,0,0,557,0,0,0,0,0,0,0,0,0,0,
-557,557,0,0,0,557,0,0,0,0,0,0,0,0,0,0,
+0,557,0,0,0,557,0,0,0,0,0,0,0,0,0,0,
+0,557,0,0,0,557,0,0,0,0,0,0,0,0,0,0,
+0,557,0,0,0,557,0,0,0,0,0,0,0,0,0,0,
+0,557,0,0,0,557,0,0,0,0,0,0,0,0,0,0,
 557,557,0,0,0,557,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,557,0,0,0,0,0,0,0,0,0,0,
 557,557,0,0,0,557,0,0,0,0,0,0,0,0,0,0,
-557,557,557,557,557,557,0,0,0,0,0,0,0,0,0,0,
+0,0,557,557,557,557,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -509,7 +499,7 @@
 </chunk>
   </data>
  </layer>
- <layer id="29" name="BARRIER_AIR" width="30" height="20" visible="0">
+ <layer id="29" name="BARRIER_AIR" width="30" height="20" opacity="0">
   <data encoding="csv">
    <chunk x="16" y="-32" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -523,22 +513,22 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-558,558,558,558,558,558,558,0,0,0,0,0,0,0,0,0,
+0,558,558,558,558,558,0,0,0,0,0,0,0,0,0,0,
 558,0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,
 558,0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,
-558,558,0,0,0,558,558,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
 0,558,0,0,0,558,0,0,0,0,0,0,0,0,0,0
 </chunk>
    <chunk x="-16" y="-16" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,558,558,558,558,558,558,558,558,558,558,558,
-0,0,0,558,558,558,558,0,0,0,0,0,0,0,0,0,
-0,0,0,558,0,558,558,0,0,0,0,0,0,0,0,0,
-0,0,0,558,0,558,558,558,558,558,558,558,558,558,558,558,
-0,0,558,558,558,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,558,558,558,558,558,558,558,558,558,558,
+0,0,0,558,558,558,0,0,0,0,0,0,0,0,0,0,
 0,0,558,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,558,558,558,558,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,558,558,558,558,558,558,558,558,558,558,558,
+0,0,0,558,558,558,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,558,558,558,558,558,558,558,558,558,558,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -549,9 +539,9 @@
 </chunk>
    <chunk x="0" y="-16" width="16" height="16">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-558,558,558,558,558,558,558,558,558,558,558,558,558,558,558,558,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,558,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,558,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 558,558,558,558,558,558,558,558,558,558,558,558,558,558,558,558,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -567,14 +557,14 @@
 </chunk>
    <chunk x="16" y="-16" width="16" height="16">
 0,558,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
-558,558,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
-558,558,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
-558,558,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
-558,558,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
+0,558,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
 558,558,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
 558,558,0,0,0,558,0,0,0,0,0,0,0,0,0,0,
-558,558,558,558,558,558,0,0,0,0,0,0,0,0,0,0,
+0,0,558,558,558,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
