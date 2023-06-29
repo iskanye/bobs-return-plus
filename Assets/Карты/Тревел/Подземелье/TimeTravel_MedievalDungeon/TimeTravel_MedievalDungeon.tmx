@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="1" nextlayerid="16" nextobjectid="88">
+<map version="1.10" tiledversion="1.10.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="1" nextlayerid="16" nextobjectid="88">
  <tileset firstgid="1" source="0_TimeTravel_Dungeon.tsx"/>
  <tileset firstgid="257" source="0_TimeTravel_WoodenTable1.tsx"/>
  <tileset firstgid="258" source="0_Dark.tsx"/>
@@ -272,15 +272,15 @@
   <object id="7" template="Spikes3.tx" gid="2147484181" x="0" y="64" rotation="0"/>
  </objectgroup>
  <objectgroup id="9" name="ObjectsFloor">
-  <object id="4" class="DeadButterfly" gid="289" x="387.5" y="22.5" width="32" height="32">
+  <object id="4" type="DeadButterfly" gid="289" x="387.5" y="22.5" width="32" height="32">
    <properties>
     <property name="Durability" type="int" value="1"/>
    </properties>
   </object>
-  <object id="5" template="Moss.tx" class="Moss" x="224" y="0"/>
-  <object id="12" template="PapyrusPicture.tx" class="PapyrusPicture" x="382.5" y="515.5"/>
+  <object id="5" template="Moss.tx" type="Moss" x="224" y="0"/>
+  <object id="12" template="PapyrusPicture.tx" type="PapyrusPicture" x="382.5" y="515.5"/>
   <object id="17" template="PapyrusNotes.tx" x="204.5" y="542"/>
-  <object id="19" template="PapyrusNote.tx" class="PapyrusNote" gid="2147484209" x="145" y="528.5" rotation="0"/>
+  <object id="19" template="PapyrusNote.tx" type="PapyrusNote" gid="2147484209" x="145" y="528.5" rotation="0"/>
   <object id="21" template="PapyrusNotes.tx" gid="2147484211" x="174.5" y="496.5" rotation="0"/>
   <object id="22" template="Moss.tx" gid="2147484172" x="128" y="480" rotation="0"/>
   <object id="23" template="Bones1.tx" x="4" y="497.5"/>
@@ -291,34 +291,34 @@
   <object id="29" template="Bones2.tx" x="17.5" y="12"/>
   <object id="30" template="Bones4.tx" x="-49" y="59"/>
   <object id="31" template="Bones6.tx" x="-53" y="485"/>
-  <object id="87" template="PapyrusNote.tx" class="PapyrusNote" gid="2147484209" x="177" y="566" rotation="0"/>
+  <object id="87" template="PapyrusNote.tx" type="PapyrusNote" gid="2147484209" x="177" y="566" rotation="0"/>
  </objectgroup>
  <objectgroup id="4" name="Objects">
   <object id="1" template="WoodenTable1.tx" x="-288" y="256"/>
-  <object id="2" template="TimeMachine.tx" class="TimeMachine" x="352" y="32"/>
-  <object id="34" template="Skull.tx" class="Skull" x="24" y="516"/>
+  <object id="2" template="TimeMachine.tx" type="TimeMachine" x="352" y="32"/>
+  <object id="34" template="Skull.tx" type="Skull" x="24" y="516"/>
   <object id="36" template="WoodenBarrel.tx" x="-288" y="160"/>
-  <object id="37" template="WoodenBarrelClosed.tx" class="WoodenBarrelClosed" x="-256" y="160"/>
+  <object id="37" template="WoodenBarrelClosed.tx" type="WoodenBarrelClosed" x="-256" y="160"/>
   <object id="38" template="WoodenStool.tx" x="-256" y="256"/>
-  <object id="41" template="WoodenStool.tx" class="WoodenStool" x="-187" y="227"/>
+  <object id="41" template="WoodenStool.tx" type="WoodenStool" x="-187" y="227"/>
   <object id="42" template="WoodenStool.tx" x="-223" y="177.5"/>
-  <object id="43" class="MapDungeonsJail" gid="593" x="-256" y="96" width="64" height="64">
+  <object id="43" type="MapDungeonsJail" gid="593" x="-256" y="96" width="64" height="64">
    <properties>
     <property name="Durability" type="int" value="1"/>
    </properties>
   </object>
-  <object id="44" template="LeverDungeonOFF.tx" class="LeverDungeonOFF" x="-192" y="96"/>
+  <object id="44" template="LeverDungeonOFF.tx" type="LeverDungeonOFF" x="-192" y="96"/>
   <object id="45" template="WoodenBarrel.tx" x="-480" y="256"/>
   <object id="46" template="WoodenBarrelClosed.tx" x="-480" y="288"/>
   <object id="47" template="WoodenBarrelClosed.tx" x="-448" y="288"/>
-  <object id="48" class="LongWeapon" gid="609" x="-352" y="256" width="64" height="96">
+  <object id="48" type="LongWeapon" gid="609" x="-352" y="256" width="64" height="96">
    <properties>
     <property name="Durability" type="int" value="4"/>
    </properties>
   </object>
   <object id="49" template="Bones4.tx" x="333" y="546"/>
   <object id="50" template="Bones2.tx" x="399.5" y="498"/>
-  <object id="52" template="Bones4.tx" class="Bones4" x="339.5" y="11.5"/>
+  <object id="52" template="Bones4.tx" type="Bones4" x="339.5" y="11.5"/>
   <object id="53" template="Bones5.tx" x="335" y="63.5"/>
   <object id="54" template="Bones3.tx" x="329.5" y="52"/>
   <object id="55" template="Bones3.tx" x="184" y="520"/>
@@ -341,7 +341,7 @@
   <object id="73" template="ChainsTop.tx" x="-480" y="160"/>
   <object id="74" template="ChainsTop.tx" x="-384" y="160"/>
   <object id="75" template="Chains.tx" x="-384" y="192"/>
-  <object id="76" template="Chains.tx" class="Chains" x="-480" y="192"/>
+  <object id="76" template="Chains.tx" type="Chains" x="-480" y="192"/>
   <object id="77" template="Chains.tx" x="-160" y="96"/>
   <object id="78" template="Chains.tx" x="-288" y="96"/>
   <object id="79" template="Chains.tx" x="-160" y="128"/>

@@ -25,6 +25,16 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "0_TimeTravel_Alchemy1.tsx": {
+            "scaleInDock": 1
+        },
+        "0_TimeTravel_Alchemy2.tsx": {
+            "scaleInDock": 1
+        },
+        "0_TimeTravel_Alchemy3.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "0_TimeTravel_ArchitectsSubjects.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
@@ -111,6 +121,10 @@
             "scaleInEditor": 1
         },
         "0_TimeTravel_Bones.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_Bookshelf.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -234,6 +248,14 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "0_TimeTravel_HayGiant.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_IronHumanShapedCage.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "0_TimeTravel_Lever.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
@@ -247,6 +269,14 @@
             "scaleInEditor": 1
         },
         "0_TimeTravel_Mannequin.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_MedievalTorture.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_MiniBarrel.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -273,6 +303,10 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "0_TimeTravel_MushroomsInPots.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "0_TimeTravel_Note.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
@@ -282,6 +316,10 @@
             "scaleInEditor": 1
         },
         "0_TimeTravel_PedestalWithPotatoe.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_PictureWings.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -333,6 +371,10 @@
             "scaleInEditor": 1
         },
         "0_TimeTravel_StalagmiteGiant.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_StateOfGod.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -447,6 +489,10 @@
             "scaleInEditor": 1
         },
         "0_TimeTravel_WoodenTableBread.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "0_TimeTravel_WoodenTableMushroom.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
@@ -814,52 +860,78 @@
         },
         "TimeTravel_MedievalDungeon.tmx": {
             "expandedObjectLayers": [
+                13,
                 4,
-                9,
-                13
+                9
             ],
             "scale": 2,
-            "selectedLayer": 5,
+            "selectedLayer": 6,
             "viewCenter": {
                 "x": 0,
-                "y": 255.75
+                "y": 256
             }
         },
         "TimeTravel_MedievalDungeonChallenges.tmx": {
             "expandedObjectLayers": [
-                10,
-                9
+                9,
+                10
             ],
             "scale": 2,
             "selectedLayer": 14,
             "viewCenter": {
-                "x": 1536,
-                "y": -768.25
+                "x": 2174.5,
+                "y": -1494.5
             }
         },
         "TimeTravel_MedievalDungeonRatKingRoom.tmx": {
             "expandedObjectLayers": [
-                10,
+                30,
                 9,
-                30
+                10
             ],
-            "scale": 2,
-            "selectedLayer": 24,
+            "scale": 1,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 1555,
-                "y": -4992
+                "x": 1441,
+                "y": -12344
             }
         },
         "TimeTravel_MedievalDungeonStoreroom.tmx": {
             "expandedObjectLayers": [
-                10,
-                9
+                9,
+                10
             ],
             "scale": 2,
-            "selectedLayer": 10,
+            "selectedLayer": 6,
             "viewCenter": {
                 "x": 256,
-                "y": -512.25
+                "y": -512
+            }
+        },
+        "TimeTravel_MedievalLaboratory.tmx": {
+            "expandedObjectLayers": [
+                11,
+                9,
+                10
+            ],
+            "scale": 1,
+            "selectedLayer": 8,
+            "viewCenter": {
+                "x": 43,
+                "y": 451
+            }
+        },
+        "TimeTravel_MedievalLaboratoryZombie.tmx": {
+            "expandedObjectLayers": [
+                9,
+                10,
+                11
+            ],
+            "scale": 0.75,
+            "selectedLayer": 18,
+            "viewCenter": {
+                "x": 341.33333333333337,
+                "y": 246.66666666666669
             }
         },
         "fireLight.tsx": {
@@ -890,120 +962,44 @@
     "map.fixedSize": false,
     "map.lastUsedFormat": "tmx",
     "openFiles": [
-        "1_TimeTravel_Spinis.tsx",
-        "0_InvisibleWall.tsx",
-        "0_TimeTravel_ArrowStatue.tsx",
-        "0_TimeTravel_Barrels.tsx",
-        "0_TimeTravel_Bones.tsx",
-        "0_TimeTravel_CardsOnTable.tsx",
-        "0_TimeTravel_Chains.tsx",
-        "0_TimeTravel_ChangesAreInevitable.tsx",
-        "0_TimeTravel_Chest.tsx",
-        "0_TimeTravel_Crossbow.tsx",
-        "0_TimeTravel_CrossbowStand.tsx",
-        "0_TimeTravel_Dungeon.tsx",
-        "0_TimeTravel_DungeonDoors.tsx",
-        "0_TimeTravel_FakeStones.tsx",
-        "0_TimeTravel_Flags.tsx",
-        "0_TimeTravel_Grass.tsx",
-        "0_TimeTravel_GuardsWeapon.tsx",
-        "0_TimeTravel_Lever.tsx",
-        "0_TimeTravel_Lute.tsx",
-        "0_TimeTravel_Moss.tsx",
-        "0_TimeTravel_Note.tsx",
-        "0_TimeTravel_PedestalWithPotatoe.tsx",
-        "0_TimeTravel_PuppetsOnPoles.tsx",
-        "0_TimeTravel_RatsWheel.tsx",
-        "0_TimeTravel_Ropes.tsx",
-        "0_TimeTravel_Rov.tsx",
-        "0_TimeTravel_ShakyFloor.tsx",
-        "0_TimeTravel_SmallDecor.tsx",
-        "0_TimeTravel_SpikyLog.tsx",
-        "0_TimeTravel_Stones.tsx",
-        "0_TimeTravel_StoneStatues.tsx",
-        "0_TimeTravel_StoneThorns.tsx",
-        "0_TimeTravel_Stool.tsx",
-        "0_TimeTravel_SwingingBall.tsx",
-        "0_TimeTravel_SwingingBalls.tsx",
-        "0_TimeTravel_SwingingBallsChains.tsx",
-        "0_TimeTravel_TableTiles.tsx",
-        "0_TimeTravel_Torch.tsx",
-        "0_TimeTravel_TrollStatue.tsx",
-        "0_TimeTravel_Vases.tsx",
+        "0_TimeTravel_DungeonLaboratory.tsx",
         "0_TimeTravel_WallDecor.tsx",
-        "0_TimeTravel_WoodenChainsaw.tsx",
-        "0_TimeTravel_WoodenFlag.tsx",
-        "0_TimeTravel_WoodenTable1.tsx",
-        "0_TimeTravel_WoodenTableBread.tsx",
-        "0_TimeTravel_WoodenTablet.tsx",
-        "0_TimeTravel_WoodenTablets.tsx",
-        "0_TimeTravel_Woods.tsx",
-        "0_TimeTravel_Wreckage.tsx",
-        "0_Dark.tsx",
-        "0_TimeTravel_VillageToilet.tsx",
-        "0_TimeTravel_MovingTower.tsx",
-        "0_TimeTravel_WarningTablet.tsx",
-        "0_TimeTravel_WarningArrow.tsx",
-        "0_TimeTravel_StalagmiteGiant.tsx",
-        "0_TimeTravel_WoodenSign.tsx",
-        "0_TimeTravel_Morgenstern.tsx",
-        "0_TimeTravel_WoodenSignLeftRight.tsx",
-        "0_TimeTravel_Banners1.tsx",
-        "0_TimeTravel_Pie.tsx",
-        "0_TimeTravel_BannerArrow.tsx",
-        "0_TimeTravel_SignageBannersRed.tsx",
-        "0_TimeTravel_Target.tsx",
-        "0_TimeTravel_SpearArrow.tsx",
-        "0_TimeTravel_Banners2.tsx",
-        "0_TimeTravel_OilLamp.tsx",
-        "TimeTravel_MedievalDungeon.tmx",
-        "0_TimeTravel_FlimsyDecor.tsx",
-        "0_TimeTravel_BarrelDrum.tsx",
-        "0_TimeTravel_BarrelCheese.tsx",
-        "0_TimeTravel_Mannequin.tsx",
-        "0_TimeTravel_BannerStand.tsx",
-        "TimeTravel_MedievalDungeonStoreroom.tmx",
-        "0_TimeTravel_StatueOfTheSilent.tsx",
-        "0_TimeTravel_DummyQuest.tsx",
-        "0_TimeTravel_WoodenCircularSaw.tsx",
-        "0_TimeTravel_BarrelOfWeapon.tsx",
-        "0_TimeTravel_GiantTorch.tsx",
-        "0_TimeTravel_TorchBig.tsx",
+        "0_TimeTravel_HayGiant.tsx",
+        "TimeTravel_MedievalDungeonRatKingRoom.tmx",
+        "0_TimeTravel_Alchemy3.tsx",
+        "0_TimeTravel_Bookshelf.tsx",
         "TimeTravel_MedievalDungeonChallenges.tmx",
-        "0_TimeTravel_Cage1.tsx",
-        "0_TimeTravel_Cage2.tsx",
-        "0_TimeTravel_Cage3.tsx",
-        "0_TimeTravel_ChainsOnFloor.tsx",
-        "0_TimeTravel_DummyBloodsucker.tsx",
-        "0_TimeTravel_ColumnAngle.tsx",
-        "0_TimeTravel_Food.tsx",
-        "0_TimeTravel_GiantGuillotine.tsx",
-        "0_TimeTravel_BlackOil.tsx",
-        "0_TimeTravel_BarrelSkis.tsx",
-        "zombieRat6.tsx",
-        "0_TimeTravel_Arrows.tsx",
-        "TimeTravel_MedievalDungeonRatKingRoom.tmx"
+        "TimeTravel_MedievalDungeon.tmx",
+        "0_TimeTravel_MedievalTorture.tsx",
+        "0_TimeTravel_MiniBarrel.tsx",
+        "0_TimeTravel_IronHumanShapedCage.tsx",
+        "0_TimeTravel_WoodenTableMushroom.tsx",
+        "0_TimeTravel_MushroomsInPots.tsx",
+        "TimeTravel_MedievalDungeonStoreroom.tmx",
+        "0_TimeTravel_StateOfGod.tsx",
+        "0_TimeTravel_PictureWings.tsx",
+        "TimeTravel_MedievalLaboratoryZombie.tmx"
     ],
     "project": "BobsReturn.tiled-project",
     "property.type": "int",
     "recentFiles": [
-        "1_TimeTravel_Spinis.tsx",
-        "0_InvisibleWall.tsx",
-        "0_TimeTravel_ArrowStatue.tsx",
-        "0_TimeTravel_Barrels.tsx",
-        "0_TimeTravel_Bones.tsx",
-        "0_TimeTravel_CardsOnTable.tsx",
-        "0_TimeTravel_Chains.tsx",
-        "0_TimeTravel_ChangesAreInevitable.tsx",
-        "0_TimeTravel_Chest.tsx",
-        "0_TimeTravel_Crossbow.tsx",
-        "0_TimeTravel_CrossbowStand.tsx",
-        "0_TimeTravel_Dungeon.tsx"
+        "0_TimeTravel_DungeonLaboratory.tsx",
+        "0_TimeTravel_WallDecor.tsx",
+        "0_TimeTravel_HayGiant.tsx",
+        "TimeTravel_MedievalLaboratoryZombie.tmx",
+        "0_TimeTravel_PictureWings.tsx",
+        "0_TimeTravel_StateOfGod.tsx",
+        "TimeTravel_MedievalDungeonStoreroom.tmx",
+        "0_TimeTravel_MushroomsInPots.tsx",
+        "0_TimeTravel_WoodenTableMushroom.tsx",
+        "0_TimeTravel_IronHumanShapedCage.tsx",
+        "0_TimeTravel_MiniBarrel.tsx",
+        "0_TimeTravel_MedievalTorture.tsx"
     ],
     "tileset.lastUsedFilter": "Все файлы (*)",
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
-        "height": 32,
-        "width": 32
+        "height": 64,
+        "width": 64
     }
 }

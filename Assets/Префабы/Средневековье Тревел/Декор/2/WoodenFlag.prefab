@@ -105,3 +105,4 @@ MonoBehaviour:
   - {fileID: 1996082439, guid: 22a779d47947b97acade8c705f7d4cf4, type: 3}
   - {fileID: 1489190508, guid: 22a779d47947b97acade8c705f7d4cf4, type: 3}
   delay: 0.1
+  isAwake: 1

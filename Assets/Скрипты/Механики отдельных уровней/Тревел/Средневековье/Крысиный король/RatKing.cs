@@ -115,19 +115,11 @@ public class RatKing : MonoBehaviour
 
     IEnumerator _Distract(float time)
     {        
-        hitTrigger.onDamage -= (i) => 
-        {
-            StartCoroutine(_Distract(2));
-            rig.AddForce(Vector2.down * movement.speed * 3, ForceMode2D.Impulse);
-        };
+        hitTrigger.onDamage -= i => StartCoroutine(_Distract(2));
         movement.StopMove();
         yield return new WaitForSeconds(time);
         movement.StartMove();
-        hitTrigger.onDamage += (i) => 
-        {
-            StartCoroutine(_Distract(2));
-            rig.AddForce(Vector2.down * movement.speed * 3, ForceMode2D.Impulse);
-        };   
+        hitTrigger.onDamage += i => StartCoroutine(_Distract(2)); 
     }
 
     IEnumerator Rotation()

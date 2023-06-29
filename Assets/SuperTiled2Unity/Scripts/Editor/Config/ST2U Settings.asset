@@ -262,3 +262,15 @@ MonoBehaviour:
   - m_TypeName: Morgenstern
     m_Prefab: {fileID: 5122690901169739556, guid: 97b86048150ece948a5017bb031674f2,
       type: 3}
+  - m_TypeName: BannerArrow
+    m_Prefab: {fileID: 966677455909006301, guid: a0ad9ea665c87ec469ec8e8f12920066,
+      type: 3}
+  - m_TypeName: Pie
+    m_Prefab: {fileID: 8423751228851437417, guid: 84a215bc28dc6244fb79b3a4f5150a21,
+      type: 3}
+  - m_TypeName: WoodenGeneralFivefingers
+    m_Prefab: {fileID: 1764720568599221578, guid: d5038187f8073bf48972241568528388,
+      type: 3}
+  - m_TypeName: WoodenFlagStand
+    m_Prefab: {fileID: 8412579995054402209, guid: d63ed32038ca60c488e93b5cb9d37498,
+      type: 3}
