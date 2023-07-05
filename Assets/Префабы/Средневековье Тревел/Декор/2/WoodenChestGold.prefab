@@ -11,9 +11,6 @@ GameObject:
   - component: {fileID: 1966068472491763083}
   - component: {fileID: 4928474118667626547}
   - component: {fileID: 8281014825505354231}
-  - component: {fileID: 7764937877672414439}
-  - component: {fileID: 457372324949645382}
-  - component: {fileID: 6592797776857419889}
   m_Layer: 3
   m_Name: trigger_WoodenChestGold
   m_TagString: Untagged
@@ -77,96 +74,6 @@ MonoBehaviour:
   action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 457372324949645382}
-        m_TargetAssemblyTypeName: PropertyHolder, Assembly-CSharp
-        m_MethodName: set_property
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 64
-  spriteRenderers:
-  - {fileID: 7945396177919602926}
---- !u!114 &7764937877672414439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119452626479202158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 100ff012ac77e9813906744666f2cf4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionBase: {fileID: 8281014825505354231}
-  action:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &457372324949645382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119452626479202158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38a87426f22708f4ebe42aefbb90ed8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 3895f675-7233-44bd-8aa9-8e21eb98649c
-  isLocal: 1
-  invokeOnUpdate: 1
-  action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6592797776857419889}
-        m_TargetAssemblyTypeName: BooleanAction, Assembly-CSharp
-        m_MethodName: Action
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 7764937877672414439}
-        m_TargetAssemblyTypeName: ChangeActionBaseEvent, Assembly-CSharp
-        m_MethodName: Change
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &6592797776857419889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119452626479202158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb2d6f576747d3a4793b90c3a6ceb611, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action:
-    m_PersistentCalls:
-      m_Calls:
       - m_Target: {fileID: 7945396177919602926}
         m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
         m_MethodName: set_sprite
@@ -180,6 +87,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  spriteRenderers:
+  - {fileID: 7945396177919602926}
 --- !u!1 &7945396177919602924
 GameObject:
   m_ObjectHideFlags: 0

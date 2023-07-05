@@ -74,12 +74,14 @@ namespace Dialogues
             yield return base.Start();    
             yield return new WaitForSeconds(mn.current.startDelay + (mn.index == 0 ? .35f : 0));
 
-            if (mn.current.clearPreviousText)
-                mn.text.text = mn.prevText = "";
+            mn.text.text = GetCurrentText();
 
             if (!mn.current.showStraightaway)
             {
-                yield return TextUtilities.AnimateText(mn.text, mn.current.text, 0.015f, () =>
+                int startPosition = mn.text.text.Length - mn.current.text.Length;
+                mn.text.ForceMeshUpdate();
+                yield return TextUtilities.MakeTextTransparent(mn.text, startPosition);
+                yield return TextUtilities.AnimateVertexColors(mn.text, Color.white, startPosition, 0.015f, () =>
                 {
                     mn.textSFX.pitch = Random.Range(.95f, 1.05f);
                     mn.textSFX.Play();
@@ -95,7 +97,9 @@ namespace Dialogues
 
         public override IEnumerator Stop()
         {            
-            mn.prevText = mn.text.text = mn.prevText + mn.current.text;
+            mn.text.text = GetCurrentText();
+            mn.prevText = mn.text.text;
+            mn.text.ForceMeshUpdate();
             yield return base.Stop();
         }
 
@@ -110,6 +114,11 @@ namespace Dialogues
         public override void Submit(InputAction.CallbackContext c)
         {
             GUIInput();
+        }
+
+        private string GetCurrentText()
+        {
+            return mn.current.clearPreviousText ? mn.current.text : mn.prevText + mn.current.text;
         }
     }
 

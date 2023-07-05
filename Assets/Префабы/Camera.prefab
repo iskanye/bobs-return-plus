@@ -132,15 +132,15 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.025000006
-    y: 0.01111111
-    width: 0.95
-    height: 0.9777778
+    x: 0.21212122
+    y: 0.20812604
+    width: 0.57575756
+    height: 0.5837479
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11
+  orthographic size: 5.5
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
@@ -169,7 +169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 6309183729310672167}
-  screenSize: {x: 608, y: 352}
   PPU: 32
 --- !u!1 &6309183730327303274
 GameObject:
@@ -216,7 +215,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.023529412, g: 0.023529412, b: 0.03137255, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 1
@@ -225,15 +224,15 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.025000006
-    y: 0.01111111
-    width: 0.95
-    height: 0.9777778
+    x: 0.21212122
+    y: 0.20812604
+    width: 0.57575756
+    height: 0.5837479
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11
+  orthographic size: 5.5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -286,5 +285,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 6309183730327303272}
-  screenSize: {x: 608, y: 352}
   PPU: 32

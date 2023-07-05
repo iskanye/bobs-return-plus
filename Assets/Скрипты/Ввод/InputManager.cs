@@ -49,17 +49,7 @@ public class InputManager : MonoBehaviour
 
     void Awake()
     {
-        if (Active == null)
-        {
-            Active = this;
-            DontDestroyOnLoad(gameObject);
-        }
-
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
+        Active = this;
 
         Input = new InputMap();
         Input.Player.Enable();

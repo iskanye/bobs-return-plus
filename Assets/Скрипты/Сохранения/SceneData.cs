@@ -21,17 +21,7 @@ public class SceneData : MonoBehaviour
 
     void Awake()
     {
-        if (Active == null)
-        {
-            Active = this;
-            DontDestroyOnLoad(gameObject);
-        }
-
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
+        Active = this;
         
         OnPropertySet = new Dictionary<string, List<UnityEngine.Events.UnityEvent<bool>>>();
         UnityEngine.SceneManagement.SceneManager.sceneLoaded += (i, j) => 

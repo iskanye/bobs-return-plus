@@ -55,6 +55,9 @@ MonoBehaviour:
   - {r: 0.7372549, g: 0.56078434, b: 0.56078434, a: 1}
   m_CustomObjectTypes: []
   m_PrefabReplacements:
+  - m_TypeName: BannerArrow
+    m_Prefab: {fileID: 966677455909006301, guid: a0ad9ea665c87ec469ec8e8f12920066,
+      type: 3}
   - m_TypeName: Bones1
     m_Prefab: {fileID: 5474111836789337542, guid: 20d00a7047ee9c34a89ddd9f6edd4c68,
       type: 3}
@@ -100,6 +103,9 @@ MonoBehaviour:
   - m_TypeName: Cheese
     m_Prefab: {fileID: 2557198380639421272, guid: bc63e135748f8e34798c9bb1ab40c641,
       type: 3}
+  - m_TypeName: CircularsawRat
+    m_Prefab: {fileID: 8645662910301891568, guid: 851f3674f1c1ba8499cd55c331b97ae8,
+      type: 3}
   - m_TypeName: CrossbowChargedDown
     m_Prefab: {fileID: 3296584701978215515, guid: 45856b06cbbdcf04e91bd19d72a1c3ac,
       type: 3}
@@ -112,8 +118,20 @@ MonoBehaviour:
   - m_TypeName: CrossbowChargedUp
     m_Prefab: {fileID: 3511780892109844867, guid: 3b40d1301251b04448bf60bdc2ec7e93,
       type: 3}
+  - m_TypeName: DeadButterfly
+    m_Prefab: {fileID: 6776503316386423761, guid: b1814cc5cf5a5c44981f531ade2a9431,
+      type: 3}
   - m_TypeName: DummyBloodsucker
     m_Prefab: {fileID: 3741305615712515347, guid: 6a2e2c70f9549b644a0dbabe8fdf701a,
+      type: 3}
+  - m_TypeName: GiantGuillotineWallLeft
+    m_Prefab: {fileID: 3236287375723178329, guid: ccceb3f176aa0f740a5ef4e0e76c88ec,
+      type: 3}
+  - m_TypeName: GiantGuillotineWallRight
+    m_Prefab: {fileID: 5349775381142381633, guid: 78e0eff6a1e3a5744a7b33e871fcc43f,
+      type: 3}
+  - m_TypeName: GuillotineBlade
+    m_Prefab: {fileID: 7210686903385011169, guid: bea7884ca33085b43a6833a0a6094f48,
       type: 3}
   - m_TypeName: HayBundle
     m_Prefab: {fileID: 3696990051255637164, guid: 77e0027a813212a49bb20a517aea408c,
@@ -133,11 +151,20 @@ MonoBehaviour:
   - m_TypeName: MapDungeonsJail
     m_Prefab: {fileID: 8896103420401632298, guid: c6893be5b584b6041b0d33f8c0936105,
       type: 3}
+  - m_TypeName: Morgenstern
+    m_Prefab: {fileID: 5122690901169739556, guid: 97b86048150ece948a5017bb031674f2,
+      type: 3}
   - m_TypeName: Moss
     m_Prefab: {fileID: 2060246739300950123, guid: f4db74f03da9e5e4eae3fa9d2cf919e3,
       type: 3}
   - m_TypeName: MovingTower
     m_Prefab: {fileID: 3114925022121557185, guid: 7eb9a9d60cca7014e9936d317111b713,
+      type: 3}
+  - m_TypeName: MovingTowerUp
+    m_Prefab: {fileID: 2279190153285008424, guid: 0c878ac5493e146418064be8d9307288,
+      type: 3}
+  - m_TypeName: NecromancerStatue
+    m_Prefab: {fileID: 8616038684348512292, guid: a517fc86af9c8b74ba0bf1040c867ee3,
       type: 3}
   - m_TypeName: PapyrusNote
     m_Prefab: {fileID: 66641684994336811, guid: a630d256778a7fe46a7e1a9bd13e57a4,
@@ -147,6 +174,9 @@ MonoBehaviour:
       type: 3}
   - m_TypeName: PapyrusPicture
     m_Prefab: {fileID: 562226478040099286, guid: 7ab44922a74da5e469593f53d9d9a027,
+      type: 3}
+  - m_TypeName: Pie
+    m_Prefab: {fileID: 8423751228851437417, guid: 84a215bc28dc6244fb79b3a4f5150a21,
       type: 3}
   - m_TypeName: ShacklesOpen
     m_Prefab: {fileID: 5063047909675392124, guid: a6e8f3f17254f8743afe382e22d14680,
@@ -166,6 +196,9 @@ MonoBehaviour:
   - m_TypeName: StatueArrowWithBow
     m_Prefab: {fileID: 2468766004690014721, guid: 6dc3565bf40678647bdce0786fc28958,
       type: 3}
+  - m_TypeName: StatueTroll
+    m_Prefab: {fileID: 5382343491514783766, guid: 73c437ca60e1c0e4d95656d602661b44,
+      type: 3}
   - m_TypeName: Stone1
     m_Prefab: {fileID: 7183264517023276131, guid: 27d3f3aefc3952e4c9e9ee17dde05ffb,
       type: 3}
@@ -174,6 +207,12 @@ MonoBehaviour:
       type: 3}
   - m_TypeName: Stone3
     m_Prefab: {fileID: 1455019094394122291, guid: 228c70dce9d30d44186323b9e919ffeb,
+      type: 3}
+  - m_TypeName: SwingingBall
+    m_Prefab: {fileID: 1453411864877508260, guid: 84755c810addaf14bb4357c89e663081,
+      type: 3}
+  - m_TypeName: TimeMachine
+    m_Prefab: {fileID: 8311383911098775483, guid: 566ce27662adde64db4847567b1655c1,
       type: 3}
   - m_TypeName: TorchFire
     m_Prefab: {fileID: 5535435404405552018, guid: 32204a6ca601d8348af44f6aa6b47c2b,
@@ -196,6 +235,9 @@ MonoBehaviour:
   - m_TypeName: WoodenBarrel
     m_Prefab: {fileID: 7139096414570187790, guid: 3c52dd70fbd974f43948e7b5de36dbbd,
       type: 3}
+  - m_TypeName: WoodenBarrelArrows
+    m_Prefab: {fileID: 3852689292089445605, guid: b9107f82cfb37fa4a8cecc9f139ff95b,
+      type: 3}
   - m_TypeName: WoodenBarrelCheeseClosed
     m_Prefab: {fileID: 1796855078582598358, guid: e4bf6fd43db0c124f92c2891a8da5890,
       type: 3}
@@ -214,11 +256,26 @@ MonoBehaviour:
   - m_TypeName: WoodenBarrelSpikes
     m_Prefab: {fileID: 5825981423294139908, guid: be2233715a33f59499ee9063ec445595,
       type: 3}
+  - m_TypeName: WoodenChest
+    m_Prefab: {fileID: 7050667005365243755, guid: db5b166c161900f49a34b13e7c09b5c1,
+      type: 3}
+  - m_TypeName: WoodenChestGold
+    m_Prefab: {fileID: 7945396177919602924, guid: 989cd198e8422284dbc099a82b1794ed,
+      type: 3}
+  - m_TypeName: WoodenFlagStand
+    m_Prefab: {fileID: 8412579995054402209, guid: d63ed32038ca60c488e93b5cb9d37498,
+      type: 3}
+  - m_TypeName: WoodenGeneralFivefingers
+    m_Prefab: {fileID: 1764720568599221578, guid: d5038187f8073bf48972241568528388,
+      type: 3}
   - m_TypeName: WoodenStool
     m_Prefab: {fileID: 3252480357661181399, guid: 8df8e31ed64a47f4c80c87fcdde998b2,
       type: 3}
   - m_TypeName: WoodenTable1
     m_Prefab: {fileID: 3766970377513843017, guid: 94778f5839ceeb44a8cea7a5fc5b96ea,
+      type: 3}
+  - m_TypeName: WoodenTabletStand
+    m_Prefab: {fileID: 2733844814677119022, guid: dcd20f57ac0b053489c49a5f8bdecfd8,
       type: 3}
   - m_TypeName: WoodPin1
     m_Prefab: {fileID: 3418783739550856997, guid: bc188c5b8e773f84b94925a3e1ba7a91,
@@ -226,51 +283,27 @@ MonoBehaviour:
   - m_TypeName: WoodPin2
     m_Prefab: {fileID: 4457989653921201467, guid: 5602f20f4b2b2534c802bd9797104884,
       type: 3}
-  - m_TypeName: MovingTowerUp
-    m_Prefab: {fileID: 2279190153285008424, guid: 0c878ac5493e146418064be8d9307288,
+  - m_TypeName: BannerAxe
+    m_Prefab: {fileID: 6877047111847685721, guid: 394c114e618c9424d8ef056db017252a,
       type: 3}
-  - m_TypeName: SwingingBall
-    m_Prefab: {fileID: 1453411864877508260, guid: 84755c810addaf14bb4357c89e663081,
+  - m_TypeName: BannerCheese
+    m_Prefab: {fileID: 756192960591489273, guid: db0c296de4ad1af40b9bc3e3afb565b7,
       type: 3}
-  - m_TypeName: NecromancerStatue
-    m_Prefab: {fileID: 8616038684348512292, guid: a517fc86af9c8b74ba0bf1040c867ee3,
+  - m_TypeName: BannerCrystal
+    m_Prefab: {fileID: 1931898088882713605, guid: 75d5615eec3988d40aaa15d3c99a8b11,
       type: 3}
-  - m_TypeName: GiantGuillotineWallLeft
-    m_Prefab: {fileID: 3236287375723178329, guid: ccceb3f176aa0f740a5ef4e0e76c88ec,
+  - m_TypeName: BannerHammer
+    m_Prefab: {fileID: 3699801940168476676, guid: 10ae17afe715b594781c2464ecf8cc45,
       type: 3}
-  - m_TypeName: GiantGuillotineWallRight
-    m_Prefab: {fileID: 5349775381142381633, guid: 78e0eff6a1e3a5744a7b33e871fcc43f,
+  - m_TypeName: BannerHeart
+    m_Prefab: {fileID: 774747559447137785, guid: 03e5219698809bc45bdd29aefb5a790d,
       type: 3}
-  - m_TypeName: GuillotineBlade
-    m_Prefab: {fileID: 7210686903385011169, guid: bea7884ca33085b43a6833a0a6094f48,
+  - m_TypeName: BannerPoisonGray
+    m_Prefab: {fileID: 7758725185685000309, guid: 984dd976e6e001744942b459106e8197,
       type: 3}
-  - m_TypeName: WoodenBarrelArrows
-    m_Prefab: {fileID: 3852689292089445605, guid: b9107f82cfb37fa4a8cecc9f139ff95b,
+  - m_TypeName: BannerPoisonRed
+    m_Prefab: {fileID: 3846904075077170117, guid: adec9b39956747540b06ca6abb8c46b1,
       type: 3}
-  - m_TypeName: CircularsawRat
-    m_Prefab: {fileID: 8645662910301891568, guid: 851f3674f1c1ba8499cd55c331b97ae8,
-      type: 3}
-  - m_TypeName: TimeMachine
-    m_Prefab: {fileID: 8311383911098775483, guid: 566ce27662adde64db4847567b1655c1,
-      type: 3}
-  - m_TypeName: DeadButterfly
-    m_Prefab: {fileID: 6776503316386423761, guid: b1814cc5cf5a5c44981f531ade2a9431,
-      type: 3}
-  - m_TypeName: WoodenTabletStand
-    m_Prefab: {fileID: 2733844814677119022, guid: dcd20f57ac0b053489c49a5f8bdecfd8,
-      type: 3}
-  - m_TypeName: Morgenstern
-    m_Prefab: {fileID: 5122690901169739556, guid: 97b86048150ece948a5017bb031674f2,
-      type: 3}
-  - m_TypeName: BannerArrow
-    m_Prefab: {fileID: 966677455909006301, guid: a0ad9ea665c87ec469ec8e8f12920066,
-      type: 3}
-  - m_TypeName: Pie
-    m_Prefab: {fileID: 8423751228851437417, guid: 84a215bc28dc6244fb79b3a4f5150a21,
-      type: 3}
-  - m_TypeName: WoodenGeneralFivefingers
-    m_Prefab: {fileID: 1764720568599221578, guid: d5038187f8073bf48972241568528388,
-      type: 3}
-  - m_TypeName: WoodenFlagStand
-    m_Prefab: {fileID: 8412579995054402209, guid: d63ed32038ca60c488e93b5cb9d37498,
+  - m_TypeName: StoneThorns
+    m_Prefab: {fileID: 3057473326488814132, guid: 064dafac8d5cfc249b32d348bf589fc7,
       type: 3}

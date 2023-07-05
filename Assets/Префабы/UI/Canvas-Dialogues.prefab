@@ -90,7 +90,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 969c2619bd275a7678d05464f8afbc5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenSize: {x: 608, y: 352}
 --- !u!1 &1252747258732899032
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,12 +780,12 @@ MonoBehaviour:
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 1
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 3.125
 --- !u!114 &7581506854051170405
 MonoBehaviour:
   m_ObjectHideFlags: 0
