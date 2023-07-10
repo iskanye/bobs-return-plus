@@ -24,17 +24,17 @@ public class PrologueCutscene : MonoBehaviour
         foreach (var i in frames)
         {            
             textBox.SetActive(i.showTextBox);
-            float t = 0;
+            float t = 0, time = Time.time;
             spriteRenderer.sprite = i.sprite;
 
             while (t < 1 && i.fadeIn) 
             {
                 spriteRenderer.color = Color.Lerp(Color.clear, Color.white, t);
                 t += .01f;
-                yield return new WaitForSeconds(.02425f);
+                yield return new WaitForSeconds(.02425f); // .2425f
             }
-
-            t = 1;
+            Debug.Log(Time.time - time);
+            
             spriteRenderer.color = Color.white;
 
             if (i.text != "")
@@ -47,7 +47,7 @@ public class PrologueCutscene : MonoBehaviour
 
             yield return new WaitForSeconds(i.waitTime);
             
-            while (t > 0) 
+            while (t > 0 && i.fadeIn) 
             {
                 spriteRenderer.color = Color.Lerp(Color.clear, Color.white, t);
                 t -= .01f;
