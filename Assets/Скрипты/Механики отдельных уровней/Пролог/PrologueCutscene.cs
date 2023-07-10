@@ -24,7 +24,7 @@ public class PrologueCutscene : MonoBehaviour
         foreach (var i in frames)
         {            
             textBox.SetActive(i.showTextBox);
-            float t = 0, time = Time.time;
+            float t = 0;
             spriteRenderer.sprite = i.sprite;
 
             while (t < 1 && i.fadeIn) 
@@ -33,7 +33,6 @@ public class PrologueCutscene : MonoBehaviour
                 t += .01f;
                 yield return new WaitForSeconds(.02425f); // .2425f
             }
-            Debug.Log(Time.time - time);
             
             spriteRenderer.color = Color.white;
 
