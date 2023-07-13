@@ -16,6 +16,7 @@ public class PrologueCutscene : MonoBehaviour
 
     public Frame[] frames;
     public SpriteRenderer spriteRenderer;
+    public Animator spriteFade;
     public TMPro.TMP_Text text;
     public GameObject textBox;
 
@@ -24,17 +25,16 @@ public class PrologueCutscene : MonoBehaviour
         foreach (var i in frames)
         {            
             textBox.SetActive(i.showTextBox);
-            float t = 0;
             spriteRenderer.sprite = i.sprite;
 
-            while (t < 1 && i.fadeIn) 
+            if (i.fadeIn)
             {
-                spriteRenderer.color = Color.Lerp(Color.clear, Color.white, t);
-                t += .01f;
-                yield return new WaitForSeconds(.02425f); // .2425f
+                spriteFade.Play("Appear");
+                yield return new WaitForSecondsRealtime(2.5f);
             }
             
-            spriteRenderer.color = Color.white;
+            else            
+                spriteFade.Play("Idle1");               
 
             if (i.text != "")
             {
@@ -44,15 +44,14 @@ public class PrologueCutscene : MonoBehaviour
                 StartCoroutine(TextUtilities.AnimateVertexColors(text, Color.white, delay: .05f));
             }
 
-            yield return new WaitForSeconds(i.waitTime);
-            
-            while (t > 0 && i.fadeIn) 
+            yield return new WaitForSecondsRealtime(i.waitTime);
+
+            if (i.fadeIn)
             {
-                spriteRenderer.color = Color.Lerp(Color.clear, Color.white, t);
-                t -= .01f;
-                yield return new WaitForSeconds(.02425f);
+                spriteFade.Play("Disappear");
+                yield return new WaitForSecondsRealtime(2.5f);
             }
-            
+
             text.text = "";
         }
     }
