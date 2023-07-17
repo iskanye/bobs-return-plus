@@ -8142,10 +8142,100 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 250381354}
     m_Modifications:
+    - target: {fileID: -7634603870521617359, guid: c79ae411d1fa6f6488dfb84185dd6775,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6416170852398633351, guid: c79ae411d1fa6f6488dfb84185dd6775,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6203588278754085555, guid: c79ae411d1fa6f6488dfb84185dd6775,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5310990825239399033, guid: c79ae411d1fa6f6488dfb84185dd6775,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4632526902108338958, guid: c79ae411d1fa6f6488dfb84185dd6775,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4228031940099855801, guid: c79ae411d1fa6f6488dfb84185dd6775,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3947502533202096934, guid: c79ae411d1fa6f6488dfb84185dd6775,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3708372838423014914, guid: c79ae411d1fa6f6488dfb84185dd6775,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3690009186090613036, guid: c79ae411d1fa6f6488dfb84185dd6775,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1084248546612790154, guid: c79ae411d1fa6f6488dfb84185dd6775,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -269328641531450102, guid: c79ae411d1fa6f6488dfb84185dd6775,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 222509826623651869, guid: c79ae411d1fa6f6488dfb84185dd6775,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1059027642846573036, guid: c79ae411d1fa6f6488dfb84185dd6775,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 1274910508994648287, guid: c79ae411d1fa6f6488dfb84185dd6775,
         type: 3}
       propertyPath: m_Name
       value: TimeTravel_MedievalLaboratoryZombie
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403042214983985706, guid: c79ae411d1fa6f6488dfb84185dd6775,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558973930693345172, guid: c79ae411d1fa6f6488dfb84185dd6775,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5124912675534765206, guid: c79ae411d1fa6f6488dfb84185dd6775,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260568813272169506, guid: c79ae411d1fa6f6488dfb84185dd6775,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8083045836024656439, guid: c79ae411d1fa6f6488dfb84185dd6775,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8569793019955591864, guid: c79ae411d1fa6f6488dfb84185dd6775,
         type: 3}
@@ -16558,6 +16648,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5285249466056293396, guid: c6f45d4cef464aa4e89698f9b72dadfe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5390824128986442934, guid: c6f45d4cef464aa4e89698f9b72dadfe,
         type: 3}
