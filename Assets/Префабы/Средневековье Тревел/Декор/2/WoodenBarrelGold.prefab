@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2321412591885010036}
   - component: {fileID: 362067645312355207}
-  - component: {fileID: 4593329032174970769}
   - component: {fileID: 5950293525301122578}
   - component: {fileID: 5950293525301122577}
   - component: {fileID: 893288445036178030}
   - component: {fileID: 7610688614624253460}
   - component: {fileID: 744684631190545692}
+  - component: {fileID: 3950542705890678478}
   m_Layer: 3
   m_Name: WoodenBarrelGold
   m_TagString: Untagged
@@ -91,22 +91,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!58 &4593329032174970769
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3392225814322023813}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.51
 --- !u!114 &5950293525301122578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,6 +248,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!61 &3950542705890678478
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3392225814322023813}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.25}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &8117291843330581879
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,11 +283,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8426739196389628963}
-  - component: {fileID: 4359734249876404041}
   - component: {fileID: 8404553404772694393}
   - component: {fileID: 6981776075672643059}
   - component: {fileID: 7552036194342525433}
   - component: {fileID: 4938680763654288610}
+  - component: {fileID: 4052455787710561907}
   m_Layer: 3
   m_Name: regularContainer
   m_TagString: Untagged
@@ -300,22 +310,6 @@ Transform:
   m_Father: {fileID: 2321412591885010036}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &4359734249876404041
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8117291843330581879}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.6
 --- !u!114 &8404553404772694393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,7 +354,6 @@ MonoBehaviour:
     m_Bits: 64
   spriteRenderers:
   - {fileID: 362067645312355207}
-  selectedBrightness: 0.8
 --- !u!114 &6981776075672643059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,3 +403,29 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c5288b1d64b998d40855ecec5a122ec7, type: 2}
   noItemPropability: 0
   empty: {fileID: 11400000, guid: 82a3b34a81f432b44865026af1f55d4c, type: 2}
+--- !u!61 &4052455787710561907
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8117291843330581879}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 1.2}
+  m_EdgeRadius: 0

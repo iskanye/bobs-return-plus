@@ -58,6 +58,30 @@ MonoBehaviour:
   - m_TypeName: BannerArrow
     m_Prefab: {fileID: 966677455909006301, guid: a0ad9ea665c87ec469ec8e8f12920066,
       type: 3}
+  - m_TypeName: BannerAxe
+    m_Prefab: {fileID: 6877047111847685721, guid: 394c114e618c9424d8ef056db017252a,
+      type: 3}
+  - m_TypeName: BannerCheese
+    m_Prefab: {fileID: 756192960591489273, guid: db0c296de4ad1af40b9bc3e3afb565b7,
+      type: 3}
+  - m_TypeName: BannerCrystal
+    m_Prefab: {fileID: 1931898088882713605, guid: 75d5615eec3988d40aaa15d3c99a8b11,
+      type: 3}
+  - m_TypeName: BannerHammer
+    m_Prefab: {fileID: 3699801940168476676, guid: 10ae17afe715b594781c2464ecf8cc45,
+      type: 3}
+  - m_TypeName: BannerHeart
+    m_Prefab: {fileID: 774747559447137785, guid: 03e5219698809bc45bdd29aefb5a790d,
+      type: 3}
+  - m_TypeName: BannerPoisonGray
+    m_Prefab: {fileID: 7758725185685000309, guid: 984dd976e6e001744942b459106e8197,
+      type: 3}
+  - m_TypeName: BannerPoisonRed
+    m_Prefab: {fileID: 3846904075077170117, guid: adec9b39956747540b06ca6abb8c46b1,
+      type: 3}
+  - m_TypeName: BannerStandPoison
+    m_Prefab: {fileID: 8812307871101896931, guid: 010b4446c21795c40bfa649624e52ed0,
+      type: 3}
   - m_TypeName: Bones1
     m_Prefab: {fileID: 5474111836789337542, guid: 20d00a7047ee9c34a89ddd9f6edd4c68,
       type: 3}
@@ -208,6 +232,9 @@ MonoBehaviour:
   - m_TypeName: Stone3
     m_Prefab: {fileID: 1455019094394122291, guid: 228c70dce9d30d44186323b9e919ffeb,
       type: 3}
+  - m_TypeName: StoneThorns
+    m_Prefab: {fileID: 3057473326488814132, guid: 064dafac8d5cfc249b32d348bf589fc7,
+      type: 3}
   - m_TypeName: SwingingBall
     m_Prefab: {fileID: 1453411864877508260, guid: 84755c810addaf14bb4357c89e663081,
       type: 3}
@@ -253,6 +280,9 @@ MonoBehaviour:
   - m_TypeName: WoodenBarrelPoison
     m_Prefab: {fileID: 294768369369065381, guid: 54e703ee60c7baa4689a9b4ef6a339af,
       type: 3}
+  - m_TypeName: WoodenBarrelPoisonClosed
+    m_Prefab: {fileID: 7774397956042665978, guid: 369702da7407df34ba13a299213f2a6a,
+      type: 3}
   - m_TypeName: WoodenBarrelSpikes
     m_Prefab: {fileID: 5825981423294139908, guid: be2233715a33f59499ee9063ec445595,
       type: 3}
@@ -283,27 +313,45 @@ MonoBehaviour:
   - m_TypeName: WoodPin2
     m_Prefab: {fileID: 4457989653921201467, guid: 5602f20f4b2b2534c802bd9797104884,
       type: 3}
-  - m_TypeName: BannerAxe
-    m_Prefab: {fileID: 6877047111847685721, guid: 394c114e618c9424d8ef056db017252a,
+  - m_TypeName: PictureAssassin
+    m_Prefab: {fileID: 7071622718399751296, guid: 0d2775d0588ad36458304c12109db4d8,
       type: 3}
-  - m_TypeName: BannerCheese
-    m_Prefab: {fileID: 756192960591489273, guid: db0c296de4ad1af40b9bc3e3afb565b7,
+  - m_TypeName: PictureManVsRat
+    m_Prefab: {fileID: 6722689643191888327, guid: 7a81ec7b6b2bc914a9983dfa9e4d9a5f,
       type: 3}
-  - m_TypeName: BannerCrystal
-    m_Prefab: {fileID: 1931898088882713605, guid: 75d5615eec3988d40aaa15d3c99a8b11,
+  - m_TypeName: PicturePiedPiper
+    m_Prefab: {fileID: 7098074080372088041, guid: 59e43b408cd6ef946ae363eb08aba233,
       type: 3}
-  - m_TypeName: BannerHammer
-    m_Prefab: {fileID: 3699801940168476676, guid: 10ae17afe715b594781c2464ecf8cc45,
+  - m_TypeName: ChainsCandles
+    m_Prefab: {fileID: 2459977192387035333, guid: 957aecaf049fa12438267948a54285e0,
       type: 3}
-  - m_TypeName: BannerHeart
-    m_Prefab: {fileID: 774747559447137785, guid: 03e5219698809bc45bdd29aefb5a790d,
+  - m_TypeName: MannequinPlague
+    m_Prefab: {fileID: 3735130861335935350, guid: 6a85738c1d224564da7289c5d519fbf8,
       type: 3}
-  - m_TypeName: BannerPoisonGray
-    m_Prefab: {fileID: 7758725185685000309, guid: 984dd976e6e001744942b459106e8197,
+  - m_TypeName: WoodenBarrelMeat
+    m_Prefab: {fileID: 42764904334052849, guid: 75ea820689b31ab4c8b53ee03187563f,
       type: 3}
-  - m_TypeName: BannerPoisonRed
-    m_Prefab: {fileID: 3846904075077170117, guid: adec9b39956747540b06ca6abb8c46b1,
+  - m_TypeName: HaySheaf
+    m_Prefab: {fileID: 5608338681973789334, guid: 8f1b64b7661afcb4d9cd9ae96f9ad4d6,
       type: 3}
-  - m_TypeName: StoneThorns
-    m_Prefab: {fileID: 3057473326488814132, guid: 064dafac8d5cfc249b32d348bf589fc7,
+  - m_TypeName: WoodenSignLeftRight
+    m_Prefab: {fileID: 2724587074240977829, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+      type: 3}
+  - m_TypeName: WoodenSignRight
+    m_Prefab: {fileID: 6152263221740105899, guid: 068a397c4f076b540aaf1bd27a66f55a,
+      type: 3}
+  - m_TypeName: WoodenSignLeft
+    m_Prefab: {fileID: 9216059505906299234, guid: 8e43f018d2ff9bf46bca465df2819c72,
+      type: 3}
+  - m_TypeName: WoodenTabletWarning
+    m_Prefab: {fileID: 358775487901575126, guid: e6303fffe3203e84388c5b29f1f4a83a,
+      type: 3}
+  - m_TypeName: WoodenTabletToilet
+    m_Prefab: {fileID: 6478700450078333279, guid: 1cc0d9297d930fa4d9c11fd58490372c,
+      type: 3}
+  - m_TypeName: WoodenTabletPie
+    m_Prefab: {fileID: 4410097086328247315, guid: e9f32e98b43bfd14a9ec27b2d2caa3e1,
+      type: 3}
+  - m_TypeName: WoodenBarrelDrum
+    m_Prefab: {fileID: 1742646221980769411, guid: abd420baa3428724b8dd4bfe8a7df4d4,
       type: 3}

@@ -2,7 +2,7 @@
 
 public class Destroy : MonoBehaviour 
 {
-    public Object[] objectsToDestroy = new Object[1];
+    public Object[] objectsToDestroy;
 
     public void Do() 
     {

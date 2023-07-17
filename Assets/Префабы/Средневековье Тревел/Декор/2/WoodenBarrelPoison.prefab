@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 807254088889429588}
   - component: {fileID: 3315480247437222311}
-  - component: {fileID: 1493621992918060465}
   - component: {fileID: 8761490624683834418}
   - component: {fileID: 8761490624683834417}
   - component: {fileID: 5260146072115675865}
   - component: {fileID: 7059909625459157362}
   - component: {fileID: 7126507656199035761}
+  - component: {fileID: 4099199302543370529}
   m_Layer: 3
   m_Name: WoodenBarrelPoison
   m_TagString: Untagged
@@ -91,22 +91,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!58 &1493621992918060465
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294768369369065381}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &8761490624683834418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,6 +219,32 @@ MonoBehaviour:
   - {fileID: 877860138, guid: 232c350ae6601c63d85c438fbefb78ba, type: 3}
   delay: 0.1
   isAwake: 1
+--- !u!61 &4099199302543370529
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294768369369065381}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.25}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &2200026108548723319
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,9 +254,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6904836599606699419}
-  - component: {fileID: 8052180889807451880}
   - component: {fileID: 6028443783708093284}
   - component: {fileID: 3847647252851736772}
+  - component: {fileID: 2812548803321646207}
   m_Layer: 3
   m_Name: "Trigger \u0434\u0430\u043C\u0430\u0433"
   m_TagString: Untagged
@@ -269,22 +279,6 @@ Transform:
   m_Father: {fileID: 807254088889429588}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &8052180889807451880
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2200026108548723319}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.6
 --- !u!114 &6028443783708093284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,3 +338,29 @@ MonoBehaviour:
   onlyThisPenetratingType: 0
   discarding: 1
   direction: {x: 0, y: 0}
+--- !u!61 &2812548803321646207
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2200026108548723319}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 1.2}
+  m_EdgeRadius: 0

@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8119593547902348046
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2724587074240977829, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: m_Name
+      value: WoodenSignRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724587074240977830, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724587074240977830, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724587074240977830, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6152263221740105897}
+    - target: {fileID: 2724587074240977830, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 6152263221740105894}
+    - target: {fileID: 2724587074240977830, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Create
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724587074240977830, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Do
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724587074240977830, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CreateGameObject, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724587074240977830, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: action.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Destroy, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724587074240977834, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724587074240977834, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724587074240977835, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1707231525, guid: b47624f434446ef4199a65f69f1fc184,
+        type: 3}
+    - target: {fileID: 2724587074240977836, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724587074240977836, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724587074240977836, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724587074240977836, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724587074240977836, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724587074240977836, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724587074240977836, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724587074240977836, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724587074240977836, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724587074240977836, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2724587074240977836, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2724587074240977833, guid: 96670ce4f9a19484098c9c7d3f32e4f7, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 96670ce4f9a19484098c9c7d3f32e4f7, type: 3}
+--- !u!114 &6152263221740105894 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2724587074240977832, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 8119593547902348046}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f5de1025c26fad98bdfedd3de193a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6152263221740105897 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2724587074240977831, guid: 96670ce4f9a19484098c9c7d3f32e4f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 8119593547902348046}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ab62e77df651912b5a6ec0a4e52396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

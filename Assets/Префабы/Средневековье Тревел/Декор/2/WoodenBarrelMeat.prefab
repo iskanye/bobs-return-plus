@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1131289025702822912}
   - component: {fileID: 3063054166210186227}
-  - component: {fileID: 1169455380183082981}
   - component: {fileID: 9013890318186911334}
   - component: {fileID: 9013890318186911333}
   - component: {fileID: 2585607181657958938}
   - component: {fileID: 3152348300926238188}
+  - component: {fileID: 7598115183183354547}
   m_Layer: 3
   m_Name: WoodenBarrelMeat
   m_TagString: Untagged
@@ -90,22 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!58 &1169455380183082981
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42764904334052849}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &9013890318186911334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +194,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objects:
   - {fileID: 1943007244304930363, guid: ebec3a94182e64342a89c4ae8c0ac734, type: 3}
+--- !u!61 &7598115183183354547
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42764904334052849}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.25}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &8706896039117663847
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,9 +229,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5245859837968821649}
-  - component: {fileID: 5135553971380918201}
   - component: {fileID: 946278715630882154}
-  - component: {fileID: 118038739216676937}
+  - component: {fileID: 1334879645046731672}
+  - component: {fileID: 986777119426692754}
   m_Layer: 3
   m_Name: "\u0422\u0440\u0438\u0433\u0433\u0435\u0440"
   m_TagString: Untagged
@@ -244,22 +254,6 @@ Transform:
   m_Father: {fileID: 1131289025702822912}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &5135553971380918201
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8706896039117663847}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.75
 --- !u!114 &946278715630882154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,7 +269,7 @@ MonoBehaviour:
   action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 118038739216676937}
+      - m_Target: {fileID: 1334879645046731672}
         m_TargetAssemblyTypeName: UninteractiveDialogueActivator, Assembly-CSharp
         m_MethodName: Dialogue
         m_Mode: 0
@@ -290,7 +284,9 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &118038739216676937
+  spriteRenderers:
+  - {fileID: 3063054166210186227}
+--- !u!114 &1334879645046731672
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -302,33 +298,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c152e1fdb2e885002ae3a9595bcc9666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues: {fileID: 11400000, guid: 72f57f1b3a0e3ba44b0a03d1b4110a29, type: 2}
-  events:
-  - m_PersistentCalls:
-      m_Calls: []
-  - m_PersistentCalls:
-      m_Calls: []
-  - m_PersistentCalls:
-      m_Calls: []
-  - m_PersistentCalls:
-      m_Calls: []
-  - m_PersistentCalls:
-      m_Calls: []
-  - m_PersistentCalls:
-      m_Calls: []
-  - m_PersistentCalls:
-      m_Calls: []
-  - m_PersistentCalls:
-      m_Calls: []
-  - m_PersistentCalls:
-      m_Calls: []
-  - m_PersistentCalls:
-      m_Calls: []
-  - m_PersistentCalls:
-      m_Calls: []
-  - m_PersistentCalls:
-      m_Calls: []
-  - m_PersistentCalls:
-      m_Calls: []
-  - m_PersistentCalls:
-      m_Calls: []
+  dialogues: {fileID: 0}
+  events: []
+--- !u!61 &986777119426692754
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8706896039117663847}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 1.2}
+  m_EdgeRadius: 0

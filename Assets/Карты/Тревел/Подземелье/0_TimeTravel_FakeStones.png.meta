@@ -125,7 +125,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.0625}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,7 +146,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,7 +167,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -209,14 +209,14 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.0625}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fc73952327466c4c89c09e07ef0d797
-      internalID: 1969427170
+      spriteID: ed49e091c53fbab43ad8c9f9685fe33b
+      internalID: 1275573819
       vertices: []
       indices: 
       edges: []
@@ -232,7 +232,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      0_TimeTravel_FakeStones_4: 1969427170
+      0_TimeTravel_FakeStones_4: 1275573819
       0_TimeTravel_FakeStones_2: 1684659887
       0_TimeTravel_FakeStones_3: 871786991
       0_TimeTravel_FakeStones_0: 1168299135
