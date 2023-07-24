@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4865044058082786240}
   - component: {fileID: -4331173581886840}
   m_Layer: 0
-  m_Name: MapBeClean
+  m_Name: PictureWashHands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -355,3 +355,15 @@ MonoBehaviour:
   - m_TypeName: WoodenBarrelDrum
     m_Prefab: {fileID: 1742646221980769411, guid: abd420baa3428724b8dd4bfe8a7df4d4,
       type: 3}
+  - m_TypeName: PictureWashHands
+    m_Prefab: {fileID: 1736749464848831449, guid: 505595e73172b064680050504685fad9,
+      type: 3}
+  - m_TypeName: HayGiant
+    m_Prefab: {fileID: 8359833727570101493, guid: 38bba2dfe5b8dba469b7b3f17b7c0cbb,
+      type: 3}
+  - m_TypeName: WoodenTableBread
+    m_Prefab: {fileID: 3705671839467950956, guid: 312f418b933087c4e8ea8399f072b32a,
+      type: 3}
+  - m_TypeName: BarrelWeapons
+    m_Prefab: {fileID: 5621254052889193780, guid: c143bacbed80b9f428667b9a3bc1fd12,
+      type: 3}

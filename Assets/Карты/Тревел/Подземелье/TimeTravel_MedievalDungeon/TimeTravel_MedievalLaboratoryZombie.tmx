@@ -1208,7 +1208,7 @@
   <object id="537" template="SpikyLog.tx" x="1568" y="-192"/>
   <object id="540" template="WoodenBarrelPoison.tx" x="1760" y="320"/>
   <object id="542" gid="848" x="1504" y="256" width="32" height="32"/>
-  <object id="543" gid="824" x="113" y="1694" width="64" height="64"/>
+  <object id="543" type="PictureWashHands" gid="824" x="112" y="1696" width="64" height="64"/>
   <object id="544" type="BarrelWeapons" gid="836" x="-64" y="1376" width="96" height="96"/>
   <object id="545" template="WoodenBarrelClosed.tx" x="-64" y="1376"/>
   <object id="546" template="WoodenTableBread.tx" x="160" y="1376"/>
@@ -1227,7 +1227,7 @@
   <object id="559" type="BannerPoisonGray" gid="554" x="128" y="1280" width="32" height="64"/>
   <object id="560" type="BannerPoisonGray" gid="554" x="192" y="1280" width="32" height="64"/>
   <object id="561" template="WoodenBarrelClosed.tx" x="192" y="1440"/>
-  <object id="562" type="HayGiantHole1" gid="846" x="96" y="1824" width="96" height="128"/>
+  <object id="562" type="HayGiant" gid="846" x="96" y="1824" width="96" height="128"/>
   <object id="563" gid="842" x="160" y="1344" width="32" height="32"/>
   <object id="564" gid="843" x="192" y="1344" width="32" height="32"/>
   <object id="568" gid="872" x="544" y="-340" width="64" height="96"/>
@@ -1354,8 +1354,6 @@
   <object id="814" template="Candle2.tx" gid="2147484158" x="0" y="224" rotation="0"/>
  </objectgroup>
  <objectgroup id="11" name="ObjectsOnTable">
-  <object id="566" gid="842" x="160" y="1344" width="32" height="32"/>
-  <object id="567" gid="843" x="192" y="1344" width="32" height="32"/>
   <object id="581" gid="878" x="500.333" y="-454.667" width="32" height="32"/>
   <object id="582" gid="879" x="580" y="-383" width="32" height="32"/>
   <object id="583" gid="880" x="574" y="-407" width="32" height="32"/>
