@@ -7,6 +7,7 @@ public abstract class Item : ScriptableObject
     public string id;
     public Sprite icon;
     public new string name;
+    public string description;
 
     [HideInInspector] public InventorySystem mn;
     

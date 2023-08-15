@@ -1,8 +1,8 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using static UnityEngine.SceneManagement.SceneManager;
 
 public class SceneData : MonoBehaviour
 {
@@ -24,12 +24,12 @@ public class SceneData : MonoBehaviour
         Active = this;
         
         OnPropertySet = new Dictionary<string, List<UnityEngine.Events.UnityEvent<bool>>>();
-        UnityEngine.SceneManagement.SceneManager.sceneLoaded += (i, j) => 
+        sceneLoaded += (i, j) => 
         {
             Start();
             Load();
         };
-        UnityEngine.SceneManagement.SceneManager.sceneUnloaded += i => OnPropertySet.Clear();
+        sceneUnloaded += i => OnPropertySet.Clear();
         Load();
     }
 
@@ -48,7 +48,7 @@ public class SceneData : MonoBehaviour
         if (Data.version != SaveData.currentVersion)
             Data = new SaveData();
 
-        if (Data.level != UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex)
+        if (Data.level != GetActiveScene().buildIndex)
         { 
             Data.localProperties = new List<Property<bool>>();           
             Data.positions = new List<Property<Vector3>>();
@@ -94,7 +94,7 @@ public class SceneData : MonoBehaviour
 
     public static void Save()
     {
-        Data.level = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
+        Data.level = GetActiveScene().buildIndex;
         Data.lives = Active.lives.LivesRemaining;
         Data.positions = new List<Property<Vector3>>();
         Data.integers = new List<Property<int>>();
