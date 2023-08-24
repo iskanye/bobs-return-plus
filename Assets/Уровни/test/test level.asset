@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404732687e8f3cc5993651930f9334eb, type: 3}
+  m_Name: test level
+  m_EditorClassIdentifier: 
+  icon: {fileID: 966566194, guid: 2f204e0d80811c3ed9106a675b8f39a9, type: 3}
+  episodeTitle: mama
+  title: "\u044F \u043B\u044E\u0431\u043B\u044E \u043C\u0430\u043C\u0430"
+  briefDescription: "\u043D\u0443 \u043A\u0430\u043A \u0438\u0445 \u0442\u0430\u043C
+    \u0431\u043B\u044F\u0442\u044C"
+  rootPoint: {fileID: 11400000, guid: 0c193d15d8f3fa471a41654fa9599533, type: 2}

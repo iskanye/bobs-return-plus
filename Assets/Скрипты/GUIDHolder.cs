@@ -1,4 +1,4 @@
-public class GUIDHolder : UnityEngine.MonoBehaviour
+public abstract class GUIDHolder : UnityEngine.MonoBehaviour
 {
     public string id;
     

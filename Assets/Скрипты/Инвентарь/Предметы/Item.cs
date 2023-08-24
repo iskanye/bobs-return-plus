@@ -2,9 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public abstract class Item : ScriptableObject
+public abstract class Item : GUIDScriptableObject
 {
-    public string id;
     public Sprite icon;
     public new string name;
     public string description;
@@ -17,9 +16,6 @@ public abstract class Item : ScriptableObject
         AllItems.First(i => i.id == id);
 
     public abstract bool Action();
-
-    void Reset() =>
-        id = System.Guid.NewGuid().ToString();
 
     void OnEnable() =>
         AllItems.Add(this);

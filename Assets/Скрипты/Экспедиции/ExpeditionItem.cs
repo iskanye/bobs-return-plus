@@ -8,6 +8,6 @@ public class ExpeditionItem : MonoBehaviour
 
     public void Select()
     {
-
+        
     }
 }
