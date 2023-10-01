@@ -106,7 +106,7 @@ public class SceneData : MonoBehaviour
         foreach (var i in Active.integers)
             Data.integers.Add(new Property<int>(i.id, i.Integer.integer));
 
-        foreach (var i in Active.inventory.items)
+        foreach (var i in Active.inventory.container.items)
             if (i != null) 
                 Data.inventory.Add(new GuidItem(i.id));
         

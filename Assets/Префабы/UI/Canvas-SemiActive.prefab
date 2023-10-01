@@ -574,6 +574,7 @@ GameObject:
   - component: {fileID: 1673453276918678643}
   - component: {fileID: 1673453276918678646}
   - component: {fileID: 2384430932670909416}
+  - component: {fileID: 4919964308434100283}
   m_Layer: 5
   m_Name: InventoryLayout
   m_TagString: Untagged
@@ -625,22 +626,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   warp: {fileID: 0}
-  maxItems: 3
-  icons:
-  - {fileID: 1673453276651643297}
-  - {fileID: 1673453278198798603}
-  - {fileID: 1673453278509768015}
-  panels:
-  - {fileID: 1673453278502509509}
-  - {fileID: 1673453277874167998}
-  - {fileID: 1673453277145975311}
-  regular: {fileID: 1228313059, guid: a14fd40096ae53540be45097fcf91586, type: 3}
-  selected: {fileID: 501424951, guid: a14fd40096ae53540be45097fcf91586, type: 3}
   pickUpDialogue: {fileID: 11400000, guid: 2e309cb85c553834aa6563789c7af1db, type: 2}
   fullDialogue: {fileID: 11400000, guid: c7600741f983ef947b77cd5e69f9dc46, type: 2}
   activator: {fileID: 2384430932670909416}
   label: {fileID: 1673453276994213616}
-  items: []
+  container: {fileID: 4919964308434100283}
 --- !u!114 &1673453276918678646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -681,6 +671,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues: {fileID: 11400000, guid: 2e309cb85c553834aa6563789c7af1db, type: 2}
   events: []
+--- !u!114 &4919964308434100283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673453276918678641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59a622ecaf1f4c82bb361733d46004c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxItems: 3
+  items: []
+  icons:
+  - {fileID: 1673453276651643297}
+  - {fileID: 1673453278198798603}
+  - {fileID: 1673453278509768015}
 --- !u!1 &1673453276928772432
 GameObject:
   m_ObjectHideFlags: 0
