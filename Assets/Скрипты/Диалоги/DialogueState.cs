@@ -38,7 +38,7 @@ namespace Dialogues
         public override IEnumerator Update()
         {
             if (mn.player != null)
-                mn.player.Enabled = true;
+                mn.player.enabled = true;
 
             yield return base.Update();
         }
@@ -52,7 +52,7 @@ namespace Dialogues
         {
             if (mn.player != null)
             {
-                mn.player.Enabled = false;
+                mn.player.enabled = false;
             }
 
             mn.current = mn.dialogues[mn.index];

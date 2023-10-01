@@ -15,10 +15,6 @@ public class DamageTilesImporter : CustomTmxImporter
             {
                 i.isTrigger = true;
 
-                var damage = i.gameObject.AddComponent<Damageable>();
-                damage.addPersistentListener = true;
-                damage.penetrating = ObjectType.Flimsy;
-
                 var trigger = i.gameObject.AddComponent<Trigger>();
                 trigger.PlayerMask = 1 << LayerMask.NameToLayer("Player");
                 trigger.action.RemoveAllListeners();

@@ -16,7 +16,6 @@ public class SceneData : MonoBehaviour
 
     PositionHolder[] positions;
     IntegerHolder[] integers;
-    PlayerLiveCounter lives;
     InventorySystem inventory;
 
     void Awake()
@@ -37,7 +36,6 @@ public class SceneData : MonoBehaviour
     {     
         positions = FindObjectsOfType<PositionHolder>();
         integers = FindObjectsOfType<IntegerHolder>();
-        lives = PlayerLiveCounter.Active;
         inventory = FindObjectOfType<InventorySystem>();
     }
 
@@ -95,7 +93,6 @@ public class SceneData : MonoBehaviour
     public static void Save()
     {
         Data.level = GetActiveScene().buildIndex;
-        Data.lives = Active.lives.LivesRemaining;
         Data.positions = new List<Property<Vector3>>();
         Data.integers = new List<Property<int>>();
         Data.inventory = new List<GuidItem>();
@@ -106,9 +103,9 @@ public class SceneData : MonoBehaviour
         foreach (var i in Active.integers)
             Data.integers.Add(new Property<int>(i.id, i.Integer.integer));
 
-        foreach (var i in Active.inventory.container.items)
+        foreach (var i in Active.inventory.container.itemButtons)
             if (i != null) 
-                Data.inventory.Add(new GuidItem(i.id));
+                Data.inventory.Add(new GuidItem(i.item.id));
         
         SaveLoad.Save(Data);
 

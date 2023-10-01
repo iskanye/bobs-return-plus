@@ -1,7 +1,7 @@
 [UnityEngine.CreateAssetMenu(fileName = "Healing Item", menuName = "Items/Healing Item", order = 0)]
 public class HealingItem : Item
 {
-    public bool healIfHPIsMax = false;
+    /*public bool healIfHPIsMax = false;
     public int healing = 1;
     public EffectBase[] effects;
 
@@ -17,5 +17,8 @@ public class HealingItem : Item
                 PlayerEffectsController.Active.AddEffect(i);
 
         return true;
-    }
+    }*/
+
+    public override bool Action() =>
+        true;
 }

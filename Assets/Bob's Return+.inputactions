@@ -15,15 +15,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Use Item",
-                    "type": "Button",
-                    "id": "e3003bc5-9047-4293-a856-69139ba5569c",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Attack",
                     "type": "Button",
                     "id": "c933bbbe-9b97-4830-a811-c7ae38ca533f",
@@ -45,24 +36,6 @@
                     "name": "Pause",
                     "type": "Button",
                     "id": "017d655a-e50f-402a-b553-7af2c7da7f34",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Item Choose",
-                    "type": "Button",
-                    "id": "64c37137-7908-4c88-a38d-ac475ba7c22b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Throw Away",
-                    "type": "Button",
-                    "id": "4b3f1909-7e6c-4b8a-944f-5ada7f2989c8",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -127,17 +100,6 @@
                 },
                 {
                     "name": "",
-                    "id": "6e389c67-3092-42fe-b73e-f8226769ed1f",
-                    "path": "<Keyboard>/j",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Use Item",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "a6349d7c-28b1-456c-b517-f2a33bab1d84",
                     "path": "<Keyboard>/k",
                     "interactions": "",
@@ -166,28 +128,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6017df5a-0983-4c9e-8d43-17c5426779eb",
-                    "path": "<Keyboard>/r",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Item Choose",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e1943fa5-7c51-49eb-ab3e-c55869e79d99",
-                    "path": "<Keyboard>/i",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Throw Away",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

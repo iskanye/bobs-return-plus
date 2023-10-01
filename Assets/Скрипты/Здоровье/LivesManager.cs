@@ -2,7 +2,6 @@
 
 public class LivesManager : LivesBase, IInteger
 {
-    [UnityEngine.SerializeField] ObjectType type;
     public int maxLives;
 
     public override int Lives
@@ -49,7 +48,6 @@ public class LivesManager : LivesBase, IInteger
     void Awake()
     {
         lives = maxLives;
-        Durability = type;
     }
 
     public void Revive(int newLives) =>

@@ -37,15 +37,6 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Use Item"",
-                    ""type"": ""Button"",
-                    ""id"": ""e3003bc5-9047-4293-a856-69139ba5569c"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Attack"",
                     ""type"": ""Button"",
                     ""id"": ""c933bbbe-9b97-4830-a811-c7ae38ca533f"",
@@ -67,24 +58,6 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                     ""name"": ""Pause"",
                     ""type"": ""Button"",
                     ""id"": ""017d655a-e50f-402a-b553-7af2c7da7f34"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Item Choose"",
-                    ""type"": ""Button"",
-                    ""id"": ""64c37137-7908-4c88-a38d-ac475ba7c22b"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Throw Away"",
-                    ""type"": ""Button"",
-                    ""id"": ""4b3f1909-7e6c-4b8a-944f-5ada7f2989c8"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -149,17 +122,6 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""6e389c67-3092-42fe-b73e-f8226769ed1f"",
-                    ""path"": ""<Keyboard>/j"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Use Item"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""a6349d7c-28b1-456c-b517-f2a33bab1d84"",
                     ""path"": ""<Keyboard>/k"",
                     ""interactions"": """",
@@ -188,28 +150,6 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""6017df5a-0983-4c9e-8d43-17c5426779eb"",
-                    ""path"": ""<Keyboard>/r"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Item Choose"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""e1943fa5-7c51-49eb-ab3e-c55869e79d99"",
-                    ""path"": ""<Keyboard>/i"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Throw Away"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -798,12 +738,9 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
-        m_Player_UseItem = m_Player.FindAction("Use Item", throwIfNotFound: true);
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
         m_Player_Submit = m_Player.FindAction("Submit", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
-        m_Player_ItemChoose = m_Player.FindAction("Item Choose", throwIfNotFound: true);
-        m_Player_ThrowAway = m_Player.FindAction("Throw Away", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -876,23 +813,17 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Move;
-    private readonly InputAction m_Player_UseItem;
     private readonly InputAction m_Player_Attack;
     private readonly InputAction m_Player_Submit;
     private readonly InputAction m_Player_Pause;
-    private readonly InputAction m_Player_ItemChoose;
-    private readonly InputAction m_Player_ThrowAway;
     public struct PlayerActions
     {
         private @InputMap m_Wrapper;
         public PlayerActions(@InputMap wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
-        public InputAction @UseItem => m_Wrapper.m_Player_UseItem;
         public InputAction @Attack => m_Wrapper.m_Player_Attack;
         public InputAction @Submit => m_Wrapper.m_Player_Submit;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
-        public InputAction @ItemChoose => m_Wrapper.m_Player_ItemChoose;
-        public InputAction @ThrowAway => m_Wrapper.m_Player_ThrowAway;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -905,9 +836,6 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                 @Move.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
                 @Move.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
                 @Move.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
-                @UseItem.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUseItem;
-                @UseItem.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUseItem;
-                @UseItem.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUseItem;
                 @Attack.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
                 @Attack.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
                 @Attack.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
@@ -917,12 +845,6 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                 @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
                 @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
                 @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
-                @ItemChoose.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemChoose;
-                @ItemChoose.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemChoose;
-                @ItemChoose.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemChoose;
-                @ThrowAway.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrowAway;
-                @ThrowAway.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrowAway;
-                @ThrowAway.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnThrowAway;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -930,9 +852,6 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
-                @UseItem.started += instance.OnUseItem;
-                @UseItem.performed += instance.OnUseItem;
-                @UseItem.canceled += instance.OnUseItem;
                 @Attack.started += instance.OnAttack;
                 @Attack.performed += instance.OnAttack;
                 @Attack.canceled += instance.OnAttack;
@@ -942,12 +861,6 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
-                @ItemChoose.started += instance.OnItemChoose;
-                @ItemChoose.performed += instance.OnItemChoose;
-                @ItemChoose.canceled += instance.OnItemChoose;
-                @ThrowAway.started += instance.OnThrowAway;
-                @ThrowAway.performed += instance.OnThrowAway;
-                @ThrowAway.canceled += instance.OnThrowAway;
             }
         }
     }
@@ -1105,12 +1018,9 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
-        void OnUseItem(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
         void OnSubmit(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
-        void OnItemChoose(InputAction.CallbackContext context);
-        void OnThrowAway(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

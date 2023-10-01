@@ -22,7 +22,7 @@ public class TouchJoystick : MonoBehaviour
                 (startPos - (Vector2)transform.position).sqrMagnitude < threshold * threshold)
             {
                 dir = touch.position - (Vector2)transform.position;
-                joystick.anchoredPosition = (touch.position - (Vector2)transform.position).sqrMagnitude > threshold * threshold ? dir.normalized * threshold : dir;
+                joystick.anchoredPosition = dir.sqrMagnitude > threshold * threshold ? dir.normalized * threshold : dir;
                 dir = joystick.position - transform.position;
             }
 
