@@ -14342,52 +14342,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1878406355}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1893454978 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1465116322805263026, guid: 8640bf961aeed5e4192b4137589aa9fd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1465116322310218304}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1893454981 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1465116322805263039, guid: 8640bf961aeed5e4192b4137589aa9fd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1465116322310218304}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1893454978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e93c3f077660b8bfb07ae65df3e286c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1893454990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1893454978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11e3bdbba050166fa8ef33f6e6150a62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1893454981}
-        m_TargetAssemblyTypeName: BobController, Assembly-CSharp
-        m_MethodName: SetCharacterBool
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: HasAxe
-          m_BoolArgument: 0
-        m_CallState: 2
-  isAwake: 0
 --- !u!1001 &1913997095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17594,6 +17548,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1465116322805263039, guid: 8640bf961aeed5e4192b4137589aa9fd,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 11400000, guid: dc6e7bb48206f0b6b9081b634eae8ebd,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8640bf961aeed5e4192b4137589aa9fd, type: 3}
 --- !u!1001 &1673453277193588672
@@ -18899,7 +18859,7 @@ PrefabInstance:
     - target: {fileID: 6309183729310672167, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.25081968
+      value: 0.24389216
       objectReference: {fileID: 0}
     - target: {fileID: 6309183729310672167, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
@@ -18909,7 +18869,7 @@ PrefabInstance:
     - target: {fileID: 6309183729310672167, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.49836066
+      value: 0.5122157
       objectReference: {fileID: 0}
     - target: {fileID: 6309183729310672167, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
@@ -18929,7 +18889,7 @@ PrefabInstance:
     - target: {fileID: 6309183730327303272, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.25081968
+      value: 0.24389216
       objectReference: {fileID: 0}
     - target: {fileID: 6309183730327303272, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
@@ -18939,7 +18899,7 @@ PrefabInstance:
     - target: {fileID: 6309183730327303272, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.49836066
+      value: 0.5122157
       objectReference: {fileID: 0}
     - target: {fileID: 6309183730327303272, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}

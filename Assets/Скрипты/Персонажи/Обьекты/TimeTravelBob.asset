@@ -25,6 +25,6 @@ MonoBehaviour:
     - {fileID: 0}
     inventory: {fileID: 0}
     rigidbody: {fileID: 0}
-    gameObject: {fileID: 0}
   controller: {fileID: 0}
   melee: {fileID: 11400000, guid: 283e27a032754f6a2b713c166518c99a, type: 2}
+  HasAxe: 0
