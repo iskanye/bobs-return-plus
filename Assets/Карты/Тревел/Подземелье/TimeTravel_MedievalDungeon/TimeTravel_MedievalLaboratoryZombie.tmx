@@ -1200,8 +1200,6 @@
  </layer>
  <objectgroup id="9" name="Objects">
   <object id="525" template="Mannequin1.tx" gid="2147484519" x="193" y="339" rotation="0"/>
-  <object id="529" template="CrossbowStandUp.tx" x="1344" y="416"/>
-  <object id="530" template="CrossbowStandLeft.tx" x="1824" y="159"/>
   <object id="531" template="CrossbowChargedLeft.tx" x="1824" y="159"/>
   <object id="532" template="CrossbowChargedUp.tx" x="1344" y="416"/>
   <object id="536" template="SpikyLog.tx" x="1376" y="192"/>
