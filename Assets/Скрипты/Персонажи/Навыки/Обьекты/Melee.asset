@@ -16,8 +16,8 @@ MonoBehaviour:
   dash: 1
   damage: 15
   swingDuration: 0.375
-  dashDuration: 0.625
-  hitDuration: 0.4
+  dashDuration: 0.41666666
+  hitDuration: 0.2
   reloadDuration: 0.2
   colliderSize: {x: 1.5, y: 2}
   discarding: 8

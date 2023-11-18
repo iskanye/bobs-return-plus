@@ -122,7 +122,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &599760660272188268
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -139,7 +139,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!61 &599760660272188269
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -164,7 +165,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1875, y: 1}
+  m_Size: {x: 0.1875, y: 2}
   m_EdgeRadius: 0
 --- !u!1 &599760660982324225
 GameObject:
@@ -223,7 +224,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 1}
+  m_Size: {x: 0.75, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &599760660982324227
 MonoBehaviour:
@@ -258,7 +259,6 @@ MonoBehaviour:
   spriteRenderers:
   - {fileID: 599760661706493390}
   - {fileID: 599760660056984155}
-  selectedBrightness: 0.8
 --- !u!1 &599760661706493388
 GameObject:
   m_ObjectHideFlags: 0
