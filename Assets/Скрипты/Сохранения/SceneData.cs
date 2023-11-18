@@ -119,18 +119,16 @@ public class SceneData : MonoBehaviour
     }
     
     public static void DeleteSaves()
-    {
-        var active = Active;
-        
+    {        
         SaveLoad.DeleteSaves();
 
         var temp = Data.globalProperties;
         Data = new SaveData();
 
-        active.StopAllCoroutines();
+        Active.StopAllCoroutines();
 
-        if (active.savingText != null)
-            active.StartCoroutine(active.Deleting());
+        if (Active.savingText != null)
+            Active.StartCoroutine(Active.Deleting());
     }
 
     IEnumerator Saving()

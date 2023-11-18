@@ -60,4 +60,10 @@ public class PrologueCutscene : MonoBehaviour
         yield return new WaitForSecondsRealtime(finalWaitTime);
         UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneIndex);
     }
+
+    void Update() 
+    {
+        if (InputManager.Active.submit)
+            UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneIndex);
+    }
 }

@@ -1226,8 +1226,6 @@
   <object id="560" type="BannerPoisonGray" gid="554" x="192" y="1280" width="32" height="64"/>
   <object id="561" template="WoodenBarrelClosed.tx" x="192" y="1440"/>
   <object id="562" type="HayGiant" gid="846" x="96" y="1824" width="96" height="128"/>
-  <object id="563" gid="842" x="160" y="1344" width="32" height="32"/>
-  <object id="564" gid="843" x="192" y="1344" width="32" height="32"/>
   <object id="568" gid="872" x="544" y="-340" width="64" height="96"/>
   <object id="570" gid="873" x="270" y="-352" width="96" height="96"/>
   <object id="572" gid="874" x="560" y="-310" width="64" height="64"/>
