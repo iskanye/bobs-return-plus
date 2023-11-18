@@ -367,3 +367,6 @@ MonoBehaviour:
   - m_TypeName: ShakyFloor
     m_Prefab: {fileID: 7715645465188629138, guid: 8c247a3269a2c6f019c4e6d376333caf,
       type: 3}
+  - m_TypeName: WoodenToilet
+    m_Prefab: {fileID: 7945498112361051238, guid: 198afcb14b4fa7b44931f3041b446fdd,
+      type: 3}

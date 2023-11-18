@@ -107,7 +107,7 @@ public class TutorialZombie : MonoBehaviour
         var coll = Instantiate(meleePrefab, transform);
 
         var inTime = coll.GetComponent<ActionInTime>();
-        inTime.time = hitDuration;
+        inTime.time = hitDuration - .2f;
         inTime.Action();
 
         coll.offset = new Vector2(colliderSize.x * .5f, 0);
