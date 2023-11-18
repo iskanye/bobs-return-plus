@@ -16,7 +16,6 @@ public class RatKingCutscene : MonoBehaviour
     public PlayerWarp player;
     public CameraController cam;
 
-    List<GameObject> rats = new List<GameObject>();
     Coroutine spawnRats;
 
     public void StartRatsSpawn() =>
@@ -30,16 +29,12 @@ public class RatKingCutscene : MonoBehaviour
         while (true)
         {
             var rat = Instantiate(ratPrefab, new Vector2(Random.Range(leftSpawnBorder, rightSpawnBorder), 
-                                  player.player.transform.position.y - ySpawnOffset), Quaternion.identity, ratSpawner);
+                player.player.transform.position.y - ySpawnOffset), Quaternion.identity, ratSpawner);
             rat.target = player.player.transform;
             rat.stopRadius = Random.Range(2, maxStopRadius);
-            rats.Add(rat.gameObject);
         
-            if (rats.Count >= ratLimit)
-            {
-                Destroy(rats[0]);            
-                rats.RemoveAt(0);
-            }
+            if (ratSpawner.childCount >= ratLimit)
+                Destroy(ratSpawner.GetChild(0));  
 
             yield return new WaitForSeconds(spawnDelay);
         }

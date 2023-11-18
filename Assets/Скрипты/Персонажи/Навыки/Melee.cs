@@ -61,7 +61,7 @@ public class Melee : BaseSkill
         bob.data.damageable = damageable;
 
         var inTime = collider.GetComponent<ActionInTime>();
-        inTime.time = hitDuration - .1f;
+        inTime.time = .1f;
         inTime.Action();
 
         yield return new WaitForSeconds(hitDuration);
