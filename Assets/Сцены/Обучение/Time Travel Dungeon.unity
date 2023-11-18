@@ -285,7 +285,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &13477127
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -302,7 +302,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &24114592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -719,7 +720,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &67223841
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -736,7 +737,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &76680465
 GameObject:
   m_ObjectHideFlags: 0
@@ -6743,7 +6745,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1131409722
 Transform:
   m_ObjectHideFlags: 0
@@ -6975,7 +6977,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1164378294
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6992,7 +6994,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &1164378295
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12059,7 +12062,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1608352073
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -12076,7 +12079,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &1608352074
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17099,6 +17103,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -244
       objectReference: {fileID: 0}
+    - target: {fileID: 7417121133953654990, guid: 93299189774bfde4ba13f9e9b8c734b9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 303.99997
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93299189774bfde4ba13f9e9b8c734b9, type: 3}
 --- !u!114 &1252747259312497960 stripped
@@ -17302,7 +17311,7 @@ PrefabInstance:
     - target: {fileID: 1673453277150031981, guid: 1d458a21e2715824183884a1efc6fccb,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -95.999985
+      value: -96
       objectReference: {fileID: 0}
     - target: {fileID: 1673453277874167997, guid: 1d458a21e2715824183884a1efc6fccb,
         type: 3}
@@ -17841,7 +17850,7 @@ GameObject:
   m_IsActive: 1
 --- !u!95 &4068785793480746378
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -17858,7 +17867,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &4068785793480746379
 Transform:
   m_ObjectHideFlags: 0
@@ -18554,22 +18564,22 @@ PrefabInstance:
     - target: {fileID: 6309183729310672167, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.22881356
+      value: 0.25081968
       objectReference: {fileID: 0}
     - target: {fileID: 6309183729310672167, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.20957094
+      value: 0.20568562
       objectReference: {fileID: 0}
     - target: {fileID: 6309183729310672167, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.5423729
+      value: 0.49836066
       objectReference: {fileID: 0}
     - target: {fileID: 6309183729310672167, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.5808581
+      value: 0.58862877
       objectReference: {fileID: 0}
     - target: {fileID: 6309183730327303252, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
@@ -18584,22 +18594,22 @@ PrefabInstance:
     - target: {fileID: 6309183730327303272, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.22881356
+      value: 0.25081968
       objectReference: {fileID: 0}
     - target: {fileID: 6309183730327303272, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.20957094
+      value: 0.20568562
       objectReference: {fileID: 0}
     - target: {fileID: 6309183730327303272, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.5423729
+      value: 0.49836066
       objectReference: {fileID: 0}
     - target: {fileID: 6309183730327303272, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.5808581
+      value: 0.58862877
       objectReference: {fileID: 0}
     - target: {fileID: 6347841605182946672, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
