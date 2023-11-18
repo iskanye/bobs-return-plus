@@ -299,9 +299,11 @@ MonoBehaviour:
   spriteFade: {fileID: 479103204}
   text: {fileID: 1713259310}
   textBox: {fileID: 581841333}
+  finalWaitTime: 3
+  nextSceneIndex: 1
 --- !u!95 &479103204
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -318,7 +320,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &581841333
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,22 +931,22 @@ PrefabInstance:
     - target: {fileID: 6309183729310672167, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.22881356
+      value: 0.25081968
       objectReference: {fileID: 0}
     - target: {fileID: 6309183729310672167, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.20957094
+      value: 0.20568562
       objectReference: {fileID: 0}
     - target: {fileID: 6309183729310672167, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.5423729
+      value: 0.49836066
       objectReference: {fileID: 0}
     - target: {fileID: 6309183729310672167, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.5808581
+      value: 0.58862877
       objectReference: {fileID: 0}
     - target: {fileID: 6309183730327303252, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
@@ -973,22 +976,22 @@ PrefabInstance:
     - target: {fileID: 6309183730327303272, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.22881356
+      value: 0.25081968
       objectReference: {fileID: 0}
     - target: {fileID: 6309183730327303272, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.20957094
+      value: 0.20568562
       objectReference: {fileID: 0}
     - target: {fileID: 6309183730327303272, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.5423729
+      value: 0.49836066
       objectReference: {fileID: 0}
     - target: {fileID: 6309183730327303272, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.5808581
+      value: 0.58862877
       objectReference: {fileID: 0}
     - target: {fileID: 6347841605182946672, guid: d7c005111899be343b6f77d32d0eff60,
         type: 3}

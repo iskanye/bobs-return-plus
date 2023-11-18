@@ -19,6 +19,8 @@ public class PrologueCutscene : MonoBehaviour
     public Animator spriteFade;
     public TMPro.TMP_Text text;
     public GameObject textBox;
+    public float finalWaitTime;
+    public int nextSceneIndex;
 
     IEnumerator Start()
     {
@@ -54,5 +56,8 @@ public class PrologueCutscene : MonoBehaviour
 
             text.text = "";
         }
+
+        yield return new WaitForSecondsRealtime(finalWaitTime);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneIndex);
     }
 }
